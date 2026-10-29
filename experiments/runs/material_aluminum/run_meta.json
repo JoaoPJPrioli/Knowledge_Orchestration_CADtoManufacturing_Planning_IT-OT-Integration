@@ -1,0 +1,12 @@
+{
+ "name": "material_aluminum",
+ "args": [
+  "--material",
+  "aluminum_6061"
+ ],
+ "returncode": 0,
+ "wall_clock_s": 5.03,
+ "pellet_s": [
+  1.57
+ ]
+}

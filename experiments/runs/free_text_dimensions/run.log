@@ -1,0 +1,500 @@
+
+======================================================================
+CAD-to-G-code Orchestration Prototype
+======================================================================
+
+  Building manufacturing knowledge graph from CAD features...
+
+----------------------------------------------------------------------
+Loading Feature Files
+----------------------------------------------------------------------
+
+  Loading: features_eixo_step_Gemini31Pro.txt
+    ✓ Found 12 features
+      - 1: Step (Main lower cylindrical body...)
+      - 2: Chamfer (Outer chamfer transition...)
+      - 3: Step (Middle cylindrical step...)
+      - 4: Chamfer (Conical transition to upper cylinder...)
+      - 5: Step (Upper cylindrical body...)
+      - 6: Chamfer (Top outer chamfer...)
+      - 7: Blind Hole (Central blind hole with drill tip...)
+      - 8: Counterbore (Counterbore for central hole...)
+      - 9: Chamfer (Top inner chamfer for counterbore...)
+      - 10: Boss (Rectangular boss on the side of the upper cylinder...)
+      - 11: Through Hole (Upper cross hole through the side boss...)
+      - 12: Through Hole (Lower cross hole through the side boss...)
+
+  Loading: features_eixo_step_Gemini35flash.txt
+    ✓ Found 5 features
+      - 1: Blind Hole (Central blind hole along the Z-axis with a standar...)
+      - 2: Counterbore (Counterbore at the entry of the central blind hole...)
+      - 3: Slot (Upper cylindrical radial cutout on the outer shaft...)
+      - 4: Slot (Lower cylindrical radial cutout on the outer shaft...)
+      - 5: Boss (Stepped outer cylindrical body of the shaft....)
+
+  Loading: draw_features_eixo_Gemini31Pro.txt
+    ✓ Found 7 features
+      - 1: Cylinder (Main upper cylindrical body with a diameter of 24m...)
+      - 2: Cylinder (Lower cylindrical body with a diameter of 24mm (R1...)
+      - 3: Groove (Cylindrical neck/groove separating the upper and l...)
+      - 4: Boss (Rectangular key/protrusion on the upper cylinder, ...)
+      - 5: Hole (Outer section of the central stepped through-hole ...)
+      - 6: Hole (Middle section of the central stepped through-hole...)
+      - 7: Hole (Inner section of the central stepped through-hole ...)
+
+  Loading: draw_features_eixo_Gemini35flash.txt
+    ✓ Found 6 features
+      - 1: Cylinder (Lower cylindrical body with diameter of 24 mm (R12...)
+      - 2: Cylinder (Upper cylindrical body with diameter of 22 mm (R11...)
+      - 3: Groove (Undercut/groove separating the upper and lower cyl...)
+      - 4: Boss (Rectangular key projection on the upper cylinder, ...)
+      - 5: Slot (Slot feature on the upper cylinder with a width of...)
+      - 6: Bore (Multi-stepped central through-hole with internal r...)
+
+----------------------------------------------------------------------
+Reconciling Feature Sources (Consensus Voting)
+----------------------------------------------------------------------
+
+  ✓ STEP-file sources: 12 + 5 raw -> 14 reconciled
+    - 3 merged, 11 single-source
+
+  ✓ Drawing sources: 7 + 6 raw -> 8 reconciled
+    - 5 merged, 3 single-source
+
+  Total reconciled features: 22
+
+----------------------------------------------------------------------
+Generating Manufacturing Plan with KEFC (SKL-grounded)
+----------------------------------------------------------------------
+
+  Reconciling 22 features against SKL ontology individuals...
+* Owlready2 * Running Pellet...
+    java -Xmx2000M -cp /usr/local/lib/python3.13/site-packages/owlready2/pellet/xml-apis-1.4.01.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/antlr-3.2.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/aterm-java-1.6.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/log4j-api-2.19.0.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/jcl-over-slf4j-1.6.4.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/xercesImpl-2.12.2.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/slf4j-log4j12-1.6.4.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/jena-tdb-0.10.0.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/httpclient-4.2.3.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/httpcore-4.2.2.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/commons-codec-1.6.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/antlr-runtime-3.2.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/jgrapht-jdk1.5.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/owlapi-distribution-3.4.3-bin.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/slf4j-api-1.6.4.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/log4j-core-2.19.0.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/jena-core-fixed2.10.0.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/pellet-2.3.1.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/log4j-1.2-api-2.19.0.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/jena-iri-0.9.5.jar:/usr/local/lib/python3.13/site-packages/owlready2/pellet/jena-arq-fixed2.10.0.jar pellet.Pellet realize --loader Jena --input-format N-Triples --infer-prop-values --infer-data-prop-values --ignore-imports /tmp/tmp6285pwrr
+* Owlready2 * Pellet took 1.9772675037384033 seconds
+* Owlready * Adding relation motor_shaft_case.feature_20 hasCuttingParameterSet cutting_parameters.AISI1045_Drilling_Params
+* Owlready * Adding relation motor_shaft_case.feature_20 requiresOperation machining_process.DrillingOp
+* Owlready * Adding relation motor_shaft_case.feature_3 hasCuttingParameterSet cutting_parameters.AISI1045_RoughTurning_Params
+* Owlready * Adding relation motor_shaft_case.feature_3 hasCuttingParameterSet cutting_parameters.AISI1045_FinishTurning_Params
+* Owlready * Adding relation motor_shaft_case.feature_3 requiresOperation machining_process.RoughTurningOp
+* Owlready * Adding relation motor_shaft_case.feature_3 requiresOperation machining_process.FinishTurningOp
+* Owlready * Adding relation motor_shaft_case.feature_21 hasCuttingParameterSet cutting_parameters.AISI1045_Drilling_Params
+* Owlready * Adding relation motor_shaft_case.feature_21 requiresOperation machining_process.DrillingOp
+* Owlready * Adding relation motor_shaft_case.feature_2 hasCuttingParameterSet cutting_parameters.Chamfering_Default_Params
+* Owlready * Adding relation motor_shaft_case.feature_2 requiresOperation machining_process.ChamferingOp
+* Owlready * Adding relation motor_shaft_case.feature_12 hasCuttingParameterSet cutting_parameters.AISI1045_Drilling_Params
+* Owlready * Adding relation motor_shaft_case.feature_12 requiresOperation machining_process.DrillingOp
+* Owlready * Adding relation motor_shaft_case.feature_11 hasCuttingParameterSet cutting_parameters.AISI1045_Drilling_Params
+* Owlready * Adding relation motor_shaft_case.feature_11 requiresOperation machining_process.DrillingOp
+* Owlready * Adding relation motor_shaft_case.feature_10 hasCuttingParameterSet cutting_parameters.AISI1045_RoughTurning_Params
+* Owlready * Adding relation motor_shaft_case.feature_10 hasCuttingParameterSet cutting_parameters.AISI1045_FinishTurning_Params
+* Owlready * Adding relation motor_shaft_case.feature_10 hasCuttingParameterSet cutting_parameters.Facing_Default_Params
+* Owlready * Adding relation motor_shaft_case.feature_10 requiresOperation machining_process.FacingOp
+* Owlready * Adding relation motor_shaft_case.feature_10 requiresOperation machining_process.RoughTurningOp
+* Owlready * Adding relation motor_shaft_case.feature_10 requiresOperation machining_process.FinishTurningOp
+* Owlready * Adding relation motor_shaft_case.feature_4 hasCuttingParameterSet cutting_parameters.Chamfering_Default_Params
+* Owlready * Adding relation motor_shaft_case.feature_4 requiresOperation machining_process.ChamferingOp
+* Owlready * Adding relation motor_shaft_case.feature_15 hasCuttingParameterSet cutting_parameters.AISI1045_RoughTurning_Params
+* Owlready * Adding relation motor_shaft_case.feature_15 hasCuttingParameterSet cutting_parameters.AISI1045_FinishTurning_Params
+* Owlready * Adding relation motor_shaft_case.feature_15 requiresOperation machining_process.RoughTurningOp
+* Owlready * Adding relation motor_shaft_case.feature_15 requiresOperation machining_process.FinishTurningOp
+* Owlready * Adding relation motor_shaft_case.feature_8 hasCuttingParameterSet cutting_parameters.Counterboring_Default_Params
+* Owlready * Adding relation motor_shaft_case.feature_8 hasCuttingParameterSet cutting_parameters.AISI1045_Drilling_Params
+* Owlready * Adding relation motor_shaft_case.feature_8 requiresOperation machining_process.DrillingOp
+* Owlready * Adding relation motor_shaft_case.feature_8 requiresOperation machining_process.CounterboringOp
+* Owlready * Adding relation motor_shaft_case.feature_9 hasCuttingParameterSet cutting_parameters.Chamfering_Default_Params
+* Owlready * Adding relation motor_shaft_case.feature_9 requiresOperation machining_process.ChamferingOp
+* Owlready * Adding relation motor_shaft_case.feature_19 hasCuttingParameterSet cutting_parameters.AISI1045_Drilling_Params
+* Owlready * Adding relation motor_shaft_case.feature_19 requiresOperation machining_process.DrillingOp
+* Owlready * Adding relation motor_shaft_case.feature_5 hasCuttingParameterSet cutting_parameters.AISI1045_RoughTurning_Params
+* Owlready * Adding relation motor_shaft_case.feature_5 hasCuttingParameterSet cutting_parameters.AISI1045_FinishTurning_Params
+* Owlready * Adding relation motor_shaft_case.feature_5 requiresOperation machining_process.RoughTurningOp
+* Owlready * Adding relation motor_shaft_case.feature_5 requiresOperation machining_process.FinishTurningOp
+* Owlready * Adding relation motor_shaft_case.feature_16 hasCuttingParameterSet cutting_parameters.AISI1045_RoughTurning_Params
+* Owlready * Adding relation motor_shaft_case.feature_16 hasCuttingParameterSet cutting_parameters.AISI1045_FinishTurning_Params
+* Owlready * Adding relation motor_shaft_case.feature_16 requiresOperation machining_process.RoughTurningOp
+* Owlready * Adding relation motor_shaft_case.feature_16 requiresOperation machining_process.FinishTurningOp
+* Owlready * Adding relation motor_shaft_case.feature_7 hasCuttingParameterSet cutting_parameters.AISI1045_Drilling_Params
+* Owlready * Adding relation motor_shaft_case.feature_7 requiresOperation machining_process.DrillingOp
+* Owlready * Adding relation motor_shaft_case.feature_13 hasCuttingParameterSet cutting_parameters.AISI1045_Milling_Params
+* Owlready * Adding relation motor_shaft_case.feature_13 requiresOperation machining_process.MillingOp
+* Owlready * Adding relation motor_shaft_case.feature_18 hasCuttingParameterSet cutting_parameters.AISI1045_RoughTurning_Params
+* Owlready * Adding relation motor_shaft_case.feature_18 hasCuttingParameterSet cutting_parameters.AISI1045_FinishTurning_Params
+* Owlready * Adding relation motor_shaft_case.feature_18 hasCuttingParameterSet cutting_parameters.Facing_Default_Params
+* Owlready * Adding relation motor_shaft_case.feature_18 requiresOperation machining_process.FacingOp
+* Owlready * Adding relation motor_shaft_case.feature_18 requiresOperation machining_process.RoughTurningOp
+* Owlready * Adding relation motor_shaft_case.feature_18 requiresOperation machining_process.FinishTurningOp
+* Owlready * Adding relation motor_shaft_case.feature_1 hasCuttingParameterSet cutting_parameters.AISI1045_RoughTurning_Params
+* Owlready * Adding relation motor_shaft_case.feature_1 hasCuttingParameterSet cutting_parameters.AISI1045_FinishTurning_Params
+* Owlready * Adding relation motor_shaft_case.feature_1 requiresOperation machining_process.RoughTurningOp
+* Owlready * Adding relation motor_shaft_case.feature_1 requiresOperation machining_process.FinishTurningOp
+* Owlready * Adding relation motor_shaft_case.feature_22 hasCuttingParameterSet cutting_parameters.AISI1045_Milling_Params
+* Owlready * Adding relation motor_shaft_case.feature_22 requiresOperation machining_process.MillingOp
+* Owlready * Adding relation motor_shaft_case.feature_14 hasCuttingParameterSet cutting_parameters.AISI1045_Milling_Params
+* Owlready * Adding relation motor_shaft_case.feature_14 requiresOperation machining_process.MillingOp
+* Owlready * Adding relation motor_shaft_case.feature_17 hasCuttingParameterSet cutting_parameters.Grooving_Default_Params
+* Owlready * Adding relation motor_shaft_case.feature_17 requiresOperation machining_process.GroovingOp
+* Owlready * Adding relation motor_shaft_case.feature_6 hasCuttingParameterSet cutting_parameters.Chamfering_Default_Params
+* Owlready * Adding relation motor_shaft_case.feature_6 requiresOperation machining_process.ChamferingOp
+* Owlready * (NB: only changes on entities loaded in Python are shown, other changes are done but not listed)
+  ✓ Reconciled (0 unmapped, 3 low-confidence) — Pellet reasoning: ok
+  ✓ Unified knowledge base (TBox + SWRL rules + asserted facts) exported to: <repository>/experiments/runs/free_text_dimensions/unified_knowledge_base.owl
+
+  ✓ Generated 32 manufacturing steps
+    - Validation status: {'auto_approved': 27, 'requires_review': 5}
+    - Expert validation requests: 11
+
+  Manufacturing Plan Summary:
+    Step 1: Facing for feature 10 (Boss) [auto_approved]
+    Step 2: Facing for feature 18 (Boss) [auto_approved]
+    Step 3: Rough Turning for feature 1 (Step) [auto_approved]
+    Step 4: Rough Turning for feature 3 (Step) [auto_approved]
+    Step 5: Rough Turning for feature 5 (Step) [auto_approved]
+    ... (27 more steps)
+
+  ⚠ 5 of 32 steps require expert review and will NOT be sent to RAL (see output/expert_validation_requests.json).
+
+  ✓ Unified graph constructed (SKL/KEFC-authoritative)
+    - Total nodes: 77
+    - Total edges: 191
+
+----------------------------------------------------------------------
+Initializing RDF Triplestore (OntoBREP)
+----------------------------------------------------------------------
+  Loading OntoBREP schema from: <repository>/pipeline/src/manufacturing.ttl
+RDF triplestore exported to: <repository>/experiments/runs/free_text_dimensions/manufacturing_rdf.ttl
+Total triples: 4604
+Node counts: {'feature': 22, 'operation': 9, 'operation_instance': 32, 'tool': 10, 'machine': 1, 'material': 3, 'parameter': 78}
+  ✓ RDF triplestore initialized successfully
+    - Total triples: 4604
+    - Node counts by type:
+      - feature: 22
+      - operation: 9
+      - operation_instance: 32
+      - tool: 10
+      - machine: 1
+      - material: 3
+      - parameter: 78
+  ✓ QueryEngine initialized with SPARQL backend
+  ✓ Triplestore set on orchestrator
+
+----------------------------------------------------------------------
+Testing SPARQL Query Engine (full fixed-order suite)
+----------------------------------------------------------------------
+
+  Test 1/54: [feature] What operations are required for feature 1?...
+    ✓ 2 results (expected non-empty)
+
+  Test 2/54: [feature] List all features in the knowledge graph....
+    ✓ 22 results (expected non-empty)
+
+  Test 3/54: [feature] What are the dimensions of feature 2?...
+    ✓ 2 results (expected non-empty)
+
+  Test 4/54: [feature] Find features located at specific coordinates....
+    ✓ 22 results (expected non-empty)
+
+  Test 5/54: [feature] What type of feature is feature 3?...
+    ✓ 1 results (expected non-empty)
+
+  Test 6/54: [feature] How many features require the turning operation?...
+    ✓ 1 results (expected non-empty)
+
+  Test 7/54: [feature] Find features with diameter greater than 50mm....
+    ✓ 0 results (expected empty)
+
+  Test 8/54: [feature] What is the location of feature 1?...
+    ✓ 1 results (expected non-empty)
+
+  Test 9/54: [feature] List all features and their dimensions....
+    ✓ 47 results (expected non-empty)
+
+  Test 10/54: [feature] Find features that have both diameter and length d...
+    ✓ 11 results (expected non-empty)
+
+  Test 11/54: [operation] What tools are used for the facing operation?...
+    ✓ 2 results (expected non-empty)
+
+  Test 12/54: [operation] List all operations in the machining sequence....
+    ✓ 41 results (expected non-empty)
+
+  Test 13/54: [operation] What machine is used for turning operations?...
+    ✓ 14 results (expected non-empty)
+
+  Test 14/54: [operation] Which operations remove steel_1045 material?...
+    ✓ 32 results (expected non-empty)
+
+  Test 15/54: [operation] What are the G-codes for the grooving operation?...
+    ✓ 2 results (expected non-empty)
+
+  Test 16/54: [operation] Find operations that use carbide tools....
+    ✓ 18 results (expected non-empty)
+
+  Test 17/54: [operation] What operations are required for cylinder features...
+    ✓ 4 results (expected non-empty)
+
+  Test 18/54: [operation] List all operations and their required tools....
+    ✓ 32 results (expected non-empty)
+
+  Test 19/54: [operation] What is the description of the threading operation...
+    ✓ 0 results (expected empty)
+
+  Test 20/54: [operation] Find operations that run on CNC lathe....
+    ✓ 32 results (expected non-empty)
+
+  Test 21/54: [tool] What is the geometry of the turning tool?...
+    ✓ 2 results (expected non-empty)
+
+  Test 22/54: [tool] List all tools and their materials....
+    ✓ 10 results (expected non-empty)
+
+  Test 23/54: [tool] Which operations use the drill bit tool?...
+    ✓ 7 results (expected non-empty)
+
+  Test 24/54: [tool] What tools are recommended for grooving operations...
+    ✓ 1 results (expected non-empty)
+
+  Test 25/54: [tool] Find tools made of high-speed steel....
+    ✓ 2 results (expected non-empty)
+
+  Test 26/54: [tool] What is the type of the groove tool?...
+    ✓ 1 results (expected non-empty)
+
+  Test 27/54: [tool] List all unique tool types in the knowledge graph....
+    ✓ 7 results (expected non-empty)
+
+  Test 28/54: [tool] Which features require tools made of carbide?...
+    ✓ 18 results (expected non-empty)
+
+  Test 29/54: [tool] What operations use the same tool?...
+    ✓ 174 results (expected non-empty)
+
+  Test 30/54: [tool] Find tools with 35-degree geometry....
+    ✓ 0 results (expected empty)
+
+  Test 31/54: [sequence] What is the complete machining sequence?...
+    ✓ 31 results (expected non-empty)
+
+  Test 32/54: [sequence] Which operation comes first in the sequence?...
+    ✓ 1 results (expected non-empty)
+
+  Test 33/54: [sequence] What operation comes after facing?...
+    ✓ 2 results (expected non-empty)
+
+  Test 34/54: [sequence] How many operations are in the machining sequence?...
+    ✓ 1 results (expected non-empty)
+
+  Test 35/54: [sequence] What is the last operation in the sequence?...
+    ✓ 1 results (expected non-empty)
+
+  Test 36/54: [sequence] Find operations that are performed before threadin...
+    ✓ 0 results (expected empty)
+
+  Test 37/54: [sequence] What is the sequence between turning and facing?...
+    ✓ 1 results (expected non-empty)
+
+  Test 38/54: [sequence] List operations in sequence order....
+    ✓ 32 results (expected non-empty)
+
+  Test 39/54: [sequence] Which features affect the machining sequence?...
+    ✓ 31 results (expected non-empty)
+
+  Test 40/54: [sequence] What operations have sequence dependencies?...
+    ✓ 32 results (expected non-empty)
+
+  Test 41/54: [complex] What tools are needed for feature 1?...
+    ✓ 2 results (expected non-empty)
+
+  Test 42/54: [complex] What machine and tools are used for feature 2?...
+    ✓ 1 results (expected non-empty)
+
+  Test 43/54: [complex] What is the complete manufacturing plan for featur...
+    ✓ 2 results (expected non-empty)
+
+  Test 44/54: [complex] Find all features that use the same tool as featur...
+    ✓ 14 results (expected non-empty)
+
+  Test 45/54: [complex] What materials are removed by operations on cylind...
+    ✓ 4 results (expected non-empty)
+
+  Test 46/54: [complex] List all operations with their tools and machines....
+    ✓ 32 results (expected non-empty)
+
+  Test 47/54: [complex] What is the total number of triples in the knowled...
+    ✓ 1 results (expected non-empty)
+
+  Test 48/54: [complex] Find features that require multiple operations....
+    ✓ 8 results (expected non-empty)
+
+  Test 49/54: [complex] What operations are performed on steel material?...
+    ✓ 32 results (expected non-empty)
+
+  Test 50/54: [complex] Generate a complete manufacturing report with feat...
+    ✓ 32 results (expected non-empty)
+
+  Test 51/54: [provenance] Which rule and ontology sources produced the spind...
+    ✓ 1 results (expected non-empty)
+
+  Test 52/54: [provenance] How many parameter records have a rule identifier ...
+    ✓ 1 results (expected non-empty)
+
+  Test 53/54: [provenance] Which parameter records lack a rule identifier or ...
+    ✓ 0 results (expected empty)
+
+  Test 54/54: [provenance] List all parameters of approved steps with value, ...
+    ✓ 108 results (expected non-empty)
+
+  SPARQL Test Summary:
+    - Total tests: 54
+    - Passed: 54
+    - Failed: 0
+  ✓ Provenance by SPARQL: 128 of 128 parameter records resolve to a rule identifier and ontology IRIs (Q52)
+
+----------------------------------------------------------------------
+Generating G-code Programs
+----------------------------------------------------------------------
+
+  Generating G-code program...
+  ✓ Generated program with 147 blocks
+  ✓ Program text length: 5391 chars
+
+  Exporting G-code files...
+    ✓ Saved: <repository>/experiments/runs/free_text_dimensions/motor_shaft_1001.nc (5404 bytes)
+    - Envelope excursions emitted as computed (not clamped): 0
+
+  G-code Statistics:
+    - Total tool changes (M06): 4
+    - Total G-code blocks: 147
+  ⚠ RAL refused 14 handed step(s) it would have to guess for: 1 (facing), 2 (facing), 6 (rough_turning), 9 (rough_turning), 13 (finish_turning), 16 (finish_turning), 21 (drilling), 22 (drilling), 23 (drilling), 25 (chamfering), 26 (chamfering), 27 (chamfering), 28 (chamfering), 29 (grooving)
+  ✓ RAL accounting: 27 handed = 13 serialised + 14 refused (each refusal recorded as serialisation_input_missing)
+  ✓ Plan-to-programme check: 13 serialised steps -> 13 segments
+  ✓ Parameter fidelity: 13 segments checked, spindle 13, feed 13, coolant 13 matching the approved packages
+  ✓ Dimension fidelity: 13 segments, 39 plan-input lookups, 0 defaulted, 13 cutting-move coordinates, 0 not derived from the plan
+
+----------------------------------------------------------------------
+Validating G-code Programs
+----------------------------------------------------------------------
+
+  Validating: motor_shaft_1001.nc
+    ✓ Status: PASS
+    - Total violations: 0
+    - Errors: 0
+    - Warnings: 0
+    - Blocks executed: 105
+    - Tool changes: 4
+    - Total travel: 2019.79mm
+    - Cut distance: 436.18mm
+    ✓ Report saved: <repository>/experiments/runs/free_text_dimensions/motor_shaft_1001_validation.json
+
+  Validation Summary:
+    - Files validated: 1
+    - Total errors: 0
+    - Total warnings: 0
+
+  ✓ All G-code files passed validation!
+
+----------------------------------------------------------------------
+Running Advanced CNC Simulation
+----------------------------------------------------------------------
+
+  Simulating: motor_shaft_1001.nc
+    ✓ Simulation completed
+    - Total cycle time: 7.06 minutes
+      - Rapid time: 18.59s
+      - Cutting time: 340.39s
+      - Tool changes: 12.00s
+    - Collisions detected: 0
+    - Operations analyzed: 13
+    - Average MRR: 5914.21 mm³/min
+    - Max MRR: 66773.38 mm³/min
+    - Average cutting force: 536.9 N (nominal kc, uncalibrated)
+    - Average cutting power: 0.298 kW (P = Fc*vc/60000)
+    - Tool wear status:
+      - turning_insert_rough: 3.5% (good)
+      - turning_insert_finish: 3.6% (good)
+      - drill_bit: 44.5% (fair)
+      - counterbore_cutter: 8.2% (good)
+    - Recommendations:
+      • Simulation completed successfully. No issues detected.
+    ✓ Report saved: <repository>/experiments/runs/free_text_dimensions/motor_shaft_1001_simulation.json
+
+  Simulation Summary:
+    - Files simulated: 1
+    - Total collisions: 0
+
+  ✓ All simulations completed successfully with no collisions!
+
+----------------------------------------------------------------------
+Generating Toolpath Visualizations
+----------------------------------------------------------------------
+
+  Visualizing: motor_shaft_1001.nc
+  ✓ Saved 2D toolpath: <repository>/experiments/runs/free_text_dimensions/motor_shaft_1001_toolpath_2d.png
+  ✓ Saved 3D toolpath: <repository>/experiments/runs/free_text_dimensions/motor_shaft_1001_toolpath_3d.png
+    ✓ 2D toolpath: <repository>/experiments/runs/free_text_dimensions/motor_shaft_1001_toolpath_2d.png (203877 bytes)
+    ✓ 3D toolpath: <repository>/experiments/runs/free_text_dimensions/motor_shaft_1001_toolpath_3d.png (517409 bytes)
+
+  Visualization Summary:
+    - Files visualized: 1
+    - Total 2D plots: 1
+    - Total 3D plots: 1
+
+  ✓ All visualizations generated successfully!
+
+----------------------------------------------------------------------
+Exporting Results
+----------------------------------------------------------------------
+  ✓ Features exported to: <repository>/experiments/runs/free_text_dimensions/features.json
+  ✓ Manufacturing plan exported to: <repository>/experiments/runs/free_text_dimensions/manufacturing_plan.json
+  ✓ Summary exported to: <repository>/experiments/runs/free_text_dimensions/summary.json
+  ✓ Manufacturing plan summary exported to: <repository>/experiments/runs/free_text_dimensions/manufacturing_plan_summary.md
+  ✓ Unified graph exported to: <repository>/experiments/runs/free_text_dimensions/unified_graph.ttl
+  ✓ Reasoning report exported to: <repository>/experiments/runs/free_text_dimensions/reasoning_report.json
+  ✓ Provenance report exported to: <repository>/experiments/runs/free_text_dimensions/provenance_report.json
+
+======================================================================
+Pipeline Complete
+======================================================================
+
+  Features processed: 22
+  Manufacturing steps: 32 (27 handed to RAL, 5 require expert review; RAL serialised 13, refused 14)
+  G-code files generated: 1
+  Validation status: PASS
+  Simulations completed: 1
+  Visualizations generated: 1
+  Output directory: <repository>/experiments/runs/free_text_dimensions
+
+  SKL / KEFC:
+    - SKL version: 0.1.0
+    - Reasoner: Pellet (via owlready2 sync_reasoner_pellet)
+    - Reasoning status: ok
+    - Expert validation: {'total_requests': 25, 'by_status': {'requires_review': 25, 'auto_approved': 0, 'expert_approved': 0, 'expert_rejected': 0, 'knowledge_update_suggested': 0}}
+
+  RDF Triplestore (OntoBREP):
+    - Total triples: 4604
+    - Backend: RDF/SPARQL (rdflib)
+
+  SPARQL Query Testing:
+    - Tests run: 54
+    - Passed: 54
+    - Failed: 0
+    - Success rate: 100.0%
+
+  Simulation Highlights:
+    - Total cycle time: 7.06 minutes
+    - Collisions detected: 0
+    - Average MRR: 5914.21 mm³/min
+    - Tool wear status:
+      - turning_insert_rough: 3.5% (good)
+      - turning_insert_finish: 3.6% (good)
+      - drill_bit: 44.5% (fair)
+      - counterbore_cutter: 8.2% (good)
+
+  Next steps:
+    - Review manufacturing_plan.json for operation sequence
+    - Review validation reports for G-code compliance
+    - Review simulation reports for cutting parameters and tool wear
+    - Review toolpath visualizations for cutting patterns
+    - Test G-code on actual CNC machine (Phase 7+)
+
+======================================================================
+

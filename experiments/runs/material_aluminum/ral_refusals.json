@@ -1,0 +1,461 @@
+{
+  "accounting": {
+    "handed": 22,
+    "serialised": 7,
+    "refused": 15,
+    "serialised_steps": [
+      3,
+      4,
+      5,
+      10,
+      11,
+      12,
+      24
+    ],
+    "refused_steps": [
+      1,
+      2,
+      6,
+      7,
+      8,
+      9,
+      13,
+      14,
+      15,
+      16,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "unrecorded_refusals": [],
+    "passed": true,
+    "problems": []
+  },
+  "refusals": [
+    {
+      "step_number": 1,
+      "operation": "facing",
+      "ontology_operation": "FacingOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 10,
+        "feature_type": "Boss",
+        "feature_dimensions": {
+          "W": 8.0
+        },
+        "feature_location": {
+          "X": 0.0,
+          "Y": 15.0,
+          "Z": 143.5
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0019"
+    },
+    {
+      "step_number": 2,
+      "operation": "facing",
+      "ontology_operation": "FacingOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 18,
+        "feature_type": "Boss",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": -6.014,
+          "Y": -8.1,
+          "Z": 68.05
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0020"
+    },
+    {
+      "step_number": 6,
+      "operation": "rough_turning",
+      "ontology_operation": "RoughTurningOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 10,
+        "feature_type": "Boss",
+        "feature_dimensions": {
+          "W": 8.0
+        },
+        "feature_location": {
+          "X": 0.0,
+          "Y": 15.0,
+          "Z": 143.5
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0021"
+    },
+    {
+      "step_number": 7,
+      "operation": "rough_turning",
+      "ontology_operation": "RoughTurningOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 15,
+        "feature_type": "Cylinder",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 61.8
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0022"
+    },
+    {
+      "step_number": 8,
+      "operation": "rough_turning",
+      "ontology_operation": "RoughTurningOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 16,
+        "feature_type": "Cylinder",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 18.75
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0023"
+    },
+    {
+      "step_number": 9,
+      "operation": "rough_turning",
+      "ontology_operation": "RoughTurningOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 18,
+        "feature_type": "Boss",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": -6.014,
+          "Y": -8.1,
+          "Z": 68.05
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0024"
+    },
+    {
+      "step_number": 13,
+      "operation": "finish_turning",
+      "ontology_operation": "FinishTurningOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 10,
+        "feature_type": "Boss",
+        "feature_dimensions": {
+          "W": 8.0
+        },
+        "feature_location": {
+          "X": 0.0,
+          "Y": 15.0,
+          "Z": 143.5
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0025"
+    },
+    {
+      "step_number": 14,
+      "operation": "finish_turning",
+      "ontology_operation": "FinishTurningOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 15,
+        "feature_type": "Cylinder",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 61.8
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0026"
+    },
+    {
+      "step_number": 15,
+      "operation": "finish_turning",
+      "ontology_operation": "FinishTurningOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 16,
+        "feature_type": "Cylinder",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 18.75
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0027"
+    },
+    {
+      "step_number": 16,
+      "operation": "finish_turning",
+      "ontology_operation": "FinishTurningOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 18,
+        "feature_type": "Boss",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": -6.014,
+          "Y": -8.1,
+          "Z": 68.05
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0028"
+    },
+    {
+      "step_number": 25,
+      "operation": "chamfering",
+      "ontology_operation": "ChamferingOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "chamfer angle (angle or chamfer_angle)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "chamfer_angle",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 2,
+        "feature_type": "Chamfer",
+        "feature_dimensions": {
+          "Ø": 24.95,
+          "L": 0.5
+        },
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 118.25
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0029"
+    },
+    {
+      "step_number": 26,
+      "operation": "chamfering",
+      "ontology_operation": "ChamferingOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "chamfer angle (angle or chamfer_angle)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "chamfer_angle",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 4,
+        "feature_type": "Chamfer",
+        "feature_dimensions": {
+          "Ø": 24.0,
+          "L": 0.75
+        },
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 120.625
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0030"
+    },
+    {
+      "step_number": 27,
+      "operation": "chamfering",
+      "ontology_operation": "ChamferingOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "chamfer angle (angle or chamfer_angle)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "chamfer_angle",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 6,
+        "feature_type": "Chamfer",
+        "feature_dimensions": {
+          "Ø": 24.0,
+          "L": 1.0
+        },
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 168.0
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0031"
+    },
+    {
+      "step_number": 28,
+      "operation": "chamfering",
+      "ontology_operation": "ChamferingOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "chamfer angle (angle or chamfer_angle)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "chamfer_angle",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 9,
+        "feature_type": "Chamfer",
+        "feature_dimensions": {
+          "Ø": 12.2,
+          "L": 3.3
+        },
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 168.5
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0032"
+    },
+    {
+      "step_number": 29,
+      "operation": "grooving",
+      "ontology_operation": "GroovingOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "outer diameter (one of outer_diameter)",
+        "groove-bottom diameter (one of groove_bottom_diameter, bottom_diameter, or a radial depth under groove_depth, depth)"
+      ],
+      "required_inputs": [
+        "outer_diameter",
+        "groove_bottom_diameter",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 17,
+        "feature_type": "Groove",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 38.025
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0033"
+    }
+  ]
+}

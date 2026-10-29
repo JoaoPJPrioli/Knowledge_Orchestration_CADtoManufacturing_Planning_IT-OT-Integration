@@ -1,0 +1,9 @@
+{
+ "name": "reference",
+ "args": [],
+ "returncode": 0,
+ "wall_clock_s": 4.89,
+ "pellet_s": [
+  1.59
+ ]
+}

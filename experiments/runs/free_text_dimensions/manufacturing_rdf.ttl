@@ -1,0 +1,5245 @@
+@prefix brep: <http://onto.brep.org/boundary#> .
+@prefix mfg: <http://onto.brep.org/manufacturing#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mfg: a owl:Ontology ;
+    rdfs:label "OntoBREP Manufacturing Knowledge Graph" ;
+    rdfs:comment "RDF/SPARQL-based manufacturing knowledge graph for CAD-to-Gcode pipeline with boundary representation semantics." .
+
+mfg:capability a owl:DatatypeProperty ;
+    rdfs:label "capability" ;
+    rdfs:comment "Capability of a machine or tool." ;
+    rdfs:range xsd:string .
+
+mfg:confidence a owl:DatatypeProperty ;
+    rdfs:label "confidence" ;
+    rdfs:comment "Confidence score for a relationship." ;
+    rdfs:range xsd:double .
+
+mfg:coordinates a owl:DatatypeProperty ;
+    rdfs:label "coordinates" ;
+    rdfs:comment "Spatial coordinates of a location parameter." ;
+    rdfs:range xsd:string .
+
+mfg:description a owl:DatatypeProperty ;
+    rdfs:label "description" ;
+    rdfs:comment "Description of an entity." ;
+    rdfs:range xsd:string .
+
+mfg:dimensionKey a owl:DatatypeProperty ;
+    rdfs:label "dimension key" ;
+    rdfs:comment "Key identifier for a dimension (diameter, length, depth, etc.)." ;
+    rdfs:range xsd:string .
+
+mfg:dimensionType a owl:DatatypeProperty ;
+    rdfs:label "dimension type" ;
+    rdfs:comment "Semantic type of a dimension parameter (diameter, length, radius, width), derived from its CAD symbol key." ;
+    rdfs:range xsd:string .
+
+mfg:featureType a owl:DatatypeProperty ;
+    rdfs:label "feature type" ;
+    rdfs:comment "The manufacturing feature type (e.g. Step, Groove, Thread), independent of the human-readable name." ;
+    rdfs:range xsd:string .
+
+mfg:geometry a owl:DatatypeProperty ;
+    rdfs:label "geometry" ;
+    rdfs:comment "Geometry description of a tool or feature." ;
+    rdfs:range xsd:string .
+
+mfg:hasDimension a owl:ObjectProperty ;
+    rdfs:label "has dimension" ;
+    rdfs:comment "A feature has a dimensional parameter." ;
+    rdfs:domain mfg:Feature ;
+    rdfs:range mfg:Parameter .
+
+mfg:hasGCodes a owl:ObjectProperty ;
+    rdfs:label "has G-codes" ;
+    rdfs:comment "An operation has an associated parameter node listing its G-codes." ;
+    rdfs:domain mfg:Operation ;
+    rdfs:range mfg:Parameter .
+
+mfg:id a owl:DatatypeProperty ;
+    rdfs:label "identifier" ;
+    rdfs:comment "Unique identifier for an entity." ;
+    rdfs:range xsd:string .
+
+mfg:locatedAt a owl:ObjectProperty ;
+    rdfs:label "located at" ;
+    rdfs:comment "A feature is located at a specific position." ;
+    rdfs:domain mfg:Feature ;
+    rdfs:range mfg:Parameter .
+
+mfg:materialType a owl:DatatypeProperty ;
+    rdfs:label "material type" ;
+    rdfs:comment "Type of material (carbide, high-speed steel, etc.)." ;
+    rdfs:range xsd:string .
+
+mfg:material_aluminum_6061 a mfg:Material ;
+    mfg:id "aluminum_6061" ;
+    mfg:materialType "" ;
+    mfg:name "Aluminum 6061-T6" ;
+    mfg:nodeType "material" .
+
+mfg:material_stainless_304 a mfg:Material ;
+    mfg:id "stainless_304" ;
+    mfg:materialType "" ;
+    mfg:name "Stainless Steel 304" ;
+    mfg:nodeType "material" .
+
+mfg:name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:comment "Human-readable name of an entity." ;
+    rdfs:range xsd:string .
+
+mfg:nodeType a owl:DatatypeProperty ;
+    rdfs:label "node type" ;
+    rdfs:comment "The type of node in the knowledge graph." ;
+    rdfs:range xsd:string .
+
+mfg:op_boring a mfg:Operation ;
+    mfg:description "Enlarge or finish existing hole to precise diameter" ;
+    mfg:hasGCodes mfg:params_boring ;
+    mfg:id "boring" ;
+    mfg:name "Boring" ;
+    mfg:nodeType "operation" .
+
+mfg:parameterType a owl:DatatypeProperty ;
+    rdfs:label "parameter type" ;
+    rdfs:comment "Type of parameter (dimension, location, speed, feed)." ;
+    rdfs:range xsd:string .
+
+mfg:relationship a owl:DatatypeProperty ;
+    rdfs:label "relationship" ;
+    rdfs:comment "Type of relationship between entities." ;
+    rdfs:range xsd:string .
+
+mfg:removes a owl:ObjectProperty ;
+    rdfs:label "removes" ;
+    rdfs:comment "An operation removes material from the workpiece." ;
+    rdfs:domain mfg:Operation ;
+    rdfs:range mfg:Material .
+
+mfg:runsOn a owl:ObjectProperty ;
+    rdfs:label "runs on" ;
+    rdfs:comment "An operation runs on a specific machine." ;
+    rdfs:domain mfg:Operation ;
+    rdfs:range mfg:Machine .
+
+mfg:stepFrom a owl:DatatypeProperty ;
+    rdfs:label "step from" ;
+    rdfs:comment "Starting step number in machining sequence." ;
+    rdfs:range xsd:integer .
+
+mfg:stepTo a owl:DatatypeProperty ;
+    rdfs:label "step to" ;
+    rdfs:comment "Ending step number in machining sequence." ;
+    rdfs:range xsd:integer .
+
+mfg:toolType a owl:DatatypeProperty ;
+    rdfs:label "tool type" ;
+    rdfs:comment "Type of tool used in an operation." ;
+    rdfs:range xsd:string .
+
+mfg:tool_boring_bar a mfg:Tool ;
+    mfg:geometry "Adjustable Boring Head" ;
+    mfg:id "boring_bar" ;
+    mfg:materialType "Carbide Insert" ;
+    mfg:name "Boring Bar" ;
+    mfg:nodeType "tool" ;
+    mfg:toolType "Boring Tool" .
+
+mfg:tool_chamfer_drill a mfg:Tool ;
+    mfg:geometry "90deg Point Angle" ;
+    mfg:id "chamfer_drill" ;
+    mfg:materialType "High-Speed Steel" ;
+    mfg:name "Chamfer Drill (Countersink)" ;
+    mfg:nodeType "tool" ;
+    mfg:toolType "Chamfer Tool" .
+
+mfg:tool_face_mill a mfg:Tool ;
+    mfg:geometry "6-Insert Head" ;
+    mfg:id "face_mill" ;
+    mfg:materialType "Carbide Inserts" ;
+    mfg:name "Face Mill" ;
+    mfg:nodeType "tool" ;
+    mfg:toolType "Milling Cutter" .
+
+mfg:value a owl:DatatypeProperty ;
+    rdfs:label "value" ;
+    rdfs:comment "Value of a parameter." ;
+    rdfs:range xsd:string .
+
+mfg:dim_10_W a mfg:Parameter ;
+    mfg:dimensionKey "W" ;
+    mfg:dimensionType "width" ;
+    mfg:id "dim_10_W" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "8.0" .
+
+mfg:dim_11_Ø a mfg:Parameter ;
+    mfg:dimensionKey "Ø" ;
+    mfg:dimensionType "diameter" ;
+    mfg:id "dim_11_Ø" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "8.0" .
+
+mfg:dim_12_Ø a mfg:Parameter ;
+    mfg:dimensionKey "Ø" ;
+    mfg:dimensionType "diameter" ;
+    mfg:id "dim_12_Ø" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "8.0" .
+
+mfg:dim_13_R a mfg:Parameter ;
+    mfg:dimensionKey "R" ;
+    mfg:dimensionType "radius" ;
+    mfg:id "dim_13_R" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "4.0" .
+
+mfg:dim_13_W a mfg:Parameter ;
+    mfg:dimensionKey "W" ;
+    mfg:dimensionType "width" ;
+    mfg:id "dim_13_W" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "8.0" .
+
+mfg:dim_13_Ø a mfg:Parameter ;
+    mfg:dimensionKey "Ø" ;
+    mfg:dimensionType "diameter" ;
+    mfg:id "dim_13_Ø" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "8.0" .
+
+mfg:dim_14_R a mfg:Parameter ;
+    mfg:dimensionKey "R" ;
+    mfg:dimensionType "radius" ;
+    mfg:id "dim_14_R" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "4.0" .
+
+mfg:dim_14_W a mfg:Parameter ;
+    mfg:dimensionKey "W" ;
+    mfg:dimensionType "width" ;
+    mfg:id "dim_14_W" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "8.0" .
+
+mfg:dim_14_Ø a mfg:Parameter ;
+    mfg:dimensionKey "Ø" ;
+    mfg:dimensionType "diameter" ;
+    mfg:id "dim_14_Ø" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "8.0" .
+
+mfg:dim_15_L a mfg:Parameter ;
+    mfg:dimensionKey "L" ;
+    mfg:dimensionType "length" ;
+    mfg:id "dim_15_L" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "46.5" .
+
+mfg:dim_15_R a mfg:Parameter ;
+    mfg:dimensionKey "R" ;
+    mfg:dimensionType "radius" ;
+    mfg:id "dim_15_R" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "11.6" .
+
+mfg:dim_15_Ø a mfg:Parameter ;
+    mfg:dimensionKey "Ø" ;
+    mfg:dimensionType "diameter" ;
+    mfg:id "dim_15_Ø" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "23.2" .
+
+mfg:dim_16_L a mfg:Parameter ;
+    mfg:dimensionKey "L" ;
+    mfg:dimensionType "length" ;
+    mfg:id "dim_16_L" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "37.5" .
+
+mfg:dim_16_R a mfg:Parameter ;
+    mfg:dimensionKey "R" ;
+    mfg:dimensionType "radius" ;
+    mfg:id "dim_16_R" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "12.0" .
+
+mfg:dim_16_Ø a mfg:Parameter ;
+    mfg:dimensionKey "Ø" ;
+    mfg:dimensionType "diameter" ;
+    mfg:id "dim_16_Ø" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "24.0" .
+
+mfg:dim_17_R a mfg:Parameter ;
+    mfg:dimensionKey "R" ;
+    mfg:dimensionType "radius" ;
+    mfg:id "dim_17_R" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "11.0" .
+
+mfg:dim_17_W a mfg:Parameter ;
+    mfg:dimensionKey "W" ;
+    mfg:dimensionType "width" ;
+    mfg:id "dim_17_W" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "1.75" .
+
+mfg:dim_17_Ø a mfg:Parameter ;
+    mfg:dimensionKey "Ø" ;
+    mfg:dimensionType "diameter" ;
+    mfg:id "dim_17_Ø" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "22.0" .
+
+mfg:dim_18_L a mfg:Parameter ;
+    mfg:dimensionKey "L" ;
+    mfg:dimensionType "length" ;
+    mfg:id "dim_18_L" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "32.0" .
+
+mfg:dim_18_W a mfg:Parameter ;
+    mfg:dimensionKey "W" ;
+    mfg:dimensionType "width" ;
+    mfg:id "dim_18_W" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "3.876" .
+
+mfg:dim_19_R a mfg:Parameter ;
+    mfg:dimensionKey "R" ;
+    mfg:dimensionType "radius" ;
+    mfg:id "dim_19_R" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "6.1" .
+
+mfg:dim_1_L a mfg:Parameter ;
+    mfg:dimensionKey "L" ;
+    mfg:dimensionType "length" ;
+    mfg:id "dim_1_L" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "57.7" .
+
+mfg:dim_1_R a mfg:Parameter ;
+    mfg:dimensionKey "R" ;
+    mfg:dimensionType "radius" ;
+    mfg:id "dim_1_R" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "12.475" .
+
+mfg:dim_1_Ø a mfg:Parameter ;
+    mfg:dimensionKey "Ø" ;
+    mfg:dimensionType "diameter" ;
+    mfg:id "dim_1_Ø" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "24.95" .
+
+mfg:dim_20_R a mfg:Parameter ;
+    mfg:dimensionKey "R" ;
+    mfg:dimensionType "radius" ;
+    mfg:id "dim_20_R" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "4.2" .
+
+mfg:dim_21_R a mfg:Parameter ;
+    mfg:dimensionKey "R" ;
+    mfg:dimensionType "radius" ;
+    mfg:id "dim_21_R" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "3.4" .
+
+mfg:dim_22_W a mfg:Parameter ;
+    mfg:dimensionKey "W" ;
+    mfg:dimensionType "width" ;
+    mfg:id "dim_22_W" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "4.0" .
+
+mfg:dim_2_L a mfg:Parameter ;
+    mfg:dimensionKey "L" ;
+    mfg:dimensionType "length" ;
+    mfg:id "dim_2_L" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "0.5" .
+
+mfg:dim_2_Ø a mfg:Parameter ;
+    mfg:dimensionKey "Ø" ;
+    mfg:dimensionType "diameter" ;
+    mfg:id "dim_2_Ø" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "24.95" .
+
+mfg:dim_3_L a mfg:Parameter ;
+    mfg:dimensionKey "L" ;
+    mfg:dimensionType "length" ;
+    mfg:id "dim_3_L" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "1.75" .
+
+mfg:dim_3_Ø a mfg:Parameter ;
+    mfg:dimensionKey "Ø" ;
+    mfg:dimensionType "diameter" ;
+    mfg:id "dim_3_Ø" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "23.6" .
+
+mfg:dim_4_L a mfg:Parameter ;
+    mfg:dimensionKey "L" ;
+    mfg:dimensionType "length" ;
+    mfg:id "dim_4_L" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "0.75" .
+
+mfg:dim_4_Ø a mfg:Parameter ;
+    mfg:dimensionKey "Ø" ;
+    mfg:dimensionType "diameter" ;
+    mfg:id "dim_4_Ø" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "24.0" .
+
+mfg:dim_5_L a mfg:Parameter ;
+    mfg:dimensionKey "L" ;
+    mfg:dimensionType "length" ;
+    mfg:id "dim_5_L" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "47.5" .
+
+mfg:dim_5_Ø a mfg:Parameter ;
+    mfg:dimensionKey "Ø" ;
+    mfg:dimensionType "diameter" ;
+    mfg:id "dim_5_Ø" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "24.0" .
+
+mfg:dim_6_L a mfg:Parameter ;
+    mfg:dimensionKey "L" ;
+    mfg:dimensionType "length" ;
+    mfg:id "dim_6_L" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "1.0" .
+
+mfg:dim_6_Ø a mfg:Parameter ;
+    mfg:dimensionKey "Ø" ;
+    mfg:dimensionType "diameter" ;
+    mfg:id "dim_6_Ø" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "24.0" .
+
+mfg:dim_7_L a mfg:Parameter ;
+    mfg:dimensionKey "L" ;
+    mfg:dimensionType "length" ;
+    mfg:id "dim_7_L" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "20.23" .
+
+mfg:dim_7_R a mfg:Parameter ;
+    mfg:dimensionKey "R" ;
+    mfg:dimensionType "radius" ;
+    mfg:id "dim_7_R" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "3.4" .
+
+mfg:dim_7_W a mfg:Parameter ;
+    mfg:dimensionKey "W" ;
+    mfg:dimensionType "width" ;
+    mfg:id "dim_7_W" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "6.8" .
+
+mfg:dim_7_Ø a mfg:Parameter ;
+    mfg:dimensionKey "Ø" ;
+    mfg:dimensionType "diameter" ;
+    mfg:id "dim_7_Ø" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "6.800000000000001" .
+
+mfg:dim_8_L a mfg:Parameter ;
+    mfg:dimensionKey "L" ;
+    mfg:dimensionType "length" ;
+    mfg:id "dim_8_L" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "4.0200000000000005" .
+
+mfg:dim_8_R a mfg:Parameter ;
+    mfg:dimensionKey "R" ;
+    mfg:dimensionType "radius" ;
+    mfg:id "dim_8_R" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "4.2" .
+
+mfg:dim_8_W a mfg:Parameter ;
+    mfg:dimensionKey "W" ;
+    mfg:dimensionType "width" ;
+    mfg:id "dim_8_W" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "8.4" .
+
+mfg:dim_8_Ø a mfg:Parameter ;
+    mfg:dimensionKey "Ø" ;
+    mfg:dimensionType "diameter" ;
+    mfg:id "dim_8_Ø" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "8.4" .
+
+mfg:dim_9_L a mfg:Parameter ;
+    mfg:dimensionKey "L" ;
+    mfg:dimensionType "length" ;
+    mfg:id "dim_9_L" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "3.3" .
+
+mfg:dim_9_Ø a mfg:Parameter ;
+    mfg:dimensionKey "Ø" ;
+    mfg:dimensionType "diameter" ;
+    mfg:id "dim_9_Ø" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "dimension" ;
+    mfg:value "12.2" .
+
+mfg:loc_1 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 0.0, \"Z\": 109.35}" ;
+    mfg:id "loc_1" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_10 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 15.0, \"Z\": 143.5}" ;
+    mfg:id "loc_10" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_11 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 15.0, \"Z\": 159.5}" ;
+    mfg:id "loc_11" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_12 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 15.0, \"Z\": 127.5}" ;
+    mfg:id "loc_12" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_13 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 15.0, \"Z\": 159.5}" ;
+    mfg:id "loc_13" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_14 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 15.0, \"Z\": 127.5}" ;
+    mfg:id "loc_14" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_15 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 0.0, \"Z\": 61.8}" ;
+    mfg:id "loc_15" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_16 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 0.0, \"Z\": 18.75}" ;
+    mfg:id "loc_16" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_17 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 0.0, \"Z\": 38.025}" ;
+    mfg:id "loc_17" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_18 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": -6.014, \"Y\": -8.1, \"Z\": 68.05}" ;
+    mfg:id "loc_18" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_19 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 0.0, \"Z\": 42.525}" ;
+    mfg:id "loc_19" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_2 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 0.0, \"Z\": 118.25}" ;
+    mfg:id "loc_2" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_20 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 0.0, \"Z\": 42.875}" ;
+    mfg:id "loc_20" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_21 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 0.0, \"Z\": 42.875}" ;
+    mfg:id "loc_21" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_22 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 11.0, \"Y\": 0.0, \"Z\": 60.75}" ;
+    mfg:id "loc_22" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_3 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 0.0, \"Z\": 119.375}" ;
+    mfg:id "loc_3" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_4 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 0.0, \"Z\": 120.625}" ;
+    mfg:id "loc_4" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_5 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 0.0, \"Z\": 144.75}" ;
+    mfg:id "loc_5" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_6 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 0.0, \"Z\": 168.0}" ;
+    mfg:id "loc_6" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_7 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 0.0, \"Z\": 162.5}" ;
+    mfg:id "loc_7" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_8 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 0.0, \"Z\": 166.51999999999998}" ;
+    mfg:id "loc_8" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:loc_9 a mfg:Parameter ;
+    mfg:coordinates "{\"X\": 0.0, \"Y\": 0.0, \"Z\": 168.5}" ;
+    mfg:id "loc_9" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "location" .
+
+mfg:op_counterboring a mfg:Operation ;
+    mfg:description "Enlarge entrance of hole for head clearance" ;
+    mfg:hasGCodes mfg:params_counterboring ;
+    mfg:id "counterboring" ;
+    mfg:name "Counterboring" ;
+    mfg:nodeType "operation" .
+
+mfg:op_grooving a mfg:Operation ;
+    mfg:description "Cut narrow groove into workpiece" ;
+    mfg:hasGCodes mfg:params_grooving ;
+    mfg:id "grooving" ;
+    mfg:name "Grooving" ;
+    mfg:nodeType "operation" .
+
+mfg:param_10_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "1" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 6.206136e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 10 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_10_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "1" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 6.206136e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 10 ;
+    mfg:unit "mm" ;
+    mfg:value 2e-01 .
+
+mfg:param_10_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "1" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 6.206136e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 10 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 6e-02 .
+
+mfg:param_10_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "1" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 6.206136e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 10 ;
+    mfg:unit "RPM" ;
+    mfg:value 9e+02 .
+
+mfg:param_11_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "3" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 11 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_11_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "3" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 11 ;
+    mfg:unit "mm" ;
+    mfg:value 2e-01 .
+
+mfg:param_11_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "3" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 11 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 6e-02 .
+
+mfg:param_11_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "3" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 11 ;
+    mfg:unit "RPM" ;
+    mfg:value 9e+02 .
+
+mfg:param_12_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "5" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 12 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_12_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "5" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 12 ;
+    mfg:unit "mm" ;
+    mfg:value 2e-01 .
+
+mfg:param_12_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "5" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 12 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 6e-02 .
+
+mfg:param_12_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "5" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 12 ;
+    mfg:unit "RPM" ;
+    mfg:value 9e+02 .
+
+mfg:param_13_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "10" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 13 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_13_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "10" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 13 ;
+    mfg:unit "mm" ;
+    mfg:value 2e-01 .
+
+mfg:param_13_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "10" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 13 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 6e-02 .
+
+mfg:param_13_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "10" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 13 ;
+    mfg:unit "RPM" ;
+    mfg:value 9e+02 .
+
+mfg:param_14_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "15" ;
+    mfg:inputFeatureType "Cylinder" ;
+    mfg:inputMappingConfidence 9.748889e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 14 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_14_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "15" ;
+    mfg:inputFeatureType "Cylinder" ;
+    mfg:inputMappingConfidence 9.748889e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 14 ;
+    mfg:unit "mm" ;
+    mfg:value 2e-01 .
+
+mfg:param_14_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "15" ;
+    mfg:inputFeatureType "Cylinder" ;
+    mfg:inputMappingConfidence 9.748889e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 14 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 6e-02 .
+
+mfg:param_14_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "15" ;
+    mfg:inputFeatureType "Cylinder" ;
+    mfg:inputMappingConfidence 9.748889e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 14 ;
+    mfg:unit "RPM" ;
+    mfg:value 9e+02 .
+
+mfg:param_15_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "16" ;
+    mfg:inputFeatureType "Cylinder" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 15 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_15_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "16" ;
+    mfg:inputFeatureType "Cylinder" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 15 ;
+    mfg:unit "mm" ;
+    mfg:value 2e-01 .
+
+mfg:param_15_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "16" ;
+    mfg:inputFeatureType "Cylinder" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 15 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 6e-02 .
+
+mfg:param_15_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "16" ;
+    mfg:inputFeatureType "Cylinder" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 15 ;
+    mfg:unit "RPM" ;
+    mfg:value 9e+02 .
+
+mfg:param_16_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "18" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 8.53186e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 16 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_16_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "18" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 8.53186e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 16 ;
+    mfg:unit "mm" ;
+    mfg:value 2e-01 .
+
+mfg:param_16_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "18" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 8.53186e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 16 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 6e-02 .
+
+mfg:param_16_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "18" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 8.53186e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_finishturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 16 ;
+    mfg:unit "RPM" ;
+    mfg:value 9e+02 .
+
+mfg:param_17_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "7" ;
+    mfg:inputFeatureType "Blind Hole" ;
+    mfg:inputMappingConfidence 9.902613e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 17 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_17_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "7" ;
+    mfg:inputFeatureType "Blind Hole" ;
+    mfg:inputMappingConfidence 9.902613e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 17 ;
+    mfg:unit "mm" ;
+    mfg:value 5e+00 .
+
+mfg:param_17_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "7" ;
+    mfg:inputFeatureType "Blind Hole" ;
+    mfg:inputMappingConfidence 9.902613e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 17 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 1.5e-01 .
+
+mfg:param_17_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "7" ;
+    mfg:inputFeatureType "Blind Hole" ;
+    mfg:inputMappingConfidence 9.902613e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 17 ;
+    mfg:unit "RPM" ;
+    mfg:value 9e+02 .
+
+mfg:param_18_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "8" ;
+    mfg:inputFeatureType "Counterbore" ;
+    mfg:inputMappingConfidence 9.186e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 18 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_18_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "8" ;
+    mfg:inputFeatureType "Counterbore" ;
+    mfg:inputMappingConfidence 9.186e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 18 ;
+    mfg:unit "mm" ;
+    mfg:value 5e+00 .
+
+mfg:param_18_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "8" ;
+    mfg:inputFeatureType "Counterbore" ;
+    mfg:inputMappingConfidence 9.186e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 18 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 1.5e-01 .
+
+mfg:param_18_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "8" ;
+    mfg:inputFeatureType "Counterbore" ;
+    mfg:inputMappingConfidence 9.186e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 18 ;
+    mfg:unit "RPM" ;
+    mfg:value 9e+02 .
+
+mfg:param_19_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "11" ;
+    mfg:inputFeatureType "Through Hole" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 19 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_19_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "11" ;
+    mfg:inputFeatureType "Through Hole" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 19 ;
+    mfg:unit "mm" ;
+    mfg:value 5e+00 .
+
+mfg:param_19_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "11" ;
+    mfg:inputFeatureType "Through Hole" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 19 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 1.5e-01 .
+
+mfg:param_19_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "11" ;
+    mfg:inputFeatureType "Through Hole" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 19 ;
+    mfg:unit "RPM" ;
+    mfg:value 9e+02 .
+
+mfg:param_1_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "10" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "facing_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 1 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_1_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "10" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "facing_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 1 ;
+    mfg:unit "mm" ;
+    mfg:value 1e+00 .
+
+mfg:param_1_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "10" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "facing_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 1 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 2e-01 .
+
+mfg:param_1_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "10" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "facing_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 1 ;
+    mfg:unit "RPM" ;
+    mfg:value 8e+02 .
+
+mfg:param_20_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "12" ;
+    mfg:inputFeatureType "Through Hole" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 20 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_20_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "12" ;
+    mfg:inputFeatureType "Through Hole" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 20 ;
+    mfg:unit "mm" ;
+    mfg:value 5e+00 .
+
+mfg:param_20_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "12" ;
+    mfg:inputFeatureType "Through Hole" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 20 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 1.5e-01 .
+
+mfg:param_20_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "12" ;
+    mfg:inputFeatureType "Through Hole" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 20 ;
+    mfg:unit "RPM" ;
+    mfg:value 9e+02 .
+
+mfg:param_21_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "19" ;
+    mfg:inputFeatureType "Hole" ;
+    mfg:inputMappingConfidence 6.73e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 21 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_21_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "19" ;
+    mfg:inputFeatureType "Hole" ;
+    mfg:inputMappingConfidence 6.73e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 21 ;
+    mfg:unit "mm" ;
+    mfg:value 5e+00 .
+
+mfg:param_21_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "19" ;
+    mfg:inputFeatureType "Hole" ;
+    mfg:inputMappingConfidence 6.73e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 21 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 1.5e-01 .
+
+mfg:param_21_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "19" ;
+    mfg:inputFeatureType "Hole" ;
+    mfg:inputMappingConfidence 6.73e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 21 ;
+    mfg:unit "RPM" ;
+    mfg:value 9e+02 .
+
+mfg:param_22_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "20" ;
+    mfg:inputFeatureType "Hole" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 22 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_22_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "20" ;
+    mfg:inputFeatureType "Hole" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 22 ;
+    mfg:unit "mm" ;
+    mfg:value 5e+00 .
+
+mfg:param_22_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "20" ;
+    mfg:inputFeatureType "Hole" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 22 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 1.5e-01 .
+
+mfg:param_22_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "20" ;
+    mfg:inputFeatureType "Hole" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 22 ;
+    mfg:unit "RPM" ;
+    mfg:value 9e+02 .
+
+mfg:param_23_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "21" ;
+    mfg:inputFeatureType "Hole" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 23 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_23_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "21" ;
+    mfg:inputFeatureType "Hole" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 23 ;
+    mfg:unit "mm" ;
+    mfg:value 5e+00 .
+
+mfg:param_23_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "21" ;
+    mfg:inputFeatureType "Hole" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 23 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 1.5e-01 .
+
+mfg:param_23_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "21" ;
+    mfg:inputFeatureType "Hole" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_drilling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 23 ;
+    mfg:unit "RPM" ;
+    mfg:value 9e+02 .
+
+mfg:param_24_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "8" ;
+    mfg:inputFeatureType "Counterbore" ;
+    mfg:inputMappingConfidence 9.186e-01 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "counterboring_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 24 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_24_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "8" ;
+    mfg:inputFeatureType "Counterbore" ;
+    mfg:inputMappingConfidence 9.186e-01 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "counterboring_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 24 ;
+    mfg:unit "mm" ;
+    mfg:value 3e+00 .
+
+mfg:param_24_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "8" ;
+    mfg:inputFeatureType "Counterbore" ;
+    mfg:inputMappingConfidence 9.186e-01 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "counterboring_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 24 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 1.2e-01 .
+
+mfg:param_24_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "8" ;
+    mfg:inputFeatureType "Counterbore" ;
+    mfg:inputMappingConfidence 9.186e-01 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "counterboring_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 24 ;
+    mfg:unit "RPM" ;
+    mfg:value 1e+03 .
+
+mfg:param_25_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "2" ;
+    mfg:inputFeatureType "Chamfer" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "chamfering_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 25 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_25_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "2" ;
+    mfg:inputFeatureType "Chamfer" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "chamfering_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 25 ;
+    mfg:unit "mm" ;
+    mfg:value 1e+00 .
+
+mfg:param_25_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "2" ;
+    mfg:inputFeatureType "Chamfer" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "chamfering_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 25 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 1e-01 .
+
+mfg:param_25_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "2" ;
+    mfg:inputFeatureType "Chamfer" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "chamfering_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 25 ;
+    mfg:unit "RPM" ;
+    mfg:value 1.2e+03 .
+
+mfg:param_26_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "4" ;
+    mfg:inputFeatureType "Chamfer" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "chamfering_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 26 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_26_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "4" ;
+    mfg:inputFeatureType "Chamfer" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "chamfering_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 26 ;
+    mfg:unit "mm" ;
+    mfg:value 1e+00 .
+
+mfg:param_26_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "4" ;
+    mfg:inputFeatureType "Chamfer" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "chamfering_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 26 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 1e-01 .
+
+mfg:param_26_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "4" ;
+    mfg:inputFeatureType "Chamfer" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "chamfering_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 26 ;
+    mfg:unit "RPM" ;
+    mfg:value 1.2e+03 .
+
+mfg:param_27_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "6" ;
+    mfg:inputFeatureType "Chamfer" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "chamfering_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 27 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_27_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "6" ;
+    mfg:inputFeatureType "Chamfer" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "chamfering_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 27 ;
+    mfg:unit "mm" ;
+    mfg:value 1e+00 .
+
+mfg:param_27_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "6" ;
+    mfg:inputFeatureType "Chamfer" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "chamfering_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 27 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 1e-01 .
+
+mfg:param_27_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "6" ;
+    mfg:inputFeatureType "Chamfer" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "chamfering_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 27 ;
+    mfg:unit "RPM" ;
+    mfg:value 1.2e+03 .
+
+mfg:param_28_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "9" ;
+    mfg:inputFeatureType "Chamfer" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "chamfering_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 28 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_28_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "9" ;
+    mfg:inputFeatureType "Chamfer" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "chamfering_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 28 ;
+    mfg:unit "mm" ;
+    mfg:value 1e+00 .
+
+mfg:param_28_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "9" ;
+    mfg:inputFeatureType "Chamfer" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "chamfering_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 28 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 1e-01 .
+
+mfg:param_28_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "9" ;
+    mfg:inputFeatureType "Chamfer" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "chamfering_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 28 ;
+    mfg:unit "RPM" ;
+    mfg:value 1.2e+03 .
+
+mfg:param_29_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "17" ;
+    mfg:inputFeatureType "Groove" ;
+    mfg:inputMappingConfidence 9.93e-01 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "grooving_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 29 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_29_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "17" ;
+    mfg:inputFeatureType "Groove" ;
+    mfg:inputMappingConfidence 9.93e-01 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "grooving_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 29 ;
+    mfg:unit "mm" ;
+    mfg:value 5e-01 .
+
+mfg:param_29_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "17" ;
+    mfg:inputFeatureType "Groove" ;
+    mfg:inputMappingConfidence 9.93e-01 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "grooving_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 29 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 8e-02 .
+
+mfg:param_29_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "17" ;
+    mfg:inputFeatureType "Groove" ;
+    mfg:inputMappingConfidence 9.93e-01 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "grooving_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 29 ;
+    mfg:unit "RPM" ;
+    mfg:value 6e+02 .
+
+mfg:param_2_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "18" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 8.53186e-01 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "facing_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 2 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_2_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "18" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 8.53186e-01 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "facing_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 2 ;
+    mfg:unit "mm" ;
+    mfg:value 1e+00 .
+
+mfg:param_2_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "18" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 8.53186e-01 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "facing_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 2 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 2e-01 .
+
+mfg:param_2_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "18" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 8.53186e-01 ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "facing_default_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 2 ;
+    mfg:unit "RPM" ;
+    mfg:value 8e+02 .
+
+mfg:param_30_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "13" ;
+    mfg:inputFeatureType "Slot" ;
+    mfg:inputMappingConfidence 4e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_milling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 30 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_30_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "13" ;
+    mfg:inputFeatureType "Slot" ;
+    mfg:inputMappingConfidence 4e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_milling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 30 ;
+    mfg:unit "mm" ;
+    mfg:value 1e+00 .
+
+mfg:param_30_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "13" ;
+    mfg:inputFeatureType "Slot" ;
+    mfg:inputMappingConfidence 4e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_milling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 30 ;
+    mfg:unit "mm/tooth" ;
+    mfg:value 5e-02 .
+
+mfg:param_30_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "13" ;
+    mfg:inputFeatureType "Slot" ;
+    mfg:inputMappingConfidence 4e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_milling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 30 ;
+    mfg:unit "RPM" ;
+    mfg:value 1.2e+03 .
+
+mfg:param_31_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "14" ;
+    mfg:inputFeatureType "Slot" ;
+    mfg:inputMappingConfidence 4e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_milling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 31 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_31_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "14" ;
+    mfg:inputFeatureType "Slot" ;
+    mfg:inputMappingConfidence 4e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_milling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 31 ;
+    mfg:unit "mm" ;
+    mfg:value 1e+00 .
+
+mfg:param_31_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "14" ;
+    mfg:inputFeatureType "Slot" ;
+    mfg:inputMappingConfidence 4e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_milling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 31 ;
+    mfg:unit "mm/tooth" ;
+    mfg:value 5e-02 .
+
+mfg:param_31_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "14" ;
+    mfg:inputFeatureType "Slot" ;
+    mfg:inputMappingConfidence 4e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_milling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 31 ;
+    mfg:unit "RPM" ;
+    mfg:value 1.2e+03 .
+
+mfg:param_32_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "22" ;
+    mfg:inputFeatureType "Slot" ;
+    mfg:inputMappingConfidence 4e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_milling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 32 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_32_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "22" ;
+    mfg:inputFeatureType "Slot" ;
+    mfg:inputMappingConfidence 4e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_milling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 32 ;
+    mfg:unit "mm" ;
+    mfg:value 1e+00 .
+
+mfg:param_32_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "22" ;
+    mfg:inputFeatureType "Slot" ;
+    mfg:inputMappingConfidence 4e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_milling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 32 ;
+    mfg:unit "mm/tooth" ;
+    mfg:value 5e-02 .
+
+mfg:param_32_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "22" ;
+    mfg:inputFeatureType "Slot" ;
+    mfg:inputMappingConfidence 4e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_milling_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 32 ;
+    mfg:unit "RPM" ;
+    mfg:value 1.2e+03 .
+
+mfg:param_3_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "1" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 6.206136e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 3 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_3_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "1" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 6.206136e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 3 ;
+    mfg:unit "mm" ;
+    mfg:value 2e+00 .
+
+mfg:param_3_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "1" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 6.206136e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 3 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 2.5e-01 .
+
+mfg:param_3_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "1" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 6.206136e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 3 ;
+    mfg:unit "RPM" ;
+    mfg:value 4.8e+02 .
+
+mfg:param_4_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "3" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 4 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_4_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "3" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 4 ;
+    mfg:unit "mm" ;
+    mfg:value 2e+00 .
+
+mfg:param_4_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "3" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 4 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 2.5e-01 .
+
+mfg:param_4_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "3" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 4 ;
+    mfg:unit "RPM" ;
+    mfg:value 4.8e+02 .
+
+mfg:param_5_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "5" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 5 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_5_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "5" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 5 ;
+    mfg:unit "mm" ;
+    mfg:value 2e+00 .
+
+mfg:param_5_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "5" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 5 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 2.5e-01 .
+
+mfg:param_5_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "5" ;
+    mfg:inputFeatureType "Step" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 5 ;
+    mfg:unit "RPM" ;
+    mfg:value 4.8e+02 .
+
+mfg:param_6_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "10" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 6 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_6_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "10" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 6 ;
+    mfg:unit "mm" ;
+    mfg:value 2e+00 .
+
+mfg:param_6_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "10" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 6 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 2.5e-01 .
+
+mfg:param_6_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "10" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 6 ;
+    mfg:unit "RPM" ;
+    mfg:value 4.8e+02 .
+
+mfg:param_7_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "15" ;
+    mfg:inputFeatureType "Cylinder" ;
+    mfg:inputMappingConfidence 9.748889e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 7 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_7_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "15" ;
+    mfg:inputFeatureType "Cylinder" ;
+    mfg:inputMappingConfidence 9.748889e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 7 ;
+    mfg:unit "mm" ;
+    mfg:value 2e+00 .
+
+mfg:param_7_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "15" ;
+    mfg:inputFeatureType "Cylinder" ;
+    mfg:inputMappingConfidence 9.748889e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 7 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 2.5e-01 .
+
+mfg:param_7_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "15" ;
+    mfg:inputFeatureType "Cylinder" ;
+    mfg:inputMappingConfidence 9.748889e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 7 ;
+    mfg:unit "RPM" ;
+    mfg:value 4.8e+02 .
+
+mfg:param_8_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "16" ;
+    mfg:inputFeatureType "Cylinder" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 8 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_8_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "16" ;
+    mfg:inputFeatureType "Cylinder" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 8 ;
+    mfg:unit "mm" ;
+    mfg:value 2e+00 .
+
+mfg:param_8_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "16" ;
+    mfg:inputFeatureType "Cylinder" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 8 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 2.5e-01 .
+
+mfg:param_8_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "16" ;
+    mfg:inputFeatureType "Cylinder" ;
+    mfg:inputMappingConfidence 1e+00 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 8 ;
+    mfg:unit "RPM" ;
+    mfg:value 4.8e+02 .
+
+mfg:param_9_coolant a mfg:ParameterRecord ;
+    mfg:inputFeatureId "18" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 8.53186e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "coolant" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 9 ;
+    mfg:unit "bool" ;
+    mfg:value true .
+
+mfg:param_9_depth_of_cut a mfg:ParameterRecord ;
+    mfg:inputFeatureId "18" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 8.53186e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "depth_of_cut" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 9 ;
+    mfg:unit "mm" ;
+    mfg:value 2e+00 .
+
+mfg:param_9_feed_rate a mfg:ParameterRecord ;
+    mfg:inputFeatureId "18" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 8.53186e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "feed_rate" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 9 ;
+    mfg:unit "mm/rev" ;
+    mfg:value 2.5e-01 .
+
+mfg:param_9_spindle_speed a mfg:ParameterRecord ;
+    mfg:inputFeatureId "18" ;
+    mfg:inputFeatureType "Boss" ;
+    mfg:inputMappingConfidence 8.53186e-01 ;
+    mfg:inputMaterial "AISI1045Steel" ;
+    mfg:ontologySource <http://onto.brep.org/manufacturing/cutting-parameters#> ;
+    mfg:parameterName "spindle_speed" ;
+    mfg:ruleId "aisi1045_roughturning_params" ;
+    mfg:source "swrl_rule" ;
+    mfg:stepNumber 9 ;
+    mfg:unit "RPM" ;
+    mfg:value 4.8e+02 .
+
+mfg:params_boring a mfg:Parameter ;
+    mfg:id "params_boring" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "g_codes" ;
+    mfg:value "[\"G00\", \"G01\"]" .
+
+mfg:params_chamfering a mfg:Parameter ;
+    mfg:id "params_chamfering" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "g_codes" ;
+    mfg:value "[\"G00\", \"G01\"]" .
+
+mfg:params_counterboring a mfg:Parameter ;
+    mfg:id "params_counterboring" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "g_codes" ;
+    mfg:value "[\"G00\", \"G01\"]" .
+
+mfg:params_drilling a mfg:Parameter ;
+    mfg:id "params_drilling" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "g_codes" ;
+    mfg:value "[\"G00\", \"G01\"]" .
+
+mfg:params_facing a mfg:Parameter ;
+    mfg:id "params_facing" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "g_codes" ;
+    mfg:value "[\"G00\", \"G01\"]" .
+
+mfg:params_finish_turning a mfg:Parameter ;
+    mfg:id "params_finish_turning" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "g_codes" ;
+    mfg:value "[\"G00\", \"G01\", \"G02\", \"G03\"]" .
+
+mfg:params_grooving a mfg:Parameter ;
+    mfg:id "params_grooving" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "g_codes" ;
+    mfg:value "[\"G00\", \"G01\"]" .
+
+mfg:params_milling a mfg:Parameter ;
+    mfg:id "params_milling" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "g_codes" ;
+    mfg:value "[\"G00\", \"G01\", \"G02\", \"G03\"]" .
+
+mfg:params_rough_turning a mfg:Parameter ;
+    mfg:id "params_rough_turning" ;
+    mfg:nodeType "parameter" ;
+    mfg:parameterType "g_codes" ;
+    mfg:value "[\"G00\", \"G01\", \"G02\", \"G03\"]" .
+
+mfg:Machine a owl:Class ;
+    rdfs:label "Machine" ;
+    rdfs:comment "A manufacturing machine (e.g., CNC lathe, milling machine)." .
+
+mfg:op_facing a mfg:Operation ;
+    mfg:description "Machine flat surface perpendicular to axis of rotation" ;
+    mfg:hasGCodes mfg:params_facing ;
+    mfg:id "facing" ;
+    mfg:name "Facing" ;
+    mfg:nodeType "operation" .
+
+mfg:op_milling a mfg:Operation ;
+    mfg:description "Remove material using rotating multi-point cutter" ;
+    mfg:hasGCodes mfg:params_milling ;
+    mfg:id "milling" ;
+    mfg:name "Milling" ;
+    mfg:nodeType "operation" .
+
+mfg:tool_counterbore_cutter a mfg:Tool ;
+    mfg:geometry "90deg Cutting Edge" ;
+    mfg:id "counterbore_cutter" ;
+    mfg:materialType "Carbide" ;
+    mfg:name "Counterbore Cutter" ;
+    mfg:nodeType "tool" ;
+    mfg:toolType "Counterbore" .
+
+mfg:tool_grooving_tool a mfg:Tool ;
+    mfg:geometry "2mm Width" ;
+    mfg:id "grooving_tool" ;
+    mfg:materialType "Carbide" ;
+    mfg:name "Grooving Tool" ;
+    mfg:nodeType "tool" ;
+    mfg:toolType "Grooving Insert" .
+
+mfg:Material a owl:Class ;
+    rdfs:label "Material" ;
+    rdfs:comment "A workpiece material with cutting parameters and machinability properties." .
+
+mfg:op_chamfering a mfg:Operation ;
+    mfg:description "Create angled edge transition" ;
+    mfg:hasGCodes mfg:params_chamfering ;
+    mfg:id "chamfering" ;
+    mfg:name "Chamfering" ;
+    mfg:nodeType "operation" .
+
+mfg:feature_11 a mfg:Feature ;
+    mfg:description "Upper cross hole through the side boss" ;
+    mfg:featureType "Through Hole" ;
+    mfg:hasDimension mfg:dim_11_Ø ;
+    mfg:id "11" ;
+    mfg:locatedAt mfg:loc_11 ;
+    mfg:name "Feature 11 (Through Hole)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_19 .
+
+mfg:feature_12 a mfg:Feature ;
+    mfg:description "Lower cross hole through the side boss" ;
+    mfg:featureType "Through Hole" ;
+    mfg:hasDimension mfg:dim_12_Ø ;
+    mfg:id "12" ;
+    mfg:locatedAt mfg:loc_12 ;
+    mfg:name "Feature 12 (Through Hole)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_20 .
+
+mfg:feature_13 a mfg:Feature ;
+    mfg:description "Upper cylindrical radial cutout on the outer shaft surface." ;
+    mfg:featureType "Slot" ;
+    mfg:hasDimension mfg:dim_13_R,
+        mfg:dim_13_W,
+        mfg:dim_13_Ø ;
+    mfg:id "13" ;
+    mfg:locatedAt mfg:loc_13 ;
+    mfg:name "Feature 13 (Slot)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_30 .
+
+mfg:feature_14 a mfg:Feature ;
+    mfg:description "Lower cylindrical radial cutout on the outer shaft surface." ;
+    mfg:featureType "Slot" ;
+    mfg:hasDimension mfg:dim_14_R,
+        mfg:dim_14_W,
+        mfg:dim_14_Ø ;
+    mfg:id "14" ;
+    mfg:locatedAt mfg:loc_14 ;
+    mfg:name "Feature 14 (Slot)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_31 .
+
+mfg:feature_17 a mfg:Feature ;
+    mfg:description "Cylindrical neck/groove separating the upper and lower bodies, with a diameter of 22mm (R11) and a width of 1.75mm." ;
+    mfg:featureType "Groove" ;
+    mfg:hasDimension mfg:dim_17_R,
+        mfg:dim_17_W,
+        mfg:dim_17_Ø ;
+    mfg:id "17" ;
+    mfg:locatedAt mfg:loc_17 ;
+    mfg:name "Feature 17 (Groove)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_29 .
+
+mfg:feature_19 a mfg:Feature ;
+    mfg:description "Outer section of the central stepped through-hole with a radius of 6.1mm." ;
+    mfg:featureType "Hole" ;
+    mfg:hasDimension mfg:dim_19_R ;
+    mfg:id "19" ;
+    mfg:locatedAt mfg:loc_19 ;
+    mfg:name "Feature 19 (Hole)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_21 .
+
+mfg:feature_2 a mfg:Feature ;
+    mfg:description "Outer chamfer transition" ;
+    mfg:featureType "Chamfer" ;
+    mfg:hasDimension mfg:dim_2_L,
+        mfg:dim_2_Ø ;
+    mfg:id "2" ;
+    mfg:locatedAt mfg:loc_2 ;
+    mfg:name "Feature 2 (Chamfer)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_25 .
+
+mfg:feature_20 a mfg:Feature ;
+    mfg:description "Middle section of the central stepped through-hole with a radius of 4.2mm." ;
+    mfg:featureType "Hole" ;
+    mfg:hasDimension mfg:dim_20_R ;
+    mfg:id "20" ;
+    mfg:locatedAt mfg:loc_20 ;
+    mfg:name "Feature 20 (Hole)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_22 .
+
+mfg:feature_21 a mfg:Feature ;
+    mfg:description "Inner section of the central stepped through-hole with a radius of 3.4mm." ;
+    mfg:featureType "Hole" ;
+    mfg:hasDimension mfg:dim_21_R ;
+    mfg:id "21" ;
+    mfg:locatedAt mfg:loc_21 ;
+    mfg:name "Feature 21 (Hole)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_23 .
+
+mfg:feature_22 a mfg:Feature ;
+    mfg:description "Slot feature on the upper cylinder with a width of 4 mm" ;
+    mfg:featureType "Slot" ;
+    mfg:hasDimension mfg:dim_22_W ;
+    mfg:id "22" ;
+    mfg:locatedAt mfg:loc_22 ;
+    mfg:name "Feature 22 (Slot)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_32 .
+
+mfg:feature_4 a mfg:Feature ;
+    mfg:description "Conical transition to upper cylinder" ;
+    mfg:featureType "Chamfer" ;
+    mfg:hasDimension mfg:dim_4_L,
+        mfg:dim_4_Ø ;
+    mfg:id "4" ;
+    mfg:locatedAt mfg:loc_4 ;
+    mfg:name "Feature 4 (Chamfer)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_26 .
+
+mfg:feature_6 a mfg:Feature ;
+    mfg:description "Top outer chamfer" ;
+    mfg:featureType "Chamfer" ;
+    mfg:hasDimension mfg:dim_6_L,
+        mfg:dim_6_Ø ;
+    mfg:id "6" ;
+    mfg:locatedAt mfg:loc_6 ;
+    mfg:name "Feature 6 (Chamfer)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_27 .
+
+mfg:feature_7 a mfg:Feature ;
+    mfg:description "Central blind hole with drill tip" ;
+    mfg:featureType "Blind Hole" ;
+    mfg:hasDimension mfg:dim_7_L,
+        mfg:dim_7_R,
+        mfg:dim_7_W,
+        mfg:dim_7_Ø ;
+    mfg:id "7" ;
+    mfg:locatedAt mfg:loc_7 ;
+    mfg:name "Feature 7 (Blind Hole)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_17 .
+
+mfg:feature_9 a mfg:Feature ;
+    mfg:description "Top inner chamfer for counterbore" ;
+    mfg:featureType "Chamfer" ;
+    mfg:hasDimension mfg:dim_9_L,
+        mfg:dim_9_Ø ;
+    mfg:id "9" ;
+    mfg:locatedAt mfg:loc_9 ;
+    mfg:name "Feature 9 (Chamfer)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_28 .
+
+mfg:op_drilling a mfg:Operation ;
+    mfg:description "Create hole using drill bit" ;
+    mfg:hasGCodes mfg:params_drilling ;
+    mfg:id "drilling" ;
+    mfg:name "Drilling" ;
+    mfg:nodeType "operation" .
+
+mfg:op_finish_turning a mfg:Operation ;
+    mfg:description "Final pass to achieve surface finish and tolerance" ;
+    mfg:hasGCodes mfg:params_finish_turning ;
+    mfg:id "finish_turning" ;
+    mfg:name "Finish Turning" ;
+    mfg:nodeType "operation" .
+
+mfg:op_rough_turning a mfg:Operation ;
+    mfg:description "Remove bulk material to near-final dimensions" ;
+    mfg:hasGCodes mfg:params_rough_turning ;
+    mfg:id "rough_turning" ;
+    mfg:name "Rough Turning" ;
+    mfg:nodeType "operation" .
+
+mfg:tool_end_mill a mfg:Tool ;
+    mfg:geometry "4-Flute" ;
+    mfg:id "end_mill" ;
+    mfg:materialType "Carbide" ;
+    mfg:name "End Mill" ;
+    mfg:nodeType "tool" ;
+    mfg:toolType "Milling Cutter" .
+
+mfg:Tool a owl:Class ;
+    rdfs:label "Tool" ;
+    rdfs:comment "A cutting tool used in machining operations (e.g., turning tool, drill bit, groove tool)." .
+
+mfg:opstep_1 a mfg:Operation ;
+    mfg:description "Machine flat surface perpendicular to axis of rotation" ;
+    mfg:hasParameterRecord mfg:param_1_coolant,
+        mfg:param_1_depth_of_cut,
+        mfg:param_1_feed_rate,
+        mfg:param_1_spindle_speed ;
+    mfg:id "opstep_1" ;
+    mfg:instanceOfOperationType mfg:op_facing ;
+    mfg:name "Facing" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_2 ;
+    mfg:stepNumber 1 ;
+    mfg:uses mfg:tool_turning_insert_rough ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:feature_1 a mfg:Feature ;
+    mfg:description "Main lower cylindrical body" ;
+    mfg:featureType "Step" ;
+    mfg:hasDimension mfg:dim_1_L,
+        mfg:dim_1_R,
+        mfg:dim_1_Ø ;
+    mfg:id "1" ;
+    mfg:locatedAt mfg:loc_1 ;
+    mfg:name "Feature 1 (Step)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_10,
+        mfg:opstep_3 .
+
+mfg:feature_15 a mfg:Feature ;
+    mfg:description "Main upper cylindrical body with a diameter of 24mm (R12) and a length of 46.5mm." ;
+    mfg:featureType "Cylinder" ;
+    mfg:hasDimension mfg:dim_15_L,
+        mfg:dim_15_R,
+        mfg:dim_15_Ø ;
+    mfg:id "15" ;
+    mfg:locatedAt mfg:loc_15 ;
+    mfg:name "Feature 15 (Cylinder)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_14,
+        mfg:opstep_7 .
+
+mfg:feature_16 a mfg:Feature ;
+    mfg:description "Lower cylindrical body with a diameter of 24mm (R12) and a length of 37.5mm." ;
+    mfg:featureType "Cylinder" ;
+    mfg:hasDimension mfg:dim_16_L,
+        mfg:dim_16_R,
+        mfg:dim_16_Ø ;
+    mfg:id "16" ;
+    mfg:locatedAt mfg:loc_16 ;
+    mfg:name "Feature 16 (Cylinder)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_15,
+        mfg:opstep_8 .
+
+mfg:feature_3 a mfg:Feature ;
+    mfg:description "Middle cylindrical step" ;
+    mfg:featureType "Step" ;
+    mfg:hasDimension mfg:dim_3_L,
+        mfg:dim_3_Ø ;
+    mfg:id "3" ;
+    mfg:locatedAt mfg:loc_3 ;
+    mfg:name "Feature 3 (Step)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_11,
+        mfg:opstep_4 .
+
+mfg:feature_5 a mfg:Feature ;
+    mfg:description "Upper cylindrical body" ;
+    mfg:featureType "Step" ;
+    mfg:hasDimension mfg:dim_5_L,
+        mfg:dim_5_Ø ;
+    mfg:id "5" ;
+    mfg:locatedAt mfg:loc_5 ;
+    mfg:name "Feature 5 (Step)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_12,
+        mfg:opstep_5 .
+
+mfg:feature_8 a mfg:Feature ;
+    mfg:description "Counterbore for central hole" ;
+    mfg:featureType "Counterbore" ;
+    mfg:hasDimension mfg:dim_8_L,
+        mfg:dim_8_R,
+        mfg:dim_8_W,
+        mfg:dim_8_Ø ;
+    mfg:id "8" ;
+    mfg:locatedAt mfg:loc_8 ;
+    mfg:name "Feature 8 (Counterbore)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_18,
+        mfg:opstep_24 .
+
+mfg:opstep_32 a mfg:Operation ;
+    mfg:description "Remove material using rotating multi-point cutter" ;
+    mfg:hasParameterRecord mfg:param_32_coolant,
+        mfg:param_32_depth_of_cut,
+        mfg:param_32_feed_rate,
+        mfg:param_32_spindle_speed ;
+    mfg:id "opstep_32" ;
+    mfg:instanceOfOperationType mfg:op_milling ;
+    mfg:name "Milling" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:stepNumber 32 ;
+    mfg:uses mfg:tool_end_mill ;
+    mfg:validationStatus "requires_review" .
+
+mfg:tool_chamfer_mill a mfg:Tool ;
+    mfg:geometry "90deg Chamfer" ;
+    mfg:id "chamfer_mill" ;
+    mfg:materialType "Carbide" ;
+    mfg:name "Chamfer Mill" ;
+    mfg:nodeType "tool" ;
+    mfg:toolType "Chamfer Tool" .
+
+mfg:opstep_10 a mfg:Operation ;
+    mfg:description "Final pass to achieve surface finish and tolerance" ;
+    mfg:hasParameterRecord mfg:param_10_coolant,
+        mfg:param_10_depth_of_cut,
+        mfg:param_10_feed_rate,
+        mfg:param_10_spindle_speed ;
+    mfg:id "opstep_10" ;
+    mfg:instanceOfOperationType mfg:op_finish_turning ;
+    mfg:name "Finish Turning" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_11 ;
+    mfg:stepNumber 10 ;
+    mfg:uses mfg:tool_turning_insert_finish ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_11 a mfg:Operation ;
+    mfg:description "Final pass to achieve surface finish and tolerance" ;
+    mfg:hasParameterRecord mfg:param_11_coolant,
+        mfg:param_11_depth_of_cut,
+        mfg:param_11_feed_rate,
+        mfg:param_11_spindle_speed ;
+    mfg:id "opstep_11" ;
+    mfg:instanceOfOperationType mfg:op_finish_turning ;
+    mfg:name "Finish Turning" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_12 ;
+    mfg:stepNumber 11 ;
+    mfg:uses mfg:tool_turning_insert_finish ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_12 a mfg:Operation ;
+    mfg:description "Final pass to achieve surface finish and tolerance" ;
+    mfg:hasParameterRecord mfg:param_12_coolant,
+        mfg:param_12_depth_of_cut,
+        mfg:param_12_feed_rate,
+        mfg:param_12_spindle_speed ;
+    mfg:id "opstep_12" ;
+    mfg:instanceOfOperationType mfg:op_finish_turning ;
+    mfg:name "Finish Turning" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_13 ;
+    mfg:stepNumber 12 ;
+    mfg:uses mfg:tool_turning_insert_finish ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_13 a mfg:Operation ;
+    mfg:description "Final pass to achieve surface finish and tolerance" ;
+    mfg:hasParameterRecord mfg:param_13_coolant,
+        mfg:param_13_depth_of_cut,
+        mfg:param_13_feed_rate,
+        mfg:param_13_spindle_speed ;
+    mfg:id "opstep_13" ;
+    mfg:instanceOfOperationType mfg:op_finish_turning ;
+    mfg:name "Finish Turning" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_14 ;
+    mfg:stepNumber 13 ;
+    mfg:uses mfg:tool_turning_insert_finish ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_14 a mfg:Operation ;
+    mfg:description "Final pass to achieve surface finish and tolerance" ;
+    mfg:hasParameterRecord mfg:param_14_coolant,
+        mfg:param_14_depth_of_cut,
+        mfg:param_14_feed_rate,
+        mfg:param_14_spindle_speed ;
+    mfg:id "opstep_14" ;
+    mfg:instanceOfOperationType mfg:op_finish_turning ;
+    mfg:name "Finish Turning" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_15 ;
+    mfg:stepNumber 14 ;
+    mfg:uses mfg:tool_turning_insert_finish ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_15 a mfg:Operation ;
+    mfg:description "Final pass to achieve surface finish and tolerance" ;
+    mfg:hasParameterRecord mfg:param_15_coolant,
+        mfg:param_15_depth_of_cut,
+        mfg:param_15_feed_rate,
+        mfg:param_15_spindle_speed ;
+    mfg:id "opstep_15" ;
+    mfg:instanceOfOperationType mfg:op_finish_turning ;
+    mfg:name "Finish Turning" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_16 ;
+    mfg:stepNumber 15 ;
+    mfg:uses mfg:tool_turning_insert_finish ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_16 a mfg:Operation ;
+    mfg:description "Final pass to achieve surface finish and tolerance" ;
+    mfg:hasParameterRecord mfg:param_16_coolant,
+        mfg:param_16_depth_of_cut,
+        mfg:param_16_feed_rate,
+        mfg:param_16_spindle_speed ;
+    mfg:id "opstep_16" ;
+    mfg:instanceOfOperationType mfg:op_finish_turning ;
+    mfg:name "Finish Turning" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_17 ;
+    mfg:stepNumber 16 ;
+    mfg:uses mfg:tool_turning_insert_finish ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_17 a mfg:Operation ;
+    mfg:description "Create hole using drill bit" ;
+    mfg:hasParameterRecord mfg:param_17_coolant,
+        mfg:param_17_depth_of_cut,
+        mfg:param_17_feed_rate,
+        mfg:param_17_spindle_speed ;
+    mfg:id "opstep_17" ;
+    mfg:instanceOfOperationType mfg:op_drilling ;
+    mfg:name "Drilling" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_18 ;
+    mfg:stepNumber 17 ;
+    mfg:uses mfg:tool_drill_bit ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_18 a mfg:Operation ;
+    mfg:description "Create hole using drill bit" ;
+    mfg:hasParameterRecord mfg:param_18_coolant,
+        mfg:param_18_depth_of_cut,
+        mfg:param_18_feed_rate,
+        mfg:param_18_spindle_speed ;
+    mfg:id "opstep_18" ;
+    mfg:instanceOfOperationType mfg:op_drilling ;
+    mfg:name "Drilling" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_19 ;
+    mfg:stepNumber 18 ;
+    mfg:uses mfg:tool_drill_bit ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_19 a mfg:Operation ;
+    mfg:description "Create hole using drill bit" ;
+    mfg:hasParameterRecord mfg:param_19_coolant,
+        mfg:param_19_depth_of_cut,
+        mfg:param_19_feed_rate,
+        mfg:param_19_spindle_speed ;
+    mfg:id "opstep_19" ;
+    mfg:instanceOfOperationType mfg:op_drilling ;
+    mfg:name "Drilling" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_20 ;
+    mfg:stepNumber 19 ;
+    mfg:uses mfg:tool_drill_bit ;
+    mfg:validationStatus "requires_review" .
+
+mfg:opstep_2 a mfg:Operation ;
+    mfg:description "Machine flat surface perpendicular to axis of rotation" ;
+    mfg:hasParameterRecord mfg:param_2_coolant,
+        mfg:param_2_depth_of_cut,
+        mfg:param_2_feed_rate,
+        mfg:param_2_spindle_speed ;
+    mfg:id "opstep_2" ;
+    mfg:instanceOfOperationType mfg:op_facing ;
+    mfg:name "Facing" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_3 ;
+    mfg:stepNumber 2 ;
+    mfg:uses mfg:tool_turning_insert_rough ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_20 a mfg:Operation ;
+    mfg:description "Create hole using drill bit" ;
+    mfg:hasParameterRecord mfg:param_20_coolant,
+        mfg:param_20_depth_of_cut,
+        mfg:param_20_feed_rate,
+        mfg:param_20_spindle_speed ;
+    mfg:id "opstep_20" ;
+    mfg:instanceOfOperationType mfg:op_drilling ;
+    mfg:name "Drilling" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_21 ;
+    mfg:stepNumber 20 ;
+    mfg:uses mfg:tool_drill_bit ;
+    mfg:validationStatus "requires_review" .
+
+mfg:opstep_21 a mfg:Operation ;
+    mfg:description "Create hole using drill bit" ;
+    mfg:hasParameterRecord mfg:param_21_coolant,
+        mfg:param_21_depth_of_cut,
+        mfg:param_21_feed_rate,
+        mfg:param_21_spindle_speed ;
+    mfg:id "opstep_21" ;
+    mfg:instanceOfOperationType mfg:op_drilling ;
+    mfg:name "Drilling" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_22 ;
+    mfg:stepNumber 21 ;
+    mfg:uses mfg:tool_drill_bit ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_22 a mfg:Operation ;
+    mfg:description "Create hole using drill bit" ;
+    mfg:hasParameterRecord mfg:param_22_coolant,
+        mfg:param_22_depth_of_cut,
+        mfg:param_22_feed_rate,
+        mfg:param_22_spindle_speed ;
+    mfg:id "opstep_22" ;
+    mfg:instanceOfOperationType mfg:op_drilling ;
+    mfg:name "Drilling" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_23 ;
+    mfg:stepNumber 22 ;
+    mfg:uses mfg:tool_drill_bit ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_23 a mfg:Operation ;
+    mfg:description "Create hole using drill bit" ;
+    mfg:hasParameterRecord mfg:param_23_coolant,
+        mfg:param_23_depth_of_cut,
+        mfg:param_23_feed_rate,
+        mfg:param_23_spindle_speed ;
+    mfg:id "opstep_23" ;
+    mfg:instanceOfOperationType mfg:op_drilling ;
+    mfg:name "Drilling" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_24 ;
+    mfg:stepNumber 23 ;
+    mfg:uses mfg:tool_drill_bit ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_24 a mfg:Operation ;
+    mfg:description "Enlarge entrance of hole for head clearance" ;
+    mfg:hasParameterRecord mfg:param_24_coolant,
+        mfg:param_24_depth_of_cut,
+        mfg:param_24_feed_rate,
+        mfg:param_24_spindle_speed ;
+    mfg:id "opstep_24" ;
+    mfg:instanceOfOperationType mfg:op_counterboring ;
+    mfg:name "Counterboring" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_25 ;
+    mfg:stepNumber 24 ;
+    mfg:uses mfg:tool_counterbore_cutter ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_25 a mfg:Operation ;
+    mfg:description "Create angled edge transition" ;
+    mfg:hasParameterRecord mfg:param_25_coolant,
+        mfg:param_25_depth_of_cut,
+        mfg:param_25_feed_rate,
+        mfg:param_25_spindle_speed ;
+    mfg:id "opstep_25" ;
+    mfg:instanceOfOperationType mfg:op_chamfering ;
+    mfg:name "Chamfering" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_26 ;
+    mfg:stepNumber 25 ;
+    mfg:uses mfg:tool_chamfer_mill ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_26 a mfg:Operation ;
+    mfg:description "Create angled edge transition" ;
+    mfg:hasParameterRecord mfg:param_26_coolant,
+        mfg:param_26_depth_of_cut,
+        mfg:param_26_feed_rate,
+        mfg:param_26_spindle_speed ;
+    mfg:id "opstep_26" ;
+    mfg:instanceOfOperationType mfg:op_chamfering ;
+    mfg:name "Chamfering" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_27 ;
+    mfg:stepNumber 26 ;
+    mfg:uses mfg:tool_chamfer_mill ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_27 a mfg:Operation ;
+    mfg:description "Create angled edge transition" ;
+    mfg:hasParameterRecord mfg:param_27_coolant,
+        mfg:param_27_depth_of_cut,
+        mfg:param_27_feed_rate,
+        mfg:param_27_spindle_speed ;
+    mfg:id "opstep_27" ;
+    mfg:instanceOfOperationType mfg:op_chamfering ;
+    mfg:name "Chamfering" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_28 ;
+    mfg:stepNumber 27 ;
+    mfg:uses mfg:tool_chamfer_mill ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_28 a mfg:Operation ;
+    mfg:description "Create angled edge transition" ;
+    mfg:hasParameterRecord mfg:param_28_coolant,
+        mfg:param_28_depth_of_cut,
+        mfg:param_28_feed_rate,
+        mfg:param_28_spindle_speed ;
+    mfg:id "opstep_28" ;
+    mfg:instanceOfOperationType mfg:op_chamfering ;
+    mfg:name "Chamfering" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_29 ;
+    mfg:stepNumber 28 ;
+    mfg:uses mfg:tool_chamfer_mill ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_29 a mfg:Operation ;
+    mfg:description "Cut narrow groove into workpiece" ;
+    mfg:hasParameterRecord mfg:param_29_coolant,
+        mfg:param_29_depth_of_cut,
+        mfg:param_29_feed_rate,
+        mfg:param_29_spindle_speed ;
+    mfg:id "opstep_29" ;
+    mfg:instanceOfOperationType mfg:op_grooving ;
+    mfg:name "Grooving" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_30 ;
+    mfg:stepNumber 29 ;
+    mfg:uses mfg:tool_grooving_tool ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_3 a mfg:Operation ;
+    mfg:description "Remove bulk material to near-final dimensions" ;
+    mfg:hasParameterRecord mfg:param_3_coolant,
+        mfg:param_3_depth_of_cut,
+        mfg:param_3_feed_rate,
+        mfg:param_3_spindle_speed ;
+    mfg:id "opstep_3" ;
+    mfg:instanceOfOperationType mfg:op_rough_turning ;
+    mfg:name "Rough Turning" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_4 ;
+    mfg:stepNumber 3 ;
+    mfg:uses mfg:tool_turning_insert_rough ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_30 a mfg:Operation ;
+    mfg:description "Remove material using rotating multi-point cutter" ;
+    mfg:hasParameterRecord mfg:param_30_coolant,
+        mfg:param_30_depth_of_cut,
+        mfg:param_30_feed_rate,
+        mfg:param_30_spindle_speed ;
+    mfg:id "opstep_30" ;
+    mfg:instanceOfOperationType mfg:op_milling ;
+    mfg:name "Milling" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_31 ;
+    mfg:stepNumber 30 ;
+    mfg:uses mfg:tool_end_mill ;
+    mfg:validationStatus "requires_review" .
+
+mfg:opstep_31 a mfg:Operation ;
+    mfg:description "Remove material using rotating multi-point cutter" ;
+    mfg:hasParameterRecord mfg:param_31_coolant,
+        mfg:param_31_depth_of_cut,
+        mfg:param_31_feed_rate,
+        mfg:param_31_spindle_speed ;
+    mfg:id "opstep_31" ;
+    mfg:instanceOfOperationType mfg:op_milling ;
+    mfg:name "Milling" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_32 ;
+    mfg:stepNumber 31 ;
+    mfg:uses mfg:tool_end_mill ;
+    mfg:validationStatus "requires_review" .
+
+mfg:opstep_4 a mfg:Operation ;
+    mfg:description "Remove bulk material to near-final dimensions" ;
+    mfg:hasParameterRecord mfg:param_4_coolant,
+        mfg:param_4_depth_of_cut,
+        mfg:param_4_feed_rate,
+        mfg:param_4_spindle_speed ;
+    mfg:id "opstep_4" ;
+    mfg:instanceOfOperationType mfg:op_rough_turning ;
+    mfg:name "Rough Turning" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_5 ;
+    mfg:stepNumber 4 ;
+    mfg:uses mfg:tool_turning_insert_rough ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_5 a mfg:Operation ;
+    mfg:description "Remove bulk material to near-final dimensions" ;
+    mfg:hasParameterRecord mfg:param_5_coolant,
+        mfg:param_5_depth_of_cut,
+        mfg:param_5_feed_rate,
+        mfg:param_5_spindle_speed ;
+    mfg:id "opstep_5" ;
+    mfg:instanceOfOperationType mfg:op_rough_turning ;
+    mfg:name "Rough Turning" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_6 ;
+    mfg:stepNumber 5 ;
+    mfg:uses mfg:tool_turning_insert_rough ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_6 a mfg:Operation ;
+    mfg:description "Remove bulk material to near-final dimensions" ;
+    mfg:hasParameterRecord mfg:param_6_coolant,
+        mfg:param_6_depth_of_cut,
+        mfg:param_6_feed_rate,
+        mfg:param_6_spindle_speed ;
+    mfg:id "opstep_6" ;
+    mfg:instanceOfOperationType mfg:op_rough_turning ;
+    mfg:name "Rough Turning" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_7 ;
+    mfg:stepNumber 6 ;
+    mfg:uses mfg:tool_turning_insert_rough ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_7 a mfg:Operation ;
+    mfg:description "Remove bulk material to near-final dimensions" ;
+    mfg:hasParameterRecord mfg:param_7_coolant,
+        mfg:param_7_depth_of_cut,
+        mfg:param_7_feed_rate,
+        mfg:param_7_spindle_speed ;
+    mfg:id "opstep_7" ;
+    mfg:instanceOfOperationType mfg:op_rough_turning ;
+    mfg:name "Rough Turning" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_8 ;
+    mfg:stepNumber 7 ;
+    mfg:uses mfg:tool_turning_insert_rough ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_8 a mfg:Operation ;
+    mfg:description "Remove bulk material to near-final dimensions" ;
+    mfg:hasParameterRecord mfg:param_8_coolant,
+        mfg:param_8_depth_of_cut,
+        mfg:param_8_feed_rate,
+        mfg:param_8_spindle_speed ;
+    mfg:id "opstep_8" ;
+    mfg:instanceOfOperationType mfg:op_rough_turning ;
+    mfg:name "Rough Turning" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_9 ;
+    mfg:stepNumber 8 ;
+    mfg:uses mfg:tool_turning_insert_rough ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:opstep_9 a mfg:Operation ;
+    mfg:description "Remove bulk material to near-final dimensions" ;
+    mfg:hasParameterRecord mfg:param_9_coolant,
+        mfg:param_9_depth_of_cut,
+        mfg:param_9_feed_rate,
+        mfg:param_9_spindle_speed ;
+    mfg:id "opstep_9" ;
+    mfg:instanceOfOperationType mfg:op_rough_turning ;
+    mfg:name "Rough Turning" ;
+    mfg:nodeType "operation_instance" ;
+    mfg:removes mfg:material_steel_1045 ;
+    mfg:runsOn mfg:machine_cnc_lathe ;
+    mfg:sequenceBefore mfg:opstep_10 ;
+    mfg:stepNumber 9 ;
+    mfg:uses mfg:tool_turning_insert_rough ;
+    mfg:validationStatus "auto_approved" .
+
+mfg:feature_10 a mfg:Feature ;
+    mfg:description "Rectangular boss on the side of the upper cylinder" ;
+    mfg:featureType "Boss" ;
+    mfg:hasDimension mfg:dim_10_W ;
+    mfg:id "10" ;
+    mfg:locatedAt mfg:loc_10 ;
+    mfg:name "Feature 10 (Boss)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_1,
+        mfg:opstep_13,
+        mfg:opstep_6 .
+
+mfg:feature_18 a mfg:Feature ;
+    mfg:description "Rectangular key/protrusion on the upper cylinder, 4mm wide, 32mm long, protruding 3mm from the cylinder surface. It is offset 3.69mm from the centerline to its left edge." ;
+    mfg:featureType "Boss" ;
+    mfg:hasDimension mfg:dim_18_L,
+        mfg:dim_18_W ;
+    mfg:id "18" ;
+    mfg:locatedAt mfg:loc_18 ;
+    mfg:name "Feature 18 (Boss)" ;
+    mfg:nodeType "feature" ;
+    mfg:requires mfg:opstep_16,
+        mfg:opstep_2,
+        mfg:opstep_9 .
+
+mfg:tool_drill_bit a mfg:Tool ;
+    mfg:geometry "118deg Point Angle" ;
+    mfg:id "drill_bit" ;
+    mfg:materialType "High-Speed Steel" ;
+    mfg:name "Twist Drill Bit" ;
+    mfg:nodeType "tool" ;
+    mfg:toolType "Drill Bit" .
+
+mfg:tool_turning_insert_finish a mfg:Tool ;
+    mfg:geometry "CNMG 120404" ;
+    mfg:id "turning_insert_finish" ;
+    mfg:materialType "Carbide with Coating" ;
+    mfg:name "Finish Turning Insert" ;
+    mfg:nodeType "tool" ;
+    mfg:toolType "Turning Insert" .
+
+mfg:Feature a owl:Class ;
+    rdfs:label "Feature" ;
+    rdfs:comment "A geometric feature extracted from CAD model (e.g., cylinder, groove, slot, chamfer)." ;
+    rdfs:subClassOf brep:BoundaryEntity .
+
+mfg:tool_turning_insert_rough a mfg:Tool ;
+    mfg:geometry "CNMG 120408" ;
+    mfg:id "turning_insert_rough" ;
+    mfg:materialType "Carbide" ;
+    mfg:name "Rough Turning Insert" ;
+    mfg:nodeType "tool" ;
+    mfg:toolType "Turning Insert" .
+
+mfg:machine_cnc_lathe a mfg:Machine ;
+    mfg:capability "control_system",
+        "max_bar_diameter",
+        "max_spindle_speed",
+        "max_swing_diameter",
+        "turret_stations" ;
+    mfg:id "cnc_lathe" ;
+    mfg:name "CNC Lathe" ;
+    mfg:nodeType "machine" .
+
+mfg:material_steel_1045 a mfg:Material ;
+    mfg:id "steel_1045" ;
+    mfg:materialType "" ;
+    mfg:name "AISI 1045 Steel" ;
+    mfg:nodeType "material" .
+
+mfg:Operation a owl:Class ;
+    rdfs:label "Operation" ;
+    rdfs:comment "A machining operation (e.g., turning, facing, grooving, threading, drilling)." .
+
+mfg:sequenceBefore a owl:ObjectProperty ;
+    rdfs:label "sequence before" ;
+    rdfs:comment "An operation is performed before another in the machining sequence." ;
+    rdfs:domain mfg:Operation ;
+    rdfs:range mfg:Operation .
+
+mfg:uses a owl:ObjectProperty ;
+    rdfs:label "uses" ;
+    rdfs:comment "An operation uses a specific cutting tool." ;
+    rdfs:domain mfg:Operation ;
+    rdfs:range mfg:Tool .
+
+mfg:Parameter a owl:Class ;
+    rdfs:label "Parameter" ;
+    rdfs:comment "A machining parameter (dimension, location, speed, feed, depth of cut)." .
+
+mfg:requires a owl:ObjectProperty ;
+    rdfs:label "requires" ;
+    rdfs:comment "A feature requires a specific machining operation." ;
+    rdfs:domain mfg:Feature ;
+    rdfs:range mfg:Operation .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "requires_review" ;
+    rdf:object mfg:opstep_32 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_22 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "4" ;
+    rdf:object mfg:opstep_4 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_3 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "25" ;
+    rdf:object mfg:opstep_25 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_24 .
+
+[] a rdf:Statement ;
+    mfg:toolType "turning_insert_rough" ;
+    rdf:object mfg:tool_turning_insert_rough ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_2 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "24" ;
+    rdf:object mfg:opstep_24 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_23 .
+
+[] a rdf:Statement ;
+    mfg:toolType "drill_bit" ;
+    rdf:object mfg:tool_drill_bit ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_17 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "7" ;
+    rdf:object mfg:opstep_7 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_15 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_18 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_8 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_4 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_3 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "requires_review" ;
+    rdf:object mfg:opstep_30 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_13 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_turning_insert_finish ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_11 .
+
+[] a rdf:Statement ;
+    mfg:toolType "chamfer_mill" ;
+    rdf:object mfg:tool_chamfer_mill ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_26 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "32" ;
+    rdf:object mfg:opstep_32 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_31 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_13 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_10 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "23" ;
+    rdf:object mfg:opstep_23 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_22 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "8" ;
+    rdf:object mfg:opstep_8 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_7 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_11 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_3 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "30" ;
+    rdf:object mfg:opstep_31 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_30 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_15 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_16 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_finishturning_params" ;
+    rdf:object mfg:opstep_14 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_15 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "31" ;
+    rdf:object mfg:opstep_31 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_30 .
+
+[] a rdf:Statement ;
+    mfg:toolType "turning_insert_finish" ;
+    rdf:object mfg:tool_turning_insert_finish ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_16 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_9 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_18 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_9 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_18 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_1 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_10 .
+
+[] a rdf:Statement ;
+    mfg:confidence "1.0" ;
+    rdf:object mfg:opstep_27 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_6 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_8 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_16 .
+
+[] a rdf:Statement ;
+    mfg:toolType "drill_bit" ;
+    rdf:object mfg:tool_drill_bit ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_20 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_11 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_3 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_16 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_18 .
+
+[] a rdf:Statement ;
+    mfg:toolType "turning_insert_rough" ;
+    rdf:object mfg:tool_turning_insert_rough ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_9 .
+
+[] a rdf:Statement ;
+    mfg:confidence "0.8531860204797806" ;
+    rdf:object mfg:opstep_2 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_18 .
+
+[] a rdf:Statement ;
+    mfg:confidence "1.0" ;
+    rdf:object mfg:opstep_5 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_5 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology|requiresExpertValidation" ;
+    rdf:object mfg:opstep_19 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_11 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_7 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_15 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_drill_bit ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_19 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "26" ;
+    rdf:object mfg:opstep_27 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_26 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_finishturning_params" ;
+    rdf:object mfg:opstep_15 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_16 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "10" ;
+    rdf:object mfg:opstep_10 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_1 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_14 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_15 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_22 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_20 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_18 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_8 .
+
+[] a rdf:Statement ;
+    mfg:confidence "1.0" ;
+    rdf:object mfg:opstep_28 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_9 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "preferred_tool_selection" ;
+    rdf:object mfg:tool_end_mill ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_32 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "14" ;
+    rdf:object mfg:opstep_14 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_13 .
+
+[] a rdf:Statement ;
+    mfg:toolType "turning_insert_finish" ;
+    rdf:object mfg:tool_turning_insert_finish ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_11 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "8" ;
+    rdf:object mfg:opstep_9 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_8 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "21" ;
+    rdf:object mfg:opstep_21 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_20 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_drilling_params" ;
+    rdf:object mfg:opstep_20 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_12 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "23" ;
+    rdf:object mfg:opstep_23 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_21 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "14" ;
+    rdf:object mfg:opstep_15 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_14 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "requires_review" ;
+    rdf:object mfg:opstep_19 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_11 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "30" ;
+    rdf:object mfg:opstep_30 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_29 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_drilling_params" ;
+    rdf:object mfg:opstep_17 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_7 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "16" ;
+    rdf:object mfg:opstep_16 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_15 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "28" ;
+    rdf:object mfg:opstep_28 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_9 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "15" ;
+    rdf:object mfg:opstep_15 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_14 .
+
+[] a rdf:Statement ;
+    mfg:confidence "1.0" ;
+    rdf:object mfg:opstep_1 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_10 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "30" ;
+    rdf:object mfg:opstep_30 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_13 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "9" ;
+    rdf:object mfg:opstep_9 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_8 .
+
+[] a rdf:Statement ;
+    mfg:confidence "0.4" ;
+    rdf:object mfg:opstep_32 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_22 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_drilling_params" ;
+    rdf:object mfg:opstep_22 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_20 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "18" ;
+    rdf:object mfg:opstep_18 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_17 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_23 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_21 .
+
+[] a rdf:Statement ;
+    mfg:toolType "chamfer_mill" ;
+    rdf:object mfg:tool_chamfer_mill ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_25 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_12 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_5 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "requires_review" ;
+    rdf:object mfg:opstep_20 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_12 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_22 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_20 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_16 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_18 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_3 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_1 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_27 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_6 .
+
+[] a rdf:Statement ;
+    mfg:confidence "0.673" ;
+    rdf:object mfg:opstep_21 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_19 .
+
+[] a rdf:Statement ;
+    mfg:confidence "1.0" ;
+    rdf:object mfg:opstep_26 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_4 .
+
+[] a rdf:Statement ;
+    mfg:toolType "turning_insert_finish" ;
+    rdf:object mfg:tool_turning_insert_finish ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_14 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_23 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_21 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_drilling_params" ;
+    rdf:object mfg:opstep_19 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_11 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_25 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_2 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_29 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_17 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "13" ;
+    rdf:object mfg:opstep_13 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_10 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_6 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_10 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "counterboring_default_params" ;
+    rdf:object mfg:opstep_24 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_8 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "facing_default_params" ;
+    rdf:object mfg:opstep_2 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_18 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "29" ;
+    rdf:object mfg:opstep_29 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_17 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_2 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_18 .
+
+[] a rdf:Statement ;
+    mfg:confidence "1.0" ;
+    rdf:object mfg:opstep_6 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_10 .
+
+[] a rdf:Statement ;
+    mfg:toolType "drill_bit" ;
+    rdf:object mfg:tool_drill_bit ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_21 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_1 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_10 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_27 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_6 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "requires_review" ;
+    rdf:object mfg:opstep_31 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_14 .
+
+[] a rdf:Statement ;
+    mfg:confidence "1.0" ;
+    rdf:object mfg:opstep_25 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_2 .
+
+[] a rdf:Statement ;
+    mfg:toolType "chamfer_mill" ;
+    rdf:object mfg:tool_chamfer_mill ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_27 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_grooving_tool ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_29 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_drill_bit ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_22 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "17" ;
+    rdf:object mfg:opstep_17 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_7 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "chamfering_default_params" ;
+    rdf:object mfg:opstep_25 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_2 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "13" ;
+    rdf:object mfg:opstep_14 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_13 .
+
+[] a rdf:Statement ;
+    mfg:toolType "chamfer_mill" ;
+    rdf:object mfg:tool_chamfer_mill ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_28 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_10 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_1 .
+
+[] a rdf:Statement ;
+    mfg:toolType "turning_insert_rough" ;
+    rdf:object mfg:tool_turning_insert_rough ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_1 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_21 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_19 .
+
+[] a rdf:Statement ;
+    mfg:confidence "0.8531860204797806" ;
+    rdf:object mfg:opstep_9 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_18 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "preferred_tool_selection" ;
+    rdf:object mfg:tool_chamfer_mill ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_25 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_18 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_8 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_drill_bit ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_20 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "20" ;
+    rdf:object mfg:opstep_21 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_20 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_25 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_2 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "6" ;
+    rdf:object mfg:opstep_6 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_5 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_2 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_18 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_27 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_6 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_32 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_22 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_24 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_8 .
+
+[] a rdf:Statement ;
+    mfg:toolType "drill_bit" ;
+    rdf:object mfg:tool_drill_bit ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_19 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "18" ;
+    rdf:object mfg:opstep_19 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_18 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "25" ;
+    rdf:object mfg:opstep_25 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_2 .
+
+[] a rdf:Statement ;
+    mfg:confidence "1.0" ;
+    rdf:object mfg:opstep_23 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_21 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_15 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_16 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_milling_params" ;
+    rdf:object mfg:opstep_30 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_13 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_6 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_10 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_10 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_1 .
+
+[] a rdf:Statement ;
+    mfg:confidence "1.0" ;
+    rdf:object mfg:opstep_20 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_12 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_26 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_4 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_milling_params" ;
+    rdf:object mfg:opstep_31 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_14 .
+
+[] a rdf:Statement ;
+    mfg:confidence "0.9186" ;
+    rdf:object mfg:opstep_18 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_8 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "2" ;
+    rdf:object mfg:opstep_2 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_1 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_21 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_19 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_finishturning_params" ;
+    rdf:object mfg:opstep_13 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_10 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_turning_insert_rough ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_5 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "6" ;
+    rdf:object mfg:opstep_7 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_6 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology|requiresExpertValidation" ;
+    rdf:object mfg:opstep_30 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_13 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "14" ;
+    rdf:object mfg:opstep_14 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_15 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "19" ;
+    rdf:object mfg:opstep_20 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_19 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_26 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_4 .
+
+[] a rdf:Statement ;
+    mfg:confidence "1.0" ;
+    rdf:object mfg:opstep_15 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_16 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_11 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_3 .
+
+[] a rdf:Statement ;
+    mfg:confidence "1.0" ;
+    rdf:object mfg:opstep_13 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_10 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_10 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_1 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_17 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_7 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "26" ;
+    rdf:object mfg:opstep_26 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_4 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_roughturning_params" ;
+    rdf:object mfg:opstep_3 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_1 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_turning_insert_rough ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_4 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_3 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_1 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_31 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_14 .
+
+[] a rdf:Statement ;
+    mfg:confidence "0.4" ;
+    rdf:object mfg:opstep_30 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_13 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "31" ;
+    rdf:object mfg:opstep_31 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_14 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "27" ;
+    rdf:object mfg:opstep_27 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_6 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_29 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_17 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_13 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_10 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "22" ;
+    rdf:object mfg:opstep_23 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_22 .
+
+[] a rdf:Statement ;
+    mfg:toolType "grooving_tool" ;
+    rdf:object mfg:tool_grooving_tool ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_29 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "10" ;
+    rdf:object mfg:opstep_10 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_9 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "26" ;
+    rdf:object mfg:opstep_26 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_25 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_17 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_7 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "21" ;
+    rdf:object mfg:opstep_22 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_21 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "27" ;
+    rdf:object mfg:opstep_28 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_27 .
+
+[] a rdf:Statement ;
+    mfg:toolType "counterbore_cutter" ;
+    rdf:object mfg:tool_counterbore_cutter ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_24 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "28" ;
+    rdf:object mfg:opstep_29 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_28 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_21 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_19 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "preferred_tool_selection" ;
+    rdf:object mfg:tool_end_mill ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_31 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_turning_insert_finish ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_15 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_turning_insert_finish ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_16 .
+
+[] a rdf:Statement ;
+    mfg:confidence "1.0" ;
+    rdf:object mfg:opstep_4 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_3 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_28 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_9 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "3" ;
+    rdf:object mfg:opstep_4 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_3 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_8 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_16 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology|requiresExpertValidation" ;
+    rdf:object mfg:opstep_32 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_22 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "20" ;
+    rdf:object mfg:opstep_20 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_19 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_29 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_17 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology|requiresExpertValidation" ;
+    rdf:object mfg:opstep_20 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_12 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_turning_insert_rough ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_7 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "12" ;
+    rdf:object mfg:opstep_12 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_5 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "9" ;
+    rdf:object mfg:opstep_9 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_18 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "11" ;
+    rdf:object mfg:opstep_12 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_11 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "chamfering_default_params" ;
+    rdf:object mfg:opstep_28 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_9 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_drilling_params" ;
+    rdf:object mfg:opstep_18 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_8 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "9" ;
+    rdf:object mfg:opstep_10 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_9 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_16 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_18 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_drill_bit ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_23 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_roughturning_params" ;
+    rdf:object mfg:opstep_9 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_18 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "8" ;
+    rdf:object mfg:opstep_8 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_16 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "1" ;
+    rdf:object mfg:opstep_1 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_10 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_turning_insert_rough ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_8 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "2" ;
+    rdf:object mfg:opstep_2 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_18 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_drill_bit ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_18 .
+
+[] a rdf:Statement ;
+    mfg:toolType "end_mill" ;
+    rdf:object mfg:tool_end_mill ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_32 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_23 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_21 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "grooving_default_params" ;
+    rdf:object mfg:opstep_29 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_17 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "21" ;
+    rdf:object mfg:opstep_21 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_19 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "preferred_tool_selection" ;
+    rdf:object mfg:tool_chamfer_mill ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_26 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "5" ;
+    rdf:object mfg:opstep_5 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_5 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_milling_params" ;
+    rdf:object mfg:opstep_32 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_22 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_9 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_18 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_2 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_18 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "preferred_tool_selection" ;
+    rdf:object mfg:tool_end_mill ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_30 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_turning_insert_rough ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_6 .
+
+[] a rdf:Statement ;
+    mfg:confidence "0.9902612826603325" ;
+    rdf:object mfg:opstep_17 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_7 .
+
+[] a rdf:Statement ;
+    mfg:confidence "0.9748888888888889" ;
+    rdf:object mfg:opstep_14 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_15 .
+
+[] a rdf:Statement ;
+    mfg:toolType "drill_bit" ;
+    rdf:object mfg:tool_drill_bit ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_23 .
+
+[] a rdf:Statement ;
+    mfg:confidence "0.8531860204797806" ;
+    rdf:object mfg:opstep_16 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_18 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "16" ;
+    rdf:object mfg:opstep_17 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_16 .
+
+[] a rdf:Statement ;
+    mfg:toolType "turning_insert_rough" ;
+    rdf:object mfg:tool_turning_insert_rough ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_7 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "preferred_tool_selection" ;
+    rdf:object mfg:tool_turning_insert_rough ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_2 .
+
+[] a rdf:Statement ;
+    mfg:toolType "turning_insert_rough" ;
+    rdf:object mfg:tool_turning_insert_rough ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_5 .
+
+[] a rdf:Statement ;
+    mfg:toolType "turning_insert_finish" ;
+    rdf:object mfg:tool_turning_insert_finish ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_13 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_3 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_1 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_turning_insert_rough ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_3 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_25 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_2 .
+
+[] a rdf:Statement ;
+    mfg:toolType "turning_insert_rough" ;
+    rdf:object mfg:tool_turning_insert_rough ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_3 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "17" ;
+    rdf:object mfg:opstep_17 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_16 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_1 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_10 .
+
+[] a rdf:Statement ;
+    mfg:confidence "1.0" ;
+    rdf:object mfg:opstep_8 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_16 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_drill_bit ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_17 .
+
+[] a rdf:Statement ;
+    mfg:confidence "1.0" ;
+    rdf:object mfg:opstep_11 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_3 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_4 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_3 .
+
+[] a rdf:Statement ;
+    mfg:confidence "1.0" ;
+    rdf:object mfg:opstep_22 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_20 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "10" ;
+    rdf:object mfg:opstep_11 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_10 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "1" ;
+    rdf:object mfg:opstep_2 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_1 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_5 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_5 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "chamfering_default_params" ;
+    rdf:object mfg:opstep_27 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_6 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_turning_insert_finish ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_10 .
+
+[] a rdf:Statement ;
+    mfg:confidence "0.9748888888888889" ;
+    rdf:object mfg:opstep_7 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_15 .
+
+[] a rdf:Statement ;
+    mfg:toolType "turning_insert_rough" ;
+    rdf:object mfg:tool_turning_insert_rough ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_8 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "preferred_tool_selection" ;
+    rdf:object mfg:tool_chamfer_mill ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_28 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "16" ;
+    rdf:object mfg:opstep_16 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_18 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_roughturning_params" ;
+    rdf:object mfg:opstep_6 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_10 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "4" ;
+    rdf:object mfg:opstep_4 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_3 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "31" ;
+    rdf:object mfg:opstep_32 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_31 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "28" ;
+    rdf:object mfg:opstep_28 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_27 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "chamfering_default_params" ;
+    rdf:object mfg:opstep_26 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_4 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_13 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_10 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "7" ;
+    rdf:object mfg:opstep_7 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_6 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "6" ;
+    rdf:object mfg:opstep_6 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_10 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_7 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_15 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "18" ;
+    rdf:object mfg:opstep_18 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_8 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "25" ;
+    rdf:object mfg:opstep_26 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_25 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_24 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_8 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "19" ;
+    rdf:object mfg:opstep_19 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_18 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_20 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_12 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "4" ;
+    rdf:object mfg:opstep_5 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_4 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_22 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_20 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_roughturning_params" ;
+    rdf:object mfg:opstep_5 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_5 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_drilling_params" ;
+    rdf:object mfg:opstep_23 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_21 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "7" ;
+    rdf:object mfg:opstep_8 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_7 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_counterbore_cutter ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_24 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_8 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_16 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_finishturning_params" ;
+    rdf:object mfg:opstep_16 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_18 .
+
+[] a rdf:Statement ;
+    mfg:confidence "1.0" ;
+    rdf:object mfg:opstep_12 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_5 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "3" ;
+    rdf:object mfg:opstep_3 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_2 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "29" ;
+    rdf:object mfg:opstep_30 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_29 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "27" ;
+    rdf:object mfg:opstep_27 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_26 .
+
+[] a rdf:Statement ;
+    mfg:confidence "0.6206136363636363" ;
+    rdf:object mfg:opstep_3 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_1 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "5" ;
+    rdf:object mfg:opstep_5 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_4 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_turning_insert_finish ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_12 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_26 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_4 .
+
+[] a rdf:Statement ;
+    mfg:toolType "end_mill" ;
+    rdf:object mfg:tool_end_mill ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_31 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_turning_insert_finish ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_14 .
+
+[] a rdf:Statement ;
+    mfg:confidence "1.0" ;
+    rdf:object mfg:opstep_19 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_11 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "11" ;
+    rdf:object mfg:opstep_11 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_3 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_drilling_params" ;
+    rdf:object mfg:opstep_21 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_19 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_roughturning_params" ;
+    rdf:object mfg:opstep_7 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_15 .
+
+[] a rdf:Statement ;
+    mfg:toolType "turning_insert_rough" ;
+    rdf:object mfg:tool_turning_insert_rough ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_6 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "20" ;
+    rdf:object mfg:opstep_20 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_12 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_19 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_11 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_roughturning_params" ;
+    rdf:object mfg:opstep_8 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_16 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_roughturning_params" ;
+    rdf:object mfg:opstep_4 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_3 .
+
+[] a rdf:Statement ;
+    mfg:toolType "turning_insert_finish" ;
+    rdf:object mfg:tool_turning_insert_finish ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_12 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_finishturning_params" ;
+    rdf:object mfg:opstep_12 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_5 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "32" ;
+    rdf:object mfg:opstep_32 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_22 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "29" ;
+    rdf:object mfg:opstep_29 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_28 .
+
+[] a rdf:Statement ;
+    mfg:toolType "drill_bit" ;
+    rdf:object mfg:tool_drill_bit ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_18 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "23" ;
+    rdf:object mfg:opstep_24 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_23 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_14 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_15 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "24" ;
+    rdf:object mfg:opstep_25 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_24 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_5 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_5 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_7 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_15 .
+
+[] a rdf:Statement ;
+    mfg:confidence "0.4" ;
+    rdf:object mfg:opstep_31 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_14 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_turning_insert_finish ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_13 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "12" ;
+    rdf:object mfg:opstep_12 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_11 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "15" ;
+    rdf:object mfg:opstep_15 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_16 .
+
+[] a rdf:Statement ;
+    mfg:toolType "drill_bit" ;
+    rdf:object mfg:tool_drill_bit ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_22 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "19" ;
+    rdf:object mfg:opstep_19 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_11 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_30 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_13 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "11" ;
+    rdf:object mfg:opstep_11 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_10 .
+
+[] a rdf:Statement ;
+    mfg:toolType "turning_insert_rough" ;
+    rdf:object mfg:tool_turning_insert_rough ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_4 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_6 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_10 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "15" ;
+    rdf:object mfg:opstep_16 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_15 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "preferred_tool_selection" ;
+    rdf:object mfg:tool_turning_insert_rough ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_1 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_5 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_5 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "3" ;
+    rdf:object mfg:opstep_3 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_1 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_turning_insert_rough ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_9 .
+
+[] a rdf:Statement ;
+    mfg:confidence "0.6206136363636363" ;
+    rdf:object mfg:opstep_10 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_1 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "24" ;
+    rdf:object mfg:opstep_24 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_8 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_28 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_9 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "facing_default_params" ;
+    rdf:object mfg:opstep_1 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_10 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_12 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_5 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "17" ;
+    rdf:object mfg:opstep_18 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_17 .
+
+[] a rdf:Statement ;
+    mfg:toolType "end_mill" ;
+    rdf:object mfg:tool_end_mill ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_30 .
+
+[] a rdf:Statement ;
+    mfg:confidence "0.9930000000000001" ;
+    rdf:object mfg:opstep_29 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_17 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_finishturning_params" ;
+    rdf:object mfg:opstep_11 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_3 .
+
+[] a rdf:Statement ;
+    mfg:confidence "0.9186" ;
+    rdf:object mfg:opstep_24 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_8 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_15 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_16 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "2" ;
+    rdf:object mfg:opstep_3 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_2 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "feature_tool_from_operation" ;
+    rdf:object mfg:tool_drill_bit ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_21 .
+
+[] a rdf:Statement ;
+    mfg:toolType "turning_insert_finish" ;
+    rdf:object mfg:tool_turning_insert_finish ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_15 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "5" ;
+    rdf:object mfg:opstep_6 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_5 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "13" ;
+    rdf:object mfg:opstep_13 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_12 .
+
+[] a rdf:Statement ;
+    mfg:validationStatus "auto_approved" ;
+    rdf:object mfg:opstep_28 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_9 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_24 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_8 .
+
+[] a rdf:Statement ;
+    mfg:stepFrom "12" ;
+    rdf:object mfg:opstep_13 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_12 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_12 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_5 .
+
+[] a rdf:Statement ;
+    mfg:kefcStepNumber "22" ;
+    rdf:object mfg:opstep_22 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_20 .
+
+[] a rdf:Statement ;
+    mfg:ruleId "preferred_tool_selection" ;
+    rdf:object mfg:tool_chamfer_mill ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_27 .
+
+[] a rdf:Statement ;
+    mfg:toolType "turning_insert_finish" ;
+    rdf:object mfg:tool_turning_insert_finish ;
+    rdf:predicate mfg:uses ;
+    rdf:subject mfg:opstep_10 .
+
+[] a rdf:Statement ;
+    mfg:stepTo "22" ;
+    rdf:object mfg:opstep_22 ;
+    rdf:predicate mfg:sequenceBefore ;
+    rdf:subject mfg:opstep_21 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology|requiresExpertValidation" ;
+    rdf:object mfg:opstep_31 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_14 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_17 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_7 .
+
+[] a rdf:Statement ;
+    mfg:kefcProvenance "inferredByRule|derivedFromOntology" ;
+    rdf:object mfg:opstep_14 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_15 .
+
+[] a rdf:Statement ;
+    mfg:ruleIds "aisi1045_finishturning_params" ;
+    rdf:object mfg:opstep_10 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_1 .
+
+[] a rdf:Statement ;
+    mfg:ontologySources "http://onto.brep.org/manufacturing/cutting-parameters#" ;
+    rdf:object mfg:opstep_4 ;
+    rdf:predicate mfg:requires ;
+    rdf:subject mfg:feature_3 .
+
