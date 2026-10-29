@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://onto.brep.org/manufacturing/mill-turn-configuration"
+         xmlns="http://onto.brep.org/manufacturing/mill-turn-configuration#"
+         xmlns:mach="http://onto.brep.org/manufacturing/machines#">
+
+<owl:Ontology rdf:about="http://onto.brep.org/manufacturing/mill-turn-configuration">
+  <owl:imports rdf:resource="http://onto.brep.org/manufacturing/machines"/>
+</owl:Ontology>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/machines#CNCMillTurn">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machines#Machine"/>
+  <mach:supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#CounterboringOp"/>
+  <mach:supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#DrillingOp"/>
+  <mach:supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#BoringOp"/>
+  <mach:supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#ChamferingOp"/>
+  <mach:supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#FinishTurningOp"/>
+  <mach:supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#FacingOp"/>
+  <mach:supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#MillingOp"/>
+  <mach:supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#RoughTurningOp"/>
+  <mach:supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#GroovingOp"/>
+  <mach:supportsToolOrientation rdf:resource="http://onto.brep.org/manufacturing/machines#AxialToolOrientation"/>
+  <mach:supportsToolOrientation rdf:resource="http://onto.brep.org/manufacturing/machines#RadialToolOrientation"/>
+  <mach:hasMachineLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CNC Mill-Turn</mach:hasMachineLabel>
+  <mach:hasModel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turning centre with driven (live) tooling, same envelope as CNCLatheFanuc0iTD</mach:hasModel>
+  <mach:hasMaxSpindleSpeedRPM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4500.0</mach:hasMaxSpindleSpeedRPM>
+  <mach:hasMaxBarDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50.0</mach:hasMaxBarDiameterMM>
+  <mach:hasMaxSwingDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300.0</mach:hasMaxSwingDiameterMM>
+  <mach:hasTurretStations rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</mach:hasTurretStations>
+  <mach:hasControlSystem rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fanuc 0i-TD</mach:hasControlSystem>
+  <mach:hasGCodeDialect rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fanuc</mach:hasGCodeDialect>
+  <mach:hasSafetyMaxRPM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4500.0</mach:hasSafetyMaxRPM>
+  <mach:hasSafetyMaxFeedRate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</mach:hasSafetyMaxFeedRate>
+  <mach:hasSafetyMaxDepthOfCut rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</mach:hasSafetyMaxDepthOfCut>
+  <mach:hasSafetyMinToolClearanceMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</mach:hasSafetyMinToolClearanceMM>
+  <mach:hasSpindleAxis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Z</mach:hasSpindleAxis>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

@@ -1,0 +1,814 @@
+{
+ "reference": {
+  "entities": 22,
+  "merges": 8,
+  "merges_tau_below_0.7": 0,
+  "slots": 3,
+  "primary_only": 11,
+  "secondary_only": 3
+ },
+ "theta_sweep": {
+  "gated": {
+   "0.3": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "0.4": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "0.5": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "0.6": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "0.7": {
+    "entities": 24,
+    "merges": 6,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 13,
+    "secondary_only": 5
+   },
+   "0.8": {
+    "entities": 28,
+    "merges": 2,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 17,
+    "secondary_only": 9
+   }
+  },
+  "ablated": {
+   "0.3": {
+    "entities": 19,
+    "merges": 11,
+    "merges_tau_below_0.7": 5,
+    "slots": 0,
+    "primary_only": 8,
+    "secondary_only": 0
+   },
+   "0.4": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 3,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   },
+   "0.5": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   },
+   "0.6": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   },
+   "0.7": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "0.8": {
+    "entities": 28,
+    "merges": 2,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 17,
+    "secondary_only": 9
+   }
+  }
+ },
+ "tau_min_sweep": {
+  "0.0": {
+   "entities": 20,
+   "merges": 10,
+   "merges_tau_below_0.7": 2,
+   "slots": 1,
+   "primary_only": 9,
+   "secondary_only": 1
+  },
+  "0.3": {
+   "entities": 20,
+   "merges": 10,
+   "merges_tau_below_0.7": 2,
+   "slots": 1,
+   "primary_only": 9,
+   "secondary_only": 1
+  },
+  "0.7": {
+   "entities": 22,
+   "merges": 8,
+   "merges_tau_below_0.7": 0,
+   "slots": 3,
+   "primary_only": 11,
+   "secondary_only": 3
+  },
+  "1.0": {
+   "entities": 23,
+   "merges": 7,
+   "merges_tau_below_0.7": 0,
+   "slots": 3,
+   "primary_only": 12,
+   "secondary_only": 4
+  }
+ },
+ "dmax_sweep": {
+  "10.0": {
+   "entities": 23,
+   "merges": 7,
+   "merges_tau_below_0.7": 0,
+   "slots": 3,
+   "primary_only": 12,
+   "secondary_only": 4
+  },
+  "25.0": {
+   "entities": 22,
+   "merges": 8,
+   "merges_tau_below_0.7": 0,
+   "slots": 3,
+   "primary_only": 11,
+   "secondary_only": 3
+  },
+  "50.0": {
+   "entities": 22,
+   "merges": 8,
+   "merges_tau_below_0.7": 0,
+   "slots": 3,
+   "primary_only": 11,
+   "secondary_only": 3
+  },
+  "100.0": {
+   "entities": 22,
+   "merges": 8,
+   "merges_tau_below_0.7": 0,
+   "slots": 3,
+   "primary_only": 11,
+   "secondary_only": 3
+  },
+  "200.0": {
+   "entities": 22,
+   "merges": 8,
+   "merges_tau_below_0.7": 0,
+   "slots": 3,
+   "primary_only": 11,
+   "secondary_only": 3
+  }
+ },
+ "dmax_sweep_ablated": {
+  "10.0": {
+   "entities": 21,
+   "merges": 9,
+   "merges_tau_below_0.7": 2,
+   "slots": 1,
+   "primary_only": 10,
+   "secondary_only": 2
+  },
+  "25.0": {
+   "entities": 20,
+   "merges": 10,
+   "merges_tau_below_0.7": 2,
+   "slots": 1,
+   "primary_only": 9,
+   "secondary_only": 1
+  },
+  "50.0": {
+   "entities": 20,
+   "merges": 10,
+   "merges_tau_below_0.7": 2,
+   "slots": 1,
+   "primary_only": 9,
+   "secondary_only": 1
+  },
+  "100.0": {
+   "entities": 20,
+   "merges": 10,
+   "merges_tau_below_0.7": 2,
+   "slots": 1,
+   "primary_only": 9,
+   "secondary_only": 1
+  },
+  "200.0": {
+   "entities": 20,
+   "merges": 10,
+   "merges_tau_below_0.7": 2,
+   "slots": 1,
+   "primary_only": 9,
+   "secondary_only": 1
+  }
+ },
+ "weight_grid": {
+  "0.2,0.2,0.6": {
+   "gated": {
+    "entities": 27,
+    "merges": 3,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 16,
+    "secondary_only": 8
+   },
+   "ablated": {
+    "entities": 25,
+    "merges": 5,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 14,
+    "secondary_only": 6
+   }
+  },
+  "0.2,0.3,0.5": {
+   "gated": {
+    "entities": 27,
+    "merges": 3,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 16,
+    "secondary_only": 8
+   },
+   "ablated": {
+    "entities": 25,
+    "merges": 5,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 14,
+    "secondary_only": 6
+   }
+  },
+  "0.2,0.4,0.4": {
+   "gated": {
+    "entities": 23,
+    "merges": 7,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 12,
+    "secondary_only": 4
+   },
+   "ablated": {
+    "entities": 21,
+    "merges": 9,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 10,
+    "secondary_only": 2
+   }
+  },
+  "0.2,0.5,0.3": {
+   "gated": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "ablated": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 3,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   }
+  },
+  "0.2,0.6,0.2": {
+   "gated": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "ablated": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 3,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   }
+  },
+  "0.3,0.1,0.6": {
+   "gated": {
+    "entities": 27,
+    "merges": 3,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 16,
+    "secondary_only": 8
+   },
+   "ablated": {
+    "entities": 25,
+    "merges": 5,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 14,
+    "secondary_only": 6
+   }
+  },
+  "0.3,0.2,0.5": {
+   "gated": {
+    "entities": 27,
+    "merges": 3,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 16,
+    "secondary_only": 8
+   },
+   "ablated": {
+    "entities": 25,
+    "merges": 5,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 14,
+    "secondary_only": 6
+   }
+  },
+  "0.3,0.3,0.4": {
+   "gated": {
+    "entities": 23,
+    "merges": 7,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 12,
+    "secondary_only": 4
+   },
+   "ablated": {
+    "entities": 21,
+    "merges": 9,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 10,
+    "secondary_only": 2
+   }
+  },
+  "0.3,0.4,0.3": {
+   "gated": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "ablated": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   }
+  },
+  "0.3,0.5,0.2": {
+   "gated": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "ablated": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 3,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   }
+  },
+  "0.3,0.6,0.1": {
+   "gated": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "ablated": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 3,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   }
+  },
+  "0.4,0.1,0.5": {
+   "gated": {
+    "entities": 27,
+    "merges": 3,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 16,
+    "secondary_only": 8
+   },
+   "ablated": {
+    "entities": 25,
+    "merges": 5,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 14,
+    "secondary_only": 6
+   }
+  },
+  "0.4,0.2,0.4": {
+   "gated": {
+    "entities": 23,
+    "merges": 7,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 12,
+    "secondary_only": 4
+   },
+   "ablated": {
+    "entities": 21,
+    "merges": 9,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 10,
+    "secondary_only": 2
+   }
+  },
+  "0.4,0.3,0.3": {
+   "gated": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "ablated": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   }
+  },
+  "0.4,0.4,0.2": {
+   "gated": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "ablated": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   }
+  },
+  "0.4,0.5,0.1": {
+   "gated": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "ablated": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 3,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   }
+  },
+  "0.4,0.6,0.0": {
+   "gated": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "ablated": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 3,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   }
+  },
+  "0.5,0.1,0.4": {
+   "gated": {
+    "entities": 23,
+    "merges": 7,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 12,
+    "secondary_only": 4
+   },
+   "ablated": {
+    "entities": 21,
+    "merges": 9,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 10,
+    "secondary_only": 2
+   }
+  },
+  "0.5,0.2,0.3": {
+   "gated": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "ablated": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   }
+  },
+  "0.5,0.3,0.2": {
+   "gated": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "ablated": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   }
+  },
+  "0.5,0.4,0.1": {
+   "gated": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "ablated": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   }
+  },
+  "0.5,0.5,0.0": {
+   "gated": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "ablated": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   }
+  },
+  "0.6,0.1,0.3": {
+   "gated": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "ablated": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   }
+  },
+  "0.6,0.2,0.2": {
+   "gated": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "ablated": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   }
+  },
+  "0.6,0.3,0.1": {
+   "gated": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "ablated": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   }
+  },
+  "0.6,0.4,0.0": {
+   "gated": {
+    "entities": 22,
+    "merges": 8,
+    "merges_tau_below_0.7": 0,
+    "slots": 3,
+    "primary_only": 11,
+    "secondary_only": 3
+   },
+   "ablated": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 2,
+    "slots": 1,
+    "primary_only": 9,
+    "secondary_only": 1
+   }
+  }
+ },
+ "weight_grid_summary": {
+  "settings": 26,
+  "gated_identical_to_reference": 17,
+  "gated_entities_range": [
+   22,
+   27
+  ],
+  "gated_cross_family_merges_max": 0,
+  "ablated_settings_with_cross_family_merges": 26,
+  "ablated_entities_range": [
+   20,
+   25
+  ]
+ },
+ "colocation_probe_5mm": [
+  {
+   "family": "step",
+   "primary": [
+    4,
+    "Chamfer"
+   ],
+   "secondary": [
+    5,
+    "Boss"
+   ],
+   "distance_mm": 3.875,
+   "tau": 0.0,
+   "metric_agreement": 0.777
+  },
+  {
+   "family": "step",
+   "primary": [
+    6,
+    "Chamfer"
+   ],
+   "secondary": [
+    2,
+    "Counterbore"
+   ],
+   "distance_mm": 0.5,
+   "tau": 0.0,
+   "metric_agreement": 0.746
+  },
+  {
+   "family": "step",
+   "primary": [
+    8,
+    "Counterbore"
+   ],
+   "secondary": [
+    1,
+    "Blind Hole"
+   ],
+   "distance_mm": 2.7,
+   "tau": 0.0,
+   "metric_agreement": 0.789
+  },
+  {
+   "family": "step",
+   "primary": [
+    9,
+    "Chamfer"
+   ],
+   "secondary": [
+    2,
+    "Counterbore"
+   ],
+   "distance_mm": 0.0,
+   "tau": 0.0,
+   "metric_agreement": 0.873
+  },
+  {
+   "family": "step",
+   "primary": [
+    11,
+    "Through Hole"
+   ],
+   "secondary": [
+    3,
+    "Slot"
+   ],
+   "distance_mm": 0.0,
+   "tau": 0.3,
+   "metric_agreement": 1.0
+  },
+  {
+   "family": "step",
+   "primary": [
+    12,
+    "Through Hole"
+   ],
+   "secondary": [
+    4,
+    "Slot"
+   ],
+   "distance_mm": 0.0,
+   "tau": 0.3,
+   "metric_agreement": 1.0
+  },
+  {
+   "family": "drawing",
+   "primary": [
+    3,
+    "Groove"
+   ],
+   "secondary": [
+    6,
+    "Bore"
+   ],
+   "distance_mm": 3.625,
+   "tau": 0.0,
+   "metric_agreement": 0.618
+  }
+ ]
+}

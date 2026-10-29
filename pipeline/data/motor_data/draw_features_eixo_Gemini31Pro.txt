@@ -1,0 +1,47 @@
+Extracted Design Features from Drawing
+
+Overall Dimensions: L:85.75, W:24, H:27
+Center Point: X:0, Y:-1.5, Z:42.875
+
+1. Cylinder
+   Description: Main upper cylindrical body with a diameter of 24mm (R12) and a length of 46.5mm.
+   Absolute Location: X:0, Y:0, Z:62.5
+   Relative Position: X:0, Y:1.5, Z:19.625
+   Orientation: Parallel to Z-axis
+
+2. Cylinder
+   Description: Lower cylindrical body with a diameter of 24mm (R12) and a length of 37.5mm.
+   Absolute Location: X:0, Y:0, Z:18.75
+   Relative Position: X:0, Y:1.5, Z:-24.125
+   Orientation: Parallel to Z-axis
+
+3. Groove
+   Description: Cylindrical neck/groove separating the upper and lower bodies, with a diameter of 22mm (R11) and a width of 1.75mm.
+   Absolute Location: X:0, Y:0, Z:38.375
+   Relative Position: X:0, Y:1.5, Z:-4.5
+   Orientation: Parallel to Z-axis
+
+4. Boss
+   Description: Rectangular key/protrusion on the upper cylinder, 4mm wide, 32mm long, protruding 3mm from the cylinder surface. It is offset 3.69mm from the centerline to its left edge.
+   Absolute Location: X:-1.69, Y:-13.5, Z:68.75
+   Relative Position: X:-1.69, Y:-12, Z:25.875
+   Orientation: Parallel to Z-axis, protruding along negative Y-axis
+
+5. Hole
+   Description: Outer section of the central stepped through-hole with a radius of 6.1mm.
+   Absolute Location: X:0, Y:0, Z:42.875
+   Relative Position: X:0, Y:1.5, Z:0
+   Orientation: Parallel to Z-axis
+
+6. Hole
+   Description: Middle section of the central stepped through-hole with a radius of 4.2mm.
+   Absolute Location: X:0, Y:0, Z:42.875
+   Relative Position: X:0, Y:1.5, Z:0
+   Orientation: Parallel to Z-axis
+
+7. Hole
+   Description: Inner section of the central stepped through-hole with a radius of 3.4mm.
+   Absolute Location: X:0, Y:0, Z:42.875
+   Relative Position: X:0, Y:1.5, Z:0
+   Orientation: Parallel to Z-axis
+

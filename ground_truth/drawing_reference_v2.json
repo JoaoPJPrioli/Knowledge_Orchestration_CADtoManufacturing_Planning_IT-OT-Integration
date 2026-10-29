@@ -1,0 +1,116 @@
+{
+  "source": "data/motor_data/eixo_drawing.pdf",
+  "version": "v2 (revision 2)",
+  "note": "Readings verified against the rendered vector drawing; every value carries its pixel evidence. Changes from R1: D04 corrected (8 wide from the R4 end radius, 40 overall, 32 between end centres, 3 high, 3.69 above the chord; R1 recorded 4 wide, 32 long, 1 mm below the shoulder, which misreads the '4', '32' and '1' dimensions); D06 is no longer implicit: the '1' dimension is the axial length of the 1 x 45 deg end chamfer. D01, D02, D03 and D05a-c are kept as in R1; D02's Ø24 is not dimensioned on the drawing (drawn Ø24.95), see D02.evidence. No coordinate frame: drawing records are scored on existence, type and stated dimensions only.",
+  "evidence_common": "400 dpi raster of eixo_drawing.pdf (page rotation 90 applied), scale 1:1, 15.748 px/mm, calibrated on the '24' extension lines (377.8 px = 23.99 mm). Pixel coordinates are stroke centres in the rotated 4678 x 3307 px image.",
+  "evidence_figure": "drawing_key_evidence.png",
+  "features": [
+    {
+      "ref_id": "D01",
+      "type": "Step",
+      "aliases": [
+        "Cylinder"
+      ],
+      "description": "upper cylindrical body carrying the key",
+      "diameter": 24.0,
+      "length": 46.5,
+      "evidence": "'24' dimension at the upper end: extension lines x = 1191.15 and 1568.95 px (377.8 px = 23.99 mm); '46.5' extension lines y = 820.3 to 1552.3 px (732.0 px = 46.48 mm), i.e. from the Ø24 edge of the end chamfer to the groove, as in R05 (z 121.0 to 167.5)."
+    },
+    {
+      "ref_id": "D02",
+      "type": "Step",
+      "aliases": [
+        "Cylinder"
+      ],
+      "description": "lower cylindrical body",
+      "diameter": 24.0,
+      "length": 37.5,
+      "diameter_dimensioned": false,
+      "diameter_drawn_mm": 24.93,
+      "evidence": "'37.5' extension lines y = 1599.7 to 2190.0 px (590.3 px = 37.48 mm). No diameter dimension is attached to the lower body; its drawn width is 392.6 px = 24.93 mm in the front view (edge paths x = 1730.3 and 2122.9 px) and 392.7 px in the side view, and the end view shows two overlapping outer circles at R12.0 and R12.475. The Ø24 value retained here (unchanged from R1, as instructed) is therefore not written on the drawing for this body; the drawn geometry is Ø24.95, as R01."
+    },
+    {
+      "ref_id": "D03",
+      "type": "Groove",
+      "aliases": [],
+      "description": "relief groove between the two bodies",
+      "diameter": null,
+      "width": 1.75,
+      "evidence": "'1.75' extension lines y = 1564.15 and 1591.65 px (27.5 px = 1.75 mm); groove edge path drawn 371.7 px wide (23.60 mm), diameter not dimensioned."
+    },
+    {
+      "ref_id": "D04",
+      "type": "Key",
+      "aliases": [],
+      "description": "raised key with full-radius ends on the upper body (as fitted in the catalogue model); '4' in the front view runs from the obround centreline to its edge, so it is the end radius R4 and the width is 8; '32' in the side view is the distance between end-radius centres, so the overall length is 40; '3' is the height above the Ø24 surface; '3.69' in the end view is the height above the chord where the flanks meet the cylinder (15 - sqrt(12^2 - 4^2) = 3.686). The key ends 5 mm below the end face; no dimension places it 1 mm below the shoulder.",
+      "width": 8.0,
+      "end_radius": 4.0,
+      "length": 40.0,
+      "end_centre_distance": 32.0,
+      "height": 3.0,
+      "height_above_chord": 3.69,
+      "drawn_values": {
+        "4": "end radius (centreline to edge)",
+        "32": "end-centre distance",
+        "3": "height above Ø24 surface",
+        "3.69": "height above chord"
+      },
+      "evidence": {
+        "4": "front view: extension lines x = 1926.8 (obround centreline, = midpoint of obround edges 1863.6 and 1989.6) and 1989.65 px (obround edge); 62.85 px = 3.99 mm",
+        "width": "front view obround edge paths x = 1863.6 and 1989.6 px: 126.0 px = 8.00 mm (8.70 mm outer stroke edge to outer stroke edge, 7.30 mm inner to inner); end view key face 1863.6 to 1989.6 px = 8.00 mm",
+        "32": "side view extension lines y = 946.35 and 1450.0 px: 503.65 px = 31.98 mm; these coincide with the arc tangent lines of the key ends",
+        "length": "side view key ends y = 883.3 and 1513.0 px: 629.7 px = 39.99 mm; front view obround arc extremes consistent (curve points 878.0 to 1518.7 px including stroke)",
+        "3": "side view key face x = 1144.0 px, Ø24 body edge x = 1191.3 px: 47.3 px = 3.00 mm",
+        "3.69": "end view extension lines y = 2800.35 and 2858.35 px: 58.0 px = 3.68 mm; key face 15.07 mm from the axis (centre y = 2620.0 px from the R12 strokes)",
+        "position": "key end 78.6 px = 4.99 mm below the end face (y 804.7 to 883.3 px), matching R06 z_max 163.5 = 168.5 - 5"
+      }
+    },
+    {
+      "ref_id": "D05a",
+      "type": "Hole",
+      "aliases": [
+        "Blind Hole",
+        "Bore",
+        "Through Hole"
+      ],
+      "description": "innermost section of the central stepped bore (R3.4); depth not dimensioned, blind or through not determinable from the views shown",
+      "diameter": 6.8,
+      "evidence": "end view: R3.4 dimensioned; concentric stroke radius along the key centreline column 3.40 mm"
+    },
+    {
+      "ref_id": "D05b",
+      "type": "Counterbore",
+      "aliases": [
+        "Hole",
+        "Bore"
+      ],
+      "description": "middle section of the central stepped bore (R4.2)",
+      "diameter": 8.4,
+      "evidence": "end view: R4.2 dimensioned; concentric stroke radius along the key centreline column 4.19 mm"
+    },
+    {
+      "ref_id": "D05c",
+      "type": "Chamfer",
+      "aliases": [
+        "Hole",
+        "Bore",
+        "Countersink"
+      ],
+      "description": "entry section of the central stepped bore (R6.1), a countersink in the STEP model",
+      "diameter": 12.2,
+      "evidence": "end view: R6.1 dimensioned; concentric stroke radius along the key centreline column 6.10 mm"
+    },
+    {
+      "ref_id": "D06",
+      "type": "Chamfer",
+      "aliases": [],
+      "description": "end chamfer 1 x 45 deg at the free end, Ø24 to Ø22; dimensioned: '1' in the side view is its axial length, '22' and '24' its diameters, R11 in the end view the Ø22 end face",
+      "diameter": 24.0,
+      "diameter_small": 22.0,
+      "length": 1.0,
+      "angle_deg": 45.0,
+      "implicit": false,
+      "evidence": "side view '1' extension lines y = 804.85 (end face) and 820.5 px (Ø24 edge): 15.65 px = 0.99 mm; end face path 346 px = 22.0 mm wide (y = 804.7 px); '22' dimension line y = 712 px; end view R11 stroke radius 10.99 mm"
+    }
+  ]
+}

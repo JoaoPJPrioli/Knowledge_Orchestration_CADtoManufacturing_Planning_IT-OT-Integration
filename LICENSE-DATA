@@ -1,0 +1,19 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 The authors (names withheld for anonymous peer review)
+
+The following content of this repository is licensed under the Creative Commons
+Attribution 4.0 International licence: the ontologies and rules (pipeline/knowledge/),
+the input feature descriptions (pipeline/data/), the references and audit results
+(ground_truth/), the reference process plan and review workbook (reference_plan/),
+the pipeline runs (runs/, experiments/runs/), the result files (experiments/results/,
+pipeline/analysis/results/), and the documentation (README files).
+
+You are free to share and adapt this material for any purpose, provided that you give
+appropriate credit, provide a link to the licence, and indicate if changes were made.
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+Summary: https://creativecommons.org/licenses/by/4.0/
+
+The third-party catalogue STEP model and drawing of the motor shaft are not part of this
+repository and are not covered by this licence.

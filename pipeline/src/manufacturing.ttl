@@ -1,0 +1,189 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix mfg: <http://onto.brep.org/manufacturing#> .
+@prefix brep: <http://onto.brep.org/boundary#> .
+
+#################################################################
+# Ontology: OntoBREP Manufacturing Knowledge Graph
+#################################################################
+
+mfg: a owl:Ontology ;
+    rdfs:label "OntoBREP Manufacturing Knowledge Graph" ;
+    rdfs:comment "RDF/SPARQL-based manufacturing knowledge graph for CAD-to-Gcode pipeline with boundary representation semantics." .
+
+#################################################################
+# Classes
+#################################################################
+
+mfg:Feature a owl:Class ;
+    rdfs:label "Feature" ;
+    rdfs:comment "A geometric feature extracted from CAD model (e.g., cylinder, groove, slot, chamfer)." ;
+    rdfs:subClassOf brep:BoundaryEntity .
+
+mfg:Operation a owl:Class ;
+    rdfs:label "Operation" ;
+    rdfs:comment "A machining operation (e.g., turning, facing, grooving, threading, drilling)." .
+
+mfg:Tool a owl:Class ;
+    rdfs:label "Tool" ;
+    rdfs:comment "A cutting tool used in machining operations (e.g., turning tool, drill bit, groove tool)." .
+
+mfg:Machine a owl:Class ;
+    rdfs:label "Machine" ;
+    rdfs:comment "A manufacturing machine (e.g., CNC lathe, milling machine)." .
+
+mfg:Material a owl:Class ;
+    rdfs:label "Material" ;
+    rdfs:comment "A workpiece material with cutting parameters and machinability properties." .
+
+mfg:Parameter a owl:Class ;
+    rdfs:label "Parameter" ;
+    rdfs:comment "A machining parameter (dimension, location, speed, feed, depth of cut)." .
+
+#################################################################
+# Object Properties (relationships between entities)
+#################################################################
+
+mfg:requires a owl:ObjectProperty ;
+    rdfs:label "requires" ;
+    rdfs:domain mfg:Feature ;
+    rdfs:range mfg:Operation ;
+    rdfs:comment "A feature requires a specific machining operation." .
+
+mfg:uses a owl:ObjectProperty ;
+    rdfs:label "uses" ;
+    rdfs:domain mfg:Operation ;
+    rdfs:range mfg:Tool ;
+    rdfs:comment "An operation uses a specific cutting tool." .
+
+mfg:runsOn a owl:ObjectProperty ;
+    rdfs:label "runs on" ;
+    rdfs:domain mfg:Operation ;
+    rdfs:range mfg:Machine ;
+    rdfs:comment "An operation runs on a specific machine." .
+
+mfg:removes a owl:ObjectProperty ;
+    rdfs:label "removes" ;
+    rdfs:domain mfg:Operation ;
+    rdfs:range mfg:Material ;
+    rdfs:comment "An operation removes material from the workpiece." .
+
+mfg:sequenceBefore a owl:ObjectProperty ;
+    rdfs:label "sequence before" ;
+    rdfs:domain mfg:Operation ;
+    rdfs:range mfg:Operation ;
+    rdfs:comment "An operation is performed before another in the machining sequence." .
+
+mfg:hasDimension a owl:ObjectProperty ;
+    rdfs:label "has dimension" ;
+    rdfs:domain mfg:Feature ;
+    rdfs:range mfg:Parameter ;
+    rdfs:comment "A feature has a dimensional parameter." .
+
+mfg:locatedAt a owl:ObjectProperty ;
+    rdfs:label "located at" ;
+    rdfs:domain mfg:Feature ;
+    rdfs:range mfg:Parameter ;
+    rdfs:comment "A feature is located at a specific position." .
+
+mfg:hasGCodes a owl:ObjectProperty ;
+    rdfs:label "has G-codes" ;
+    rdfs:domain mfg:Operation ;
+    rdfs:range mfg:Parameter ;
+    rdfs:comment "An operation has an associated parameter node listing its G-codes." .
+
+#################################################################
+# Data Properties (attributes with literal values)
+#################################################################
+
+mfg:nodeType a owl:DatatypeProperty ;
+    rdfs:label "node type" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The type of node in the knowledge graph." .
+
+mfg:id a owl:DatatypeProperty ;
+    rdfs:label "identifier" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Unique identifier for an entity." .
+
+mfg:name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Human-readable name of an entity." .
+
+mfg:description a owl:DatatypeProperty ;
+    rdfs:label "description" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Description of an entity." .
+
+mfg:confidence a owl:DatatypeProperty ;
+    rdfs:label "confidence" ;
+    rdfs:range xsd:double ;
+    rdfs:comment "Confidence score for a relationship." .
+
+mfg:stepFrom a owl:DatatypeProperty ;
+    rdfs:label "step from" ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Starting step number in machining sequence." .
+
+mfg:stepTo a owl:DatatypeProperty ;
+    rdfs:label "step to" ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Ending step number in machining sequence." .
+
+mfg:parameterType a owl:DatatypeProperty ;
+    rdfs:label "parameter type" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Type of parameter (dimension, location, speed, feed)." .
+
+mfg:value a owl:DatatypeProperty ;
+    rdfs:label "value" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Value of a parameter." .
+
+mfg:geometry a owl:DatatypeProperty ;
+    rdfs:label "geometry" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Geometry description of a tool or feature." .
+
+mfg:materialType a owl:DatatypeProperty ;
+    rdfs:label "material type" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Type of material (carbide, high-speed steel, etc.)." .
+
+mfg:capability a owl:DatatypeProperty ;
+    rdfs:label "capability" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Capability of a machine or tool." .
+
+mfg:toolType a owl:DatatypeProperty ;
+    rdfs:label "tool type" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Type of tool used in an operation." .
+
+mfg:dimensionKey a owl:DatatypeProperty ;
+    rdfs:label "dimension key" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Key identifier for a dimension (diameter, length, depth, etc.)." .
+
+mfg:dimensionType a owl:DatatypeProperty ;
+    rdfs:label "dimension type" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Semantic type of a dimension parameter (diameter, length, radius, width), derived from its CAD symbol key." .
+
+mfg:featureType a owl:DatatypeProperty ;
+    rdfs:label "feature type" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The manufacturing feature type (e.g. Step, Groove, Thread), independent of the human-readable name." .
+
+mfg:coordinates a owl:DatatypeProperty ;
+    rdfs:label "coordinates" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Spatial coordinates of a location parameter." .
+
+mfg:relationship a owl:DatatypeProperty ;
+    rdfs:label "relationship" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Type of relationship between entities." .

@@ -1,0 +1,64 @@
+{
+ "table_sizes": {
+  "feature_to_operations": 18,
+  "parameter_rules": 17,
+  "parameter_sets": 17,
+  "tools_for_operation": 13
+ },
+ "probe1_equivalence": {
+  "reference_steps": 32,
+  "baseline_steps": 32,
+  "same_step_set": true,
+  "identical_decisions": 32,
+  "same_sequence": true,
+  "differences": [],
+  "baseline_planner_seconds": 0.0001,
+  "baseline_steps_outside_machine_operation_set": 3,
+  "provenance_form": {
+   "reference": "rule identifier + ontology IRIs, SPARQL-queryable (128 of 128)",
+   "baseline": "dictionary key strings in the plan record; not queryable"
+  }
+ },
+ "probe2_contradiction": {
+  "injected_rule": "aisi1045_drilling_params_alt: Feature(?f) ^ requiresOperation(?f, DrillingOp) ^ madeOfMaterial(?f, AISI1045Steel) -> hasCuttingParameterSet(?f, Aluminum6061_Drilling_Params)",
+  "ontology": {
+   "drilling_steps": 7,
+   "withheld_rule_conflict": 7,
+   "parameters_emitted_for_conflicting_steps": 0,
+   "rule_conflict_requests": 7
+  },
+  "lookup_table": {
+   "drilling_steps": 7,
+   "steps_with_silently_replaced_values": 7,
+   "flags_raised": 0,
+   "winning_entry": [
+    "Aluminum6061_Drilling_Params",
+    "aisi1045_drilling_params_alt"
+   ]
+  }
+ },
+ "probe3_subsumption": {
+  "ontology": {
+   "steps_inferred": 1,
+   "operations": [
+    "drilling"
+   ],
+   "operation_rule_ids": [
+    "hole_requires_drilling"
+   ],
+   "statuses": [
+    "auto_approved"
+   ],
+   "new_rules_written": 0,
+   "new_axioms_written": 1
+  },
+  "lookup_table": {
+   "steps_produced": 0,
+   "rows_added": 0,
+   "note": "no row for the new label; a row (and one per new class) must be written by hand"
+  }
+ },
+ "timing": {
+  "ontology_load_and_table_build_seconds": 0.181
+ }
+}

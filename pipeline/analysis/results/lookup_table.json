@@ -1,0 +1,344 @@
+{
+ "feature_to_operations": {
+  "Step": [
+   [
+    "RoughTurningOp",
+    "step_requires_rough_turning"
+   ],
+   [
+    "FinishTurningOp",
+    "step_requires_finish_turning"
+   ]
+  ],
+  "Cylinder": [
+   [
+    "RoughTurningOp",
+    "cylinder_requires_rough_turning"
+   ],
+   [
+    "FinishTurningOp",
+    "cylinder_requires_finish_turning"
+   ]
+  ],
+  "ChamferFeature": [
+   [
+    "ChamferingOp",
+    "chamfer_requires_chamfering"
+   ]
+  ],
+  "BlindHole": [
+   [
+    "DrillingOp",
+    "blindhole_requires_drilling"
+   ]
+  ],
+  "HoleFeature": [
+   [
+    "DrillingOp",
+    "hole_requires_drilling"
+   ]
+  ],
+  "Bore": [
+   [
+    "DrillingOp",
+    "bore_requires_drilling"
+   ],
+   [
+    "BoringOp",
+    "bore_requires_boring"
+   ]
+  ],
+  "Counterbore": [
+   [
+    "DrillingOp",
+    "counterbore_requires_drilling"
+   ],
+   [
+    "CounterboringOp",
+    "counterbore_requires_counterboring"
+   ]
+  ],
+  "Boss": [
+   [
+    "FacingOp",
+    "boss_requires_facing"
+   ],
+   [
+    "RoughTurningOp",
+    "boss_requires_rough_turning"
+   ],
+   [
+    "FinishTurningOp",
+    "boss_requires_finish_turning"
+   ]
+  ],
+  "ThroughHole": [
+   [
+    "DrillingOp",
+    "throughhole_requires_drilling"
+   ]
+  ],
+  "Slot": [
+   [
+    "MillingOp",
+    "slot_requires_milling"
+   ]
+  ],
+  "Groove": [
+   [
+    "GroovingOp",
+    "groove_requires_grooving"
+   ]
+  ],
+  "KeyFeature": [
+   [
+    "MillingOp",
+    "key_requires_milling"
+   ]
+  ]
+ },
+ "parameter_rules": {
+  "AISI1045Steel|RoughTurningOp": [
+   "AISI1045_RoughTurning_Params",
+   "aisi1045_roughturning_params"
+  ],
+  "AISI1045Steel|FinishTurningOp": [
+   "AISI1045_FinishTurning_Params",
+   "aisi1045_finishturning_params"
+  ],
+  "AISI1045Steel|DrillingOp": [
+   "AISI1045_Drilling_Params",
+   "aisi1045_drilling_params"
+  ],
+  "AISI1045Steel|MillingOp": [
+   "AISI1045_Milling_Params",
+   "aisi1045_milling_params"
+  ],
+  "Aluminum6061T6|RoughTurningOp": [
+   "Aluminum6061_RoughTurning_Params",
+   "aluminum6061_roughturning_params"
+  ],
+  "Aluminum6061T6|FinishTurningOp": [
+   "Aluminum6061_FinishTurning_Params",
+   "aluminum6061_finishturning_params"
+  ],
+  "Aluminum6061T6|DrillingOp": [
+   "Aluminum6061_Drilling_Params",
+   "aluminum6061_drilling_params"
+  ],
+  "Aluminum6061T6|MillingOp": [
+   "Aluminum6061_Milling_Params",
+   "aluminum6061_milling_params"
+  ],
+  "StainlessSteel304|RoughTurningOp": [
+   "Stainless304_RoughTurning_Params",
+   "stainless304_roughturning_params"
+  ],
+  "StainlessSteel304|FinishTurningOp": [
+   "Stainless304_FinishTurning_Params",
+   "stainless304_finishturning_params"
+  ],
+  "StainlessSteel304|DrillingOp": [
+   "Stainless304_Drilling_Params",
+   "stainless304_drilling_params"
+  ],
+  "StainlessSteel304|MillingOp": [
+   "Stainless304_Milling_Params",
+   "stainless304_milling_params"
+  ],
+  "*|CounterboringOp": [
+   "Counterboring_Default_Params",
+   "counterboring_default_params"
+  ],
+  "*|ChamferingOp": [
+   "Chamfering_Default_Params",
+   "chamfering_default_params"
+  ],
+  "*|BoringOp": [
+   "Boring_Default_Params",
+   "boring_default_params"
+  ],
+  "*|FacingOp": [
+   "Facing_Default_Params",
+   "facing_default_params"
+  ],
+  "*|GroovingOp": [
+   "Grooving_Default_Params",
+   "grooving_default_params"
+  ]
+ },
+ "parameter_sets": {
+  "AISI1045_RoughTurning_Params": {
+   "feed_rate": 0.25,
+   "spindle_speed": 480.0,
+   "depth_of_cut": 2.0,
+   "coolant": true
+  },
+  "AISI1045_FinishTurning_Params": {
+   "feed_rate": 0.06,
+   "spindle_speed": 900.0,
+   "depth_of_cut": 0.2,
+   "coolant": true
+  },
+  "AISI1045_Drilling_Params": {
+   "feed_rate": 0.15,
+   "spindle_speed": 900.0,
+   "depth_of_cut": 5.0,
+   "coolant": true
+  },
+  "AISI1045_Milling_Params": {
+   "feed_rate": 0.05,
+   "spindle_speed": 1200.0,
+   "depth_of_cut": 1.0,
+   "coolant": true
+  },
+  "Aluminum6061_RoughTurning_Params": {
+   "feed_rate": 0.3,
+   "spindle_speed": 800.0,
+   "depth_of_cut": 3.0,
+   "coolant": true
+  },
+  "Aluminum6061_FinishTurning_Params": {
+   "feed_rate": 0.12,
+   "spindle_speed": 1500.0,
+   "depth_of_cut": 0.2,
+   "coolant": true
+  },
+  "Aluminum6061_Drilling_Params": {
+   "feed_rate": 0.18,
+   "spindle_speed": 1500.0,
+   "depth_of_cut": 8.0,
+   "coolant": true
+  },
+  "Aluminum6061_Milling_Params": {
+   "feed_rate": 0.08,
+   "spindle_speed": 2000.0,
+   "depth_of_cut": 2.0,
+   "coolant": true
+  },
+  "Stainless304_RoughTurning_Params": {
+   "feed_rate": 0.2,
+   "spindle_speed": 320.0,
+   "depth_of_cut": 1.5,
+   "coolant": true
+  },
+  "Stainless304_FinishTurning_Params": {
+   "feed_rate": 0.032,
+   "spindle_speed": 600.0,
+   "depth_of_cut": 0.15,
+   "coolant": true
+  },
+  "Stainless304_Drilling_Params": {
+   "feed_rate": 0.12,
+   "spindle_speed": 600.0,
+   "depth_of_cut": 4.0,
+   "coolant": true
+  },
+  "Stainless304_Milling_Params": {
+   "feed_rate": 0.04,
+   "spindle_speed": 800.0,
+   "depth_of_cut": 0.8,
+   "coolant": true
+  },
+  "Counterboring_Default_Params": {
+   "feed_rate": 0.12,
+   "spindle_speed": 1000.0,
+   "depth_of_cut": 3.0,
+   "coolant": true
+  },
+  "Chamfering_Default_Params": {
+   "feed_rate": 0.1,
+   "spindle_speed": 1200.0,
+   "depth_of_cut": 1.0,
+   "coolant": true
+  },
+  "Boring_Default_Params": {
+   "feed_rate": 0.1,
+   "spindle_speed": 800.0,
+   "depth_of_cut": 0.5,
+   "coolant": true
+  },
+  "Facing_Default_Params": {
+   "feed_rate": 0.2,
+   "spindle_speed": 800.0,
+   "depth_of_cut": 1.0,
+   "coolant": true
+  },
+  "Grooving_Default_Params": {
+   "feed_rate": 0.08,
+   "spindle_speed": 600.0,
+   "depth_of_cut": 0.5,
+   "coolant": true
+  }
+ },
+ "tools_for_operation": {
+  "RoughTurningOp": [
+   "TurningInsertRough"
+  ],
+  "FacingOp": [
+   "TurningInsertRough",
+   "TurningInsertFinish",
+   "FaceMill"
+  ],
+  "FinishTurningOp": [
+   "TurningInsertFinish"
+  ],
+  "DrillingOp": [
+   "DrillBit"
+  ],
+  "CounterboringOp": [
+   "CounterboreCutter"
+  ],
+  "ChamferingOp": [
+   "ChamferMill",
+   "ChamferDrill"
+  ],
+  "BoringOp": [
+   "BoringBar"
+  ],
+  "MillingOp": [
+   "EndMill",
+   "FaceMill"
+  ],
+  "GroovingOp": [
+   "GroovingTool"
+  ]
+ },
+ "preferred_tool": {
+  "ChamferingOp": "ChamferMill",
+  "FacingOp": "TurningInsertRough",
+  "MillingOp": "EndMill"
+ },
+ "precedence": {
+  "RoughTurningOp": 2,
+  "FinishTurningOp": 3,
+  "DrillingOp": 4,
+  "CounterboringOp": 5,
+  "ChamferingOp": 7,
+  "BoringOp": 6,
+  "FacingOp": 1,
+  "MillingOp": 9,
+  "GroovingOp": 8
+ },
+ "machine": {
+  "supportsOperation": [
+   "FinishTurningOp",
+   "CounterboringOp",
+   "FacingOp",
+   "BoringOp",
+   "RoughTurningOp",
+   "DrillingOp",
+   "ChamferingOp",
+   "GroovingOp"
+  ],
+  "supportsToolOrientation": [
+   "AxialToolOrientation"
+  ],
+  "spindle_axis": "Z",
+  "limits": {
+   "feed_rate": 5.0,
+   "spindle_speed": 4500.0,
+   "depth_of_cut": 5.0
+  }
+ }
+}

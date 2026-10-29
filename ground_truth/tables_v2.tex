@@ -1,0 +1,265 @@
+% ---- replaces Table 2 (tab:reference) ----
+\begin{table}[htbp]
+\centering
+\caption{\rev{Reference features derived from the B-Rep of the STEP model (R01 to R10; exact values in the STEP frame, $z$ along the part axis, face indices in kernel order) and read from the drawing (D01 to D06; dimensions as written on the drawing, no coordinate frame).}}
+\label{tab:reference}
+\small
+\rev{
+\begin{tabular}{p{0.9cm} p{2.0cm} p{5.6cm} p{4.6cm}}
+\toprule
+\textbf{Id} & \textbf{Type} & \textbf{Geometry} & \textbf{Position (STEP) or note} \\
+\midrule
+R01 & Step & $\varnothing$24.95 $\times$ 37.5 & $z$ 80.5 to 118.0 \\
+R02 & Chamfer & 0.5 $\times$ 45$^\circ$, $\varnothing$24.95 to 23.95 & $z$ 118.0 to 118.5 \\
+R03 & Groove & $\varnothing$23.6 $\times$ 1.754 & $z$ 118.5 to 120.254 \\
+R04 & Chamfer & 15$^\circ$ taper, $\varnothing$23.6 to 24.0 & $z$ 120.254 to 121.0 \\
+R05 & Step & $\varnothing$24.0 $\times$ 46.5 & $z$ 121.0 to 167.5 \\
+R06 & Key & 8 wide, 40 long, 3 high; full-radius ends R4 (faces 22; 4 and 20), flanks $x = \pm 4$ (faces 21, 23), top plane $y = 15$ (face 24) & $z$ 123.5 to 163.5, on $+y$; end-radius axes along $y$ through $(0, 15, 127.5)$ and $(0, 15, 159.5)$ \\
+R07 & Blind hole & $\varnothing$6.8 $\times$ 19.0, drill point 2.04 & $z$ 143.5 to 162.5 \\
+R08 & Counterbore & $\varnothing$8.4 $\times$ 2.709 & $z$ 162.5 to 165.209 \\
+R09 & Chamfer (countersink) & 60$^\circ$, $\varnothing$12.2 to 8.4 & $z$ 165.209 to 168.5 \\
+R10 & Chamfer & 1.0 $\times$ 45$^\circ$, $\varnothing$24.0 to 22.0 & $z$ 167.5 to 168.5 \\
+\addlinespace
+D01 & Step & $\varnothing$24 $\times$ 46.5 & upper body, carries the key \\
+D02 & Step & $\varnothing$24 $\times$ 37.5 & lower body; length dimensioned, diameter drawn at 24.93 but not dimensioned \\
+D03 & Groove & width 1.75 & diameter not dimensioned \\
+D04 & Key & 8 wide (end radius R4), 40 long (32 between end-radius centres), 3 high (3.69 above the chord) & ends 5~mm from the free end \\
+D05a & Hole & R3.4 ($\varnothing$6.8) & innermost bore section \\
+D05b & Counterbore & R4.2 ($\varnothing$8.4) & middle bore section \\
+D05c & Chamfer & R6.1 ($\varnothing$12.2) & entry bore section \\
+D06 & Chamfer & 1 $\times$ 45$^\circ$, $\varnothing$24 to 22 & free end; end face R11 in the end view \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+% ---- replaces Table 3 (tab:accuracy) ----
+\begin{table}[htbp]
+\centering
+\caption{\rev{Extraction accuracy of the four agents under three conventions. R1 convention: a record denotes a real feature when it matches a reference feature of Table~\ref{tab:reference} under the R1 matching rule; type is exact, related (right feature, different operation family) or wrong. Level G: a STEP record is grounded when it lies within 10~mm of an anchor of a B-Rep feature (key end-radius axes included) with its stated diameter within 10\,\%; drawing records are grounded on dimensioned values; labels are scored with the type-similarity tiers of Equation~\ref{eq:merge_criterion}. Level M: the label's operation family is compared with the family the physical feature requires (Table~\ref{tab:physref}). Positional errors are available for STEP-derived records only.}}
+\label{tab:accuracy}
+\scriptsize
+\rev{
+\begin{tabular}{p{4.1cm} p{2.3cm} p{2.3cm} p{2.3cm} p{2.6cm}}
+\toprule
+\textbf{Measure} & \textbf{STEP-A (primary)} & \textbf{STEP-B (secondary)} & \textbf{DRW-A (primary)} & \textbf{DRW-B (secondary)} \\
+\midrule
+\multicolumn{5}{l}{\textit{R1 convention, corrected drawing reference}} \\
+Records reported & 12 & 5 & 7 & 6 \\
+Records denoting a real feature & 10 & 2 & 7 & 5 \\
+Precision & 0.83 & 0.40 & 1.00 & 0.83 \\
+Reference features found & 10 of 10 & 2 of 10 & 7 of 8 & 7 of 8 \\
+Type exact / related / wrong & 8 / 1 / 1 & 2 / 0 / 0 & 6 / 1 / 0 & 4 / 1 / 0 \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Level G, geometric grounding}} \\
+Records grounded (precision) & 12 (1.00) & 5 (1.00) & 7 (1.00) & 6 (1.00) \\
+Label exact / same family / other family & 8 / 1 / 3 & 2 / 1 / 2 & 2 / 3 / 2 & 1 / 4 / 1 \\
+Reference features found & 10 of 10 & 4 of 10 & 7 of 8 & 7 of 8 \\
+Position error to nearest anchor, mean (max), mm & 0.04 (0.50) & 1.36 (3.50) & n/a & n/a \\
+Position error to feature centre, mean (max), mm & 3.89 (16.07) & 13.21 (19.75) & n/a & n/a \\
+Diameter error, mean (max), mm & 0.00 (0.00), $n = 11$ & 0.19 (0.95), $n = 5$ & 0 stated errors & 1 record (22 for 24) \\
+Length or width error, mean (max), mm & 0.34 (2.05), $n = 9$ & 14.93 (41.50), $n = 3$ & 1 record (key: 4 for 8 wide, 32 for 40 long) & 2 records (key: 3.69 for 8 wide, 32 for 40 long; slot: 4 for 8) \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Level M, operation family for the physical shaft}} \\
+Correct / wrong family / no such feature & 8 / 4 / 0 & 5 / 0 / 0 & 4 / 3 / 0 & 5 / 1 / 0 \\
+Precision & 0.67 & 1.00 & 0.57 & 0.83 \\
+Physical features covered in the correct family & 8 of 10 & 4 of 10 & 4 of 8 & 5 of 8 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+% ---- NEW table (tab:physref): physical reference for Level M; cite it where Level M is introduced ----
+\begin{table}[htbp]
+\centering
+\caption{\rev{Physical reference for operation-family scoring: the IEC 60072-1 frame-90 drive-end shaft extension that the catalogue model depicts with its feather key fitted. Required families use the pipeline's vocabulary.}}
+\label{tab:physref}
+\small
+\rev{
+\begin{tabular}{p{0.9cm} p{5.6cm} p{3.0cm} p{1.2cm} p{1.2cm}}
+\toprule
+\textbf{Id} & \textbf{Physical feature} & \textbf{Required family} & \textbf{B-Rep} & \textbf{Drawing} \\
+\midrule
+P01 & lower body $\varnothing$24.95 $\times$ 37.5 & turning & R01 & D02 \\
+P02 & chamfer 0.5 $\times$ 45$^\circ$ & chamfering & R02 & none \\
+P03 & relief groove $\varnothing$23.6 $\times$ 1.75 & grooving & R03 & D03 \\
+P04 & 15$^\circ$ transition & chamfering & R04 & none \\
+P05 & upper body $\varnothing$24 j6 $\times$ 46.5 & turning & R05 & D01 \\
+P06 & end chamfer 1 $\times$ 45$^\circ$ & chamfering & R10 & D06 \\
+P07a & centre hole: tap drill $\varnothing$6.8 $\times$ 19, 118$^\circ$ & drilling & R07 & D05a \\
+P07b & centre hole: counterbore $\varnothing$8.4 & counterboring & R08 & D05b \\
+P07c & centre hole: countersink 60$^\circ$ to $\varnothing$12.2 & chamfering & R09 & D05c \\
+P07d & centre hole: thread M8 & tapping (not in the vocabulary) & none & none \\
+P08 & keyway 8 $\times$ 4 $\times$ 40, key fitted afterwards & milling & R06 & D04 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+% ---- NEW table (tab:classrates): per reconciliation class rates vs assigned confidence ----
+\begin{table}[htbp]
+\centering
+\caption{\rev{Observed rates per reconciliation class against the assigned confidence of Equation~\ref{eq:conf}. Existence (R1 convention), grounding and exact label (Level G), and correct operation family (Level M) are fractions of the entities in the class. In the swapped run the secondary-model agents act as primary.}}
+\label{tab:classrates}
+\scriptsize
+\rev{
+\begin{tabular}{p{2.6cm} p{0.5cm} p{1.8cm} p{1.5cm} p{1.4cm} p{1.4cm} p{1.6cm}}
+\toprule
+\textbf{Class} & \textbf{$n$} & \textbf{Assigned $c$} & \textbf{Existence (R1)} & \textbf{Grounded (G)} & \textbf{Exact label (G)} & \textbf{Correct family (M)} \\
+\midrule
+\multicolumn{7}{l}{\textit{Reference run}} \\
+Merged & 8 & $S$ (mean 0.78) & 1.00 & 1.00 & 0.50 & 0.75 \\
+Primary-only & 11 & 1.0 & 0.82 & 1.00 & 0.55 & 0.55 \\
+Secondary-only & 3 & 0.4 & 0.00 & 1.00 & 0.00 & 1.00 \\
+Primary above secondary? & & & supported & not supported, tied & supported & reversed \\
+\addlinespace
+\multicolumn{7}{l}{\textit{Source roles swapped}} \\
+Merged & 8 & $S$ (mean 0.80) & 1.00 & 1.00 & 0.38 & 0.88 \\
+Primary-only & 3 & 1.0 & 0.00 & 1.00 & 0.00 & 1.00 \\
+Secondary-only & 11 & 0.4 & 0.82 & 1.00 & 0.64 & 0.64 \\
+Primary above secondary? & & & reversed & not supported, tied & reversed & supported \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+% ---- replaces Table 7 (tab:correctness) ----
+\begin{table}[htbp]
+\centering
+\caption{\rev{Decision correctness of the 32 planned steps under the three conventions of Table~\ref{tab:accuracy}. Level M asks whether the step's operation is the family the physical feature requires (Table~\ref{tab:physref}); auxiliary pilot drilling counts as correct only when the same entity is also counterbored.}}
+\label{tab:correctness}
+\small
+\rev{
+\begin{tabular}{p{7.2cm} p{2.4cm} p{2.4cm}}
+\toprule
+\textbf{Steps} & \textbf{Approved} & \textbf{Withheld} \\
+\midrule
+\multicolumn{3}{l}{\textit{R1 convention, corrected references}} \\
+On a real, correctly typed feature & 19 & 0 \\
+On a real, mistyped feature (operation family differs) & 8 & 0 \\
+On a feature the part does not have & 0 & 5 \\
+\addlinespace
+\multicolumn{3}{l}{\textit{Level G, geometric grounding}} \\
+On a grounded feature, label exact & 13 & 0 \\
+On a grounded feature, label same family & 10 & 0 \\
+On a grounded feature, label other family & 4 & 5 \\
+On an ungrounded feature & 0 & 0 \\
+\addlinespace
+\multicolumn{3}{l}{\textit{Level M, operation family for the physical shaft}} \\
+Correct operation family & 17 & 3 \\
+Wrong operation family & 10 & 2 \\
+No such feature & 0 & 0 \\
+\addlinespace
+Total & 27 & 5 \\
+Approved steps that duplicate a STEP-family feature from the drawing family & 11 & \\
+Physical features without an approved step of the correct family & P07d, P08 & \\
+Parameter records with rule and ontology provenance & 108 of 108 & 20 of 20 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+% ---- replaces Appendix A table (tab:records) ----
+\begin{table}[htbp]
+\centering
+\caption{\rev{Matching outcome for the 30 raw records (A: primary agent, B: secondary agent). R1: match under the R1 convention with the corrected references (rel.: related type). G: grounding feature and anchor (c centre, end axial end, top key top face, R4 axis key end-radius axis), distance $d$ to the anchor, diameter and length errors for STEP records (stated-dimension errors for drawing records), and label tier. M: operation-family verdict and the physical feature of Table~\ref{tab:physref}.}}
+\label{tab:records}
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\rev{
+\begin{tabular}{p{0.85cm} p{0.3cm} p{1.45cm} p{2.9cm} p{0.9cm} p{1.35cm} p{0.55cm} p{1.15cm} p{0.7cm} p{2.0cm}}
+\toprule
+\textbf{Source} & \textbf{Id} & \textbf{Label} & \textbf{Stated position and dimensions} & \textbf{R1} & \textbf{G match} & \textbf{$d$, mm} & \textbf{$\Delta D$ / $\Delta L$} & \textbf{Tier} & \textbf{M verdict} \\
+\midrule
+STEP-A & 1 & Step & (0, 0, 99.25); $\varnothing$24.95, L 37.5 & R01 & R01 (c) & 0.00 & 0 / 0 & exact & correct (lower body) \\
+STEP-A & 2 & Chamfer & (0, 0, 118.25); $\varnothing$24.95, L 0.5 & R02 & R02 (c) & 0.00 & 0 / 0 & exact & correct (0.5 chamfer) \\
+STEP-A & 3 & Step & (0, 0, 119.375); $\varnothing$23.6, L 1.75 & R03 wrong & R03 (c) & 0.00 & 0 / 0.004 & other & wrong (groove) \\
+STEP-A & 4 & Chamfer & (0, 0, 120.625); $\varnothing$24, L 0.75 & R04 & R04 (c) & 0.00 & 0 / 0.004 & exact & correct (15$^\circ$ chamfer) \\
+STEP-A & 5 & Step & (0, 0, 144.75); $\varnothing$24, L 47.5 & R05 & R05 (c) & 0.50 & 0 / 1 & exact & correct (upper body) \\
+STEP-A & 6 & Chamfer & (0, 0, 168); $\varnothing$24, L 1 & R10 & R10 (c) & 0.00 & 0 / 0 & exact & correct (end chamfer) \\
+STEP-A & 7 & Blind Hole & (0, 0, 162.5); $\varnothing$6.8, L 21.05 & R07 & R07 (end) & 0.00 & 0 / 2.05 & exact & correct (tap-drill hole) \\
+STEP-A & 8 & Counterbore & (0, 0, 165.2); $\varnothing$8.4, L 2.7 & R08 & R08 (end) & 0.01 & 0 / 0.009 & exact & correct (counterbore) \\
+STEP-A & 9 & Chamfer & (0, 0, 168.5); $\varnothing$12.2, L 3.3 & R09 & R09 (end) & 0.00 & 0 / 0.009 & exact & correct (countersink) \\
+STEP-A & 10 & Boss & (0, 15, 143.5); W 8 & R06 rel. & R06 (top) & 0.00 & n/a / n/a & same & wrong (keyway) \\
+STEP-A & 11 & Through Hole & (0, 15, 159.5); $\varnothing$8 & none & R06 (R4 axis) & 0.00 & 0 / n/a & other & wrong (keyway) \\
+STEP-A & 12 & Through Hole & (0, 15, 127.5); $\varnothing$8 & none & R06 (R4 axis) & 0.00 & 0 / n/a & other & wrong (keyway) \\
+STEP-B & 1 & Blind Hole & (0, 0, 162.5); $\varnothing$6.8, L 19 & R07 & R07 (end) & 0.00 & 0 / 0 & exact & correct (tap-drill hole) \\
+STEP-B & 2 & Counterbore & (0, 0, 168.5); $\varnothing$8.4, L 6 & R08 & R08 (end) & 3.29 & 0 / 3.291 & exact & correct (counterbore) \\
+STEP-B & 3 & Slot & (0, 15, 159.5); $\varnothing$8 & none & R06 (R4 axis) & 0.00 & 0 / n/a & other & correct (keyway) \\
+STEP-B & 4 & Slot & (0, 15, 127.5); $\varnothing$8 & none & R06 (R4 axis) & 0.00 & 0 / n/a & other & correct (keyway) \\
+STEP-B & 5 & Boss & (0, 0, 124.5); $\varnothing$24.95, L 88 & none & R05 (end) & 3.50 & 0.95 / 41.5 & same & correct (upper body) \\
+DRW-A & 1 & Cylinder & $\varnothing$24, L 46.5 & D01 & D01 &  & 0 / 0 & same & correct (upper body) \\
+DRW-A & 2 & Cylinder & $\varnothing$24, L 37.5 & D02 & D02 &  & 0 / 0 & same & correct (lower body) \\
+DRW-A & 3 & Groove & width 1.75 & D03 & D03 &  & 0 & exact & correct (groove) \\
+DRW-A & 4 & Boss & key 4 wide, 32 long, 3 high & D04 rel. & D04 &  & 4 / 8 & same & wrong (keyway) \\
+DRW-A & 5 & Hole & R6.1 & D05c & D05c &  & 0 & other & wrong (countersink) \\
+DRW-A & 6 & Hole & R4.2 & D05b & D05b &  & 0 & other & wrong (counterbore) \\
+DRW-A & 7 & Hole & R3.4 & D05a & D05a &  & 0 & exact & correct (tap-drill hole) \\
+DRW-B & 1 & Cylinder & $\varnothing$24, L 37.5 & D02 & D02 &  & 0 / 0 & same & correct (lower body) \\
+DRW-B & 2 & Cylinder & $\varnothing$22, L 46.5 & D01 & D01 &  & 2 / 0 & same & correct (upper body) \\
+DRW-B & 3 & Groove & width 1.75 & D03 & D03 &  & 0 & exact & correct (groove) \\
+DRW-B & 4 & Boss & key 32 long, 3.69 wide, 3 high & D04 rel. & D04 &  & 4.31 / 8 & same & wrong (keyway) \\
+DRW-B & 5 & Slot & width 4 & none & D04 &  & 4 & other & correct (keyway) \\
+DRW-B & 6 & Bore & R3.4, R4.2, R6.1 & D05a & D05a to c &  & 0 & same & correct (tap-drill hole) \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+% ---- replaces Appendix B table (tab:stepaudit) ----
+\begin{table}[htbp]
+\centering
+\caption{\rev{Per-step audit of the reference plan, steps 1 to 16. Status: A approved, W withheld. Tool: F \texttt{feature\_tool\_from\_operation}, P \texttt{preferred\_tool\_selection}; the operation rule is \texttt{<label>\_requires\_<operation>} in every row. R1: verdict under the R1 convention (correct, mistyped, phantom). G: grounding feature and label tier. M: operation-family verdict, physical feature and required family. Flags: D the drawing-family entity duplicates a STEP-family feature; S$n$ the physical feature is already described by entity $n$ of the same family.}}
+\label{tab:stepaudit}
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\rev{
+\begin{tabular}{p{0.45cm} p{0.55cm} p{1.5cm} p{1.5cm} p{0.4cm} p{0.4cm} p{1.1cm} p{1.4cm} p{3.6cm} p{0.6cm}}
+\toprule
+\textbf{Step} & \textbf{Entity} & \textbf{Entity label} & \textbf{Operation} & \textbf{St.} & \textbf{Tool} & \textbf{R1} & \textbf{G} & \textbf{M} & \textbf{Flags} \\
+\midrule
+1 & 10 & Boss & facing & A & P & mistyped & R06 same & wrong (keyway: milling) &  \\
+2 & 18 & Boss & facing & A & P & mistyped & D04 same & wrong (keyway: milling) & D \\
+3 & 1 & Step & rough turning & A & F & correct & R01 exact & correct (lower body: turning) &  \\
+4 & 3 & Step & rough turning & A & F & mistyped & R03 other & wrong (groove: grooving) &  \\
+5 & 5 & Step & rough turning & A & F & correct & R05 exact & correct (upper body: turning) &  \\
+6 & 10 & Boss & rough turning & A & F & mistyped & R06 same & wrong (keyway: milling) &  \\
+7 & 15 & Cylinder & rough turning & A & F & correct & D01 same & correct (upper body: turning) & D \\
+8 & 16 & Cylinder & rough turning & A & F & correct & D02 same & correct (lower body: turning) & D \\
+9 & 18 & Boss & rough turning & A & F & mistyped & D04 same & wrong (keyway: milling) & D \\
+10 & 1 & Step & finish turning & A & F & correct & R01 exact & correct (lower body: turning) &  \\
+11 & 3 & Step & finish turning & A & F & mistyped & R03 other & wrong (groove: grooving) &  \\
+12 & 5 & Step & finish turning & A & F & correct & R05 exact & correct (upper body: turning) &  \\
+13 & 10 & Boss & finish turning & A & F & mistyped & R06 same & wrong (keyway: milling) &  \\
+14 & 15 & Cylinder & finish turning & A & F & correct & D01 same & correct (upper body: turning) & D \\
+15 & 16 & Cylinder & finish turning & A & F & correct & D02 same & correct (lower body: turning) & D \\
+16 & 18 & Boss & finish turning & A & F & mistyped & D04 same & wrong (keyway: milling) & D \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+% ---- replaces Appendix B table (tab:stepaudit2) ----
+\begin{table}[htbp]
+\centering
+\caption{\rev{Per-step audit of the reference plan, steps 17 to 32. Status: A approved, W withheld. Tool: F \texttt{feature\_tool\_from\_operation}, P \texttt{preferred\_tool\_selection}; the operation rule is \texttt{<label>\_requires\_<operation>} in every row. R1: verdict under the R1 convention (correct, mistyped, phantom). G: grounding feature and label tier. M: operation-family verdict, physical feature and required family. Flags: D the drawing-family entity duplicates a STEP-family feature; S$n$ the physical feature is already described by entity $n$ of the same family.}}
+\label{tab:stepaudit2}
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\rev{
+\begin{tabular}{p{0.45cm} p{0.55cm} p{1.5cm} p{1.5cm} p{0.4cm} p{0.4cm} p{1.1cm} p{1.4cm} p{3.6cm} p{0.6cm}}
+\toprule
+\textbf{Step} & \textbf{Entity} & \textbf{Entity label} & \textbf{Operation} & \textbf{St.} & \textbf{Tool} & \textbf{R1} & \textbf{G} & \textbf{M} & \textbf{Flags} \\
+\midrule
+17 & 7 & Blind Hole & drilling & A & F & correct & R07 exact & correct (tap-drill hole: drilling) &  \\
+18 & 8 & Counterbore & drilling & A & F & correct & R08 exact & correct (counterbore: counterboring) &  \\
+19 & 11 & Through Hole & drilling & W & F & phantom & R06 other & wrong (keyway: milling) & S10 \\
+20 & 12 & Through Hole & drilling & W & F & phantom & R06 other & wrong (keyway: milling) & S10 \\
+21 & 19 & Hole & drilling & A & F & correct & D05c other & wrong (countersink: chamfering) & D \\
+22 & 20 & Hole & drilling & A & F & correct & D05b other & wrong (counterbore: counterboring) & D \\
+23 & 21 & Hole & drilling & A & F & correct & D05a exact & correct (tap-drill hole: drilling) & D \\
+24 & 8 & Counterbore & counterboring & A & F & correct & R08 exact & correct (counterbore: counterboring) &  \\
+25 & 2 & Chamfer & chamfering & A & P & correct & R02 exact & correct (0.5 chamfer: chamfering) &  \\
+26 & 4 & Chamfer & chamfering & A & P & correct & R04 exact & correct (15$^\circ$ chamfer: chamfering) &  \\
+27 & 6 & Chamfer & chamfering & A & P & correct & R10 exact & correct (end chamfer: chamfering) &  \\
+28 & 9 & Chamfer & chamfering & A & P & correct & R09 exact & correct (countersink: chamfering) &  \\
+29 & 17 & Groove & grooving & A & F & correct & D03 exact & correct (groove: grooving) & D \\
+30 & 13 & Slot & milling & W & P & phantom & R06 other & correct (keyway: milling) & S10 \\
+31 & 14 & Slot & milling & W & P & phantom & R06 other & correct (keyway: milling) & S10 \\
+32 & 22 & Slot & milling & W & P & phantom & D04 other & correct (keyway: milling) & D, S18 \\
+\bottomrule
+\end{tabular}}
+\end{table}

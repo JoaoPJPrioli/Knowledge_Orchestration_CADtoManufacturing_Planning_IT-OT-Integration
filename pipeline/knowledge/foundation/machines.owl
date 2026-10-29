@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://onto.brep.org/manufacturing/machines"
+         xmlns="http://onto.brep.org/manufacturing/machines#">
+
+<owl:Ontology rdf:about="http://onto.brep.org/manufacturing/machines">
+  <owl:imports rdf:resource="http://onto.brep.org/manufacturing/machining-process"/>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="#supportsOperation">
+  <rdfs:domain rdf:resource="#Machine"/>
+  <rdfs:range rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#supportsToolOrientation">
+  <rdfs:domain rdf:resource="#Machine"/>
+  <rdfs:range rdf:resource="#ToolOrientation"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#hasMachineLabel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasModel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasMaxSpindleSpeedRPM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasMaxBarDiameterMM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasMaxSwingDiameterMM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasTurretStations">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasControlSystem">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasGCodeDialect">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasSafetyMaxRPM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasSafetyMaxFeedRate">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasSafetyMaxDepthOfCut">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasSafetyMinToolClearanceMM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasSpindleAxis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Machine">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ToolOrientation">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#AxialToolOrientation">
+  <rdf:type rdf:resource="#ToolOrientation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#RadialToolOrientation">
+  <rdf:type rdf:resource="#ToolOrientation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CNCLatheFanuc0iTD">
+  <rdf:type rdf:resource="#Machine"/>
+  <supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#FinishTurningOp"/>
+  <supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#CounterboringOp"/>
+  <supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#FacingOp"/>
+  <supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#BoringOp"/>
+  <supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#RoughTurningOp"/>
+  <supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#DrillingOp"/>
+  <supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#ChamferingOp"/>
+  <supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#GroovingOp"/>
+  <supportsToolOrientation rdf:resource="#AxialToolOrientation"/>
+  <hasMachineLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CNC Lathe</hasMachineLabel>
+  <hasModel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fanuc Series 0i-TD</hasModel>
+  <hasMaxSpindleSpeedRPM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4500.0</hasMaxSpindleSpeedRPM>
+  <hasMaxBarDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50.0</hasMaxBarDiameterMM>
+  <hasMaxSwingDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300.0</hasMaxSwingDiameterMM>
+  <hasTurretStations rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</hasTurretStations>
+  <hasControlSystem rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fanuc 0i-TD</hasControlSystem>
+  <hasGCodeDialect rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fanuc</hasGCodeDialect>
+  <hasSafetyMaxRPM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4500.0</hasSafetyMaxRPM>
+  <hasSafetyMaxFeedRate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasSafetyMaxFeedRate>
+  <hasSafetyMaxDepthOfCut rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasSafetyMaxDepthOfCut>
+  <hasSafetyMinToolClearanceMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasSafetyMinToolClearanceMM>
+  <hasSpindleAxis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Z</hasSpindleAxis>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

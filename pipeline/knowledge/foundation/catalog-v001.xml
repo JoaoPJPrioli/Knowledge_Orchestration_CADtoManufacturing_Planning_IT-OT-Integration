@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1787841976459" name="http://onto.brep.org/manufacturing/cutting-parameters" uri="cutting_parameters.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1787841976459" name="http://onto.brep.org/manufacturing/machines" uri="machines.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1787841976459" name="http://onto.brep.org/manufacturing/machining-process" uri="machining_process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1787841976459" name="http://onto.brep.org/manufacturing/materials" uri="materials.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1787841976459" name="http://onto.brep.org/manufacturing/tools" uri="tools.owl"/>
+    </group>
+</catalog>

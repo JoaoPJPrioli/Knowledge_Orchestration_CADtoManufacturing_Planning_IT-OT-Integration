@@ -1,0 +1,479 @@
+[
+  {
+    "id": 1,
+    "type": "Step",
+    "description": "Main lower cylindrical body",
+    "absolute_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 109.35
+    },
+    "relative_position": {},
+    "dimensions": {
+      "R": 12.475,
+      "Ø": 24.95,
+      "L": 57.7
+    },
+    "orientation": "Along Z-axis",
+    "tolerance": "General",
+    "source_primary": {
+      "id": 1,
+      "type": "Step",
+      "description": "Main lower cylindrical body",
+      "absolute_location": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 99.25
+      },
+      "relative_position": {
+        "X": 0.0,
+        "Y": -1.2625,
+        "Z": -25.25
+      },
+      "dimensions": {
+        "Ø": 24.95,
+        "L": 37.5
+      },
+      "orientation": "Along Z-axis",
+      "tolerance": "General"
+    },
+    "source_secondary": {
+      "id": 5,
+      "type": "Boss",
+      "description": "Stepped outer cylindrical body of the shaft.",
+      "absolute_location": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 124.5
+      },
+      "relative_position": {
+        "X": 0.0,
+        "Y": -1.2625,
+        "Z": 0.0
+      },
+      "dimensions": {
+        "Ø": 24.95,
+        "R": 12.475,
+        "L": 88.0
+      },
+      "orientation": "Along Z-axis",
+      "tolerance": "General"
+    },
+    "match_confidence": 0.6206136363636363,
+    "reconciliation": "merged"
+  },
+  {
+    "id": 2,
+    "type": "Chamfer",
+    "description": "Outer chamfer transition",
+    "absolute_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 118.25
+    },
+    "relative_position": {
+      "X": 0.0,
+      "Y": -1.2625,
+      "Z": -6.25
+    },
+    "dimensions": {
+      "Ø": 24.95,
+      "L": 0.5
+    },
+    "orientation": "Along Z-axis",
+    "tolerance": "General",
+    "match_confidence": 1.0,
+    "reconciliation": "primary_only"
+  },
+  {
+    "id": 3,
+    "type": "Step",
+    "description": "Middle cylindrical step",
+    "absolute_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 119.375
+    },
+    "relative_position": {
+      "X": 0.0,
+      "Y": -1.2625,
+      "Z": -5.125
+    },
+    "dimensions": {
+      "Ø": 23.6,
+      "L": 1.75
+    },
+    "orientation": "Along Z-axis",
+    "tolerance": "General",
+    "match_confidence": 1.0,
+    "reconciliation": "primary_only"
+  },
+  {
+    "id": 4,
+    "type": "Chamfer",
+    "description": "Conical transition to upper cylinder",
+    "absolute_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 120.625
+    },
+    "relative_position": {
+      "X": 0.0,
+      "Y": -1.2625,
+      "Z": -3.875
+    },
+    "dimensions": {
+      "Ø": 24.0,
+      "L": 0.75
+    },
+    "orientation": "Along Z-axis",
+    "tolerance": "General",
+    "match_confidence": 1.0,
+    "reconciliation": "primary_only"
+  },
+  {
+    "id": 5,
+    "type": "Step",
+    "description": "Upper cylindrical body",
+    "absolute_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 144.75
+    },
+    "relative_position": {
+      "X": 0.0,
+      "Y": -1.2625,
+      "Z": 20.25
+    },
+    "dimensions": {
+      "Ø": 24.0,
+      "L": 47.5
+    },
+    "orientation": "Along Z-axis",
+    "tolerance": "General",
+    "match_confidence": 1.0,
+    "reconciliation": "primary_only"
+  },
+  {
+    "id": 6,
+    "type": "Chamfer",
+    "description": "Top outer chamfer",
+    "absolute_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 168.0
+    },
+    "relative_position": {
+      "X": 0.0,
+      "Y": -1.2625,
+      "Z": 43.5
+    },
+    "dimensions": {
+      "Ø": 24.0,
+      "L": 1.0
+    },
+    "orientation": "Along Z-axis",
+    "tolerance": "General",
+    "match_confidence": 1.0,
+    "reconciliation": "primary_only"
+  },
+  {
+    "id": 7,
+    "type": "Blind Hole",
+    "description": "Central blind hole with drill tip",
+    "absolute_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 162.5
+    },
+    "relative_position": {},
+    "dimensions": {
+      "R": 3.4,
+      "Ø": 6.800000000000001,
+      "L": 20.23,
+      "W": 6.8
+    },
+    "orientation": "Along Z-axis",
+    "tolerance": "H7",
+    "source_primary": {
+      "id": 7,
+      "type": "Blind Hole",
+      "description": "Central blind hole with drill tip",
+      "absolute_location": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 162.5
+      },
+      "relative_position": {
+        "X": 0.0,
+        "Y": -1.2625,
+        "Z": 38.0
+      },
+      "dimensions": {
+        "Ø": 6.8,
+        "L": 21.05
+      },
+      "orientation": "Along Z-axis",
+      "tolerance": "General"
+    },
+    "source_secondary": {
+      "id": 1,
+      "type": "Blind Hole",
+      "description": "Central blind hole along the Z-axis with a standard drill point tip.",
+      "absolute_location": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 162.5
+      },
+      "relative_position": {
+        "X": 0.0,
+        "Y": -1.2625,
+        "Z": 38.0
+      },
+      "dimensions": {
+        "Ø": 6.8,
+        "R": 3.4,
+        "L": 19.0,
+        "W": 6.8
+      },
+      "orientation": "Along Z-axis",
+      "tolerance": "H7"
+    },
+    "match_confidence": 0.9902612826603325,
+    "reconciliation": "merged"
+  },
+  {
+    "id": 8,
+    "type": "Counterbore",
+    "description": "Counterbore for central hole",
+    "absolute_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 166.51999999999998
+    },
+    "relative_position": {},
+    "dimensions": {
+      "R": 4.2,
+      "Ø": 8.4,
+      "L": 4.0200000000000005,
+      "W": 8.4
+    },
+    "orientation": "Along Z-axis",
+    "tolerance": "General",
+    "source_primary": {
+      "id": 8,
+      "type": "Counterbore",
+      "description": "Counterbore for central hole",
+      "absolute_location": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 165.2
+      },
+      "relative_position": {
+        "X": 0.0,
+        "Y": -1.2625,
+        "Z": 40.7
+      },
+      "dimensions": {
+        "Ø": 8.4,
+        "L": 2.7
+      },
+      "orientation": "Along Z-axis",
+      "tolerance": "General"
+    },
+    "source_secondary": {
+      "id": 2,
+      "type": "Counterbore",
+      "description": "Counterbore at the entry of the central blind hole, transitioning to a chamfer.",
+      "absolute_location": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 168.5
+      },
+      "relative_position": {
+        "X": 0.0,
+        "Y": -1.2625,
+        "Z": 44.0
+      },
+      "dimensions": {
+        "Ø": 8.4,
+        "R": 4.2,
+        "L": 6.0,
+        "W": 8.4
+      },
+      "orientation": "Along Z-axis",
+      "tolerance": "General"
+    },
+    "match_confidence": 0.9186,
+    "reconciliation": "merged"
+  },
+  {
+    "id": 9,
+    "type": "Chamfer",
+    "description": "Top inner chamfer for counterbore",
+    "absolute_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 168.5
+    },
+    "relative_position": {
+      "X": 0.0,
+      "Y": -1.2625,
+      "Z": 44.0
+    },
+    "dimensions": {
+      "Ø": 12.2,
+      "L": 3.3
+    },
+    "orientation": "Along Z-axis",
+    "tolerance": "General",
+    "match_confidence": 1.0,
+    "reconciliation": "primary_only"
+  },
+  {
+    "id": 10,
+    "type": "Boss",
+    "description": "Rectangular boss on the side of the upper cylinder",
+    "absolute_location": {
+      "X": 0.0,
+      "Y": 15.0,
+      "Z": 143.5
+    },
+    "relative_position": {
+      "X": 0.0,
+      "Y": 13.7375,
+      "Z": 19.0
+    },
+    "dimensions": {
+      "W": 8.0
+    },
+    "orientation": "Normal to Y-axis",
+    "tolerance": "General",
+    "match_confidence": 1.0,
+    "reconciliation": "primary_only"
+  },
+  {
+    "id": 11,
+    "type": "Through Hole",
+    "description": "Upper cross hole through the side boss",
+    "absolute_location": {
+      "X": 0.0,
+      "Y": 15.0,
+      "Z": 159.5
+    },
+    "relative_position": {},
+    "dimensions": {
+      "R": 4.0,
+      "W": 8.0,
+      "Ø": 8.0
+    },
+    "orientation": "Along Y-axis",
+    "tolerance": "General",
+    "source_primary": {
+      "id": 11,
+      "type": "Through Hole",
+      "description": "Upper cross hole through the side boss",
+      "absolute_location": {
+        "X": 0.0,
+        "Y": 15.0,
+        "Z": 159.5
+      },
+      "relative_position": {
+        "X": 0.0,
+        "Y": 13.7375,
+        "Z": 35.0
+      },
+      "dimensions": {
+        "Ø": 8.0
+      },
+      "orientation": "Along Y-axis",
+      "tolerance": "General"
+    },
+    "source_secondary": {
+      "id": 3,
+      "type": "Slot",
+      "description": "Upper cylindrical radial cutout on the outer shaft surface.",
+      "absolute_location": {
+        "X": 0.0,
+        "Y": 15.0,
+        "Z": 159.5
+      },
+      "relative_position": {
+        "X": 0.0,
+        "Y": 13.7375,
+        "Z": 35.0
+      },
+      "dimensions": {
+        "Ø": 8.0,
+        "R": 4.0,
+        "W": 8.0
+      },
+      "orientation": "Along Y-axis",
+      "tolerance": "General"
+    },
+    "match_confidence": 0.72,
+    "reconciliation": "merged"
+  },
+  {
+    "id": 12,
+    "type": "Through Hole",
+    "description": "Lower cross hole through the side boss",
+    "absolute_location": {
+      "X": 0.0,
+      "Y": 15.0,
+      "Z": 127.5
+    },
+    "relative_position": {},
+    "dimensions": {
+      "R": 4.0,
+      "W": 8.0,
+      "Ø": 8.0
+    },
+    "orientation": "Along Y-axis",
+    "tolerance": "General",
+    "source_primary": {
+      "id": 12,
+      "type": "Through Hole",
+      "description": "Lower cross hole through the side boss",
+      "absolute_location": {
+        "X": 0.0,
+        "Y": 15.0,
+        "Z": 127.5
+      },
+      "relative_position": {
+        "X": 0.0,
+        "Y": 13.7375,
+        "Z": 3.0
+      },
+      "dimensions": {
+        "Ø": 8.0
+      },
+      "orientation": "Along Y-axis",
+      "tolerance": "General"
+    },
+    "source_secondary": {
+      "id": 4,
+      "type": "Slot",
+      "description": "Lower cylindrical radial cutout on the outer shaft surface.",
+      "absolute_location": {
+        "X": 0.0,
+        "Y": 15.0,
+        "Z": 127.5
+      },
+      "relative_position": {
+        "X": 0.0,
+        "Y": 13.7375,
+        "Z": 3.0
+      },
+      "dimensions": {
+        "Ø": 8.0,
+        "R": 4.0,
+        "W": 8.0
+      },
+      "orientation": "Along Y-axis",
+      "tolerance": "General"
+    },
+    "match_confidence": 0.72,
+    "reconciliation": "merged"
+  }
+]

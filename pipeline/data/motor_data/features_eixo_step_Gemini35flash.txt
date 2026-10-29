@@ -1,0 +1,45 @@
+Extracted Manufacturing Features
+
+Overall Dimensions: L:24.95, W:27.475, H:88
+Center Point: X:0, Y:1.2625, Z:124.5
+
+1. Blind Hole
+   Description: Central blind hole along the Z-axis with a standard drill point tip.
+   Absolute Location: X:0, Y:0, Z:162.5
+   Relative Position: X:0, Y:-1.2625, Z:38
+   Dimensions: Ø:6.8, R:3.4, L:19, W:6.8
+   Orientation: Along Z-axis
+   Tolerance: H7
+
+2. Counterbore
+   Description: Counterbore at the entry of the central blind hole, transitioning to a chamfer.
+   Absolute Location: X:0, Y:0, Z:168.5
+   Relative Position: X:0, Y:-1.2625, Z:44
+   Dimensions: Ø:8.4, R:4.2, L:6, W:8.4
+   Orientation: Along Z-axis
+   Tolerance: General
+
+3. Slot
+   Description: Upper cylindrical radial cutout on the outer shaft surface.
+   Absolute Location: X:0, Y:15, Z:159.5
+   Relative Position: X:0, Y:13.7375, Z:35
+   Dimensions: Ø:8, R:4, W:8
+   Orientation: Along Y-axis
+   Tolerance: General
+
+4. Slot
+   Description: Lower cylindrical radial cutout on the outer shaft surface.
+   Absolute Location: X:0, Y:15, Z:127.5
+   Relative Position: X:0, Y:13.7375, Z:3
+   Dimensions: Ø:8, R:4, W:8
+   Orientation: Along Y-axis
+   Tolerance: General
+
+5. Boss
+   Description: Stepped outer cylindrical body of the shaft.
+   Absolute Location: X:0, Y:0, Z:124.5
+   Relative Position: X:0, Y:-1.2625, Z:0
+   Dimensions: Ø:24.95, R:12.475, L:88
+   Orientation: Along Z-axis
+   Tolerance: General
+

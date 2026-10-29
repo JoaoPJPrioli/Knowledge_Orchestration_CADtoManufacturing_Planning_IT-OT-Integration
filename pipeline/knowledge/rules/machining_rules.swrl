@@ -1,0 +1,70 @@
+# SKL Machining Rules
+# =====================
+# SWRL rules for feature-operation mapping and cutting-parameter inference.
+#
+# This file is the single source of truth for the SWRL rule set. It is parsed and
+# registered against the loaded ontology at runtime by `src/skl_repository.py` via
+# owlready2's `Imp().set_as_rule(...)` — nothing hand-edits rules into the saved .owl
+# files separately from this file (see `knowledge/build_ontologies.py`'s docstring).
+#
+# Format: one rule per non-comment, non-blank line, as `rule_id: SWRL_antecedent ->
+# SWRL_consequent`, using owlready2's supported SWRL textual syntax. `rule_id` is used
+# for provenance (`kefc_controller.py` records which named rule produced each inferred
+# value). Lines starting with `#` and blank lines are ignored.
+#
+# Entity names below refer to classes/individuals/properties defined in
+# knowledge/foundation/*.owl and knowledge/specialized/motor_shaft_case.owl.
+
+# --- Feature -> Operation mapping (source: ontology.py FEATURE_TO_OPERATION) ---
+
+step_requires_rough_turning: Step(?f) -> requiresOperation(?f, RoughTurningOp)
+step_requires_finish_turning: Step(?f) -> requiresOperation(?f, FinishTurningOp)
+cylinder_requires_rough_turning: Cylinder(?f) -> requiresOperation(?f, RoughTurningOp)
+cylinder_requires_finish_turning: Cylinder(?f) -> requiresOperation(?f, FinishTurningOp)
+chamfer_requires_chamfering: ChamferFeature(?f) -> requiresOperation(?f, ChamferingOp)
+blindhole_requires_drilling: BlindHole(?f) -> requiresOperation(?f, DrillingOp)
+hole_requires_drilling: HoleFeature(?f) -> requiresOperation(?f, DrillingOp)
+bore_requires_drilling: Bore(?f) -> requiresOperation(?f, DrillingOp)
+bore_requires_boring: Bore(?f) -> requiresOperation(?f, BoringOp)
+counterbore_requires_drilling: Counterbore(?f) -> requiresOperation(?f, DrillingOp)
+counterbore_requires_counterboring: Counterbore(?f) -> requiresOperation(?f, CounterboringOp)
+boss_requires_facing: Boss(?f) -> requiresOperation(?f, FacingOp)
+boss_requires_rough_turning: Boss(?f) -> requiresOperation(?f, RoughTurningOp)
+boss_requires_finish_turning: Boss(?f) -> requiresOperation(?f, FinishTurningOp)
+throughhole_requires_drilling: ThroughHole(?f) -> requiresOperation(?f, DrillingOp)
+slot_requires_milling: Slot(?f) -> requiresOperation(?f, MillingOp)
+groove_requires_grooving: Groove(?f) -> requiresOperation(?f, GroovingOp)
+key_requires_milling: KeyFeature(?f) -> requiresOperation(?f, MillingOp)
+
+# --- Operation -> Tool mapping (source: ontology.py OPERATIONS[...]['tools'] /
+# TOOLS[...]['recommended_operations'], symmetrized as tools.owl:recommendedForOperation) ---
+
+feature_tool_from_operation: Feature(?f) ^ requiresOperation(?f, ?op) ^ recommendedForOperation(?t, ?op) -> requiresTool(?f, ?t)
+
+# --- Material-specific cutting-parameter inference (source: ontology.py
+# MATERIALS[...]['cutting_parameters'], machinability-scaled) ---
+
+aisi1045_roughturning_params: Feature(?f) ^ requiresOperation(?f, RoughTurningOp) ^ madeOfMaterial(?f, AISI1045Steel) -> hasCuttingParameterSet(?f, AISI1045_RoughTurning_Params)
+aisi1045_finishturning_params: Feature(?f) ^ requiresOperation(?f, FinishTurningOp) ^ madeOfMaterial(?f, AISI1045Steel) -> hasCuttingParameterSet(?f, AISI1045_FinishTurning_Params)
+aisi1045_drilling_params: Feature(?f) ^ requiresOperation(?f, DrillingOp) ^ madeOfMaterial(?f, AISI1045Steel) -> hasCuttingParameterSet(?f, AISI1045_Drilling_Params)
+aisi1045_milling_params: Feature(?f) ^ requiresOperation(?f, MillingOp) ^ madeOfMaterial(?f, AISI1045Steel) -> hasCuttingParameterSet(?f, AISI1045_Milling_Params)
+
+aluminum6061_roughturning_params: Feature(?f) ^ requiresOperation(?f, RoughTurningOp) ^ madeOfMaterial(?f, Aluminum6061T6) -> hasCuttingParameterSet(?f, Aluminum6061_RoughTurning_Params)
+aluminum6061_finishturning_params: Feature(?f) ^ requiresOperation(?f, FinishTurningOp) ^ madeOfMaterial(?f, Aluminum6061T6) -> hasCuttingParameterSet(?f, Aluminum6061_FinishTurning_Params)
+aluminum6061_drilling_params: Feature(?f) ^ requiresOperation(?f, DrillingOp) ^ madeOfMaterial(?f, Aluminum6061T6) -> hasCuttingParameterSet(?f, Aluminum6061_Drilling_Params)
+aluminum6061_milling_params: Feature(?f) ^ requiresOperation(?f, MillingOp) ^ madeOfMaterial(?f, Aluminum6061T6) -> hasCuttingParameterSet(?f, Aluminum6061_Milling_Params)
+
+stainless304_roughturning_params: Feature(?f) ^ requiresOperation(?f, RoughTurningOp) ^ madeOfMaterial(?f, StainlessSteel304) -> hasCuttingParameterSet(?f, Stainless304_RoughTurning_Params)
+stainless304_finishturning_params: Feature(?f) ^ requiresOperation(?f, FinishTurningOp) ^ madeOfMaterial(?f, StainlessSteel304) -> hasCuttingParameterSet(?f, Stainless304_FinishTurning_Params)
+stainless304_drilling_params: Feature(?f) ^ requiresOperation(?f, DrillingOp) ^ madeOfMaterial(?f, StainlessSteel304) -> hasCuttingParameterSet(?f, Stainless304_Drilling_Params)
+stainless304_milling_params: Feature(?f) ^ requiresOperation(?f, MillingOp) ^ madeOfMaterial(?f, StainlessSteel304) -> hasCuttingParameterSet(?f, Stainless304_Milling_Params)
+
+# --- Material-independent default parameters (source: ontology.py
+# OPERATIONS[...]['parameters']['default'] — used for operations the MATERIALS dict
+# does not break out per-material: counterboring, chamfering, boring, facing, grooving) ---
+
+counterboring_default_params: Feature(?f) ^ requiresOperation(?f, CounterboringOp) -> hasCuttingParameterSet(?f, Counterboring_Default_Params)
+chamfering_default_params: Feature(?f) ^ requiresOperation(?f, ChamferingOp) -> hasCuttingParameterSet(?f, Chamfering_Default_Params)
+boring_default_params: Feature(?f) ^ requiresOperation(?f, BoringOp) -> hasCuttingParameterSet(?f, Boring_Default_Params)
+facing_default_params: Feature(?f) ^ requiresOperation(?f, FacingOp) -> hasCuttingParameterSet(?f, Facing_Default_Params)
+grooving_default_params: Feature(?f) ^ requiresOperation(?f, GroovingOp) -> hasCuttingParameterSet(?f, Grooving_Default_Params)

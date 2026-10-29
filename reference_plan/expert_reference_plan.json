@@ -1,0 +1,383 @@
+{
+ "status": "drafted by the authors; every judgement listed (J01 to J17) for independent review",
+ "part": "motor shaft eixo, replacement part (remanufacturing)",
+ "material": "AISI 1045 bar",
+ "stock": "d 30 cold-drawn bar (J01)",
+ "geometry_source": "analysis/results/step_reference.json R01-R10 + IEC 60072-1 frame-90 interpretation (J02)",
+ "operations": [
+  {
+   "op_id": "10.01",
+   "setup": "S10",
+   "machine": "CNC lathe (CNCLatheFanuc0iTD)",
+   "feature": "Drive-end (DE) face, z = 168.5",
+   "ref_feature": "F-DE",
+   "operation_family": "facing",
+   "tool": "CNMG 120408 rough + CNMG 120404 finish pass (TurningInsertRough / TurningInsertFinish)",
+   "operation_class_in_ontology": true,
+   "tool_in_tools_owl": true,
+   "required": true,
+   "judgements": [
+    "J05"
+   ],
+   "note": "Datum face for E = 50; constant surface speed."
+  },
+  {
+   "op_id": "10.02",
+   "setup": "S10",
+   "machine": "CNC lathe",
+   "feature": "Spot/centre on axis before tap drill",
+   "ref_feature": "R07",
+   "operation_family": "centre_drilling",
+   "tool": "Spot drill 90 deg or DIN 332-2 form-DS stepped centre drill",
+   "operation_class_in_ontology": false,
+   "tool_in_tools_owl": false,
+   "required": "conditional",
+   "judgements": [
+    "J07"
+   ],
+   "note": "Not needed if 10.03-10.05 use one DIN 332-2 stepped centre drill."
+  },
+  {
+   "op_id": "10.03",
+   "setup": "S10",
+   "machine": "CNC lathe",
+   "feature": "Tap-drill hole d 6.8, full-diameter depth 25.0 from DE face (R07)",
+   "ref_feature": "R07",
+   "operation_family": "drilling",
+   "tool": "HSS twist drill 6.8, 118 deg (DrillBit); axial peck cycle at X0",
+   "operation_class_in_ontology": true,
+   "tool_in_tools_owl": true,
+   "required": true,
+   "judgements": [
+    "J07"
+   ],
+   "note": "6.8 is the M8 tap drill."
+  },
+  {
+   "op_id": "10.04",
+   "setup": "S10",
+   "machine": "CNC lathe",
+   "feature": "Counterbore d 8.4, flat floor at z = 162.5 (R08)",
+   "ref_feature": "R08",
+   "operation_family": "counterboring",
+   "tool": "Flat-bottom counterbore (CounterboreCutter) or step of DIN 332-2 drill",
+   "operation_class_in_ontology": true,
+   "tool_in_tools_owl": true,
+   "required": true,
+   "judgements": [
+    "J07",
+    "J10"
+   ],
+   "note": "Floor is planar in the B-Rep (PLANE at z = 162.5)."
+  },
+  {
+   "op_id": "10.05",
+   "setup": "S10",
+   "machine": "CNC lathe",
+   "feature": "60 deg countersink to d 12.2 (R09), DIN 332-2 centre seat",
+   "ref_feature": "R09",
+   "operation_family": "chamfering",
+   "tool": "60 deg countersink / DIN 332-2 stepped drill; NOT in tools.owl (only 90 deg chamfer tools)",
+   "operation_class_in_ontology": true,
+   "tool_in_tools_owl": false,
+   "required": true,
+   "judgements": [
+    "J07",
+    "J12"
+   ],
+   "note": "Bearing surface for tailstock live centre."
+  },
+  {
+   "op_id": "10.06",
+   "setup": "S10",
+   "machine": "CNC lathe",
+   "feature": "Engage tailstock live 60 deg centre in R09",
+   "ref_feature": "-",
+   "operation_family": "setup_element",
+   "tool": "Live centre; tailstock not modelled in machines.owl",
+   "operation_class_in_ontology": false,
+   "tool_in_tools_owl": false,
+   "required": "setup",
+   "judgements": [
+    "J05"
+   ],
+   "note": "Not an operation; not scored."
+  },
+  {
+   "op_id": "10.07a",
+   "setup": "S10",
+   "machine": "CNC lathe",
+   "feature": "Rough turn d 24.0 seat (R05), leave 0.2-0.3 on diameter",
+   "ref_feature": "R05",
+   "operation_family": "rough_turning",
+   "tool": "CNMG 120408 (TurningInsertRough)",
+   "operation_class_in_ontology": true,
+   "tool_in_tools_owl": true,
+   "required": true,
+   "judgements": [
+    "J01"
+   ],
+   "note": "From d 30 bar, two passes."
+  },
+  {
+   "op_id": "10.07b",
+   "setup": "S10",
+   "machine": "CNC lathe",
+   "feature": "Rough turn d 24.95 body (R01) back past NDE face + parting width",
+   "ref_feature": "R01",
+   "operation_family": "rough_turning",
+   "tool": "CNMG 120408 (TurningInsertRough)",
+   "operation_class_in_ontology": true,
+   "tool_in_tools_owl": true,
+   "required": true,
+   "judgements": [
+    "J01",
+    "J17"
+   ],
+   "note": ""
+  },
+  {
+   "op_id": "10.08a",
+   "setup": "S10",
+   "machine": "CNC lathe",
+   "feature": "Undercut d 23.6 x 1.754 at shaft-end root (R03)",
+   "ref_feature": "R03",
+   "operation_family": "grooving",
+   "tool": "Grooving/profiling insert of width <= 1.5 mm with corner radius, or undercut form insert; tools.owl GroovingTool is 2 mm wide",
+   "operation_class_in_ontology": true,
+   "tool_in_tools_owl": false,
+   "required": true,
+   "judgements": [
+    "J04",
+    "J08"
+   ],
+   "note": "Recess below both neighbours; 15 deg run-out resembles a DIN 509 grinding relief."
+  },
+  {
+   "op_id": "10.08b",
+   "setup": "S10",
+   "machine": "CNC lathe",
+   "feature": "15 deg run-out cone d 23.6 -> 24.0 (R04)",
+   "ref_feature": "R04",
+   "operation_family": "grooving|chamfering|finish_turning",
+   "tool": "Profiled with the undercut tool or in the finishing contour",
+   "operation_class_in_ontology": true,
+   "tool_in_tools_owl": true,
+   "required": true,
+   "judgements": [
+    "J09"
+   ],
+   "note": "Any of the three families accepted."
+  },
+  {
+   "op_id": "10.09a",
+   "setup": "S10",
+   "machine": "CNC lathe",
+   "feature": "Finish turn d 24 j6 seat (R05): +0.009/-0.004",
+   "ref_feature": "R05",
+   "operation_family": "finish_turning",
+   "tool": "CNMG 120404 (TurningInsertFinish) or 35 deg profiling insert; G42 nose-radius compensation, in-process gauging",
+   "operation_class_in_ontology": true,
+   "tool_in_tools_owl": true,
+   "required": true,
+   "judgements": [
+    "J04"
+   ],
+   "note": "Optional grinding route S40."
+  },
+  {
+   "op_id": "10.09b",
+   "setup": "S10",
+   "machine": "CNC lathe",
+   "feature": "Finish turn d 24.95 body (R01)",
+   "ref_feature": "R01",
+   "operation_family": "finish_turning",
+   "tool": "CNMG 120404 (TurningInsertFinish)",
+   "operation_class_in_ontology": true,
+   "tool_in_tools_owl": true,
+   "required": true,
+   "judgements": [
+    "J17"
+   ],
+   "note": "General tolerance assumed."
+  },
+  {
+   "op_id": "10.09c",
+   "setup": "S10",
+   "machine": "CNC lathe",
+   "feature": "1 x 45 deg end chamfer d 24 -> 22 (R10), turned in contour",
+   "ref_feature": "R10",
+   "operation_family": "chamfering",
+   "tool": "Turning insert (contour); not a chamfer mill",
+   "operation_class_in_ontology": true,
+   "tool_in_tools_owl": true,
+   "required": true,
+   "judgements": [
+    "J12"
+   ],
+   "note": ""
+  },
+  {
+   "op_id": "10.09d",
+   "setup": "S10",
+   "machine": "CNC lathe",
+   "feature": "0.5 x 45 deg chamfer d 24.95 -> 23.95 (R02), turned in contour",
+   "ref_feature": "R02",
+   "operation_family": "chamfering",
+   "tool": "Turning insert (contour); not a chamfer mill",
+   "operation_class_in_ontology": true,
+   "tool_in_tools_owl": true,
+   "required": true,
+   "judgements": [
+    "J12"
+   ],
+   "note": ""
+  },
+  {
+   "op_id": "10.10",
+   "setup": "S10",
+   "machine": "CNC lathe",
+   "feature": "Tap M8 x 1.25-6H in R07 (thread depth per DIN 332-2)",
+   "ref_feature": "R07t",
+   "operation_family": "tapping",
+   "tool": "HSS-E spiral-flute machine tap, rigid tapping (G84, stationary tap on centreline) or floating holder; NOT in ontology",
+   "operation_class_in_ontology": false,
+   "tool_in_tools_owl": false,
+   "required": true,
+   "judgements": [
+    "J06"
+   ],
+   "note": "Tailstock retracted first."
+  },
+  {
+   "op_id": "10.11",
+   "setup": "S10",
+   "machine": "CNC lathe",
+   "feature": "Part off at z ~ 80.0 (0.5 mm facing allowance)",
+   "ref_feature": "-",
+   "operation_family": "parting",
+   "tool": "Parting blade/insert; NOT in ontology",
+   "operation_class_in_ontology": false,
+   "tool_in_tools_owl": false,
+   "required": true,
+   "judgements": [
+    "J14"
+   ],
+   "note": "Not needed if sawn blanks are used (J14)."
+  },
+  {
+   "op_id": "20.01",
+   "setup": "S20",
+   "machine": "CNC lathe (reversed, soft jaws on d 24.95, stop on R02 shoulder)",
+   "feature": "Non-drive-end (NDE) face to overall length 88.0, z = 80.5",
+   "ref_feature": "F-NDE",
+   "operation_family": "facing",
+   "tool": "CNMG 120404 (TurningInsertFinish)",
+   "operation_class_in_ontology": true,
+   "tool_in_tools_owl": true,
+   "required": true,
+   "judgements": [
+    "J05",
+    "J17"
+   ],
+   "note": "Never clamp on the j6 seat."
+  },
+  {
+   "op_id": "20.02",
+   "setup": "S20",
+   "machine": "CNC lathe",
+   "feature": "Edge break NDE outer edge (not modelled in CAD)",
+   "ref_feature": "-",
+   "operation_family": "chamfering",
+   "tool": "Turning insert",
+   "operation_class_in_ontology": true,
+   "tool_in_tools_owl": true,
+   "required": false,
+   "judgements": [
+    "J16"
+   ],
+   "note": "Shop practice; not scored."
+  },
+  {
+   "op_id": "30.01",
+   "setup": "S30",
+   "machine": "Vertical milling machine / VMC (NOT in machines.owl)",
+   "feature": "Keyway 8 N9 (7.964-8.000) x t1 4.0 +0.2 x 40, form A (R4 ends), z 123.5-163.5, symmetric to axis",
+   "ref_feature": "R06",
+   "operation_family": "milling",
+   "tool": "2-flute carbide keyway end mill d 8 (keyway tolerance) or undersize rough + side finish; tools.owl EndMill is a generic 4-flute",
+   "operation_class_in_ontology": true,
+   "tool_in_tools_owl": true,
+   "required": true,
+   "judgements": [
+    "J02",
+    "J03",
+    "J13"
+   ],
+   "note": "Replaces the catalogue CAD's fitted key (R06)."
+  },
+  {
+   "op_id": "30.02",
+   "setup": "S30",
+   "machine": "Vertical milling machine / VMC",
+   "feature": "Deburr keyway edges",
+   "ref_feature": "R06",
+   "operation_family": "deburring",
+   "tool": "Hand/brush",
+   "operation_class_in_ontology": false,
+   "tool_in_tools_owl": false,
+   "required": false,
+   "judgements": [
+    "J16"
+   ],
+   "note": "Not scored."
+  },
+  {
+   "op_id": "40.01",
+   "setup": "S40 (optional)",
+   "machine": "Cylindrical grinder (NOT in machines.owl)",
+   "feature": "Grind d 24 j6 seat (R05) if turning cannot hold IT6",
+   "ref_feature": "R05",
+   "operation_family": "grinding",
+   "tool": "Plain wheel; undercut R03/R04 gives run-out",
+   "operation_class_in_ontology": false,
+   "tool_in_tools_owl": false,
+   "required": false,
+   "judgements": [
+    "J04"
+   ],
+   "note": "Judgement; not scored."
+  },
+  {
+   "op_id": "50.01",
+   "setup": "S50",
+   "machine": "Inspection",
+   "feature": "j6 seat, run-out (IEC 60072-1 class), keyway width/depth (G = 20.0)/symmetry, M8-6H plug gauge, E = 50, GA = 27 after key fitted",
+   "ref_feature": "-",
+   "operation_family": "inspection",
+   "tool": "Air gauge/micrometer, slot gauge, thread plug gauge",
+   "operation_class_in_ontology": false,
+   "tool_in_tools_owl": false,
+   "required": false,
+   "judgements": [
+    "J03",
+    "J16"
+   ],
+   "note": "Not scored."
+  }
+ ],
+ "operation_classes_in_ontology": [
+  "BoringOp",
+  "ChamferingOp",
+  "CounterboringOp",
+  "DrillingOp",
+  "FacingOp",
+  "FinishTurningOp",
+  "GroovingOp",
+  "MillingOp",
+  "RoughTurningOp"
+ ],
+ "machines_in_ontology": [
+  "CNCLatheFanuc0iTD"
+ ]
+}

@@ -1,0 +1,6 @@
+# Kernel reference scripts in ground_truth/ and pipeline/analysis/step_reference.py
+# (they also need the third-party catalogue STEP model; see README.md)
+cadquery-ocp==8.0.1.1
+# Optional language-model drafting of SPARQL queries (pipeline/src/sparql_generator.py) and the manual
+# benchmark script pipeline/tests/test_llm_benchmarks.py; not used for any reported result
+google-generativeai

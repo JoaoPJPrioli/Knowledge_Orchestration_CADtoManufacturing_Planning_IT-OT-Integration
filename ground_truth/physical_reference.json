@@ -1,0 +1,159 @@
+{
+  "source": "Physical part to be remanufactured: IEC 60072-1 frame-90 drive-end shaft extension (D = 24 j6, E = 50, F = 8, G = 20, GA = 27, DB = M8). D, E, F, G cross-checked against a published IEC frame-size table; GA = 27 and DB = M8 as verified by the authors from the CAD geometry (GA = 24 + 3; tap drill 6.8 for M8). The catalogue CAD shows the feather key fitted; the shaft itself carries a milled keyway 8 x 4 x 40 and an M8-tapped centre hole. Required operation families use the pipeline's own vocabulary (knowledge/rules/machining_rules.swrl).",
+  "features": [
+    {
+      "phys_id": "P01",
+      "description": "lower body Ø24.95 x 37.5",
+      "required": [
+        "turning"
+      ],
+      "auxiliary": [
+        "facing"
+      ],
+      "brep": [
+        "R01"
+      ],
+      "drawing": [
+        "D02"
+      ]
+    },
+    {
+      "phys_id": "P02",
+      "description": "chamfer 0.5 x 45 deg at the shoulder",
+      "required": [
+        "chamfering"
+      ],
+      "auxiliary": [],
+      "brep": [
+        "R02"
+      ],
+      "drawing": []
+    },
+    {
+      "phys_id": "P03",
+      "description": "relief groove Ø23.6 x 1.75",
+      "required": [
+        "grooving"
+      ],
+      "auxiliary": [],
+      "brep": [
+        "R03"
+      ],
+      "drawing": [
+        "D03"
+      ]
+    },
+    {
+      "phys_id": "P04",
+      "description": "15 deg conical transition Ø23.6 to Ø24",
+      "required": [
+        "chamfering"
+      ],
+      "auxiliary": [],
+      "brep": [
+        "R04"
+      ],
+      "drawing": []
+    },
+    {
+      "phys_id": "P05",
+      "description": "upper body (shaft extension) Ø24 j6 x 46.5",
+      "required": [
+        "turning"
+      ],
+      "auxiliary": [
+        "facing"
+      ],
+      "brep": [
+        "R05"
+      ],
+      "drawing": [
+        "D01"
+      ]
+    },
+    {
+      "phys_id": "P06",
+      "description": "end chamfer 1 x 45 deg, Ø24 to Ø22",
+      "required": [
+        "chamfering"
+      ],
+      "auxiliary": [],
+      "brep": [
+        "R10"
+      ],
+      "drawing": [
+        "D06"
+      ]
+    },
+    {
+      "phys_id": "P07a",
+      "description": "centre hole: tap drill Ø6.8 x 19, 118 deg point",
+      "required": [
+        "drilling"
+      ],
+      "auxiliary": [],
+      "brep": [
+        "R07"
+      ],
+      "drawing": [
+        "D05a"
+      ]
+    },
+    {
+      "phys_id": "P07b",
+      "description": "centre hole: counterbore Ø8.4 (thread relief)",
+      "required": [
+        "counterboring"
+      ],
+      "auxiliary": [
+        "drilling"
+      ],
+      "brep": [
+        "R08"
+      ],
+      "drawing": [
+        "D05b"
+      ]
+    },
+    {
+      "phys_id": "P07c",
+      "description": "centre hole: 60 deg countersink to Ø12.2",
+      "required": [
+        "chamfering"
+      ],
+      "auxiliary": [],
+      "brep": [
+        "R09"
+      ],
+      "drawing": [
+        "D05c"
+      ]
+    },
+    {
+      "phys_id": "P07d",
+      "description": "centre hole: M8 thread",
+      "required": [
+        "tapping"
+      ],
+      "auxiliary": [],
+      "brep": [],
+      "drawing": [],
+      "note": "not modelled in the CAD; the SKL has no thread feature class and no threading or tapping operation"
+    },
+    {
+      "phys_id": "P08",
+      "description": "keyway 8 x 4 x 40 with full-radius ends (key fitted afterwards, assembly not machining)",
+      "required": [
+        "milling"
+      ],
+      "auxiliary": [],
+      "brep": [
+        "R06"
+      ],
+      "drawing": [
+        "D04"
+      ]
+    }
+  ],
+  "auxiliary_rule": "an auxiliary operation counts as the correct family at step level only when the entity's label also yields the required operation (e.g. pilot drilling planned from a Counterbore entity that is also counterbored)"
+}

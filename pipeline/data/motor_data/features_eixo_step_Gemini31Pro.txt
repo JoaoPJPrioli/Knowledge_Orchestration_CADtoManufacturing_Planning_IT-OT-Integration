@@ -1,0 +1,89 @@
+Extracted Manufacturing Features
+
+Overall Dimensions: L:27.475, W:24.95, H:88
+Center Point: X:0, Y:1.2625, Z:124.5
+
+1. Step
+   Description: Main lower cylindrical body
+   Absolute Location: X:0, Y:0, Z:99.25
+   Relative Position: X:0, Y:-1.2625, Z:-25.25
+   Dimensions: Ø:24.95, L:37.5
+   Orientation: Along Z-axis
+
+2. Chamfer
+   Description: Outer chamfer transition
+   Absolute Location: X:0, Y:0, Z:118.25
+   Relative Position: X:0, Y:-1.2625, Z:-6.25
+   Dimensions: Ø:24.95, L:0.5
+   Orientation: Along Z-axis
+
+3. Step
+   Description: Middle cylindrical step
+   Absolute Location: X:0, Y:0, Z:119.375
+   Relative Position: X:0, Y:-1.2625, Z:-5.125
+   Dimensions: Ø:23.6, L:1.75
+   Orientation: Along Z-axis
+
+4. Chamfer
+   Description: Conical transition to upper cylinder
+   Absolute Location: X:0, Y:0, Z:120.625
+   Relative Position: X:0, Y:-1.2625, Z:-3.875
+   Dimensions: Ø:24, L:0.75
+   Orientation: Along Z-axis
+
+5. Step
+   Description: Upper cylindrical body
+   Absolute Location: X:0, Y:0, Z:144.75
+   Relative Position: X:0, Y:-1.2625, Z:20.25
+   Dimensions: Ø:24, L:47.5
+   Orientation: Along Z-axis
+
+6. Chamfer
+   Description: Top outer chamfer
+   Absolute Location: X:0, Y:0, Z:168
+   Relative Position: X:0, Y:-1.2625, Z:43.5
+   Dimensions: Ø:24, L:1
+   Orientation: Along Z-axis
+
+7. Blind Hole
+   Description: Central blind hole with drill tip
+   Absolute Location: X:0, Y:0, Z:162.5
+   Relative Position: X:0, Y:-1.2625, Z:38
+   Dimensions: Ø:6.8, L:21.05
+   Orientation: Along Z-axis
+
+8. Counterbore
+   Description: Counterbore for central hole
+   Absolute Location: X:0, Y:0, Z:165.2
+   Relative Position: X:0, Y:-1.2625, Z:40.7
+   Dimensions: Ø:8.4, L:2.7
+   Orientation: Along Z-axis
+
+9. Chamfer
+   Description: Top inner chamfer for counterbore
+   Absolute Location: X:0, Y:0, Z:168.5
+   Relative Position: X:0, Y:-1.2625, Z:44
+   Dimensions: Ø:12.2, L:3.3
+   Orientation: Along Z-axis
+
+10. Boss
+   Description: Rectangular boss on the side of the upper cylinder
+   Absolute Location: X:0, Y:15, Z:143.5
+   Relative Position: X:0, Y:13.7375, Z:19
+   Dimensions: W:8
+   Orientation: Normal to Y-axis
+
+11. Through Hole
+   Description: Upper cross hole through the side boss
+   Absolute Location: X:0, Y:15, Z:159.5
+   Relative Position: X:0, Y:13.7375, Z:35
+   Dimensions: Ø:8
+   Orientation: Along Y-axis
+
+12. Through Hole
+   Description: Lower cross hole through the side boss
+   Absolute Location: X:0, Y:15, Z:127.5
+   Relative Position: X:0, Y:13.7375, Z:3
+   Dimensions: Ø:8
+   Orientation: Along Y-axis
+

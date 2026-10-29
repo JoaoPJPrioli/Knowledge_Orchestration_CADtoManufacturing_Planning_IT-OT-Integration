@@ -1,0 +1,2236 @@
+{
+ "reference": {
+  "entities": 22,
+  "merges": 8,
+  "merges_tau_below_0.7": 0,
+  "primary_only": 11,
+  "secondary_only": 3,
+  "merged_pairs": [
+   {
+    "family": "step",
+    "primary": [
+     1,
+     "Step",
+     {
+      "\u00d8": 24.95,
+      "L": 37.5
+     }
+    ],
+    "secondary": [
+     5,
+     "Boss",
+     {
+      "\u00d8": 24.95,
+      "R": 12.475,
+      "L": 88.0
+     }
+    ],
+    "tau": 0.7,
+    "worst_rel_disagreement": 0.574,
+    "key": "L"
+   },
+   {
+    "family": "step",
+    "primary": [
+     7,
+     "Blind Hole",
+     {
+      "\u00d8": 6.8,
+      "L": 21.05
+     }
+    ],
+    "secondary": [
+     1,
+     "Blind Hole",
+     {
+      "\u00d8": 6.8,
+      "R": 3.4,
+      "L": 19.0,
+      "W": 6.8
+     }
+    ],
+    "tau": 1.0,
+    "worst_rel_disagreement": 0.097,
+    "key": "L"
+   },
+   {
+    "family": "step",
+    "primary": [
+     8,
+     "Counterbore",
+     {
+      "\u00d8": 8.4,
+      "L": 2.7
+     }
+    ],
+    "secondary": [
+     2,
+     "Counterbore",
+     {
+      "\u00d8": 8.4,
+      "R": 4.2,
+      "L": 6.0,
+      "W": 8.4
+     }
+    ],
+    "tau": 1.0,
+    "worst_rel_disagreement": 0.55,
+    "key": "L"
+   },
+   {
+    "family": "drawing",
+    "primary": [
+     1,
+     "Cylinder",
+     {}
+    ],
+    "secondary": [
+     2,
+     "Cylinder",
+     {}
+    ],
+    "tau": 1.0,
+    "worst_rel_disagreement": 0.0,
+    "key": null
+   },
+   {
+    "family": "drawing",
+    "primary": [
+     2,
+     "Cylinder",
+     {}
+    ],
+    "secondary": [
+     1,
+     "Cylinder",
+     {}
+    ],
+    "tau": 1.0,
+    "worst_rel_disagreement": 0.0,
+    "key": null
+   },
+   {
+    "family": "drawing",
+    "primary": [
+     3,
+     "Groove",
+     {}
+    ],
+    "secondary": [
+     3,
+     "Groove",
+     {}
+    ],
+    "tau": 1.0,
+    "worst_rel_disagreement": 0.0,
+    "key": null
+   },
+   {
+    "family": "drawing",
+    "primary": [
+     4,
+     "Boss",
+     {}
+    ],
+    "secondary": [
+     4,
+     "Boss",
+     {}
+    ],
+    "tau": 1.0,
+    "worst_rel_disagreement": 0.0,
+    "key": null
+   },
+   {
+    "family": "drawing",
+    "primary": [
+     5,
+     "Hole",
+     {}
+    ],
+    "secondary": [
+     6,
+     "Bore",
+     {}
+    ],
+    "tau": 0.7,
+    "worst_rel_disagreement": 0.0,
+    "key": null
+   }
+  ]
+ },
+ "sweep": {
+  "gated": {
+   "0.1": {
+    "entities": 23,
+    "merges": 7,
+    "merges_tau_below_0.7": 0,
+    "primary_only": 12,
+    "secondary_only": 4,
+    "merged_pairs": [
+     {
+      "family": "step",
+      "primary": [
+       7,
+       "Blind Hole",
+       {
+        "\u00d8": 6.8,
+        "L": 21.05
+       }
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       {
+        "\u00d8": 6.8,
+        "R": 3.4,
+        "L": 19.0,
+        "W": 6.8
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.097,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       10,
+       "Boss",
+       {
+        "W": 8.0
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       1,
+       "Cylinder",
+       {}
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       2,
+       "Cylinder",
+       {}
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       3,
+       "Groove",
+       {}
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       4,
+       "Boss",
+       {}
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       5,
+       "Hole",
+       {}
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       {}
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     }
+    ],
+    "reference_merges_blocked": [
+     {
+      "family": "step",
+      "primary": [
+       1,
+       "Step",
+       {
+        "\u00d8": 24.95,
+        "L": 37.5
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.574,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       8,
+       "Counterbore",
+       {
+        "\u00d8": 8.4,
+        "L": 2.7
+       }
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       {
+        "\u00d8": 8.4,
+        "R": 4.2,
+        "L": 6.0,
+        "W": 8.4
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.55,
+      "key": "L"
+     }
+    ],
+    "new_merges": [
+     {
+      "family": "step",
+      "primary": [
+       10,
+       "Boss",
+       {
+        "W": 8.0
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     }
+    ]
+   },
+   "0.2": {
+    "entities": 23,
+    "merges": 7,
+    "merges_tau_below_0.7": 0,
+    "primary_only": 12,
+    "secondary_only": 4,
+    "merged_pairs": [
+     {
+      "family": "step",
+      "primary": [
+       7,
+       "Blind Hole",
+       {
+        "\u00d8": 6.8,
+        "L": 21.05
+       }
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       {
+        "\u00d8": 6.8,
+        "R": 3.4,
+        "L": 19.0,
+        "W": 6.8
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.097,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       10,
+       "Boss",
+       {
+        "W": 8.0
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       1,
+       "Cylinder",
+       {}
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       2,
+       "Cylinder",
+       {}
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       3,
+       "Groove",
+       {}
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       4,
+       "Boss",
+       {}
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       5,
+       "Hole",
+       {}
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       {}
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     }
+    ],
+    "reference_merges_blocked": [
+     {
+      "family": "step",
+      "primary": [
+       1,
+       "Step",
+       {
+        "\u00d8": 24.95,
+        "L": 37.5
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.574,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       8,
+       "Counterbore",
+       {
+        "\u00d8": 8.4,
+        "L": 2.7
+       }
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       {
+        "\u00d8": 8.4,
+        "R": 4.2,
+        "L": 6.0,
+        "W": 8.4
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.55,
+      "key": "L"
+     }
+    ],
+    "new_merges": [
+     {
+      "family": "step",
+      "primary": [
+       10,
+       "Boss",
+       {
+        "W": 8.0
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     }
+    ]
+   },
+   "0.3": {
+    "entities": 23,
+    "merges": 7,
+    "merges_tau_below_0.7": 0,
+    "primary_only": 12,
+    "secondary_only": 4,
+    "merged_pairs": [
+     {
+      "family": "step",
+      "primary": [
+       7,
+       "Blind Hole",
+       {
+        "\u00d8": 6.8,
+        "L": 21.05
+       }
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       {
+        "\u00d8": 6.8,
+        "R": 3.4,
+        "L": 19.0,
+        "W": 6.8
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.097,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       10,
+       "Boss",
+       {
+        "W": 8.0
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       1,
+       "Cylinder",
+       {}
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       2,
+       "Cylinder",
+       {}
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       3,
+       "Groove",
+       {}
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       4,
+       "Boss",
+       {}
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       5,
+       "Hole",
+       {}
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       {}
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     }
+    ],
+    "reference_merges_blocked": [
+     {
+      "family": "step",
+      "primary": [
+       1,
+       "Step",
+       {
+        "\u00d8": 24.95,
+        "L": 37.5
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.574,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       8,
+       "Counterbore",
+       {
+        "\u00d8": 8.4,
+        "L": 2.7
+       }
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       {
+        "\u00d8": 8.4,
+        "R": 4.2,
+        "L": 6.0,
+        "W": 8.4
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.55,
+      "key": "L"
+     }
+    ],
+    "new_merges": [
+     {
+      "family": "step",
+      "primary": [
+       10,
+       "Boss",
+       {
+        "W": 8.0
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     }
+    ]
+   },
+   "0.5": {
+    "entities": 23,
+    "merges": 7,
+    "merges_tau_below_0.7": 0,
+    "primary_only": 12,
+    "secondary_only": 4,
+    "merged_pairs": [
+     {
+      "family": "step",
+      "primary": [
+       5,
+       "Step",
+       {
+        "\u00d8": 24.0,
+        "L": 47.5
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.46,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       7,
+       "Blind Hole",
+       {
+        "\u00d8": 6.8,
+        "L": 21.05
+       }
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       {
+        "\u00d8": 6.8,
+        "R": 3.4,
+        "L": 19.0,
+        "W": 6.8
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.097,
+      "key": "L"
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       1,
+       "Cylinder",
+       {}
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       2,
+       "Cylinder",
+       {}
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       3,
+       "Groove",
+       {}
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       4,
+       "Boss",
+       {}
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       5,
+       "Hole",
+       {}
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       {}
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     }
+    ],
+    "reference_merges_blocked": [
+     {
+      "family": "step",
+      "primary": [
+       1,
+       "Step",
+       {
+        "\u00d8": 24.95,
+        "L": 37.5
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.574,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       8,
+       "Counterbore",
+       {
+        "\u00d8": 8.4,
+        "L": 2.7
+       }
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       {
+        "\u00d8": 8.4,
+        "R": 4.2,
+        "L": 6.0,
+        "W": 8.4
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.55,
+      "key": "L"
+     }
+    ],
+    "new_merges": [
+     {
+      "family": "step",
+      "primary": [
+       5,
+       "Step",
+       {
+        "\u00d8": 24.0,
+        "L": 47.5
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.46,
+      "key": "L"
+     }
+    ]
+   }
+  },
+  "ablated": {
+   "0.1": {
+    "entities": 21,
+    "merges": 9,
+    "merges_tau_below_0.7": 2,
+    "primary_only": 10,
+    "secondary_only": 2,
+    "merged_pairs": [
+     {
+      "family": "step",
+      "primary": [
+       7,
+       "Blind Hole",
+       {
+        "\u00d8": 6.8,
+        "L": 21.05
+       }
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       {
+        "\u00d8": 6.8,
+        "R": 3.4,
+        "L": 19.0,
+        "W": 6.8
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.097,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       10,
+       "Boss",
+       {
+        "W": 8.0
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "step",
+      "primary": [
+       11,
+       "Through Hole",
+       {
+        "\u00d8": 8.0
+       }
+      ],
+      "secondary": [
+       3,
+       "Slot",
+       {
+        "\u00d8": 8.0,
+        "R": 4.0,
+        "W": 8.0
+       }
+      ],
+      "tau": 0.3,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "step",
+      "primary": [
+       12,
+       "Through Hole",
+       {
+        "\u00d8": 8.0
+       }
+      ],
+      "secondary": [
+       4,
+       "Slot",
+       {
+        "\u00d8": 8.0,
+        "R": 4.0,
+        "W": 8.0
+       }
+      ],
+      "tau": 0.3,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       1,
+       "Cylinder",
+       {}
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       2,
+       "Cylinder",
+       {}
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       3,
+       "Groove",
+       {}
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       4,
+       "Boss",
+       {}
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       5,
+       "Hole",
+       {}
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       {}
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     }
+    ],
+    "reference_merges_blocked": [
+     {
+      "family": "step",
+      "primary": [
+       1,
+       "Step",
+       {
+        "\u00d8": 24.95,
+        "L": 37.5
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.574,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       8,
+       "Counterbore",
+       {
+        "\u00d8": 8.4,
+        "L": 2.7
+       }
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       {
+        "\u00d8": 8.4,
+        "R": 4.2,
+        "L": 6.0,
+        "W": 8.4
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.55,
+      "key": "L"
+     }
+    ],
+    "new_merges": [
+     {
+      "family": "step",
+      "primary": [
+       10,
+       "Boss",
+       {
+        "W": 8.0
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "step",
+      "primary": [
+       11,
+       "Through Hole",
+       {
+        "\u00d8": 8.0
+       }
+      ],
+      "secondary": [
+       3,
+       "Slot",
+       {
+        "\u00d8": 8.0,
+        "R": 4.0,
+        "W": 8.0
+       }
+      ],
+      "tau": 0.3,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "step",
+      "primary": [
+       12,
+       "Through Hole",
+       {
+        "\u00d8": 8.0
+       }
+      ],
+      "secondary": [
+       4,
+       "Slot",
+       {
+        "\u00d8": 8.0,
+        "R": 4.0,
+        "W": 8.0
+       }
+      ],
+      "tau": 0.3,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     }
+    ]
+   },
+   "0.2": {
+    "entities": 21,
+    "merges": 9,
+    "merges_tau_below_0.7": 2,
+    "primary_only": 10,
+    "secondary_only": 2,
+    "merged_pairs": [
+     {
+      "family": "step",
+      "primary": [
+       7,
+       "Blind Hole",
+       {
+        "\u00d8": 6.8,
+        "L": 21.05
+       }
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       {
+        "\u00d8": 6.8,
+        "R": 3.4,
+        "L": 19.0,
+        "W": 6.8
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.097,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       10,
+       "Boss",
+       {
+        "W": 8.0
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "step",
+      "primary": [
+       11,
+       "Through Hole",
+       {
+        "\u00d8": 8.0
+       }
+      ],
+      "secondary": [
+       3,
+       "Slot",
+       {
+        "\u00d8": 8.0,
+        "R": 4.0,
+        "W": 8.0
+       }
+      ],
+      "tau": 0.3,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "step",
+      "primary": [
+       12,
+       "Through Hole",
+       {
+        "\u00d8": 8.0
+       }
+      ],
+      "secondary": [
+       4,
+       "Slot",
+       {
+        "\u00d8": 8.0,
+        "R": 4.0,
+        "W": 8.0
+       }
+      ],
+      "tau": 0.3,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       1,
+       "Cylinder",
+       {}
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       2,
+       "Cylinder",
+       {}
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       3,
+       "Groove",
+       {}
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       4,
+       "Boss",
+       {}
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       5,
+       "Hole",
+       {}
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       {}
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     }
+    ],
+    "reference_merges_blocked": [
+     {
+      "family": "step",
+      "primary": [
+       1,
+       "Step",
+       {
+        "\u00d8": 24.95,
+        "L": 37.5
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.574,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       8,
+       "Counterbore",
+       {
+        "\u00d8": 8.4,
+        "L": 2.7
+       }
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       {
+        "\u00d8": 8.4,
+        "R": 4.2,
+        "L": 6.0,
+        "W": 8.4
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.55,
+      "key": "L"
+     }
+    ],
+    "new_merges": [
+     {
+      "family": "step",
+      "primary": [
+       10,
+       "Boss",
+       {
+        "W": 8.0
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "step",
+      "primary": [
+       11,
+       "Through Hole",
+       {
+        "\u00d8": 8.0
+       }
+      ],
+      "secondary": [
+       3,
+       "Slot",
+       {
+        "\u00d8": 8.0,
+        "R": 4.0,
+        "W": 8.0
+       }
+      ],
+      "tau": 0.3,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "step",
+      "primary": [
+       12,
+       "Through Hole",
+       {
+        "\u00d8": 8.0
+       }
+      ],
+      "secondary": [
+       4,
+       "Slot",
+       {
+        "\u00d8": 8.0,
+        "R": 4.0,
+        "W": 8.0
+       }
+      ],
+      "tau": 0.3,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     }
+    ]
+   },
+   "0.3": {
+    "entities": 21,
+    "merges": 9,
+    "merges_tau_below_0.7": 2,
+    "primary_only": 10,
+    "secondary_only": 2,
+    "merged_pairs": [
+     {
+      "family": "step",
+      "primary": [
+       7,
+       "Blind Hole",
+       {
+        "\u00d8": 6.8,
+        "L": 21.05
+       }
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       {
+        "\u00d8": 6.8,
+        "R": 3.4,
+        "L": 19.0,
+        "W": 6.8
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.097,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       10,
+       "Boss",
+       {
+        "W": 8.0
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "step",
+      "primary": [
+       11,
+       "Through Hole",
+       {
+        "\u00d8": 8.0
+       }
+      ],
+      "secondary": [
+       3,
+       "Slot",
+       {
+        "\u00d8": 8.0,
+        "R": 4.0,
+        "W": 8.0
+       }
+      ],
+      "tau": 0.3,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "step",
+      "primary": [
+       12,
+       "Through Hole",
+       {
+        "\u00d8": 8.0
+       }
+      ],
+      "secondary": [
+       4,
+       "Slot",
+       {
+        "\u00d8": 8.0,
+        "R": 4.0,
+        "W": 8.0
+       }
+      ],
+      "tau": 0.3,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       1,
+       "Cylinder",
+       {}
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       2,
+       "Cylinder",
+       {}
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       3,
+       "Groove",
+       {}
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       4,
+       "Boss",
+       {}
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       5,
+       "Hole",
+       {}
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       {}
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     }
+    ],
+    "reference_merges_blocked": [
+     {
+      "family": "step",
+      "primary": [
+       1,
+       "Step",
+       {
+        "\u00d8": 24.95,
+        "L": 37.5
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.574,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       8,
+       "Counterbore",
+       {
+        "\u00d8": 8.4,
+        "L": 2.7
+       }
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       {
+        "\u00d8": 8.4,
+        "R": 4.2,
+        "L": 6.0,
+        "W": 8.4
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.55,
+      "key": "L"
+     }
+    ],
+    "new_merges": [
+     {
+      "family": "step",
+      "primary": [
+       10,
+       "Boss",
+       {
+        "W": 8.0
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "step",
+      "primary": [
+       11,
+       "Through Hole",
+       {
+        "\u00d8": 8.0
+       }
+      ],
+      "secondary": [
+       3,
+       "Slot",
+       {
+        "\u00d8": 8.0,
+        "R": 4.0,
+        "W": 8.0
+       }
+      ],
+      "tau": 0.3,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "step",
+      "primary": [
+       12,
+       "Through Hole",
+       {
+        "\u00d8": 8.0
+       }
+      ],
+      "secondary": [
+       4,
+       "Slot",
+       {
+        "\u00d8": 8.0,
+        "R": 4.0,
+        "W": 8.0
+       }
+      ],
+      "tau": 0.3,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     }
+    ]
+   },
+   "0.5": {
+    "entities": 20,
+    "merges": 10,
+    "merges_tau_below_0.7": 3,
+    "primary_only": 9,
+    "secondary_only": 1,
+    "merged_pairs": [
+     {
+      "family": "step",
+      "primary": [
+       5,
+       "Step",
+       {
+        "\u00d8": 24.0,
+        "L": 47.5
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.46,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       7,
+       "Blind Hole",
+       {
+        "\u00d8": 6.8,
+        "L": 21.05
+       }
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       {
+        "\u00d8": 6.8,
+        "R": 3.4,
+        "L": 19.0,
+        "W": 6.8
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.097,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       9,
+       "Chamfer",
+       {
+        "\u00d8": 12.2,
+        "L": 3.3
+       }
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       {
+        "\u00d8": 8.4,
+        "R": 4.2,
+        "L": 6.0,
+        "W": 8.4
+       }
+      ],
+      "tau": 0.0,
+      "worst_rel_disagreement": 0.45,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       11,
+       "Through Hole",
+       {
+        "\u00d8": 8.0
+       }
+      ],
+      "secondary": [
+       3,
+       "Slot",
+       {
+        "\u00d8": 8.0,
+        "R": 4.0,
+        "W": 8.0
+       }
+      ],
+      "tau": 0.3,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "step",
+      "primary": [
+       12,
+       "Through Hole",
+       {
+        "\u00d8": 8.0
+       }
+      ],
+      "secondary": [
+       4,
+       "Slot",
+       {
+        "\u00d8": 8.0,
+        "R": 4.0,
+        "W": 8.0
+       }
+      ],
+      "tau": 0.3,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       1,
+       "Cylinder",
+       {}
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       2,
+       "Cylinder",
+       {}
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       3,
+       "Groove",
+       {}
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       4,
+       "Boss",
+       {}
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       {}
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "drawing",
+      "primary": [
+       5,
+       "Hole",
+       {}
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       {}
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     }
+    ],
+    "reference_merges_blocked": [
+     {
+      "family": "step",
+      "primary": [
+       1,
+       "Step",
+       {
+        "\u00d8": 24.95,
+        "L": 37.5
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.574,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       8,
+       "Counterbore",
+       {
+        "\u00d8": 8.4,
+        "L": 2.7
+       }
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       {
+        "\u00d8": 8.4,
+        "R": 4.2,
+        "L": 6.0,
+        "W": 8.4
+       }
+      ],
+      "tau": 1.0,
+      "worst_rel_disagreement": 0.55,
+      "key": "L"
+     }
+    ],
+    "new_merges": [
+     {
+      "family": "step",
+      "primary": [
+       5,
+       "Step",
+       {
+        "\u00d8": 24.0,
+        "L": 47.5
+       }
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       {
+        "\u00d8": 24.95,
+        "R": 12.475,
+        "L": 88.0
+       }
+      ],
+      "tau": 0.7,
+      "worst_rel_disagreement": 0.46,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       9,
+       "Chamfer",
+       {
+        "\u00d8": 12.2,
+        "L": 3.3
+       }
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       {
+        "\u00d8": 8.4,
+        "R": 4.2,
+        "L": 6.0,
+        "W": 8.4
+       }
+      ],
+      "tau": 0.0,
+      "worst_rel_disagreement": 0.45,
+      "key": "L"
+     },
+     {
+      "family": "step",
+      "primary": [
+       11,
+       "Through Hole",
+       {
+        "\u00d8": 8.0
+       }
+      ],
+      "secondary": [
+       3,
+       "Slot",
+       {
+        "\u00d8": 8.0,
+        "R": 4.0,
+        "W": 8.0
+       }
+      ],
+      "tau": 0.3,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     },
+     {
+      "family": "step",
+      "primary": [
+       12,
+       "Through Hole",
+       {
+        "\u00d8": 8.0
+       }
+      ],
+      "secondary": [
+       4,
+       "Slot",
+       {
+        "\u00d8": 8.0,
+        "R": 4.0,
+        "W": 8.0
+       }
+      ],
+      "tau": 0.3,
+      "worst_rel_disagreement": 0.0,
+      "key": null
+     }
+    ]
+   }
+  }
+ }
+}

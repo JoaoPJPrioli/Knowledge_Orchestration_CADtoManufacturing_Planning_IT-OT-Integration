@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://onto.brep.org/manufacturing/serialisation-profiles"
+         xmlns="http://onto.brep.org/manufacturing/serialisation-profiles#">
+
+<owl:Ontology rdf:about="http://onto.brep.org/manufacturing/serialisation-profiles">
+  <owl:imports rdf:resource="http://onto.brep.org/manufacturing/machines"/>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="#profileSupportsToolOrientation">
+  <rdfs:domain rdf:resource="#SerialisationProfile"/>
+  <rdfs:range rdf:resource="http://onto.brep.org/manufacturing/machines#ToolOrientation"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#hasProfileLabel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#SerialisationProfile"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasProfileDescription">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#SerialisationProfile"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#SerialisationProfile">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#RALTurningProfile">
+  <rdf:type rdf:resource="#SerialisationProfile"/>
+  <profileSupportsToolOrientation rdf:resource="http://onto.brep.org/manufacturing/machines#AxialToolOrientation"/>
+  <hasProfileLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RAL turning profile (gcode_generator.py)</hasProfileLabel>
+  <hasProfileDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G18/G21/G40/G54/G80/G90/G97/G99 turning profile; drilling and counterboring as G81/G83 canned cycles on the spindle centreline; no driven-tool (radial) cycle and no C-axis positioning.</hasProfileDescription>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

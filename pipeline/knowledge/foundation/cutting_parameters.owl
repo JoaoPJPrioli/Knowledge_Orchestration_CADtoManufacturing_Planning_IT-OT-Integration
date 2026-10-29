@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://onto.brep.org/manufacturing/cutting-parameters"
+         xmlns="http://onto.brep.org/manufacturing/cutting-parameters#">
+
+<owl:Ontology rdf:about="http://onto.brep.org/manufacturing/cutting-parameters">
+  <owl:imports rdf:resource="http://onto.brep.org/manufacturing/materials"/>
+  <owl:imports rdf:resource="http://onto.brep.org/manufacturing/machining-process"/>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="#forMaterial">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#CuttingParameterSet"/>
+  <rdfs:range rdf:resource="http://onto.brep.org/manufacturing/materials#Material"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#forOperation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#CuttingParameterSet"/>
+  <rdfs:range rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasCuttingParameterSet">
+  <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:range rdf:resource="#CuttingParameterSet"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#hasFeedRateValue">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#CuttingParameterSet"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasFeedRateUnit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#CuttingParameterSet"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasSpindleSpeedValue">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#CuttingParameterSet"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasSpindleSpeedUnit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#CuttingParameterSet"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasDepthOfCutValue">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#CuttingParameterSet"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasDepthOfCutUnit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#CuttingParameterSet"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#requiresCoolant">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#CuttingParameterSet"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#CuttingParameterSet">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#AISI1045_RoughTurning_Params">
+  <rdf:type rdf:resource="#CuttingParameterSet"/>
+  <forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#RoughTurningOp"/>
+  <hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.25</hasFeedRateValue>
+  <hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</hasFeedRateUnit>
+  <hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">480.0</hasSpindleSpeedValue>
+  <hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</hasSpindleSpeedUnit>
+  <hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</hasDepthOfCutValue>
+  <hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</hasDepthOfCutUnit>
+  <requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#AISI1045_FinishTurning_Params">
+  <rdf:type rdf:resource="#CuttingParameterSet"/>
+  <forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#FinishTurningOp"/>
+  <hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.06</hasFeedRateValue>
+  <hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</hasFeedRateUnit>
+  <hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">900.0</hasSpindleSpeedValue>
+  <hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</hasSpindleSpeedUnit>
+  <hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</hasDepthOfCutValue>
+  <hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</hasDepthOfCutUnit>
+  <requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#AISI1045_Drilling_Params">
+  <rdf:type rdf:resource="#CuttingParameterSet"/>
+  <forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#DrillingOp"/>
+  <hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.15</hasFeedRateValue>
+  <hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</hasFeedRateUnit>
+  <hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">900.0</hasSpindleSpeedValue>
+  <hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</hasSpindleSpeedUnit>
+  <hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasDepthOfCutValue>
+  <hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</hasDepthOfCutUnit>
+  <requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#AISI1045_Milling_Params">
+  <rdf:type rdf:resource="#CuttingParameterSet"/>
+  <forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#MillingOp"/>
+  <hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.05</hasFeedRateValue>
+  <hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/tooth</hasFeedRateUnit>
+  <hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1200.0</hasSpindleSpeedValue>
+  <hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</hasSpindleSpeedUnit>
+  <hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</hasDepthOfCutValue>
+  <hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</hasDepthOfCutUnit>
+  <requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Aluminum6061_RoughTurning_Params">
+  <rdf:type rdf:resource="#CuttingParameterSet"/>
+  <forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#Aluminum6061T6"/>
+  <forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#RoughTurningOp"/>
+  <hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</hasFeedRateValue>
+  <hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</hasFeedRateUnit>
+  <hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">800.0</hasSpindleSpeedValue>
+  <hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</hasSpindleSpeedUnit>
+  <hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</hasDepthOfCutValue>
+  <hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</hasDepthOfCutUnit>
+  <requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Aluminum6061_FinishTurning_Params">
+  <rdf:type rdf:resource="#CuttingParameterSet"/>
+  <forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#Aluminum6061T6"/>
+  <forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#FinishTurningOp"/>
+  <hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.12</hasFeedRateValue>
+  <hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</hasFeedRateUnit>
+  <hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1500.0</hasSpindleSpeedValue>
+  <hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</hasSpindleSpeedUnit>
+  <hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</hasDepthOfCutValue>
+  <hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</hasDepthOfCutUnit>
+  <requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Aluminum6061_Drilling_Params">
+  <rdf:type rdf:resource="#CuttingParameterSet"/>
+  <forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#Aluminum6061T6"/>
+  <forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#DrillingOp"/>
+  <hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.18</hasFeedRateValue>
+  <hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</hasFeedRateUnit>
+  <hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1500.0</hasSpindleSpeedValue>
+  <hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</hasSpindleSpeedUnit>
+  <hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</hasDepthOfCutValue>
+  <hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</hasDepthOfCutUnit>
+  <requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Aluminum6061_Milling_Params">
+  <rdf:type rdf:resource="#CuttingParameterSet"/>
+  <forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#Aluminum6061T6"/>
+  <forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#MillingOp"/>
+  <hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.08</hasFeedRateValue>
+  <hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/tooth</hasFeedRateUnit>
+  <hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2000.0</hasSpindleSpeedValue>
+  <hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</hasSpindleSpeedUnit>
+  <hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</hasDepthOfCutValue>
+  <hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</hasDepthOfCutUnit>
+  <requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Stainless304_RoughTurning_Params">
+  <rdf:type rdf:resource="#CuttingParameterSet"/>
+  <forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#StainlessSteel304"/>
+  <forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#RoughTurningOp"/>
+  <hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</hasFeedRateValue>
+  <hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</hasFeedRateUnit>
+  <hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">320.0</hasSpindleSpeedValue>
+  <hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</hasSpindleSpeedUnit>
+  <hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.5</hasDepthOfCutValue>
+  <hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</hasDepthOfCutUnit>
+  <requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Stainless304_FinishTurning_Params">
+  <rdf:type rdf:resource="#CuttingParameterSet"/>
+  <forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#StainlessSteel304"/>
+  <forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#FinishTurningOp"/>
+  <hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.032</hasFeedRateValue>
+  <hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</hasFeedRateUnit>
+  <hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600.0</hasSpindleSpeedValue>
+  <hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</hasSpindleSpeedUnit>
+  <hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.15</hasDepthOfCutValue>
+  <hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</hasDepthOfCutUnit>
+  <requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Stainless304_Drilling_Params">
+  <rdf:type rdf:resource="#CuttingParameterSet"/>
+  <forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#StainlessSteel304"/>
+  <forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#DrillingOp"/>
+  <hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.12</hasFeedRateValue>
+  <hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</hasFeedRateUnit>
+  <hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600.0</hasSpindleSpeedValue>
+  <hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</hasSpindleSpeedUnit>
+  <hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</hasDepthOfCutValue>
+  <hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</hasDepthOfCutUnit>
+  <requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Stainless304_Milling_Params">
+  <rdf:type rdf:resource="#CuttingParameterSet"/>
+  <forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#StainlessSteel304"/>
+  <forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#MillingOp"/>
+  <hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.04</hasFeedRateValue>
+  <hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/tooth</hasFeedRateUnit>
+  <hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">800.0</hasSpindleSpeedValue>
+  <hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</hasSpindleSpeedUnit>
+  <hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</hasDepthOfCutValue>
+  <hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</hasDepthOfCutUnit>
+  <requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Counterboring_Default_Params">
+  <rdf:type rdf:resource="#CuttingParameterSet"/>
+  <forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#CounterboringOp"/>
+  <hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.12</hasFeedRateValue>
+  <hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</hasFeedRateUnit>
+  <hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000.0</hasSpindleSpeedValue>
+  <hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</hasSpindleSpeedUnit>
+  <hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</hasDepthOfCutValue>
+  <hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</hasDepthOfCutUnit>
+  <requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chamfering_Default_Params">
+  <rdf:type rdf:resource="#CuttingParameterSet"/>
+  <forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#ChamferingOp"/>
+  <hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</hasFeedRateValue>
+  <hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</hasFeedRateUnit>
+  <hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1200.0</hasSpindleSpeedValue>
+  <hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</hasSpindleSpeedUnit>
+  <hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</hasDepthOfCutValue>
+  <hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</hasDepthOfCutUnit>
+  <requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Boring_Default_Params">
+  <rdf:type rdf:resource="#CuttingParameterSet"/>
+  <forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#BoringOp"/>
+  <hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</hasFeedRateValue>
+  <hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</hasFeedRateUnit>
+  <hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">800.0</hasSpindleSpeedValue>
+  <hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</hasSpindleSpeedUnit>
+  <hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasDepthOfCutValue>
+  <hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</hasDepthOfCutUnit>
+  <requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Facing_Default_Params">
+  <rdf:type rdf:resource="#CuttingParameterSet"/>
+  <forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#FacingOp"/>
+  <hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</hasFeedRateValue>
+  <hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</hasFeedRateUnit>
+  <hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">800.0</hasSpindleSpeedValue>
+  <hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</hasSpindleSpeedUnit>
+  <hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</hasDepthOfCutValue>
+  <hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</hasDepthOfCutUnit>
+  <requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Grooving_Default_Params">
+  <rdf:type rdf:resource="#CuttingParameterSet"/>
+  <forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#GroovingOp"/>
+  <hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.08</hasFeedRateValue>
+  <hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</hasFeedRateUnit>
+  <hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600.0</hasSpindleSpeedValue>
+  <hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</hasSpindleSpeedUnit>
+  <hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasDepthOfCutValue>
+  <hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</hasDepthOfCutUnit>
+  <requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</requiresCoolant>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

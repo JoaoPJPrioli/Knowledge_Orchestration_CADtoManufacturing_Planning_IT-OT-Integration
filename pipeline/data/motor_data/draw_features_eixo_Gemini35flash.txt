@@ -1,0 +1,47 @@
+Extracted Design Features from Drawing
+
+Overall Dimensions: L:84, W:27, H:24
+Center Point: X:0, Y:0, Z:42
+
+1. Cylinder
+   Description: Lower cylindrical body with diameter of 24 mm (R12) and length of 37.5 mm
+   Absolute Location: X:0, Y:0, Z:18.75
+   Relative Position: X:0, Y:0, Z:-23.25
+   Orientation: Z-axis
+   Tolerance: Not specified
+
+2. Cylinder
+   Description: Upper cylindrical body with diameter of 22 mm (R11) and length of 46.5 mm
+   Absolute Location: X:0, Y:0, Z:60.75
+   Relative Position: X:0, Y:0, Z:18.75
+   Orientation: Z-axis
+   Tolerance: Not specified
+
+3. Groove
+   Description: Undercut/groove separating the upper and lower cylinders with a width of 1.75 mm
+   Absolute Location: X:0, Y:0, Z:37.5
+   Relative Position: X:0, Y:0, Z:-4.5
+   Orientation: Z-axis
+   Tolerance: Not specified
+
+4. Boss
+   Description: Rectangular key projection on the upper cylinder, length of 32 mm, width of 3.69 mm, and height of 3 mm, positioned 1 mm from the top edge
+   Absolute Location: X:-12.5, Y:0, Z:67
+   Relative Position: X:-12.5, Y:0, Z:25
+   Orientation: Parallel to Z-axis
+   Tolerance: Not specified
+
+5. Slot
+   Description: Slot feature on the upper cylinder with a width of 4 mm
+   Absolute Location: X:11, Y:0, Z:60.75
+   Relative Position: X:11, Y:0, Z:18.75
+   Orientation: Parallel to Z-axis
+   Tolerance: Not specified
+
+6. Bore
+   Description: Multi-stepped central through-hole with internal radii of R3.4, R4.2, and R6.1
+   Absolute Location: X:0, Y:0, Z:42
+   Relative Position: X:0, Y:0, Z:0
+   Orientation: Z-axis
+   Tolerance: Not specified
+

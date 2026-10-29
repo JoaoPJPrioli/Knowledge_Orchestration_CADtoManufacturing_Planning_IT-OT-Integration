@@ -1,0 +1,794 @@
+{
+ "rows": [
+  {
+   "step": 1,
+   "operation": "facing",
+   "entity": 10,
+   "entity_type": "Boss",
+   "source_family": "STEP",
+   "ref_feature": "KEY_FITTED",
+   "ref_op": null,
+   "classification": "not_in_plan",
+   "underlying": "not_in_plan",
+   "status": "auto_approved",
+   "tool": "TurningInsertRough",
+   "tool_issue": null
+  },
+  {
+   "step": 2,
+   "operation": "facing",
+   "entity": 18,
+   "entity_type": "Boss",
+   "source_family": "DRW",
+   "ref_feature": "KEY_FITTED",
+   "ref_op": null,
+   "classification": "duplicate",
+   "underlying": "not_in_plan",
+   "status": "auto_approved",
+   "tool": "TurningInsertRough",
+   "tool_issue": null
+  },
+  {
+   "step": 3,
+   "operation": "rough_turning",
+   "entity": 1,
+   "entity_type": "Step",
+   "source_family": "STEP",
+   "ref_feature": "R01",
+   "ref_op": "10.07b",
+   "classification": "match",
+   "underlying": "match",
+   "status": "auto_approved",
+   "tool": "TurningInsertRough",
+   "tool_issue": null
+  },
+  {
+   "step": 4,
+   "operation": "rough_turning",
+   "entity": 3,
+   "entity_type": "Step",
+   "source_family": "STEP",
+   "ref_feature": "R03",
+   "ref_op": null,
+   "classification": "wrong_family",
+   "underlying": "wrong_family",
+   "status": "auto_approved",
+   "tool": "TurningInsertRough",
+   "tool_issue": null
+  },
+  {
+   "step": 5,
+   "operation": "rough_turning",
+   "entity": 5,
+   "entity_type": "Step",
+   "source_family": "STEP",
+   "ref_feature": "R05",
+   "ref_op": "10.07a",
+   "classification": "match",
+   "underlying": "match",
+   "status": "auto_approved",
+   "tool": "TurningInsertRough",
+   "tool_issue": null
+  },
+  {
+   "step": 6,
+   "operation": "rough_turning",
+   "entity": 10,
+   "entity_type": "Boss",
+   "source_family": "STEP",
+   "ref_feature": "KEY_FITTED",
+   "ref_op": null,
+   "classification": "not_in_plan",
+   "underlying": "not_in_plan",
+   "status": "auto_approved",
+   "tool": "TurningInsertRough",
+   "tool_issue": null
+  },
+  {
+   "step": 7,
+   "operation": "rough_turning",
+   "entity": 15,
+   "entity_type": "Cylinder",
+   "source_family": "DRW",
+   "ref_feature": "R05",
+   "ref_op": "10.07a",
+   "classification": "duplicate",
+   "underlying": "match",
+   "status": "auto_approved",
+   "tool": "TurningInsertRough",
+   "tool_issue": null
+  },
+  {
+   "step": 8,
+   "operation": "rough_turning",
+   "entity": 16,
+   "entity_type": "Cylinder",
+   "source_family": "DRW",
+   "ref_feature": "R01",
+   "ref_op": "10.07b",
+   "classification": "duplicate",
+   "underlying": "match",
+   "status": "auto_approved",
+   "tool": "TurningInsertRough",
+   "tool_issue": null
+  },
+  {
+   "step": 9,
+   "operation": "rough_turning",
+   "entity": 18,
+   "entity_type": "Boss",
+   "source_family": "DRW",
+   "ref_feature": "KEY_FITTED",
+   "ref_op": null,
+   "classification": "duplicate",
+   "underlying": "not_in_plan",
+   "status": "auto_approved",
+   "tool": "TurningInsertRough",
+   "tool_issue": null
+  },
+  {
+   "step": 10,
+   "operation": "finish_turning",
+   "entity": 1,
+   "entity_type": "Step",
+   "source_family": "STEP",
+   "ref_feature": "R01",
+   "ref_op": "10.09b",
+   "classification": "match",
+   "underlying": "match",
+   "status": "auto_approved",
+   "tool": "TurningInsertFinish",
+   "tool_issue": null
+  },
+  {
+   "step": 11,
+   "operation": "finish_turning",
+   "entity": 3,
+   "entity_type": "Step",
+   "source_family": "STEP",
+   "ref_feature": "R03",
+   "ref_op": null,
+   "classification": "wrong_family",
+   "underlying": "wrong_family",
+   "status": "auto_approved",
+   "tool": "TurningInsertFinish",
+   "tool_issue": null
+  },
+  {
+   "step": 12,
+   "operation": "finish_turning",
+   "entity": 5,
+   "entity_type": "Step",
+   "source_family": "STEP",
+   "ref_feature": "R05",
+   "ref_op": "10.09a",
+   "classification": "match",
+   "underlying": "match",
+   "status": "auto_approved",
+   "tool": "TurningInsertFinish",
+   "tool_issue": null
+  },
+  {
+   "step": 13,
+   "operation": "finish_turning",
+   "entity": 10,
+   "entity_type": "Boss",
+   "source_family": "STEP",
+   "ref_feature": "KEY_FITTED",
+   "ref_op": null,
+   "classification": "not_in_plan",
+   "underlying": "not_in_plan",
+   "status": "auto_approved",
+   "tool": "TurningInsertFinish",
+   "tool_issue": null
+  },
+  {
+   "step": 14,
+   "operation": "finish_turning",
+   "entity": 15,
+   "entity_type": "Cylinder",
+   "source_family": "DRW",
+   "ref_feature": "R05",
+   "ref_op": "10.09a",
+   "classification": "duplicate",
+   "underlying": "match",
+   "status": "auto_approved",
+   "tool": "TurningInsertFinish",
+   "tool_issue": null
+  },
+  {
+   "step": 15,
+   "operation": "finish_turning",
+   "entity": 16,
+   "entity_type": "Cylinder",
+   "source_family": "DRW",
+   "ref_feature": "R01",
+   "ref_op": "10.09b",
+   "classification": "duplicate",
+   "underlying": "match",
+   "status": "auto_approved",
+   "tool": "TurningInsertFinish",
+   "tool_issue": null
+  },
+  {
+   "step": 16,
+   "operation": "finish_turning",
+   "entity": 18,
+   "entity_type": "Boss",
+   "source_family": "DRW",
+   "ref_feature": "KEY_FITTED",
+   "ref_op": null,
+   "classification": "duplicate",
+   "underlying": "not_in_plan",
+   "status": "auto_approved",
+   "tool": "TurningInsertFinish",
+   "tool_issue": null
+  },
+  {
+   "step": 17,
+   "operation": "drilling",
+   "entity": 7,
+   "entity_type": "Blind Hole",
+   "source_family": "STEP",
+   "ref_feature": "R07",
+   "ref_op": "10.03",
+   "classification": "match",
+   "underlying": "match",
+   "status": "auto_approved",
+   "tool": "DrillBit",
+   "tool_issue": null
+  },
+  {
+   "step": 18,
+   "operation": "drilling",
+   "entity": 8,
+   "entity_type": "Counterbore",
+   "source_family": "STEP",
+   "ref_feature": "R08",
+   "ref_op": null,
+   "classification": "wrong_family",
+   "underlying": "wrong_family",
+   "status": "auto_approved",
+   "tool": "DrillBit",
+   "tool_issue": null
+  },
+  {
+   "step": 19,
+   "operation": "drilling",
+   "entity": 11,
+   "entity_type": "Through Hole",
+   "source_family": "STEP",
+   "ref_feature": "R06_end_radius",
+   "ref_op": null,
+   "classification": "wrong_family",
+   "underlying": "wrong_family",
+   "status": "requires_review",
+   "tool": "DrillBit",
+   "tool_issue": null
+  },
+  {
+   "step": 20,
+   "operation": "drilling",
+   "entity": 12,
+   "entity_type": "Through Hole",
+   "source_family": "STEP",
+   "ref_feature": "R06_end_radius",
+   "ref_op": null,
+   "classification": "wrong_family",
+   "underlying": "wrong_family",
+   "status": "requires_review",
+   "tool": "DrillBit",
+   "tool_issue": null
+  },
+  {
+   "step": 21,
+   "operation": "drilling",
+   "entity": 19,
+   "entity_type": "Hole",
+   "source_family": "DRW",
+   "ref_feature": "R09",
+   "ref_op": null,
+   "classification": "duplicate",
+   "underlying": "wrong_family",
+   "status": "auto_approved",
+   "tool": "DrillBit",
+   "tool_issue": null
+  },
+  {
+   "step": 22,
+   "operation": "drilling",
+   "entity": 20,
+   "entity_type": "Hole",
+   "source_family": "DRW",
+   "ref_feature": "R08",
+   "ref_op": null,
+   "classification": "duplicate",
+   "underlying": "wrong_family",
+   "status": "auto_approved",
+   "tool": "DrillBit",
+   "tool_issue": null
+  },
+  {
+   "step": 23,
+   "operation": "drilling",
+   "entity": 21,
+   "entity_type": "Hole",
+   "source_family": "DRW",
+   "ref_feature": "R07",
+   "ref_op": "10.03",
+   "classification": "duplicate",
+   "underlying": "match",
+   "status": "auto_approved",
+   "tool": "DrillBit",
+   "tool_issue": null
+  },
+  {
+   "step": 24,
+   "operation": "counterboring",
+   "entity": 8,
+   "entity_type": "Counterbore",
+   "source_family": "STEP",
+   "ref_feature": "R08",
+   "ref_op": "10.04",
+   "classification": "match",
+   "underlying": "match",
+   "status": "auto_approved",
+   "tool": "CounterboreCutter",
+   "tool_issue": null
+  },
+  {
+   "step": 25,
+   "operation": "chamfering",
+   "entity": 2,
+   "entity_type": "Chamfer",
+   "source_family": "STEP",
+   "ref_feature": "R02",
+   "ref_op": "10.09d",
+   "classification": "match",
+   "underlying": "match",
+   "status": "auto_approved",
+   "tool": "ChamferMill",
+   "tool_issue": "rotating milling cutter; lathe has no driven tooling (J12)"
+  },
+  {
+   "step": 26,
+   "operation": "chamfering",
+   "entity": 4,
+   "entity_type": "Chamfer",
+   "source_family": "STEP",
+   "ref_feature": "R04",
+   "ref_op": "10.08b",
+   "classification": "match",
+   "underlying": "match",
+   "status": "auto_approved",
+   "tool": "ChamferMill",
+   "tool_issue": "rotating milling cutter; lathe has no driven tooling (J12)"
+  },
+  {
+   "step": 27,
+   "operation": "chamfering",
+   "entity": 6,
+   "entity_type": "Chamfer",
+   "source_family": "STEP",
+   "ref_feature": "R10",
+   "ref_op": "10.09c",
+   "classification": "match",
+   "underlying": "match",
+   "status": "auto_approved",
+   "tool": "ChamferMill",
+   "tool_issue": "rotating milling cutter; lathe has no driven tooling (J12)"
+  },
+  {
+   "step": 28,
+   "operation": "chamfering",
+   "entity": 9,
+   "entity_type": "Chamfer",
+   "source_family": "STEP",
+   "ref_feature": "R09",
+   "ref_op": "10.05",
+   "classification": "match",
+   "underlying": "match",
+   "status": "auto_approved",
+   "tool": "ChamferMill",
+   "tool_issue": "90 deg chamfer mill cannot form the 60 deg countersink; also needs driven tooling (J12)"
+  },
+  {
+   "step": 29,
+   "operation": "grooving",
+   "entity": 17,
+   "entity_type": "Groove",
+   "source_family": "DRW",
+   "ref_feature": "R03",
+   "ref_op": "10.08a",
+   "classification": "duplicate",
+   "underlying": "match",
+   "status": "auto_approved",
+   "tool": "GroovingTool",
+   "tool_issue": null
+  },
+  {
+   "step": 30,
+   "operation": "milling",
+   "entity": 13,
+   "entity_type": "Slot",
+   "source_family": "STEP",
+   "ref_feature": "R06",
+   "ref_op": "30.01",
+   "classification": "match",
+   "underlying": "match",
+   "status": "requires_review",
+   "tool": "EndMill",
+   "tool_issue": null
+  },
+  {
+   "step": 31,
+   "operation": "milling",
+   "entity": 14,
+   "entity_type": "Slot",
+   "source_family": "STEP",
+   "ref_feature": "R06",
+   "ref_op": "30.01",
+   "classification": "match",
+   "underlying": "match",
+   "status": "requires_review",
+   "tool": "EndMill",
+   "tool_issue": null
+  },
+  {
+   "step": 32,
+   "operation": "milling",
+   "entity": 22,
+   "entity_type": "Slot",
+   "source_family": "DRW",
+   "ref_feature": "R06",
+   "ref_op": "30.01",
+   "classification": "duplicate",
+   "underlying": "match",
+   "status": "requires_review",
+   "tool": "EndMill",
+   "tool_issue": null
+  }
+ ],
+ "coverage": [
+  {
+   "op_id": "10.01",
+   "feature": "Drive-end (DE) face, z = 168.5",
+   "family": "facing",
+   "required": true,
+   "state": "missing",
+   "steps": [],
+   "approved_steps": [],
+   "via_duplicate_only": false,
+   "tool_issue_on_all_approved": false,
+   "operation_class_in_ontology": true
+  },
+  {
+   "op_id": "10.02",
+   "feature": "Spot/centre on axis before tap drill",
+   "family": "centre_drilling",
+   "required": "conditional",
+   "state": "missing",
+   "steps": [],
+   "approved_steps": [],
+   "via_duplicate_only": false,
+   "tool_issue_on_all_approved": false,
+   "operation_class_in_ontology": false
+  },
+  {
+   "op_id": "10.03",
+   "feature": "Tap-drill hole d 6.8, full-diameter depth 25.0 from DE face (R07)",
+   "family": "drilling",
+   "required": true,
+   "state": "covered_approved",
+   "steps": [
+    17,
+    23
+   ],
+   "approved_steps": [
+    17,
+    23
+   ],
+   "via_duplicate_only": false,
+   "tool_issue_on_all_approved": false,
+   "operation_class_in_ontology": true
+  },
+  {
+   "op_id": "10.04",
+   "feature": "Counterbore d 8.4, flat floor at z = 162.5 (R08)",
+   "family": "counterboring",
+   "required": true,
+   "state": "covered_approved",
+   "steps": [
+    24
+   ],
+   "approved_steps": [
+    24
+   ],
+   "via_duplicate_only": false,
+   "tool_issue_on_all_approved": false,
+   "operation_class_in_ontology": true
+  },
+  {
+   "op_id": "10.05",
+   "feature": "60 deg countersink to d 12.2 (R09), DIN 332-2 centre seat",
+   "family": "chamfering",
+   "required": true,
+   "state": "covered_approved",
+   "steps": [
+    28
+   ],
+   "approved_steps": [
+    28
+   ],
+   "via_duplicate_only": false,
+   "tool_issue_on_all_approved": true,
+   "operation_class_in_ontology": true
+  },
+  {
+   "op_id": "10.07a",
+   "feature": "Rough turn d 24.0 seat (R05), leave 0.2-0.3 on diameter",
+   "family": "rough_turning",
+   "required": true,
+   "state": "covered_approved",
+   "steps": [
+    5,
+    7
+   ],
+   "approved_steps": [
+    5,
+    7
+   ],
+   "via_duplicate_only": false,
+   "tool_issue_on_all_approved": false,
+   "operation_class_in_ontology": true
+  },
+  {
+   "op_id": "10.07b",
+   "feature": "Rough turn d 24.95 body (R01) back past NDE face + parting width",
+   "family": "rough_turning",
+   "required": true,
+   "state": "covered_approved",
+   "steps": [
+    3,
+    8
+   ],
+   "approved_steps": [
+    3,
+    8
+   ],
+   "via_duplicate_only": false,
+   "tool_issue_on_all_approved": false,
+   "operation_class_in_ontology": true
+  },
+  {
+   "op_id": "10.08a",
+   "feature": "Undercut d 23.6 x 1.754 at shaft-end root (R03)",
+   "family": "grooving",
+   "required": true,
+   "state": "covered_approved",
+   "steps": [
+    29
+   ],
+   "approved_steps": [
+    29
+   ],
+   "via_duplicate_only": true,
+   "tool_issue_on_all_approved": false,
+   "operation_class_in_ontology": true
+  },
+  {
+   "op_id": "10.08b",
+   "feature": "15 deg run-out cone d 23.6 -> 24.0 (R04)",
+   "family": "grooving|chamfering|finish_turning",
+   "required": true,
+   "state": "covered_approved",
+   "steps": [
+    26
+   ],
+   "approved_steps": [
+    26
+   ],
+   "via_duplicate_only": false,
+   "tool_issue_on_all_approved": true,
+   "operation_class_in_ontology": true
+  },
+  {
+   "op_id": "10.09a",
+   "feature": "Finish turn d 24 j6 seat (R05): +0.009/-0.004",
+   "family": "finish_turning",
+   "required": true,
+   "state": "covered_approved",
+   "steps": [
+    12,
+    14
+   ],
+   "approved_steps": [
+    12,
+    14
+   ],
+   "via_duplicate_only": false,
+   "tool_issue_on_all_approved": false,
+   "operation_class_in_ontology": true
+  },
+  {
+   "op_id": "10.09b",
+   "feature": "Finish turn d 24.95 body (R01)",
+   "family": "finish_turning",
+   "required": true,
+   "state": "covered_approved",
+   "steps": [
+    10,
+    15
+   ],
+   "approved_steps": [
+    10,
+    15
+   ],
+   "via_duplicate_only": false,
+   "tool_issue_on_all_approved": false,
+   "operation_class_in_ontology": true
+  },
+  {
+   "op_id": "10.09c",
+   "feature": "1 x 45 deg end chamfer d 24 -> 22 (R10), turned in contour",
+   "family": "chamfering",
+   "required": true,
+   "state": "covered_approved",
+   "steps": [
+    27
+   ],
+   "approved_steps": [
+    27
+   ],
+   "via_duplicate_only": false,
+   "tool_issue_on_all_approved": true,
+   "operation_class_in_ontology": true
+  },
+  {
+   "op_id": "10.09d",
+   "feature": "0.5 x 45 deg chamfer d 24.95 -> 23.95 (R02), turned in contour",
+   "family": "chamfering",
+   "required": true,
+   "state": "covered_approved",
+   "steps": [
+    25
+   ],
+   "approved_steps": [
+    25
+   ],
+   "via_duplicate_only": false,
+   "tool_issue_on_all_approved": true,
+   "operation_class_in_ontology": true
+  },
+  {
+   "op_id": "10.10",
+   "feature": "Tap M8 x 1.25-6H in R07 (thread depth per DIN 332-2)",
+   "family": "tapping",
+   "required": true,
+   "state": "missing",
+   "steps": [],
+   "approved_steps": [],
+   "via_duplicate_only": false,
+   "tool_issue_on_all_approved": false,
+   "operation_class_in_ontology": false
+  },
+  {
+   "op_id": "10.11",
+   "feature": "Part off at z ~ 80.0 (0.5 mm facing allowance)",
+   "family": "parting",
+   "required": true,
+   "state": "missing",
+   "steps": [],
+   "approved_steps": [],
+   "via_duplicate_only": false,
+   "tool_issue_on_all_approved": false,
+   "operation_class_in_ontology": false
+  },
+  {
+   "op_id": "20.01",
+   "feature": "Non-drive-end (NDE) face to overall length 88.0, z = 80.5",
+   "family": "facing",
+   "required": true,
+   "state": "missing",
+   "steps": [],
+   "approved_steps": [],
+   "via_duplicate_only": false,
+   "tool_issue_on_all_approved": false,
+   "operation_class_in_ontology": true
+  },
+  {
+   "op_id": "30.01",
+   "feature": "Keyway 8 N9 (7.964-8.000) x t1 4.0 +0.2 x 40, form A (R4 ends), z 123.5-163.5, symmetric to axis",
+   "family": "milling",
+   "required": true,
+   "state": "present_withheld_only",
+   "steps": [
+    30,
+    31,
+    32
+   ],
+   "approved_steps": [],
+   "via_duplicate_only": false,
+   "tool_issue_on_all_approved": false,
+   "operation_class_in_ontology": true
+  }
+ ],
+ "summary": {
+  "steps_total": 32,
+  "by_class": {
+   "not_in_plan": 3,
+   "duplicate": 12,
+   "match": 12,
+   "wrong_family": 5
+  },
+  "approved_by_class": {
+   "not_in_plan": 3,
+   "duplicate": 11,
+   "match": 10,
+   "wrong_family": 3
+  },
+  "withheld_by_class": {
+   "wrong_family": 2,
+   "match": 2,
+   "duplicate": 1
+  },
+  "underlying_ignoring_duplication": {
+   "not_in_plan": 6,
+   "match": 19,
+   "wrong_family": 7
+  },
+  "required_reference_ops": 16,
+  "required_covered_approved": 11,
+  "required_present_withheld_only": [
+   "30.01"
+  ],
+  "required_missing": [
+   "10.01",
+   "10.10",
+   "10.11",
+   "20.01"
+  ],
+  "covered_with_tool_issue": [
+   "10.05",
+   "10.08b",
+   "10.09c",
+   "10.09d"
+  ],
+  "covered_via_duplicate_only": [
+   "10.08a"
+  ],
+  "conditional_missing": [
+   "10.02"
+  ],
+  "approved_steps_with_tool_issue": [
+   25,
+   26,
+   27,
+   28
+  ]
+ },
+ "entity_to_reference": {
+  "1": "R01",
+  "2": "R02",
+  "3": "R03",
+  "4": "R04",
+  "5": "R05",
+  "6": "R10",
+  "7": "R07",
+  "8": "R08",
+  "9": "R09",
+  "10": "KEY_FITTED",
+  "11": "R06_end_radius",
+  "12": "R06_end_radius",
+  "13": "R06",
+  "14": "R06",
+  "15": "R05",
+  "16": "R01",
+  "17": "R03",
+  "18": "KEY_FITTED",
+  "19": "R09",
+  "20": "R08",
+  "21": "R07",
+  "22": "R06"
+ }
+}
