@@ -1,0 +1,75 @@
+{
+  "total_features": 20,
+  "total_steps": 30,
+  "feature_types": {
+    "Step": 3,
+    "Chamfer": 4,
+    "Blind Hole": 1,
+    "Counterbore": 1,
+    "Boss": 2,
+    "Through Hole": 2,
+    "Cylinder": 2,
+    "Groove": 1,
+    "Hole": 3,
+    "Slot": 1
+  },
+  "operations": {
+    "Facing": 2,
+    "Rough Turning": 7,
+    "Finish Turning": 7,
+    "Drilling": 7,
+    "Counterboring": 1,
+    "Chamfering": 4,
+    "Grooving": 1,
+    "Milling": 1
+  },
+  "gcode_files": [
+    "../runs_v7/ablation_type_gate/motor_shaft_1001.nc"
+  ],
+  "validation": {
+    "files_validated": 1,
+    "total_errors": 0,
+    "total_warnings": 0,
+    "status": "PASS"
+  },
+  "simulation": {
+    "files_simulated": 1,
+    "total_collisions": 0,
+    "total_cycle_time_minutes": 4.38,
+    "average_mrr": 8504.075333333341
+  },
+  "skl_version": "0.1.0",
+  "reasoner": "Pellet (via owlready2 sync_reasoner_pellet)",
+  "reasoning_status": "ok",
+  "expert_validation_summary": {
+    "total_requests": 23,
+    "by_status": {
+      "requires_review": 23,
+      "auto_approved": 0,
+      "expert_approved": 0,
+      "expert_rejected": 0,
+      "knowledge_update_suggested": 0
+    }
+  },
+  "critical_simulation_findings": [],
+  "unified_graph_stats": {
+    "total_nodes": 73,
+    "total_edges": 179,
+    "node_types": {
+      "operation": 9,
+      "tool": 10,
+      "machine": 1,
+      "material": 3,
+      "feature": 20,
+      "operation_instance": 30
+    },
+    "edge_types": {
+      "REQUIRES": 30,
+      "INSTANCE_OF": 30,
+      "USES": 30,
+      "RUNS_ON": 30,
+      "REMOVES": 30,
+      "SEQUENCE_BEFORE": 29
+    }
+  }
+}

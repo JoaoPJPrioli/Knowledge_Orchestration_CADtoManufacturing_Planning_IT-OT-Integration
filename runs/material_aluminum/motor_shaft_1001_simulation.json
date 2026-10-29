@@ -1,0 +1,259 @@
+{
+  "simulation_timestamp": "2026-10-24T17:48:09.934633",
+  "machine_id": "cnc_lathe",
+  "material_id": "aluminum_6061",
+  "workpiece": {
+    "stock_diameter_mm": 80.0,
+    "stock_length_mm": 200.0
+  },
+  "basic_simulation": {
+    "total_travel_distance": 974.11,
+    "rapid_distance": 742.19,
+    "cut_distance": 231.92,
+    "tool_changes": 3,
+    "blocks_executed": 70,
+    "cycle_count": 1,
+    "final_position": {
+      "x": 0.0,
+      "z": 0.0
+    }
+  },
+  "collision_detection": {
+    "total_collisions": 0,
+    "by_type": {
+      "tool_workpiece": 0,
+      "tool_tool": 0,
+      "boundary": 0
+    },
+    "by_severity": {
+      "critical": 0,
+      "error": 0,
+      "warning": 0
+    },
+    "collisions": []
+  },
+  "cutting_time": {
+    "rapid_time_seconds": 8.83,
+    "cutting_time_seconds": 68.9,
+    "tool_change_time_seconds": 9.0,
+    "positioning_time_seconds": 35.0,
+    "total_cycle_time_seconds": 121.73,
+    "total_cycle_time_minutes": 2.03,
+    "timed_feed_length_mm": 225.9,
+    "timed_cycle_depth_mm": 6.02,
+    "untimed_feed_moves": 0
+  },
+  "chip_load_analysis": {
+    "operations_analyzed": 7,
+    "average_mrr": 801.264000000002,
+    "max_mrr": 4348.8480000000145,
+    "average_cutting_force": 357.9428571428571,
+    "average_cutting_power": 0.3463040413905101,
+    "force_power_model": {
+      "specific_cutting_force_kc_N_per_mm2": 800.0,
+      "kc_status": "nominal handbook-order constant, uncalibrated, no chip-thickness correction",
+      "force_units": "N",
+      "power_units": "kW",
+      "cutting_speed_units": "m/min",
+      "models": [
+        "single_point: Fc = kc*ap*f; P = Fc*vc/60000"
+      ],
+      "inputs_source": "plan step parameter package",
+      "moves_with_force": 7,
+      "moves_with_power": 7,
+      "max_cutting_force": 720.0,
+      "max_cutting_power": 0.7524742723878272
+    },
+    "parameters": [
+      {
+        "operation_type": "RoughTurningOp",
+        "feed_rate_mm_per_rev": 0.3,
+        "spindle_speed_rpm": 800.0,
+        "cutting_speed_m_per_min": 62.71,
+        "depth_of_cut_mm": 1.0,
+        "width_of_cut_mm": 1.0,
+        "chip_load_mm_per_tooth": 0.0225,
+        "material_removal_rate_mm3_per_min": 240.0,
+        "cutting_time_seconds": 15.0,
+        "cutting_force_N": 720.0,
+        "cutting_power_kW": 0.7525,
+        "force_model": "single_point: Fc = kc*ap*f; P = Fc*vc/60000",
+        "force_inputs": {
+          "plan_step_number": 3,
+          "feed_mm_per_rev": 0.3,
+          "depth_of_cut_mm": 3.0,
+          "diameter_mm": 24.95,
+          "spindle_speed_rpm": 800.0,
+          "cutting_speed_m_per_min": 62.706
+        }
+      },
+      {
+        "operation_type": "RoughTurningOp",
+        "feed_rate_mm_per_rev": 0.3,
+        "spindle_speed_rpm": 800.0,
+        "cutting_speed_m_per_min": 59.31,
+        "depth_of_cut_mm": 1.0,
+        "width_of_cut_mm": 1.0,
+        "chip_load_mm_per_tooth": 0.0225,
+        "material_removal_rate_mm3_per_min": 240.0,
+        "cutting_time_seconds": 15.0,
+        "cutting_force_N": 720.0,
+        "cutting_power_kW": 0.7118,
+        "force_model": "single_point: Fc = kc*ap*f; P = Fc*vc/60000",
+        "force_inputs": {
+          "plan_step_number": 4,
+          "feed_mm_per_rev": 0.3,
+          "depth_of_cut_mm": 3.0,
+          "diameter_mm": 23.6,
+          "spindle_speed_rpm": 800.0,
+          "cutting_speed_m_per_min": 59.313
+        }
+      },
+      {
+        "operation_type": "RoughTurningOp",
+        "feed_rate_mm_per_rev": 0.3,
+        "spindle_speed_rpm": 800.0,
+        "cutting_speed_m_per_min": 60.32,
+        "depth_of_cut_mm": 1.0,
+        "width_of_cut_mm": 1.0,
+        "chip_load_mm_per_tooth": 0.0225,
+        "material_removal_rate_mm3_per_min": 240.0,
+        "cutting_time_seconds": 15.0,
+        "cutting_force_N": 720.0,
+        "cutting_power_kW": 0.7238,
+        "force_model": "single_point: Fc = kc*ap*f; P = Fc*vc/60000",
+        "force_inputs": {
+          "plan_step_number": 5,
+          "feed_mm_per_rev": 0.3,
+          "depth_of_cut_mm": 3.0,
+          "diameter_mm": 24.0,
+          "spindle_speed_rpm": 800.0,
+          "cutting_speed_m_per_min": 60.319
+        }
+      },
+      {
+        "operation_type": "FinishTurningOp",
+        "feed_rate_mm_per_rev": 0.12,
+        "spindle_speed_rpm": 1500.0,
+        "cutting_speed_m_per_min": 117.57,
+        "depth_of_cut_mm": 1.0,
+        "width_of_cut_mm": 1.0,
+        "chip_load_mm_per_tooth": 0.0048,
+        "material_removal_rate_mm3_per_min": 180.0,
+        "cutting_time_seconds": 20.0,
+        "cutting_force_N": 19.2,
+        "cutting_power_kW": 0.0376,
+        "force_model": "single_point: Fc = kc*ap*f; P = Fc*vc/60000",
+        "force_inputs": {
+          "plan_step_number": 10,
+          "feed_mm_per_rev": 0.12,
+          "depth_of_cut_mm": 0.2,
+          "diameter_mm": 24.95,
+          "spindle_speed_rpm": 1500.0,
+          "cutting_speed_m_per_min": 117.574
+        }
+      },
+      {
+        "operation_type": "FinishTurningOp",
+        "feed_rate_mm_per_rev": 0.12,
+        "spindle_speed_rpm": 1500.0,
+        "cutting_speed_m_per_min": 111.21,
+        "depth_of_cut_mm": 1.0,
+        "width_of_cut_mm": 1.0,
+        "chip_load_mm_per_tooth": 0.0048,
+        "material_removal_rate_mm3_per_min": 180.0,
+        "cutting_time_seconds": 20.0,
+        "cutting_force_N": 19.2,
+        "cutting_power_kW": 0.0356,
+        "force_model": "single_point: Fc = kc*ap*f; P = Fc*vc/60000",
+        "force_inputs": {
+          "plan_step_number": 11,
+          "feed_mm_per_rev": 0.12,
+          "depth_of_cut_mm": 0.2,
+          "diameter_mm": 23.6,
+          "spindle_speed_rpm": 1500.0,
+          "cutting_speed_m_per_min": 111.212
+        }
+      },
+      {
+        "operation_type": "FinishTurningOp",
+        "feed_rate_mm_per_rev": 0.12,
+        "spindle_speed_rpm": 1500.0,
+        "cutting_speed_m_per_min": 113.1,
+        "depth_of_cut_mm": 1.0,
+        "width_of_cut_mm": 1.0,
+        "chip_load_mm_per_tooth": 0.0048,
+        "material_removal_rate_mm3_per_min": 180.0,
+        "cutting_time_seconds": 20.0,
+        "cutting_force_N": 19.2,
+        "cutting_power_kW": 0.0362,
+        "force_model": "single_point: Fc = kc*ap*f; P = Fc*vc/60000",
+        "force_inputs": {
+          "plan_step_number": 12,
+          "feed_mm_per_rev": 0.12,
+          "depth_of_cut_mm": 0.2,
+          "diameter_mm": 24.0,
+          "spindle_speed_rpm": 1500.0,
+          "cutting_speed_m_per_min": 113.097
+        }
+      },
+      {
+        "operation_type": "CounterboringOp",
+        "feed_rate_mm_per_rev": 0.12,
+        "spindle_speed_rpm": 1000.0,
+        "cutting_speed_m_per_min": 0.0,
+        "depth_of_cut_mm": 6.02,
+        "width_of_cut_mm": 6.02,
+        "chip_load_mm_per_tooth": 0.0072,
+        "material_removal_rate_mm3_per_min": 4348.85,
+        "cutting_time_seconds": 180.6,
+        "cutting_force_N": 288.0,
+        "cutting_power_kW": 0.1267,
+        "force_model": "single_point: Fc = kc*ap*f; P = Fc*vc/60000",
+        "force_inputs": {
+          "plan_step_number": 24,
+          "feed_mm_per_rev": 0.12,
+          "depth_of_cut_mm": 3.0,
+          "diameter_mm": 8.4,
+          "spindle_speed_rpm": 1000.0,
+          "cutting_speed_m_per_min": 26.389
+        }
+      }
+    ]
+  },
+  "tool_wear": {
+    "turning_insert_rough": {
+      "tool_id": "turning_insert_rough",
+      "material_id": "aluminum_6061",
+      "cumulative_cutting_time_minutes": 0.75,
+      "cumulative_wear": 0.0116,
+      "wear_percentage": 1.16,
+      "nominal_tool_life_at_current_speed_minutes": 54.36,
+      "remaining_tool_life_minutes": 118.61,
+      "wear_status": "good"
+    },
+    "turning_insert_finish": {
+      "tool_id": "turning_insert_finish",
+      "material_id": "aluminum_6061",
+      "cumulative_cutting_time_minutes": 1.0,
+      "cumulative_wear": 0.0132,
+      "wear_percentage": 1.32,
+      "nominal_tool_life_at_current_speed_minutes": 6.69,
+      "remaining_tool_life_minutes": 118.42,
+      "wear_status": "good"
+    },
+    "counterbore_cutter": {
+      "tool_id": "counterbore_cutter",
+      "material_id": "aluminum_6061",
+      "cumulative_cutting_time_minutes": 3.01,
+      "cumulative_wear": 0.0326,
+      "wear_percentage": 3.26,
+      "nominal_tool_life_at_current_speed_minutes": Infinity,
+      "remaining_tool_life_minutes": 116.09,
+      "wear_status": "good"
+    }
+  },
+  "recommendations": [
+    "Simulation completed successfully. No issues detected."
+  ]
+}

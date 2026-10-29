@@ -1,0 +1,2405 @@
+{
+  "skl_version": "0.1.0",
+  "steps": [
+    {
+      "step_number": 1,
+      "feature_id": 10,
+      "operation": "facing",
+      "operation_selection_rule_id": "boss_requires_facing",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "turning_insert_rough",
+      "tool_selection_rule_id": "preferred_tool_selection",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.2,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "facing_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 10,
+            "feature_type": "Boss",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        },
+        "spindle_speed": {
+          "value": 800.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "facing_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 10,
+            "feature_type": "Boss",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        },
+        "depth_of_cut": {
+          "value": 1.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "facing_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 10,
+            "feature_type": "Boss",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "facing_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 10,
+            "feature_type": "Boss",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        }
+      }
+    },
+    {
+      "step_number": 2,
+      "feature_id": 18,
+      "operation": "facing",
+      "operation_selection_rule_id": "boss_requires_facing",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "turning_insert_rough",
+      "tool_selection_rule_id": "preferred_tool_selection",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.2,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "facing_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 18,
+            "feature_type": "Boss",
+            "material": null,
+            "mapping_confidence": 0.6609360204797806
+          }
+        },
+        "spindle_speed": {
+          "value": 800.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "facing_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 18,
+            "feature_type": "Boss",
+            "material": null,
+            "mapping_confidence": 0.6609360204797806
+          }
+        },
+        "depth_of_cut": {
+          "value": 1.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "facing_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 18,
+            "feature_type": "Boss",
+            "material": null,
+            "mapping_confidence": 0.6609360204797806
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "facing_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 18,
+            "feature_type": "Boss",
+            "material": null,
+            "mapping_confidence": 0.6609360204797806
+          }
+        }
+      }
+    },
+    {
+      "step_number": 3,
+      "feature_id": 1,
+      "operation": "rough_turning",
+      "operation_selection_rule_id": "step_requires_rough_turning",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "turning_insert_rough",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.3,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 1,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.6206136363636363
+          }
+        },
+        "spindle_speed": {
+          "value": 800.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 1,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.6206136363636363
+          }
+        },
+        "depth_of_cut": {
+          "value": 3.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 1,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.6206136363636363
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 1,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.6206136363636363
+          }
+        }
+      }
+    },
+    {
+      "step_number": 4,
+      "feature_id": 3,
+      "operation": "rough_turning",
+      "operation_selection_rule_id": "step_requires_rough_turning",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "turning_insert_rough",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.3,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 3,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "spindle_speed": {
+          "value": 800.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 3,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "depth_of_cut": {
+          "value": 3.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 3,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 3,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        }
+      }
+    },
+    {
+      "step_number": 5,
+      "feature_id": 5,
+      "operation": "rough_turning",
+      "operation_selection_rule_id": "step_requires_rough_turning",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "turning_insert_rough",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.3,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 5,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "spindle_speed": {
+          "value": 800.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 5,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "depth_of_cut": {
+          "value": 3.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 5,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 5,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        }
+      }
+    },
+    {
+      "step_number": 6,
+      "feature_id": 10,
+      "operation": "rough_turning",
+      "operation_selection_rule_id": "boss_requires_rough_turning",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "turning_insert_rough",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.3,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 10,
+            "feature_type": "Boss",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "spindle_speed": {
+          "value": 800.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 10,
+            "feature_type": "Boss",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "depth_of_cut": {
+          "value": 3.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 10,
+            "feature_type": "Boss",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 10,
+            "feature_type": "Boss",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        }
+      }
+    },
+    {
+      "step_number": 7,
+      "feature_id": 15,
+      "operation": "rough_turning",
+      "operation_selection_rule_id": "cylinder_requires_rough_turning",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "turning_insert_rough",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.3,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 15,
+            "feature_type": "Cylinder",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.786
+          }
+        },
+        "spindle_speed": {
+          "value": 800.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 15,
+            "feature_type": "Cylinder",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.786
+          }
+        },
+        "depth_of_cut": {
+          "value": 3.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 15,
+            "feature_type": "Cylinder",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.786
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 15,
+            "feature_type": "Cylinder",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.786
+          }
+        }
+      }
+    },
+    {
+      "step_number": 8,
+      "feature_id": 16,
+      "operation": "rough_turning",
+      "operation_selection_rule_id": "cylinder_requires_rough_turning",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "turning_insert_rough",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.3,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 16,
+            "feature_type": "Cylinder",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.8
+          }
+        },
+        "spindle_speed": {
+          "value": 800.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 16,
+            "feature_type": "Cylinder",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.8
+          }
+        },
+        "depth_of_cut": {
+          "value": 3.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 16,
+            "feature_type": "Cylinder",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.8
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 16,
+            "feature_type": "Cylinder",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.8
+          }
+        }
+      }
+    },
+    {
+      "step_number": 9,
+      "feature_id": 18,
+      "operation": "rough_turning",
+      "operation_selection_rule_id": "boss_requires_rough_turning",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "turning_insert_rough",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.3,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 18,
+            "feature_type": "Boss",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.6609360204797806
+          }
+        },
+        "spindle_speed": {
+          "value": 800.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 18,
+            "feature_type": "Boss",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.6609360204797806
+          }
+        },
+        "depth_of_cut": {
+          "value": 3.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 18,
+            "feature_type": "Boss",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.6609360204797806
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_roughturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 18,
+            "feature_type": "Boss",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.6609360204797806
+          }
+        }
+      }
+    },
+    {
+      "step_number": 10,
+      "feature_id": 1,
+      "operation": "finish_turning",
+      "operation_selection_rule_id": "step_requires_finish_turning",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "turning_insert_finish",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.12,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 1,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.6206136363636363
+          }
+        },
+        "spindle_speed": {
+          "value": 1500.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 1,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.6206136363636363
+          }
+        },
+        "depth_of_cut": {
+          "value": 0.2,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 1,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.6206136363636363
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 1,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.6206136363636363
+          }
+        }
+      }
+    },
+    {
+      "step_number": 11,
+      "feature_id": 3,
+      "operation": "finish_turning",
+      "operation_selection_rule_id": "step_requires_finish_turning",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "turning_insert_finish",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.12,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 3,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "spindle_speed": {
+          "value": 1500.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 3,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "depth_of_cut": {
+          "value": 0.2,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 3,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 3,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        }
+      }
+    },
+    {
+      "step_number": 12,
+      "feature_id": 5,
+      "operation": "finish_turning",
+      "operation_selection_rule_id": "step_requires_finish_turning",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "turning_insert_finish",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.12,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 5,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "spindle_speed": {
+          "value": 1500.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 5,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "depth_of_cut": {
+          "value": 0.2,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 5,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 5,
+            "feature_type": "Step",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        }
+      }
+    },
+    {
+      "step_number": 13,
+      "feature_id": 10,
+      "operation": "finish_turning",
+      "operation_selection_rule_id": "boss_requires_finish_turning",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "turning_insert_finish",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.12,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 10,
+            "feature_type": "Boss",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "spindle_speed": {
+          "value": 1500.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 10,
+            "feature_type": "Boss",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "depth_of_cut": {
+          "value": 0.2,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 10,
+            "feature_type": "Boss",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 10,
+            "feature_type": "Boss",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        }
+      }
+    },
+    {
+      "step_number": 14,
+      "feature_id": 15,
+      "operation": "finish_turning",
+      "operation_selection_rule_id": "cylinder_requires_finish_turning",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "turning_insert_finish",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.12,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 15,
+            "feature_type": "Cylinder",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.786
+          }
+        },
+        "spindle_speed": {
+          "value": 1500.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 15,
+            "feature_type": "Cylinder",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.786
+          }
+        },
+        "depth_of_cut": {
+          "value": 0.2,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 15,
+            "feature_type": "Cylinder",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.786
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 15,
+            "feature_type": "Cylinder",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.786
+          }
+        }
+      }
+    },
+    {
+      "step_number": 15,
+      "feature_id": 16,
+      "operation": "finish_turning",
+      "operation_selection_rule_id": "cylinder_requires_finish_turning",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "turning_insert_finish",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.12,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 16,
+            "feature_type": "Cylinder",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.8
+          }
+        },
+        "spindle_speed": {
+          "value": 1500.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 16,
+            "feature_type": "Cylinder",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.8
+          }
+        },
+        "depth_of_cut": {
+          "value": 0.2,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 16,
+            "feature_type": "Cylinder",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.8
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 16,
+            "feature_type": "Cylinder",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.8
+          }
+        }
+      }
+    },
+    {
+      "step_number": 16,
+      "feature_id": 18,
+      "operation": "finish_turning",
+      "operation_selection_rule_id": "boss_requires_finish_turning",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "turning_insert_finish",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.12,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 18,
+            "feature_type": "Boss",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.6609360204797806
+          }
+        },
+        "spindle_speed": {
+          "value": 1500.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 18,
+            "feature_type": "Boss",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.6609360204797806
+          }
+        },
+        "depth_of_cut": {
+          "value": 0.2,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 18,
+            "feature_type": "Boss",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.6609360204797806
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_finishturning_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 18,
+            "feature_type": "Boss",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.6609360204797806
+          }
+        }
+      }
+    },
+    {
+      "step_number": 17,
+      "feature_id": 7,
+      "operation": "drilling",
+      "operation_selection_rule_id": "blindhole_requires_drilling",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "drill_bit",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "requires_review",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.18,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 7,
+            "feature_type": "Blind Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.9902612826603325
+          }
+        },
+        "spindle_speed": {
+          "value": 1500.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 7,
+            "feature_type": "Blind Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.9902612826603325
+          }
+        },
+        "depth_of_cut": {
+          "value": 8.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 7,
+            "feature_type": "Blind Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.9902612826603325
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 7,
+            "feature_type": "Blind Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.9902612826603325
+          }
+        }
+      }
+    },
+    {
+      "step_number": 18,
+      "feature_id": 8,
+      "operation": "drilling",
+      "operation_selection_rule_id": "counterbore_requires_drilling",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "drill_bit",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "requires_review",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.18,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 8,
+            "feature_type": "Counterbore",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.9186
+          }
+        },
+        "spindle_speed": {
+          "value": 1500.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 8,
+            "feature_type": "Counterbore",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.9186
+          }
+        },
+        "depth_of_cut": {
+          "value": 8.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 8,
+            "feature_type": "Counterbore",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.9186
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 8,
+            "feature_type": "Counterbore",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.9186
+          }
+        }
+      }
+    },
+    {
+      "step_number": 19,
+      "feature_id": 11,
+      "operation": "drilling",
+      "operation_selection_rule_id": "throughhole_requires_drilling",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "drill_bit",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "requires_review",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.18,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 11,
+            "feature_type": "Through Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "spindle_speed": {
+          "value": 1500.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 11,
+            "feature_type": "Through Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "depth_of_cut": {
+          "value": 8.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 11,
+            "feature_type": "Through Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 11,
+            "feature_type": "Through Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        }
+      }
+    },
+    {
+      "step_number": 20,
+      "feature_id": 12,
+      "operation": "drilling",
+      "operation_selection_rule_id": "throughhole_requires_drilling",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "drill_bit",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "requires_review",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.18,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 12,
+            "feature_type": "Through Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "spindle_speed": {
+          "value": 1500.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 12,
+            "feature_type": "Through Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "depth_of_cut": {
+          "value": 8.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 12,
+            "feature_type": "Through Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 12,
+            "feature_type": "Through Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        }
+      }
+    },
+    {
+      "step_number": 21,
+      "feature_id": 19,
+      "operation": "drilling",
+      "operation_selection_rule_id": "hole_requires_drilling",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "drill_bit",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "requires_review",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.18,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 19,
+            "feature_type": "Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.673
+          }
+        },
+        "spindle_speed": {
+          "value": 1500.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 19,
+            "feature_type": "Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.673
+          }
+        },
+        "depth_of_cut": {
+          "value": 8.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 19,
+            "feature_type": "Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.673
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 19,
+            "feature_type": "Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.673
+          }
+        }
+      }
+    },
+    {
+      "step_number": 22,
+      "feature_id": 20,
+      "operation": "drilling",
+      "operation_selection_rule_id": "hole_requires_drilling",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "drill_bit",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "requires_review",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.18,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 20,
+            "feature_type": "Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "spindle_speed": {
+          "value": 1500.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 20,
+            "feature_type": "Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "depth_of_cut": {
+          "value": 8.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 20,
+            "feature_type": "Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 20,
+            "feature_type": "Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        }
+      }
+    },
+    {
+      "step_number": 23,
+      "feature_id": 21,
+      "operation": "drilling",
+      "operation_selection_rule_id": "hole_requires_drilling",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "drill_bit",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "requires_review",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.18,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 21,
+            "feature_type": "Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "spindle_speed": {
+          "value": 1500.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 21,
+            "feature_type": "Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "depth_of_cut": {
+          "value": 8.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 21,
+            "feature_type": "Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_drilling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 21,
+            "feature_type": "Hole",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 1.0
+          }
+        }
+      }
+    },
+    {
+      "step_number": 24,
+      "feature_id": 8,
+      "operation": "counterboring",
+      "operation_selection_rule_id": "counterbore_requires_counterboring",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "counterbore_cutter",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.12,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "counterboring_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 8,
+            "feature_type": "Counterbore",
+            "material": null,
+            "mapping_confidence": 0.9186
+          }
+        },
+        "spindle_speed": {
+          "value": 1000.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "counterboring_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 8,
+            "feature_type": "Counterbore",
+            "material": null,
+            "mapping_confidence": 0.9186
+          }
+        },
+        "depth_of_cut": {
+          "value": 3.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "counterboring_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 8,
+            "feature_type": "Counterbore",
+            "material": null,
+            "mapping_confidence": 0.9186
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "counterboring_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 8,
+            "feature_type": "Counterbore",
+            "material": null,
+            "mapping_confidence": 0.9186
+          }
+        }
+      }
+    },
+    {
+      "step_number": 25,
+      "feature_id": 2,
+      "operation": "chamfering",
+      "operation_selection_rule_id": "chamfer_requires_chamfering",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "chamfer_mill",
+      "tool_selection_rule_id": "preferred_tool_selection",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.1,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "chamfering_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 2,
+            "feature_type": "Chamfer",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        },
+        "spindle_speed": {
+          "value": 1200.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "chamfering_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 2,
+            "feature_type": "Chamfer",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        },
+        "depth_of_cut": {
+          "value": 1.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "chamfering_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 2,
+            "feature_type": "Chamfer",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "chamfering_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 2,
+            "feature_type": "Chamfer",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        }
+      }
+    },
+    {
+      "step_number": 26,
+      "feature_id": 4,
+      "operation": "chamfering",
+      "operation_selection_rule_id": "chamfer_requires_chamfering",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "chamfer_mill",
+      "tool_selection_rule_id": "preferred_tool_selection",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.1,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "chamfering_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 4,
+            "feature_type": "Chamfer",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        },
+        "spindle_speed": {
+          "value": 1200.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "chamfering_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 4,
+            "feature_type": "Chamfer",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        },
+        "depth_of_cut": {
+          "value": 1.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "chamfering_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 4,
+            "feature_type": "Chamfer",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "chamfering_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 4,
+            "feature_type": "Chamfer",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        }
+      }
+    },
+    {
+      "step_number": 27,
+      "feature_id": 6,
+      "operation": "chamfering",
+      "operation_selection_rule_id": "chamfer_requires_chamfering",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "chamfer_mill",
+      "tool_selection_rule_id": "preferred_tool_selection",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.1,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "chamfering_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 6,
+            "feature_type": "Chamfer",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        },
+        "spindle_speed": {
+          "value": 1200.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "chamfering_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 6,
+            "feature_type": "Chamfer",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        },
+        "depth_of_cut": {
+          "value": 1.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "chamfering_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 6,
+            "feature_type": "Chamfer",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "chamfering_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 6,
+            "feature_type": "Chamfer",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        }
+      }
+    },
+    {
+      "step_number": 28,
+      "feature_id": 9,
+      "operation": "chamfering",
+      "operation_selection_rule_id": "chamfer_requires_chamfering",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "chamfer_mill",
+      "tool_selection_rule_id": "preferred_tool_selection",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.1,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "chamfering_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 9,
+            "feature_type": "Chamfer",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        },
+        "spindle_speed": {
+          "value": 1200.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "chamfering_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 9,
+            "feature_type": "Chamfer",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        },
+        "depth_of_cut": {
+          "value": 1.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "chamfering_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 9,
+            "feature_type": "Chamfer",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "chamfering_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 9,
+            "feature_type": "Chamfer",
+            "material": null,
+            "mapping_confidence": 1.0
+          }
+        }
+      }
+    },
+    {
+      "step_number": 29,
+      "feature_id": 17,
+      "operation": "grooving",
+      "operation_selection_rule_id": "groove_requires_grooving",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "grooving_tool",
+      "tool_selection_rule_id": "feature_tool_from_operation",
+      "validation_status": "auto_approved",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.08,
+          "unit": "mm/rev",
+          "source": "swrl_rule",
+          "rule_id": "grooving_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 17,
+            "feature_type": "Groove",
+            "material": null,
+            "mapping_confidence": 0.793
+          }
+        },
+        "spindle_speed": {
+          "value": 600.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "grooving_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 17,
+            "feature_type": "Groove",
+            "material": null,
+            "mapping_confidence": 0.793
+          }
+        },
+        "depth_of_cut": {
+          "value": 0.5,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "grooving_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 17,
+            "feature_type": "Groove",
+            "material": null,
+            "mapping_confidence": 0.793
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "grooving_default_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 17,
+            "feature_type": "Groove",
+            "material": null,
+            "mapping_confidence": 0.793
+          }
+        }
+      }
+    },
+    {
+      "step_number": 30,
+      "feature_id": 13,
+      "operation": "milling",
+      "operation_selection_rule_id": "slot_requires_milling",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "end_mill",
+      "tool_selection_rule_id": "preferred_tool_selection",
+      "validation_status": "requires_review",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.08,
+          "unit": "mm/tooth",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_milling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 13,
+            "feature_type": "Slot",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.4
+          }
+        },
+        "spindle_speed": {
+          "value": 2000.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_milling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 13,
+            "feature_type": "Slot",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.4
+          }
+        },
+        "depth_of_cut": {
+          "value": 2.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_milling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 13,
+            "feature_type": "Slot",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.4
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_milling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 13,
+            "feature_type": "Slot",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.4
+          }
+        }
+      }
+    },
+    {
+      "step_number": 31,
+      "feature_id": 14,
+      "operation": "milling",
+      "operation_selection_rule_id": "slot_requires_milling",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "end_mill",
+      "tool_selection_rule_id": "preferred_tool_selection",
+      "validation_status": "requires_review",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.08,
+          "unit": "mm/tooth",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_milling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 14,
+            "feature_type": "Slot",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.4
+          }
+        },
+        "spindle_speed": {
+          "value": 2000.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_milling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 14,
+            "feature_type": "Slot",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.4
+          }
+        },
+        "depth_of_cut": {
+          "value": 2.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_milling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 14,
+            "feature_type": "Slot",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.4
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_milling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 14,
+            "feature_type": "Slot",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.4
+          }
+        }
+      }
+    },
+    {
+      "step_number": 32,
+      "feature_id": 22,
+      "operation": "milling",
+      "operation_selection_rule_id": "slot_requires_milling",
+      "operation_ontology_sources": [
+        "http://onto.brep.org/manufacturing/machining-process#",
+        "http://onto.brep.org/manufacturing/motor-shaft-case#"
+      ],
+      "tool_id": "end_mill",
+      "tool_selection_rule_id": "preferred_tool_selection",
+      "validation_status": "requires_review",
+      "parameters": {
+        "feed_rate": {
+          "value": 0.08,
+          "unit": "mm/tooth",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_milling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 22,
+            "feature_type": "Slot",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.4
+          }
+        },
+        "spindle_speed": {
+          "value": 2000.0,
+          "unit": "RPM",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_milling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 22,
+            "feature_type": "Slot",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.4
+          }
+        },
+        "depth_of_cut": {
+          "value": 2.0,
+          "unit": "mm",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_milling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 22,
+            "feature_type": "Slot",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.4
+          }
+        },
+        "coolant": {
+          "value": true,
+          "unit": "bool",
+          "source": "swrl_rule",
+          "rule_id": "aluminum6061_milling_params",
+          "ontology_sources": [
+            "http://onto.brep.org/manufacturing/cutting-parameters#"
+          ],
+          "input_facts": {
+            "feature_id": 22,
+            "feature_type": "Slot",
+            "material": "Aluminum6061T6",
+            "mapping_confidence": 0.4
+          }
+        }
+      }
+    }
+  ]
+}

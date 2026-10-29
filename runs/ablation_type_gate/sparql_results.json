@@ -1,0 +1,446 @@
+{
+  "total": 54,
+  "passed": 54,
+  "failed": 0,
+  "errors": [],
+  "queries": [
+    {
+      "index": 1,
+      "query": "What operations are required for feature 1?",
+      "category": "feature",
+      "expected": "non-empty",
+      "result_count": 2,
+      "status": "passed"
+    },
+    {
+      "index": 2,
+      "query": "List all features in the knowledge graph.",
+      "category": "feature",
+      "expected": "non-empty",
+      "result_count": 20,
+      "status": "passed"
+    },
+    {
+      "index": 3,
+      "query": "What are the dimensions of feature 2?",
+      "category": "feature",
+      "expected": "non-empty",
+      "result_count": 2,
+      "status": "passed"
+    },
+    {
+      "index": 4,
+      "query": "Find features located at specific coordinates.",
+      "category": "feature",
+      "expected": "non-empty",
+      "result_count": 20,
+      "status": "passed"
+    },
+    {
+      "index": 5,
+      "query": "What type of feature is feature 3?",
+      "category": "feature",
+      "expected": "non-empty",
+      "result_count": 1,
+      "status": "passed"
+    },
+    {
+      "index": 6,
+      "query": "How many features require the turning operation?",
+      "category": "feature",
+      "expected": "non-empty",
+      "result_count": 1,
+      "status": "passed"
+    },
+    {
+      "index": 7,
+      "query": "Find features with diameter greater than 50mm.",
+      "category": "feature",
+      "expected": "empty",
+      "result_count": 0,
+      "status": "passed"
+    },
+    {
+      "index": 8,
+      "query": "What is the location of feature 1?",
+      "category": "feature",
+      "expected": "non-empty",
+      "result_count": 1,
+      "status": "passed"
+    },
+    {
+      "index": 9,
+      "query": "List all features and their dimensions.",
+      "category": "feature",
+      "expected": "non-empty",
+      "result_count": 30,
+      "status": "passed"
+    },
+    {
+      "index": 10,
+      "query": "Find features that have both diameter and length dimensions.",
+      "category": "feature",
+      "expected": "non-empty",
+      "result_count": 9,
+      "status": "passed"
+    },
+    {
+      "index": 11,
+      "query": "What tools are used for the facing operation?",
+      "category": "operation",
+      "expected": "non-empty",
+      "result_count": 2,
+      "status": "passed"
+    },
+    {
+      "index": 12,
+      "query": "List all operations in the machining sequence.",
+      "category": "operation",
+      "expected": "non-empty",
+      "result_count": 39,
+      "status": "passed"
+    },
+    {
+      "index": 13,
+      "query": "What machine is used for turning operations?",
+      "category": "operation",
+      "expected": "non-empty",
+      "result_count": 14,
+      "status": "passed"
+    },
+    {
+      "index": 14,
+      "query": "Which operations remove steel_1045 material?",
+      "category": "operation",
+      "expected": "non-empty",
+      "result_count": 30,
+      "status": "passed"
+    },
+    {
+      "index": 15,
+      "query": "What are the G-codes for the grooving operation?",
+      "category": "operation",
+      "expected": "non-empty",
+      "result_count": 2,
+      "status": "passed"
+    },
+    {
+      "index": 16,
+      "query": "Find operations that use carbide tools.",
+      "category": "operation",
+      "expected": "non-empty",
+      "result_count": 16,
+      "status": "passed"
+    },
+    {
+      "index": 17,
+      "query": "What operations are required for cylinder features?",
+      "category": "operation",
+      "expected": "non-empty",
+      "result_count": 4,
+      "status": "passed"
+    },
+    {
+      "index": 18,
+      "query": "List all operations and their required tools.",
+      "category": "operation",
+      "expected": "non-empty",
+      "result_count": 30,
+      "status": "passed"
+    },
+    {
+      "index": 19,
+      "query": "What is the description of the threading operation?",
+      "category": "operation",
+      "expected": "empty",
+      "result_count": 0,
+      "status": "passed"
+    },
+    {
+      "index": 20,
+      "query": "Find operations that run on CNC lathe.",
+      "category": "operation",
+      "expected": "non-empty",
+      "result_count": 30,
+      "status": "passed"
+    },
+    {
+      "index": 21,
+      "query": "What is the geometry of the turning tool?",
+      "category": "tool",
+      "expected": "non-empty",
+      "result_count": 2,
+      "status": "passed"
+    },
+    {
+      "index": 22,
+      "query": "List all tools and their materials.",
+      "category": "tool",
+      "expected": "non-empty",
+      "result_count": 10,
+      "status": "passed"
+    },
+    {
+      "index": 23,
+      "query": "Which operations use the drill bit tool?",
+      "category": "tool",
+      "expected": "non-empty",
+      "result_count": 7,
+      "status": "passed"
+    },
+    {
+      "index": 24,
+      "query": "What tools are recommended for grooving operations?",
+      "category": "tool",
+      "expected": "non-empty",
+      "result_count": 1,
+      "status": "passed"
+    },
+    {
+      "index": 25,
+      "query": "Find tools made of high-speed steel.",
+      "category": "tool",
+      "expected": "non-empty",
+      "result_count": 2,
+      "status": "passed"
+    },
+    {
+      "index": 26,
+      "query": "What is the type of the groove tool?",
+      "category": "tool",
+      "expected": "non-empty",
+      "result_count": 1,
+      "status": "passed"
+    },
+    {
+      "index": 27,
+      "query": "List all unique tool types in the knowledge graph.",
+      "category": "tool",
+      "expected": "non-empty",
+      "result_count": 7,
+      "status": "passed"
+    },
+    {
+      "index": 28,
+      "query": "Which features require tools made of carbide?",
+      "category": "tool",
+      "expected": "non-empty",
+      "result_count": 16,
+      "status": "passed"
+    },
+    {
+      "index": 29,
+      "query": "What operations use the same tool?",
+      "category": "tool",
+      "expected": "non-empty",
+      "result_count": 168,
+      "status": "passed"
+    },
+    {
+      "index": 30,
+      "query": "Find tools with 35-degree geometry.",
+      "category": "tool",
+      "expected": "empty",
+      "result_count": 0,
+      "status": "passed"
+    },
+    {
+      "index": 31,
+      "query": "What is the complete machining sequence?",
+      "category": "sequence",
+      "expected": "non-empty",
+      "result_count": 29,
+      "status": "passed"
+    },
+    {
+      "index": 32,
+      "query": "Which operation comes first in the sequence?",
+      "category": "sequence",
+      "expected": "non-empty",
+      "result_count": 1,
+      "status": "passed"
+    },
+    {
+      "index": 33,
+      "query": "What operation comes after facing?",
+      "category": "sequence",
+      "expected": "non-empty",
+      "result_count": 2,
+      "status": "passed"
+    },
+    {
+      "index": 34,
+      "query": "How many operations are in the machining sequence?",
+      "category": "sequence",
+      "expected": "non-empty",
+      "result_count": 1,
+      "status": "passed"
+    },
+    {
+      "index": 35,
+      "query": "What is the last operation in the sequence?",
+      "category": "sequence",
+      "expected": "non-empty",
+      "result_count": 1,
+      "status": "passed"
+    },
+    {
+      "index": 36,
+      "query": "Find operations that are performed before threading.",
+      "category": "sequence",
+      "expected": "empty",
+      "result_count": 0,
+      "status": "passed"
+    },
+    {
+      "index": 37,
+      "query": "What is the sequence between turning and facing?",
+      "category": "sequence",
+      "expected": "non-empty",
+      "result_count": 1,
+      "status": "passed"
+    },
+    {
+      "index": 38,
+      "query": "List operations in sequence order.",
+      "category": "sequence",
+      "expected": "non-empty",
+      "result_count": 30,
+      "status": "passed"
+    },
+    {
+      "index": 39,
+      "query": "Which features affect the machining sequence?",
+      "category": "sequence",
+      "expected": "non-empty",
+      "result_count": 29,
+      "status": "passed"
+    },
+    {
+      "index": 40,
+      "query": "What operations have sequence dependencies?",
+      "category": "sequence",
+      "expected": "non-empty",
+      "result_count": 30,
+      "status": "passed"
+    },
+    {
+      "index": 41,
+      "query": "What tools are needed for feature 1?",
+      "category": "complex",
+      "expected": "non-empty",
+      "result_count": 2,
+      "status": "passed"
+    },
+    {
+      "index": 42,
+      "query": "What machine and tools are used for feature 2?",
+      "category": "complex",
+      "expected": "non-empty",
+      "result_count": 1,
+      "status": "passed"
+    },
+    {
+      "index": 43,
+      "query": "What is the complete manufacturing plan for feature 1?",
+      "category": "complex",
+      "expected": "non-empty",
+      "result_count": 2,
+      "status": "passed"
+    },
+    {
+      "index": 44,
+      "query": "Find all features that use the same tool as feature 1.",
+      "category": "complex",
+      "expected": "non-empty",
+      "result_count": 14,
+      "status": "passed"
+    },
+    {
+      "index": 45,
+      "query": "What materials are removed by operations on cylinder features?",
+      "category": "complex",
+      "expected": "non-empty",
+      "result_count": 4,
+      "status": "passed"
+    },
+    {
+      "index": 46,
+      "query": "List all operations with their tools and machines.",
+      "category": "complex",
+      "expected": "non-empty",
+      "result_count": 30,
+      "status": "passed"
+    },
+    {
+      "index": 47,
+      "query": "What is the total number of triples in the knowledge graph?",
+      "category": "complex",
+      "expected": "non-empty",
+      "result_count": 1,
+      "status": "passed"
+    },
+    {
+      "index": 48,
+      "query": "Find features that require multiple operations.",
+      "category": "complex",
+      "expected": "non-empty",
+      "result_count": 8,
+      "status": "passed"
+    },
+    {
+      "index": 49,
+      "query": "What operations are performed on steel material?",
+      "category": "complex",
+      "expected": "non-empty",
+      "result_count": 30,
+      "status": "passed"
+    },
+    {
+      "index": 50,
+      "query": "Generate a complete manufacturing report with features, operations, tools, and machines.",
+      "category": "complex",
+      "expected": "non-empty",
+      "result_count": 30,
+      "status": "passed"
+    },
+    {
+      "index": 51,
+      "query": "Which rule and ontology sources produced the spindle speed of step 3?",
+      "category": "provenance",
+      "expected": "non-empty",
+      "result_count": 1,
+      "status": "passed"
+    },
+    {
+      "index": 52,
+      "query": "How many parameter records have a rule identifier and at least one ontology source?",
+      "category": "provenance",
+      "expected": "non-empty",
+      "result_count": 1,
+      "status": "passed"
+    },
+    {
+      "index": 53,
+      "query": "Which parameter records lack a rule identifier or an ontology source?",
+      "category": "provenance",
+      "expected": "empty",
+      "result_count": 0,
+      "status": "passed"
+    },
+    {
+      "index": 54,
+      "query": "List all parameters of approved steps with value, unit and rule.",
+      "category": "provenance",
+      "expected": "non-empty",
+      "result_count": 108,
+      "status": "passed"
+    }
+  ],
+  "context": {
+    "material": "steel_1045",
+    "machine": "cnc_lathe"
+  },
+  "parameter_records_with_rule_and_source": 120,
+  "parameter_records_expected": 120
+}
