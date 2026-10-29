@@ -1,0 +1,89 @@
+{
+ "reference": {
+  "returncode": 0,
+  "wall_clock_s": 23.54,
+  "pellet_s": [
+   3.9
+  ],
+  "args": []
+ },
+ "ablation_type_gate": {
+  "returncode": 0,
+  "wall_clock_s": 24.86,
+  "pellet_s": [
+   5.05
+  ],
+  "args": [
+   "--ablation",
+   "type_gate"
+  ]
+ },
+ "ablation_orientation_gate": {
+  "returncode": 0,
+  "wall_clock_s": 26.48,
+  "pellet_s": [
+   5.26
+  ],
+  "args": [
+   "--ablation",
+   "orientation_gate"
+  ]
+ },
+ "ablation_kefc_gate": {
+  "returncode": 0,
+  "wall_clock_s": 21.7,
+  "pellet_s": [
+   4.13
+  ],
+  "args": [
+   "--ablation",
+   "kefc_gate"
+  ]
+ },
+ "ablation_swap_sources": {
+  "returncode": 0,
+  "wall_clock_s": 25.72,
+  "pellet_s": [
+   5.24
+  ],
+  "args": [
+   "--ablation",
+   "swap_sources"
+  ]
+ },
+ "material_aluminum": {
+  "returncode": 0,
+  "wall_clock_s": 23.18,
+  "pellet_s": [
+   3.97
+  ],
+  "args": [
+   "--material",
+   "aluminum_6061"
+  ]
+ },
+ "machine_mill_turn": {
+  "returncode": 0,
+  "wall_clock_s": 24.37,
+  "pellet_s": [
+   4.4
+  ],
+  "args": [
+   "--machine",
+   "cnc_mill_turn"
+  ]
+ },
+ "machine_mill_turn_ablation_serialisation_profile": {
+  "returncode": 0,
+  "wall_clock_s": 23.37,
+  "pellet_s": [
+   4.47
+  ],
+  "args": [
+   "--machine",
+   "cnc_mill_turn",
+   "--ablation",
+   "serialisation_profile"
+  ]
+ }
+}

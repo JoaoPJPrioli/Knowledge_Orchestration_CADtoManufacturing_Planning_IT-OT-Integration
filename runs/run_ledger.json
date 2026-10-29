@@ -1,0 +1,4582 @@
+{
+ "reference": {
+  "entities": 22,
+  "reconciliation": {
+   "merged": 8,
+   "primary_only": 11,
+   "secondary_only": 3
+  },
+  "merges": 8,
+  "merges_by_tau": {
+   "0.7": 2,
+   "1.0": 6
+  },
+  "slots": 3,
+  "steps": 32,
+  "approved": 27,
+  "withheld": 5,
+  "withheld_steps": [
+   [
+    19,
+    11,
+    "Through Hole",
+    "drilling"
+   ],
+   [
+    20,
+    12,
+    "Through Hole",
+    "drilling"
+   ],
+   [
+    30,
+    13,
+    "Slot",
+    "milling"
+   ],
+   [
+    31,
+    14,
+    "Slot",
+    "milling"
+   ],
+   [
+    32,
+    22,
+    "Slot",
+    "milling"
+   ]
+  ],
+  "param_records": 128,
+  "param_records_with_provenance": 128,
+  "rules_fired": 24,
+  "tool_rule_ids": {
+   "preferred_tool_selection": 9,
+   "feature_tool_from_operation": 23
+  },
+  "segments": 9,
+  "blocks_executed": 85,
+  "tool_changes": 4,
+  "travel_total_mm": 1111.77,
+  "travel_cut_mm": 260.18,
+  "cycle_time_min": 4.38,
+  "validation_status": "PASS",
+  "tool_wear_saturated": [],
+  "wear_flags": 0,
+  "requests_total": 29,
+  "requests_by_code": {
+   "low_confidence_mapping": 6,
+   "orientation_incompatible": 2,
+   "machine_incompatible": 3,
+   "serialisation_input_missing": 18
+  },
+  "graph_nodes": 77,
+  "graph_edges": 191,
+  "triples": 4484,
+  "sparql_passed": 54,
+  "average_cutting_force_N": 548.0,
+  "average_cutting_power_kW": 0.2928,
+  "max_cutting_force_N": 1000.0,
+  "max_cutting_power_kW": 0.6271,
+  "force_power_moves_analysed": 9,
+  "force_power_moves_with_force": 9,
+  "force_power_kc_N_per_mm2": 2000.0,
+  "force_power_inputs_source": "plan step parameter package",
+  "average_mrr_mm3_per_min": 8504.08,
+  "pellet_reasoning_s": [
+   3.9
+  ],
+  "wall_clock_s": 23.54,
+  "cli_args": [],
+  "ontologies_loaded": [
+   "http://onto.brep.org/manufacturing/machining-process#",
+   "http://onto.brep.org/manufacturing/materials#",
+   "http://onto.brep.org/manufacturing/tools#",
+   "http://onto.brep.org/manufacturing/machines#",
+   "http://onto.brep.org/manufacturing/cutting-parameters#",
+   "http://onto.brep.org/manufacturing/motor-shaft-case#",
+   "http://onto.brep.org/manufacturing/serialisation-profiles#"
+  ],
+  "parameter_fidelity": {
+   "segments_checked": 9,
+   "spindle_match": 9,
+   "feed_match": 9,
+   "coolant_match": 9
+  },
+  "sparql": {
+   "passed": 54,
+   "total": 54
+  },
+  "sparql_failed_indices": [],
+  "wear_flags_by_tool": {},
+  "parameter_records_sparql": {
+   "q52_records_with_rule_and_source": 128,
+   "expected_4_x_planned_steps": 128
+  },
+  "envelope_excursions": {
+   "count": 0,
+   "steps": [],
+   "details": []
+  },
+  "validator_errors": 0,
+  "validator_warnings": 0,
+  "validator_violations_by_category": {},
+  "cycle_time_breakdown": {
+   "rapid_time_seconds": 9.81,
+   "cutting_time_seconds": 198.61,
+   "tool_change_time_seconds": 12.0,
+   "positioning_time_seconds": 42.5,
+   "total_cycle_time_seconds": 262.92,
+   "timed_feed_length_mm": 225.9,
+   "timed_cycle_depth_mm": 34.28,
+   "untimed_feed_moves": 0
+  },
+  "dimension_fidelity": {
+   "segments": 9,
+   "segments_with_inputs": 9,
+   "lookups": 27,
+   "traced_to_plan": 27,
+   "defaulted": 0,
+   "cutting_words_checked": 9,
+   "unexplained_cutting_words": 0,
+   "passed": true,
+   "by_operation": {
+    "rough_turning": {
+     "segments": 3,
+     "lookups": 9,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "finish_turning": {
+     "segments": 3,
+     "lookups": 9,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "drilling": {
+     "segments": 2,
+     "lookups": 6,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "counterboring": {
+     "segments": 1,
+     "lookups": 3,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    }
+   }
+  },
+  "serialiser_default_dimension_lookups": {
+   "lookups": 27,
+   "defaulted": 0,
+   "source": "dimension_fidelity.json"
+  },
+  "kefc_approved": 27,
+  "kefc_withheld_steps": [
+   19,
+   20,
+   30,
+   31,
+   32
+  ],
+  "handed_to_ral": 27,
+  "serialised_steps": [
+   3,
+   4,
+   5,
+   10,
+   11,
+   12,
+   17,
+   18,
+   24
+  ],
+  "ral_accounting": {
+   "handed": 27,
+   "serialised": 9,
+   "refused": 18,
+   "serialised_steps": [
+    3,
+    4,
+    5,
+    10,
+    11,
+    12,
+    17,
+    18,
+    24
+   ],
+   "refused_steps": [
+    1,
+    2,
+    6,
+    7,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "unrecorded_refusals": [],
+   "passed": true,
+   "problems": []
+  },
+  "serialised_segments": 9,
+  "ral_refused": {
+   "count": 18,
+   "steps": [
+    1,
+    2,
+    6,
+    7,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "by_operation": {
+    "chamfering": 4,
+    "drilling": 3,
+    "facing": 2,
+    "finish_turning": 4,
+    "grooving": 1,
+    "rough_turning": 4
+   },
+   "by_kind": {
+    "missing_inputs": 18
+   },
+   "records": [
+    {
+     "step_number": 1,
+     "operation": "facing",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0012"
+    },
+    {
+     "step_number": 2,
+     "operation": "facing",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0013"
+    },
+    {
+     "step_number": 6,
+     "operation": "rough_turning",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0014"
+    },
+    {
+     "step_number": 7,
+     "operation": "rough_turning",
+     "feature_id": 15,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0015"
+    },
+    {
+     "step_number": 8,
+     "operation": "rough_turning",
+     "feature_id": 16,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0016"
+    },
+    {
+     "step_number": 9,
+     "operation": "rough_turning",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0017"
+    },
+    {
+     "step_number": 13,
+     "operation": "finish_turning",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0018"
+    },
+    {
+     "step_number": 14,
+     "operation": "finish_turning",
+     "feature_id": 15,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0019"
+    },
+    {
+     "step_number": 15,
+     "operation": "finish_turning",
+     "feature_id": 16,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0020"
+    },
+    {
+     "step_number": 16,
+     "operation": "finish_turning",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0021"
+    },
+    {
+     "step_number": 21,
+     "operation": "drilling",
+     "feature_id": 19,
+     "feature_type": "Hole",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0022"
+    },
+    {
+     "step_number": 22,
+     "operation": "drilling",
+     "feature_id": 20,
+     "feature_type": "Hole",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0023"
+    },
+    {
+     "step_number": 23,
+     "operation": "drilling",
+     "feature_id": 21,
+     "feature_type": "Hole",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0024"
+    },
+    {
+     "step_number": 25,
+     "operation": "chamfering",
+     "feature_id": 2,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.95,
+      "L": 0.5
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0025"
+    },
+    {
+     "step_number": 26,
+     "operation": "chamfering",
+     "feature_id": 4,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.0,
+      "L": 0.75
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0026"
+    },
+    {
+     "step_number": 27,
+     "operation": "chamfering",
+     "feature_id": 6,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.0,
+      "L": 1.0
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0027"
+    },
+    {
+     "step_number": 28,
+     "operation": "chamfering",
+     "feature_id": 9,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 12.2,
+      "L": 3.3
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0028"
+    },
+    {
+     "step_number": 29,
+     "operation": "grooving",
+     "feature_id": 17,
+     "feature_type": "Groove",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "outer diameter (one of outer_diameter)",
+      "groove-bottom diameter (one of groove_bottom_diameter, bottom_diameter, or a radial depth under groove_depth, depth)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0029"
+    }
+   ]
+  },
+  "kefc_gate_sets": null
+ },
+ "ablation_type_gate": {
+  "entities": 20,
+  "reconciliation": {
+   "merged": 10,
+   "primary_only": 9,
+   "secondary_only": 1
+  },
+  "merges": 10,
+  "merges_by_tau": {
+   "0.7": 2,
+   "1.0": 6,
+   "0.3": 2
+  },
+  "slots": 1,
+  "steps": 30,
+  "approved": 27,
+  "withheld": 3,
+  "withheld_steps": [
+   [
+    19,
+    11,
+    "Through Hole",
+    "drilling"
+   ],
+   [
+    20,
+    12,
+    "Through Hole",
+    "drilling"
+   ],
+   [
+    30,
+    20,
+    "Slot",
+    "milling"
+   ]
+  ],
+  "param_records": 120,
+  "param_records_with_provenance": 120,
+  "rules_fired": 24,
+  "tool_rule_ids": {
+   "preferred_tool_selection": 7,
+   "feature_tool_from_operation": 23
+  },
+  "segments": 9,
+  "blocks_executed": 85,
+  "tool_changes": 4,
+  "travel_total_mm": 1111.77,
+  "travel_cut_mm": 260.18,
+  "cycle_time_min": 4.38,
+  "validation_status": "PASS",
+  "tool_wear_saturated": [],
+  "wear_flags": 0,
+  "requests_total": 23,
+  "requests_by_code": {
+   "low_confidence_mapping": 2,
+   "orientation_incompatible": 2,
+   "machine_incompatible": 1,
+   "serialisation_input_missing": 18
+  },
+  "graph_nodes": 73,
+  "graph_edges": 179,
+  "triples": 4214,
+  "sparql_passed": 54,
+  "average_cutting_force_N": 548.0,
+  "average_cutting_power_kW": 0.2928,
+  "max_cutting_force_N": 1000.0,
+  "max_cutting_power_kW": 0.6271,
+  "force_power_moves_analysed": 9,
+  "force_power_moves_with_force": 9,
+  "force_power_kc_N_per_mm2": 2000.0,
+  "force_power_inputs_source": "plan step parameter package",
+  "average_mrr_mm3_per_min": 8504.08,
+  "pellet_reasoning_s": [
+   5.05
+  ],
+  "wall_clock_s": 24.86,
+  "cli_args": [
+   "--ablation",
+   "type_gate"
+  ],
+  "ontologies_loaded": [
+   "http://onto.brep.org/manufacturing/machining-process#",
+   "http://onto.brep.org/manufacturing/materials#",
+   "http://onto.brep.org/manufacturing/tools#",
+   "http://onto.brep.org/manufacturing/machines#",
+   "http://onto.brep.org/manufacturing/cutting-parameters#",
+   "http://onto.brep.org/manufacturing/motor-shaft-case#",
+   "http://onto.brep.org/manufacturing/serialisation-profiles#"
+  ],
+  "parameter_fidelity": {
+   "segments_checked": 9,
+   "spindle_match": 9,
+   "feed_match": 9,
+   "coolant_match": 9
+  },
+  "sparql": {
+   "passed": 54,
+   "total": 54
+  },
+  "sparql_failed_indices": [],
+  "wear_flags_by_tool": {},
+  "parameter_records_sparql": {
+   "q52_records_with_rule_and_source": 120,
+   "expected_4_x_planned_steps": 120
+  },
+  "envelope_excursions": {
+   "count": 0,
+   "steps": [],
+   "details": []
+  },
+  "validator_errors": 0,
+  "validator_warnings": 0,
+  "validator_violations_by_category": {},
+  "cycle_time_breakdown": {
+   "rapid_time_seconds": 9.81,
+   "cutting_time_seconds": 198.61,
+   "tool_change_time_seconds": 12.0,
+   "positioning_time_seconds": 42.5,
+   "total_cycle_time_seconds": 262.92,
+   "timed_feed_length_mm": 225.9,
+   "timed_cycle_depth_mm": 34.28,
+   "untimed_feed_moves": 0
+  },
+  "dimension_fidelity": {
+   "segments": 9,
+   "segments_with_inputs": 9,
+   "lookups": 27,
+   "traced_to_plan": 27,
+   "defaulted": 0,
+   "cutting_words_checked": 9,
+   "unexplained_cutting_words": 0,
+   "passed": true,
+   "by_operation": {
+    "rough_turning": {
+     "segments": 3,
+     "lookups": 9,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "finish_turning": {
+     "segments": 3,
+     "lookups": 9,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "drilling": {
+     "segments": 2,
+     "lookups": 6,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "counterboring": {
+     "segments": 1,
+     "lookups": 3,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    }
+   }
+  },
+  "serialiser_default_dimension_lookups": {
+   "lookups": 27,
+   "defaulted": 0,
+   "source": "dimension_fidelity.json"
+  },
+  "kefc_approved": 27,
+  "kefc_withheld_steps": [
+   19,
+   20,
+   30
+  ],
+  "handed_to_ral": 27,
+  "serialised_steps": [
+   3,
+   4,
+   5,
+   10,
+   11,
+   12,
+   17,
+   18,
+   24
+  ],
+  "ral_accounting": {
+   "handed": 27,
+   "serialised": 9,
+   "refused": 18,
+   "serialised_steps": [
+    3,
+    4,
+    5,
+    10,
+    11,
+    12,
+    17,
+    18,
+    24
+   ],
+   "refused_steps": [
+    1,
+    2,
+    6,
+    7,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "unrecorded_refusals": [],
+   "passed": true,
+   "problems": []
+  },
+  "serialised_segments": 9,
+  "ral_refused": {
+   "count": 18,
+   "steps": [
+    1,
+    2,
+    6,
+    7,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "by_operation": {
+    "chamfering": 4,
+    "drilling": 3,
+    "facing": 2,
+    "finish_turning": 4,
+    "grooving": 1,
+    "rough_turning": 4
+   },
+   "by_kind": {
+    "missing_inputs": 18
+   },
+   "records": [
+    {
+     "step_number": 1,
+     "operation": "facing",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0006"
+    },
+    {
+     "step_number": 2,
+     "operation": "facing",
+     "feature_id": 16,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0007"
+    },
+    {
+     "step_number": 6,
+     "operation": "rough_turning",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0008"
+    },
+    {
+     "step_number": 7,
+     "operation": "rough_turning",
+     "feature_id": 13,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0009"
+    },
+    {
+     "step_number": 8,
+     "operation": "rough_turning",
+     "feature_id": 14,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0010"
+    },
+    {
+     "step_number": 9,
+     "operation": "rough_turning",
+     "feature_id": 16,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0011"
+    },
+    {
+     "step_number": 13,
+     "operation": "finish_turning",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0012"
+    },
+    {
+     "step_number": 14,
+     "operation": "finish_turning",
+     "feature_id": 13,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0013"
+    },
+    {
+     "step_number": 15,
+     "operation": "finish_turning",
+     "feature_id": 14,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0014"
+    },
+    {
+     "step_number": 16,
+     "operation": "finish_turning",
+     "feature_id": 16,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0015"
+    },
+    {
+     "step_number": 21,
+     "operation": "drilling",
+     "feature_id": 17,
+     "feature_type": "Hole",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0016"
+    },
+    {
+     "step_number": 22,
+     "operation": "drilling",
+     "feature_id": 18,
+     "feature_type": "Hole",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0017"
+    },
+    {
+     "step_number": 23,
+     "operation": "drilling",
+     "feature_id": 19,
+     "feature_type": "Hole",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0018"
+    },
+    {
+     "step_number": 25,
+     "operation": "chamfering",
+     "feature_id": 2,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.95,
+      "L": 0.5
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0019"
+    },
+    {
+     "step_number": 26,
+     "operation": "chamfering",
+     "feature_id": 4,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.0,
+      "L": 0.75
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0020"
+    },
+    {
+     "step_number": 27,
+     "operation": "chamfering",
+     "feature_id": 6,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.0,
+      "L": 1.0
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0021"
+    },
+    {
+     "step_number": 28,
+     "operation": "chamfering",
+     "feature_id": 9,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 12.2,
+      "L": 3.3
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0022"
+    },
+    {
+     "step_number": 29,
+     "operation": "grooving",
+     "feature_id": 15,
+     "feature_type": "Groove",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "outer diameter (one of outer_diameter)",
+      "groove-bottom diameter (one of groove_bottom_diameter, bottom_diameter, or a radial depth under groove_depth, depth)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0023"
+    }
+   ]
+  },
+  "kefc_gate_sets": null
+ },
+ "ablation_orientation_gate": {
+  "entities": 22,
+  "reconciliation": {
+   "merged": 8,
+   "primary_only": 11,
+   "secondary_only": 3
+  },
+  "merges": 8,
+  "merges_by_tau": {
+   "0.7": 2,
+   "1.0": 6
+  },
+  "slots": 3,
+  "steps": 32,
+  "approved": 29,
+  "withheld": 3,
+  "withheld_steps": [
+   [
+    30,
+    13,
+    "Slot",
+    "milling"
+   ],
+   [
+    31,
+    14,
+    "Slot",
+    "milling"
+   ],
+   [
+    32,
+    22,
+    "Slot",
+    "milling"
+   ]
+  ],
+  "param_records": 128,
+  "param_records_with_provenance": 128,
+  "rules_fired": 24,
+  "tool_rule_ids": {
+   "preferred_tool_selection": 9,
+   "feature_tool_from_operation": 23
+  },
+  "segments": 9,
+  "blocks_executed": 85,
+  "tool_changes": 4,
+  "travel_total_mm": 1111.77,
+  "travel_cut_mm": 260.18,
+  "cycle_time_min": 4.38,
+  "validation_status": "PASS",
+  "tool_wear_saturated": [],
+  "wear_flags": 0,
+  "requests_total": 29,
+  "requests_by_code": {
+   "low_confidence_mapping": 6,
+   "machine_incompatible": 3,
+   "serialisation_input_missing": 20
+  },
+  "graph_nodes": 77,
+  "graph_edges": 191,
+  "triples": 4484,
+  "sparql_passed": 54,
+  "average_cutting_force_N": 548.0,
+  "average_cutting_power_kW": 0.2928,
+  "max_cutting_force_N": 1000.0,
+  "max_cutting_power_kW": 0.6271,
+  "force_power_moves_analysed": 9,
+  "force_power_moves_with_force": 9,
+  "force_power_kc_N_per_mm2": 2000.0,
+  "force_power_inputs_source": "plan step parameter package",
+  "average_mrr_mm3_per_min": 8504.08,
+  "pellet_reasoning_s": [
+   5.26
+  ],
+  "wall_clock_s": 26.48,
+  "cli_args": [
+   "--ablation",
+   "orientation_gate"
+  ],
+  "ontologies_loaded": [
+   "http://onto.brep.org/manufacturing/machining-process#",
+   "http://onto.brep.org/manufacturing/materials#",
+   "http://onto.brep.org/manufacturing/tools#",
+   "http://onto.brep.org/manufacturing/machines#",
+   "http://onto.brep.org/manufacturing/cutting-parameters#",
+   "http://onto.brep.org/manufacturing/motor-shaft-case#",
+   "http://onto.brep.org/manufacturing/serialisation-profiles#"
+  ],
+  "parameter_fidelity": {
+   "segments_checked": 9,
+   "spindle_match": 9,
+   "feed_match": 9,
+   "coolant_match": 9
+  },
+  "sparql": {
+   "passed": 54,
+   "total": 54
+  },
+  "sparql_failed_indices": [],
+  "wear_flags_by_tool": {},
+  "parameter_records_sparql": {
+   "q52_records_with_rule_and_source": 128,
+   "expected_4_x_planned_steps": 128
+  },
+  "envelope_excursions": {
+   "count": 0,
+   "steps": [],
+   "details": []
+  },
+  "validator_errors": 0,
+  "validator_warnings": 0,
+  "validator_violations_by_category": {},
+  "cycle_time_breakdown": {
+   "rapid_time_seconds": 9.81,
+   "cutting_time_seconds": 198.61,
+   "tool_change_time_seconds": 12.0,
+   "positioning_time_seconds": 42.5,
+   "total_cycle_time_seconds": 262.92,
+   "timed_feed_length_mm": 225.9,
+   "timed_cycle_depth_mm": 34.28,
+   "untimed_feed_moves": 0
+  },
+  "dimension_fidelity": {
+   "segments": 9,
+   "segments_with_inputs": 9,
+   "lookups": 27,
+   "traced_to_plan": 27,
+   "defaulted": 0,
+   "cutting_words_checked": 9,
+   "unexplained_cutting_words": 0,
+   "passed": true,
+   "by_operation": {
+    "rough_turning": {
+     "segments": 3,
+     "lookups": 9,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "finish_turning": {
+     "segments": 3,
+     "lookups": 9,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "drilling": {
+     "segments": 2,
+     "lookups": 6,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "counterboring": {
+     "segments": 1,
+     "lookups": 3,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    }
+   }
+  },
+  "serialiser_default_dimension_lookups": {
+   "lookups": 27,
+   "defaulted": 0,
+   "source": "dimension_fidelity.json"
+  },
+  "kefc_approved": 29,
+  "kefc_withheld_steps": [
+   30,
+   31,
+   32
+  ],
+  "handed_to_ral": 29,
+  "serialised_steps": [
+   3,
+   4,
+   5,
+   10,
+   11,
+   12,
+   17,
+   18,
+   24
+  ],
+  "ral_accounting": {
+   "handed": 29,
+   "serialised": 9,
+   "refused": 20,
+   "serialised_steps": [
+    3,
+    4,
+    5,
+    10,
+    11,
+    12,
+    17,
+    18,
+    24
+   ],
+   "refused_steps": [
+    1,
+    2,
+    6,
+    7,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    19,
+    20,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "unrecorded_refusals": [],
+   "passed": true,
+   "problems": []
+  },
+  "serialised_segments": 9,
+  "ral_refused": {
+   "count": 20,
+   "steps": [
+    1,
+    2,
+    6,
+    7,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    19,
+    20,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "by_operation": {
+    "chamfering": 4,
+    "drilling": 5,
+    "facing": 2,
+    "finish_turning": 4,
+    "grooving": 1,
+    "rough_turning": 4
+   },
+   "by_kind": {
+    "missing_inputs": 20
+   },
+   "records": [
+    {
+     "step_number": 1,
+     "operation": "facing",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0010"
+    },
+    {
+     "step_number": 2,
+     "operation": "facing",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0011"
+    },
+    {
+     "step_number": 6,
+     "operation": "rough_turning",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0012"
+    },
+    {
+     "step_number": 7,
+     "operation": "rough_turning",
+     "feature_id": 15,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0013"
+    },
+    {
+     "step_number": 8,
+     "operation": "rough_turning",
+     "feature_id": 16,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0014"
+    },
+    {
+     "step_number": 9,
+     "operation": "rough_turning",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0015"
+    },
+    {
+     "step_number": 13,
+     "operation": "finish_turning",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0016"
+    },
+    {
+     "step_number": 14,
+     "operation": "finish_turning",
+     "feature_id": 15,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0017"
+    },
+    {
+     "step_number": 15,
+     "operation": "finish_turning",
+     "feature_id": 16,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0018"
+    },
+    {
+     "step_number": 16,
+     "operation": "finish_turning",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0019"
+    },
+    {
+     "step_number": 19,
+     "operation": "drilling",
+     "feature_id": 11,
+     "feature_type": "Through Hole",
+     "feature_dimensions": {
+      "Ø": 8.0
+     },
+     "missing_inputs": [
+      "axial length (L or length)",
+      "an on-axis position (location X=0.0, Y=15.0; off-axis axial features need C-axis indexing, not declared in RALTurningProfile)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0020"
+    },
+    {
+     "step_number": 20,
+     "operation": "drilling",
+     "feature_id": 12,
+     "feature_type": "Through Hole",
+     "feature_dimensions": {
+      "Ø": 8.0
+     },
+     "missing_inputs": [
+      "axial length (L or length)",
+      "an on-axis position (location X=0.0, Y=15.0; off-axis axial features need C-axis indexing, not declared in RALTurningProfile)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0021"
+    },
+    {
+     "step_number": 21,
+     "operation": "drilling",
+     "feature_id": 19,
+     "feature_type": "Hole",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0022"
+    },
+    {
+     "step_number": 22,
+     "operation": "drilling",
+     "feature_id": 20,
+     "feature_type": "Hole",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0023"
+    },
+    {
+     "step_number": 23,
+     "operation": "drilling",
+     "feature_id": 21,
+     "feature_type": "Hole",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0024"
+    },
+    {
+     "step_number": 25,
+     "operation": "chamfering",
+     "feature_id": 2,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.95,
+      "L": 0.5
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0025"
+    },
+    {
+     "step_number": 26,
+     "operation": "chamfering",
+     "feature_id": 4,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.0,
+      "L": 0.75
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0026"
+    },
+    {
+     "step_number": 27,
+     "operation": "chamfering",
+     "feature_id": 6,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.0,
+      "L": 1.0
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0027"
+    },
+    {
+     "step_number": 28,
+     "operation": "chamfering",
+     "feature_id": 9,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 12.2,
+      "L": 3.3
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0028"
+    },
+    {
+     "step_number": 29,
+     "operation": "grooving",
+     "feature_id": 17,
+     "feature_type": "Groove",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "outer diameter (one of outer_diameter)",
+      "groove-bottom diameter (one of groove_bottom_diameter, bottom_diameter, or a radial depth under groove_depth, depth)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0029"
+    }
+   ]
+  },
+  "kefc_gate_sets": null
+ },
+ "ablation_kefc_gate": {
+  "entities": 22,
+  "reconciliation": {
+   "merged": 8,
+   "primary_only": 11,
+   "secondary_only": 3
+  },
+  "merges": 8,
+  "merges_by_tau": {
+   "0.7": 2,
+   "1.0": 6
+  },
+  "slots": 3,
+  "steps": 32,
+  "approved": 27,
+  "withheld": 5,
+  "withheld_steps": [
+   [
+    19,
+    11,
+    "Through Hole",
+    "drilling"
+   ],
+   [
+    20,
+    12,
+    "Through Hole",
+    "drilling"
+   ],
+   [
+    30,
+    13,
+    "Slot",
+    "milling"
+   ],
+   [
+    31,
+    14,
+    "Slot",
+    "milling"
+   ],
+   [
+    32,
+    22,
+    "Slot",
+    "milling"
+   ]
+  ],
+  "param_records": 128,
+  "param_records_with_provenance": 128,
+  "rules_fired": 24,
+  "tool_rule_ids": {
+   "preferred_tool_selection": 9,
+   "feature_tool_from_operation": 23
+  },
+  "segments": 9,
+  "blocks_executed": 85,
+  "tool_changes": 4,
+  "travel_total_mm": 1111.77,
+  "travel_cut_mm": 260.18,
+  "cycle_time_min": 4.38,
+  "validation_status": "PASS",
+  "tool_wear_saturated": [],
+  "wear_flags": 0,
+  "requests_total": 34,
+  "requests_by_code": {
+   "low_confidence_mapping": 6,
+   "orientation_incompatible": 2,
+   "machine_incompatible": 3,
+   "serialisation_input_missing": 23
+  },
+  "graph_nodes": 77,
+  "graph_edges": 191,
+  "triples": 4484,
+  "sparql_passed": 54,
+  "average_cutting_force_N": 548.0,
+  "average_cutting_power_kW": 0.2928,
+  "max_cutting_force_N": 1000.0,
+  "max_cutting_power_kW": 0.6271,
+  "force_power_moves_analysed": 9,
+  "force_power_moves_with_force": 9,
+  "force_power_kc_N_per_mm2": 2000.0,
+  "force_power_inputs_source": "plan step parameter package",
+  "average_mrr_mm3_per_min": 8504.08,
+  "pellet_reasoning_s": [
+   4.13
+  ],
+  "wall_clock_s": 21.7,
+  "cli_args": [
+   "--ablation",
+   "kefc_gate"
+  ],
+  "ontologies_loaded": [
+   "http://onto.brep.org/manufacturing/machining-process#",
+   "http://onto.brep.org/manufacturing/materials#",
+   "http://onto.brep.org/manufacturing/tools#",
+   "http://onto.brep.org/manufacturing/machines#",
+   "http://onto.brep.org/manufacturing/cutting-parameters#",
+   "http://onto.brep.org/manufacturing/motor-shaft-case#",
+   "http://onto.brep.org/manufacturing/serialisation-profiles#"
+  ],
+  "parameter_fidelity": {
+   "segments_checked": 9,
+   "spindle_match": 9,
+   "feed_match": 9,
+   "coolant_match": 9
+  },
+  "sparql": {
+   "passed": 54,
+   "total": 54
+  },
+  "sparql_failed_indices": [],
+  "wear_flags_by_tool": {},
+  "parameter_records_sparql": {
+   "q52_records_with_rule_and_source": 128,
+   "expected_4_x_planned_steps": 128
+  },
+  "envelope_excursions": {
+   "count": 0,
+   "steps": [],
+   "details": []
+  },
+  "validator_errors": 0,
+  "validator_warnings": 0,
+  "validator_violations_by_category": {},
+  "cycle_time_breakdown": {
+   "rapid_time_seconds": 9.81,
+   "cutting_time_seconds": 198.61,
+   "tool_change_time_seconds": 12.0,
+   "positioning_time_seconds": 42.5,
+   "total_cycle_time_seconds": 262.92,
+   "timed_feed_length_mm": 225.9,
+   "timed_cycle_depth_mm": 34.28,
+   "untimed_feed_moves": 0
+  },
+  "dimension_fidelity": {
+   "segments": 9,
+   "segments_with_inputs": 9,
+   "lookups": 27,
+   "traced_to_plan": 27,
+   "defaulted": 0,
+   "cutting_words_checked": 9,
+   "unexplained_cutting_words": 0,
+   "passed": true,
+   "by_operation": {
+    "rough_turning": {
+     "segments": 3,
+     "lookups": 9,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "finish_turning": {
+     "segments": 3,
+     "lookups": 9,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "drilling": {
+     "segments": 2,
+     "lookups": 6,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "counterboring": {
+     "segments": 1,
+     "lookups": 3,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    }
+   }
+  },
+  "serialiser_default_dimension_lookups": {
+   "lookups": 27,
+   "defaulted": 0,
+   "source": "dimension_fidelity.json"
+  },
+  "kefc_approved": 27,
+  "kefc_withheld_steps": [
+   19,
+   20,
+   30,
+   31,
+   32
+  ],
+  "handed_to_ral": 32,
+  "serialised_steps": [
+   3,
+   4,
+   5,
+   10,
+   11,
+   12,
+   17,
+   18,
+   24
+  ],
+  "ral_accounting": {
+   "handed": 32,
+   "serialised": 9,
+   "refused": 23,
+   "serialised_steps": [
+    3,
+    4,
+    5,
+    10,
+    11,
+    12,
+    17,
+    18,
+    24
+   ],
+   "refused_steps": [
+    1,
+    2,
+    6,
+    7,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    19,
+    20,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+   ],
+   "unrecorded_refusals": [],
+   "passed": true,
+   "problems": []
+  },
+  "serialised_segments": 9,
+  "ral_refused": {
+   "count": 23,
+   "steps": [
+    1,
+    2,
+    6,
+    7,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    19,
+    20,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+   ],
+   "by_operation": {
+    "chamfering": 4,
+    "drilling": 5,
+    "facing": 2,
+    "finish_turning": 4,
+    "grooving": 1,
+    "milling": 3,
+    "rough_turning": 4
+   },
+   "by_kind": {
+    "missing_inputs": 20,
+    "no_toolpath_pattern": 3
+   },
+   "records": [
+    {
+     "step_number": 1,
+     "operation": "facing",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0012"
+    },
+    {
+     "step_number": 2,
+     "operation": "facing",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0013"
+    },
+    {
+     "step_number": 6,
+     "operation": "rough_turning",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0014"
+    },
+    {
+     "step_number": 7,
+     "operation": "rough_turning",
+     "feature_id": 15,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0015"
+    },
+    {
+     "step_number": 8,
+     "operation": "rough_turning",
+     "feature_id": 16,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0016"
+    },
+    {
+     "step_number": 9,
+     "operation": "rough_turning",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0017"
+    },
+    {
+     "step_number": 13,
+     "operation": "finish_turning",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0018"
+    },
+    {
+     "step_number": 14,
+     "operation": "finish_turning",
+     "feature_id": 15,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0019"
+    },
+    {
+     "step_number": 15,
+     "operation": "finish_turning",
+     "feature_id": 16,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0020"
+    },
+    {
+     "step_number": 16,
+     "operation": "finish_turning",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0021"
+    },
+    {
+     "step_number": 19,
+     "operation": "drilling",
+     "feature_id": 11,
+     "feature_type": "Through Hole",
+     "feature_dimensions": {
+      "Ø": 8.0
+     },
+     "missing_inputs": [
+      "axial length (L or length)",
+      "an on-axis position (location X=0.0, Y=15.0; off-axis axial features need C-axis indexing, not declared in RALTurningProfile)"
+     ],
+     "kefc_validation_status": "requires_review",
+     "request_id": "evr_0022"
+    },
+    {
+     "step_number": 20,
+     "operation": "drilling",
+     "feature_id": 12,
+     "feature_type": "Through Hole",
+     "feature_dimensions": {
+      "Ø": 8.0
+     },
+     "missing_inputs": [
+      "axial length (L or length)",
+      "an on-axis position (location X=0.0, Y=15.0; off-axis axial features need C-axis indexing, not declared in RALTurningProfile)"
+     ],
+     "kefc_validation_status": "requires_review",
+     "request_id": "evr_0023"
+    },
+    {
+     "step_number": 21,
+     "operation": "drilling",
+     "feature_id": 19,
+     "feature_type": "Hole",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0024"
+    },
+    {
+     "step_number": 22,
+     "operation": "drilling",
+     "feature_id": 20,
+     "feature_type": "Hole",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0025"
+    },
+    {
+     "step_number": 23,
+     "operation": "drilling",
+     "feature_id": 21,
+     "feature_type": "Hole",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0026"
+    },
+    {
+     "step_number": 25,
+     "operation": "chamfering",
+     "feature_id": 2,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.95,
+      "L": 0.5
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0027"
+    },
+    {
+     "step_number": 26,
+     "operation": "chamfering",
+     "feature_id": 4,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.0,
+      "L": 0.75
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0028"
+    },
+    {
+     "step_number": 27,
+     "operation": "chamfering",
+     "feature_id": 6,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.0,
+      "L": 1.0
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0029"
+    },
+    {
+     "step_number": 28,
+     "operation": "chamfering",
+     "feature_id": 9,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 12.2,
+      "L": 3.3
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0030"
+    },
+    {
+     "step_number": 29,
+     "operation": "grooving",
+     "feature_id": 17,
+     "feature_type": "Groove",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "outer diameter (one of outer_diameter)",
+      "groove-bottom diameter (one of groove_bottom_diameter, bottom_diameter, or a radial depth under groove_depth, depth)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0031"
+    },
+    {
+     "step_number": 30,
+     "operation": "milling",
+     "feature_id": 13,
+     "feature_type": "Slot",
+     "feature_dimensions": {
+      "Ø": 8.0,
+      "R": 4.0,
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "a toolpath pattern for 'milling' (none declared in RALTurningProfile)"
+     ],
+     "kefc_validation_status": "requires_review",
+     "request_id": "evr_0032"
+    },
+    {
+     "step_number": 31,
+     "operation": "milling",
+     "feature_id": 14,
+     "feature_type": "Slot",
+     "feature_dimensions": {
+      "Ø": 8.0,
+      "R": 4.0,
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "a toolpath pattern for 'milling' (none declared in RALTurningProfile)"
+     ],
+     "kefc_validation_status": "requires_review",
+     "request_id": "evr_0033"
+    },
+    {
+     "step_number": 32,
+     "operation": "milling",
+     "feature_id": 22,
+     "feature_type": "Slot",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "a toolpath pattern for 'milling' (none declared in RALTurningProfile)"
+     ],
+     "kefc_validation_status": "requires_review",
+     "request_id": "evr_0034"
+    }
+   ]
+  },
+  "kefc_gate_sets": {
+   "kefc_would_withhold": [
+    19,
+    20,
+    30,
+    31,
+    32
+   ],
+   "ral_refused": [
+    1,
+    2,
+    6,
+    7,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    19,
+    20,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+   ],
+   "withheld_by_both": [
+    19,
+    20,
+    30,
+    31,
+    32
+   ],
+   "kefc_only_serialised": [],
+   "ral_only_refused": [
+    1,
+    2,
+    6,
+    7,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29
+   ]
+  }
+ },
+ "ablation_swap_sources": {
+  "entities": 22,
+  "reconciliation": {
+   "merged": 8,
+   "primary_only": 3,
+   "secondary_only": 11
+  },
+  "merges": 8,
+  "merges_by_tau": {
+   "1.0": 6,
+   "0.7": 2
+  },
+  "slots": 3,
+  "steps": 34,
+  "approved": 16,
+  "withheld": 18,
+  "withheld_steps": [
+   [
+    2,
+    12,
+    "Boss",
+    "facing"
+   ],
+   [
+    5,
+    6,
+    "Step",
+    "rough_turning"
+   ],
+   [
+    6,
+    9,
+    "Step",
+    "rough_turning"
+   ],
+   [
+    7,
+    12,
+    "Boss",
+    "rough_turning"
+   ],
+   [
+    12,
+    6,
+    "Step",
+    "finish_turning"
+   ],
+   [
+    13,
+    9,
+    "Step",
+    "finish_turning"
+   ],
+   [
+    14,
+    12,
+    "Boss",
+    "finish_turning"
+   ],
+   [
+    20,
+    13,
+    "Through Hole",
+    "drilling"
+   ],
+   [
+    21,
+    14,
+    "Through Hole",
+    "drilling"
+   ],
+   [
+    23,
+    21,
+    "Hole",
+    "drilling"
+   ],
+   [
+    24,
+    22,
+    "Hole",
+    "drilling"
+   ],
+   [
+    27,
+    7,
+    "Chamfer",
+    "chamfering"
+   ],
+   [
+    28,
+    8,
+    "Chamfer",
+    "chamfering"
+   ],
+   [
+    29,
+    10,
+    "Chamfer",
+    "chamfering"
+   ],
+   [
+    30,
+    11,
+    "Chamfer",
+    "chamfering"
+   ],
+   [
+    32,
+    3,
+    "Slot",
+    "milling"
+   ],
+   [
+    33,
+    4,
+    "Slot",
+    "milling"
+   ],
+   [
+    34,
+    19,
+    "Slot",
+    "milling"
+   ]
+  ],
+  "param_records": 136,
+  "param_records_with_provenance": 136,
+  "rules_fired": 27,
+  "tool_rule_ids": {
+   "preferred_tool_selection": 10,
+   "feature_tool_from_operation": 24
+  },
+  "segments": 3,
+  "blocks_executed": 41,
+  "tool_changes": 2,
+  "travel_total_mm": 315.77,
+  "travel_cut_mm": 35.18,
+  "cycle_time_min": 0.77,
+  "validation_status": "PASS",
+  "tool_wear_saturated": [],
+  "wear_flags": 0,
+  "requests_total": 44,
+  "requests_by_code": {
+   "low_confidence_mapping": 26,
+   "orientation_incompatible": 2,
+   "machine_incompatible": 3,
+   "serialisation_input_missing": 13
+  },
+  "graph_nodes": 79,
+  "graph_edges": 203,
+  "triples": 4706,
+  "sparql_passed": 54,
+  "average_cutting_force_N": 620.0,
+  "average_cutting_power_kW": 0.2432,
+  "max_cutting_force_N": 720.0,
+  "max_cutting_power_kW": 0.3167,
+  "force_power_moves_analysed": 3,
+  "force_power_moves_with_force": 3,
+  "force_power_kc_N_per_mm2": 2000.0,
+  "force_power_inputs_source": "plan step parameter package",
+  "average_mrr_mm3_per_min": 25217.96,
+  "pellet_reasoning_s": [
+   5.24
+  ],
+  "wall_clock_s": 25.72,
+  "cli_args": [
+   "--ablation",
+   "swap_sources"
+  ],
+  "ontologies_loaded": [
+   "http://onto.brep.org/manufacturing/machining-process#",
+   "http://onto.brep.org/manufacturing/materials#",
+   "http://onto.brep.org/manufacturing/tools#",
+   "http://onto.brep.org/manufacturing/machines#",
+   "http://onto.brep.org/manufacturing/cutting-parameters#",
+   "http://onto.brep.org/manufacturing/motor-shaft-case#",
+   "http://onto.brep.org/manufacturing/serialisation-profiles#"
+  ],
+  "parameter_fidelity": {
+   "segments_checked": 3,
+   "spindle_match": 3,
+   "feed_match": 3,
+   "coolant_match": 3
+  },
+  "sparql": {
+   "passed": 54,
+   "total": 54
+  },
+  "sparql_failed_indices": [],
+  "wear_flags_by_tool": {},
+  "parameter_records_sparql": {
+   "q52_records_with_rule_and_source": 136,
+   "expected_4_x_planned_steps": 136
+  },
+  "envelope_excursions": {
+   "count": 0,
+   "steps": [],
+   "details": []
+  },
+  "validator_errors": 0,
+  "validator_warnings": 0,
+  "validator_violations_by_category": {},
+  "cycle_time_breakdown": {
+   "rapid_time_seconds": 2.94,
+   "cutting_time_seconds": 17.05,
+   "tool_change_time_seconds": 6.0,
+   "positioning_time_seconds": 20.5,
+   "total_cycle_time_seconds": 46.5,
+   "timed_feed_length_mm": 0.0,
+   "timed_cycle_depth_mm": 35.18,
+   "untimed_feed_moves": 0
+  },
+  "dimension_fidelity": {
+   "segments": 3,
+   "segments_with_inputs": 3,
+   "lookups": 9,
+   "traced_to_plan": 9,
+   "defaulted": 0,
+   "cutting_words_checked": 3,
+   "unexplained_cutting_words": 0,
+   "passed": true,
+   "by_operation": {
+    "drilling": {
+     "segments": 2,
+     "lookups": 6,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "counterboring": {
+     "segments": 1,
+     "lookups": 3,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    }
+   }
+  },
+  "serialiser_default_dimension_lookups": {
+   "lookups": 9,
+   "defaulted": 0,
+   "source": "dimension_fidelity.json"
+  },
+  "kefc_approved": 16,
+  "kefc_withheld_steps": [
+   2,
+   5,
+   6,
+   7,
+   12,
+   13,
+   14,
+   20,
+   21,
+   23,
+   24,
+   27,
+   28,
+   29,
+   30,
+   32,
+   33,
+   34
+  ],
+  "handed_to_ral": 16,
+  "serialised_steps": [
+   18,
+   19,
+   25
+  ],
+  "ral_accounting": {
+   "handed": 16,
+   "serialised": 3,
+   "refused": 13,
+   "serialised_steps": [
+    18,
+    19,
+    25
+   ],
+   "refused_steps": [
+    1,
+    3,
+    4,
+    8,
+    9,
+    10,
+    11,
+    15,
+    16,
+    17,
+    22,
+    26,
+    31
+   ],
+   "unrecorded_refusals": [],
+   "passed": true,
+   "problems": []
+  },
+  "serialised_segments": 3,
+  "ral_refused": {
+   "count": 13,
+   "steps": [
+    1,
+    3,
+    4,
+    8,
+    9,
+    10,
+    11,
+    15,
+    16,
+    17,
+    22,
+    26,
+    31
+   ],
+   "by_operation": {
+    "boring": 1,
+    "drilling": 1,
+    "facing": 2,
+    "finish_turning": 4,
+    "grooving": 1,
+    "rough_turning": 4
+   },
+   "by_kind": {
+    "missing_inputs": 13
+   },
+   "records": [
+    {
+     "step_number": 1,
+     "operation": "facing",
+     "feature_id": 5,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "L": 53.5,
+      "R": 12.475,
+      "Ø": 24.41
+     },
+     "missing_inputs": [
+      "a consistent diameter (Ø=24.41 but R=12.475)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0032"
+    },
+    {
+     "step_number": 3,
+     "operation": "facing",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0033"
+    },
+    {
+     "step_number": 4,
+     "operation": "rough_turning",
+     "feature_id": 5,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "L": 53.5,
+      "R": 12.475,
+      "Ø": 24.41
+     },
+     "missing_inputs": [
+      "a consistent diameter (Ø=24.41 but R=12.475)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0034"
+    },
+    {
+     "step_number": 8,
+     "operation": "rough_turning",
+     "feature_id": 15,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0035"
+    },
+    {
+     "step_number": 9,
+     "operation": "rough_turning",
+     "feature_id": 16,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0036"
+    },
+    {
+     "step_number": 10,
+     "operation": "rough_turning",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0037"
+    },
+    {
+     "step_number": 11,
+     "operation": "finish_turning",
+     "feature_id": 5,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "L": 53.5,
+      "R": 12.475,
+      "Ø": 24.41
+     },
+     "missing_inputs": [
+      "a consistent diameter (Ø=24.41 but R=12.475)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0038"
+    },
+    {
+     "step_number": 15,
+     "operation": "finish_turning",
+     "feature_id": 15,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0039"
+    },
+    {
+     "step_number": 16,
+     "operation": "finish_turning",
+     "feature_id": 16,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0040"
+    },
+    {
+     "step_number": 17,
+     "operation": "finish_turning",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0041"
+    },
+    {
+     "step_number": 22,
+     "operation": "drilling",
+     "feature_id": 20,
+     "feature_type": "Bore",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0042"
+    },
+    {
+     "step_number": 26,
+     "operation": "boring",
+     "feature_id": 20,
+     "feature_type": "Bore",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0043"
+    },
+    {
+     "step_number": 31,
+     "operation": "grooving",
+     "feature_id": 17,
+     "feature_type": "Groove",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "outer diameter (one of outer_diameter)",
+      "groove-bottom diameter (one of groove_bottom_diameter, bottom_diameter, or a radial depth under groove_depth, depth)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0044"
+    }
+   ]
+  },
+  "kefc_gate_sets": null
+ },
+ "material_aluminum": {
+  "entities": 22,
+  "reconciliation": {
+   "merged": 8,
+   "primary_only": 11,
+   "secondary_only": 3
+  },
+  "merges": 8,
+  "merges_by_tau": {
+   "0.7": 2,
+   "1.0": 6
+  },
+  "slots": 3,
+  "steps": 32,
+  "approved": 22,
+  "withheld": 10,
+  "withheld_steps": [
+   [
+    17,
+    7,
+    "Blind Hole",
+    "drilling"
+   ],
+   [
+    18,
+    8,
+    "Counterbore",
+    "drilling"
+   ],
+   [
+    19,
+    11,
+    "Through Hole",
+    "drilling"
+   ],
+   [
+    20,
+    12,
+    "Through Hole",
+    "drilling"
+   ],
+   [
+    21,
+    19,
+    "Hole",
+    "drilling"
+   ],
+   [
+    22,
+    20,
+    "Hole",
+    "drilling"
+   ],
+   [
+    23,
+    21,
+    "Hole",
+    "drilling"
+   ],
+   [
+    30,
+    13,
+    "Slot",
+    "milling"
+   ],
+   [
+    31,
+    14,
+    "Slot",
+    "milling"
+   ],
+   [
+    32,
+    22,
+    "Slot",
+    "milling"
+   ]
+  ],
+  "param_records": 128,
+  "param_records_with_provenance": 128,
+  "rules_fired": 24,
+  "tool_rule_ids": {
+   "preferred_tool_selection": 9,
+   "feature_tool_from_operation": 23
+  },
+  "segments": 7,
+  "blocks_executed": 70,
+  "tool_changes": 3,
+  "travel_total_mm": 974.11,
+  "travel_cut_mm": 231.92,
+  "cycle_time_min": 2.03,
+  "validation_status": "PASS",
+  "tool_wear_saturated": [],
+  "wear_flags": 0,
+  "requests_total": 33,
+  "requests_by_code": {
+   "low_confidence_mapping": 6,
+   "unsafe_value": 7,
+   "orientation_incompatible": 2,
+   "machine_incompatible": 3,
+   "serialisation_input_missing": 15
+  },
+  "graph_nodes": 77,
+  "graph_edges": 191,
+  "triples": 4484,
+  "sparql_passed": 54,
+  "average_cutting_force_N": 357.94,
+  "average_cutting_power_kW": 0.3463,
+  "max_cutting_force_N": 720.0,
+  "max_cutting_power_kW": 0.7525,
+  "force_power_moves_analysed": 7,
+  "force_power_moves_with_force": 7,
+  "force_power_kc_N_per_mm2": 800.0,
+  "force_power_inputs_source": "plan step parameter package",
+  "average_mrr_mm3_per_min": 801.26,
+  "pellet_reasoning_s": [
+   3.97
+  ],
+  "wall_clock_s": 23.18,
+  "cli_args": [
+   "--material",
+   "aluminum_6061"
+  ],
+  "ontologies_loaded": [
+   "http://onto.brep.org/manufacturing/machining-process#",
+   "http://onto.brep.org/manufacturing/materials#",
+   "http://onto.brep.org/manufacturing/tools#",
+   "http://onto.brep.org/manufacturing/machines#",
+   "http://onto.brep.org/manufacturing/cutting-parameters#",
+   "http://onto.brep.org/manufacturing/motor-shaft-case#",
+   "http://onto.brep.org/manufacturing/serialisation-profiles#"
+  ],
+  "parameter_fidelity": {
+   "segments_checked": 7,
+   "spindle_match": 7,
+   "feed_match": 7,
+   "coolant_match": 7
+  },
+  "sparql": {
+   "passed": 54,
+   "total": 54
+  },
+  "sparql_failed_indices": [],
+  "wear_flags_by_tool": {},
+  "parameter_records_sparql": {
+   "q52_records_with_rule_and_source": 128,
+   "expected_4_x_planned_steps": 128
+  },
+  "envelope_excursions": {
+   "count": 0,
+   "steps": [],
+   "details": []
+  },
+  "validator_errors": 0,
+  "validator_warnings": 0,
+  "validator_violations_by_category": {},
+  "cycle_time_breakdown": {
+   "rapid_time_seconds": 8.83,
+   "cutting_time_seconds": 68.9,
+   "tool_change_time_seconds": 9.0,
+   "positioning_time_seconds": 35.0,
+   "total_cycle_time_seconds": 121.73,
+   "timed_feed_length_mm": 225.9,
+   "timed_cycle_depth_mm": 6.02,
+   "untimed_feed_moves": 0
+  },
+  "dimension_fidelity": {
+   "segments": 7,
+   "segments_with_inputs": 7,
+   "lookups": 21,
+   "traced_to_plan": 21,
+   "defaulted": 0,
+   "cutting_words_checked": 7,
+   "unexplained_cutting_words": 0,
+   "passed": true,
+   "by_operation": {
+    "rough_turning": {
+     "segments": 3,
+     "lookups": 9,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "finish_turning": {
+     "segments": 3,
+     "lookups": 9,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "counterboring": {
+     "segments": 1,
+     "lookups": 3,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    }
+   }
+  },
+  "serialiser_default_dimension_lookups": {
+   "lookups": 21,
+   "defaulted": 0,
+   "source": "dimension_fidelity.json"
+  },
+  "kefc_approved": 22,
+  "kefc_withheld_steps": [
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   30,
+   31,
+   32
+  ],
+  "handed_to_ral": 22,
+  "serialised_steps": [
+   3,
+   4,
+   5,
+   10,
+   11,
+   12,
+   24
+  ],
+  "ral_accounting": {
+   "handed": 22,
+   "serialised": 7,
+   "refused": 15,
+   "serialised_steps": [
+    3,
+    4,
+    5,
+    10,
+    11,
+    12,
+    24
+   ],
+   "refused_steps": [
+    1,
+    2,
+    6,
+    7,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "unrecorded_refusals": [],
+   "passed": true,
+   "problems": []
+  },
+  "serialised_segments": 7,
+  "ral_refused": {
+   "count": 15,
+   "steps": [
+    1,
+    2,
+    6,
+    7,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "by_operation": {
+    "chamfering": 4,
+    "facing": 2,
+    "finish_turning": 4,
+    "grooving": 1,
+    "rough_turning": 4
+   },
+   "by_kind": {
+    "missing_inputs": 15
+   },
+   "records": [
+    {
+     "step_number": 1,
+     "operation": "facing",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0019"
+    },
+    {
+     "step_number": 2,
+     "operation": "facing",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0020"
+    },
+    {
+     "step_number": 6,
+     "operation": "rough_turning",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0021"
+    },
+    {
+     "step_number": 7,
+     "operation": "rough_turning",
+     "feature_id": 15,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0022"
+    },
+    {
+     "step_number": 8,
+     "operation": "rough_turning",
+     "feature_id": 16,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0023"
+    },
+    {
+     "step_number": 9,
+     "operation": "rough_turning",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0024"
+    },
+    {
+     "step_number": 13,
+     "operation": "finish_turning",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0025"
+    },
+    {
+     "step_number": 14,
+     "operation": "finish_turning",
+     "feature_id": 15,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0026"
+    },
+    {
+     "step_number": 15,
+     "operation": "finish_turning",
+     "feature_id": 16,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0027"
+    },
+    {
+     "step_number": 16,
+     "operation": "finish_turning",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0028"
+    },
+    {
+     "step_number": 25,
+     "operation": "chamfering",
+     "feature_id": 2,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.95,
+      "L": 0.5
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0029"
+    },
+    {
+     "step_number": 26,
+     "operation": "chamfering",
+     "feature_id": 4,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.0,
+      "L": 0.75
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0030"
+    },
+    {
+     "step_number": 27,
+     "operation": "chamfering",
+     "feature_id": 6,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.0,
+      "L": 1.0
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0031"
+    },
+    {
+     "step_number": 28,
+     "operation": "chamfering",
+     "feature_id": 9,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 12.2,
+      "L": 3.3
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0032"
+    },
+    {
+     "step_number": 29,
+     "operation": "grooving",
+     "feature_id": 17,
+     "feature_type": "Groove",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "outer diameter (one of outer_diameter)",
+      "groove-bottom diameter (one of groove_bottom_diameter, bottom_diameter, or a radial depth under groove_depth, depth)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0033"
+    }
+   ]
+  },
+  "kefc_gate_sets": null
+ },
+ "machine_mill_turn": {
+  "entities": 22,
+  "reconciliation": {
+   "merged": 8,
+   "primary_only": 11,
+   "secondary_only": 3
+  },
+  "merges": 8,
+  "merges_by_tau": {
+   "0.7": 2,
+   "1.0": 6
+  },
+  "slots": 3,
+  "steps": 32,
+  "approved": 27,
+  "withheld": 5,
+  "withheld_steps": [
+   [
+    19,
+    11,
+    "Through Hole",
+    "drilling"
+   ],
+   [
+    20,
+    12,
+    "Through Hole",
+    "drilling"
+   ],
+   [
+    30,
+    13,
+    "Slot",
+    "milling"
+   ],
+   [
+    31,
+    14,
+    "Slot",
+    "milling"
+   ],
+   [
+    32,
+    22,
+    "Slot",
+    "milling"
+   ]
+  ],
+  "param_records": 128,
+  "param_records_with_provenance": 128,
+  "rules_fired": 24,
+  "tool_rule_ids": {
+   "preferred_tool_selection": 9,
+   "feature_tool_from_operation": 23
+  },
+  "segments": 9,
+  "blocks_executed": 85,
+  "tool_changes": 4,
+  "travel_total_mm": 1111.77,
+  "travel_cut_mm": 260.18,
+  "cycle_time_min": 4.38,
+  "validation_status": "PASS",
+  "tool_wear_saturated": [],
+  "wear_flags": 0,
+  "requests_total": 26,
+  "requests_by_code": {
+   "low_confidence_mapping": 6,
+   "serialisation_unsupported": 2,
+   "serialisation_input_missing": 18
+  },
+  "graph_nodes": 78,
+  "graph_edges": 191,
+  "triples": 4493,
+  "sparql_passed": 54,
+  "average_cutting_force_N": 548.0,
+  "average_cutting_power_kW": 0.2928,
+  "max_cutting_force_N": 1000.0,
+  "max_cutting_power_kW": 0.6271,
+  "force_power_moves_analysed": 9,
+  "force_power_moves_with_force": 9,
+  "force_power_kc_N_per_mm2": 2000.0,
+  "force_power_inputs_source": "plan step parameter package",
+  "average_mrr_mm3_per_min": 8504.08,
+  "pellet_reasoning_s": [
+   4.4
+  ],
+  "wall_clock_s": 24.37,
+  "cli_args": [
+   "--machine",
+   "cnc_mill_turn"
+  ],
+  "ontologies_loaded": [
+   "http://onto.brep.org/manufacturing/machining-process#",
+   "http://onto.brep.org/manufacturing/materials#",
+   "http://onto.brep.org/manufacturing/tools#",
+   "http://onto.brep.org/manufacturing/machines#",
+   "http://onto.brep.org/manufacturing/cutting-parameters#",
+   "http://onto.brep.org/manufacturing/motor-shaft-case#",
+   "http://onto.brep.org/manufacturing/serialisation-profiles#",
+   "http://onto.brep.org/manufacturing/mill-turn-configuration#"
+  ],
+  "parameter_fidelity": {
+   "segments_checked": 9,
+   "spindle_match": 9,
+   "feed_match": 9,
+   "coolant_match": 9
+  },
+  "sparql": {
+   "passed": 54,
+   "total": 54
+  },
+  "sparql_failed_indices": [],
+  "wear_flags_by_tool": {},
+  "parameter_records_sparql": {
+   "q52_records_with_rule_and_source": 128,
+   "expected_4_x_planned_steps": 128
+  },
+  "envelope_excursions": {
+   "count": 0,
+   "steps": [],
+   "details": []
+  },
+  "validator_errors": 0,
+  "validator_warnings": 0,
+  "validator_violations_by_category": {},
+  "cycle_time_breakdown": {
+   "rapid_time_seconds": 9.81,
+   "cutting_time_seconds": 198.61,
+   "tool_change_time_seconds": 12.0,
+   "positioning_time_seconds": 42.5,
+   "total_cycle_time_seconds": 262.92,
+   "timed_feed_length_mm": 225.9,
+   "timed_cycle_depth_mm": 34.28,
+   "untimed_feed_moves": 0
+  },
+  "dimension_fidelity": {
+   "segments": 9,
+   "segments_with_inputs": 9,
+   "lookups": 27,
+   "traced_to_plan": 27,
+   "defaulted": 0,
+   "cutting_words_checked": 9,
+   "unexplained_cutting_words": 0,
+   "passed": true,
+   "by_operation": {
+    "rough_turning": {
+     "segments": 3,
+     "lookups": 9,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "finish_turning": {
+     "segments": 3,
+     "lookups": 9,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "drilling": {
+     "segments": 2,
+     "lookups": 6,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "counterboring": {
+     "segments": 1,
+     "lookups": 3,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    }
+   }
+  },
+  "serialiser_default_dimension_lookups": {
+   "lookups": 27,
+   "defaulted": 0,
+   "source": "dimension_fidelity.json"
+  },
+  "kefc_approved": 27,
+  "kefc_withheld_steps": [
+   19,
+   20,
+   30,
+   31,
+   32
+  ],
+  "handed_to_ral": 27,
+  "serialised_steps": [
+   3,
+   4,
+   5,
+   10,
+   11,
+   12,
+   17,
+   18,
+   24
+  ],
+  "ral_accounting": {
+   "handed": 27,
+   "serialised": 9,
+   "refused": 18,
+   "serialised_steps": [
+    3,
+    4,
+    5,
+    10,
+    11,
+    12,
+    17,
+    18,
+    24
+   ],
+   "refused_steps": [
+    1,
+    2,
+    6,
+    7,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "unrecorded_refusals": [],
+   "passed": true,
+   "problems": []
+  },
+  "serialised_segments": 9,
+  "ral_refused": {
+   "count": 18,
+   "steps": [
+    1,
+    2,
+    6,
+    7,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "by_operation": {
+    "chamfering": 4,
+    "drilling": 3,
+    "facing": 2,
+    "finish_turning": 4,
+    "grooving": 1,
+    "rough_turning": 4
+   },
+   "by_kind": {
+    "missing_inputs": 18
+   },
+   "records": [
+    {
+     "step_number": 1,
+     "operation": "facing",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0009"
+    },
+    {
+     "step_number": 2,
+     "operation": "facing",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0010"
+    },
+    {
+     "step_number": 6,
+     "operation": "rough_turning",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0011"
+    },
+    {
+     "step_number": 7,
+     "operation": "rough_turning",
+     "feature_id": 15,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0012"
+    },
+    {
+     "step_number": 8,
+     "operation": "rough_turning",
+     "feature_id": 16,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0013"
+    },
+    {
+     "step_number": 9,
+     "operation": "rough_turning",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0014"
+    },
+    {
+     "step_number": 13,
+     "operation": "finish_turning",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0015"
+    },
+    {
+     "step_number": 14,
+     "operation": "finish_turning",
+     "feature_id": 15,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0016"
+    },
+    {
+     "step_number": 15,
+     "operation": "finish_turning",
+     "feature_id": 16,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0017"
+    },
+    {
+     "step_number": 16,
+     "operation": "finish_turning",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0018"
+    },
+    {
+     "step_number": 21,
+     "operation": "drilling",
+     "feature_id": 19,
+     "feature_type": "Hole",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0019"
+    },
+    {
+     "step_number": 22,
+     "operation": "drilling",
+     "feature_id": 20,
+     "feature_type": "Hole",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0020"
+    },
+    {
+     "step_number": 23,
+     "operation": "drilling",
+     "feature_id": 21,
+     "feature_type": "Hole",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0021"
+    },
+    {
+     "step_number": 25,
+     "operation": "chamfering",
+     "feature_id": 2,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.95,
+      "L": 0.5
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0022"
+    },
+    {
+     "step_number": 26,
+     "operation": "chamfering",
+     "feature_id": 4,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.0,
+      "L": 0.75
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0023"
+    },
+    {
+     "step_number": 27,
+     "operation": "chamfering",
+     "feature_id": 6,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.0,
+      "L": 1.0
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0024"
+    },
+    {
+     "step_number": 28,
+     "operation": "chamfering",
+     "feature_id": 9,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 12.2,
+      "L": 3.3
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0025"
+    },
+    {
+     "step_number": 29,
+     "operation": "grooving",
+     "feature_id": 17,
+     "feature_type": "Groove",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "outer diameter (one of outer_diameter)",
+      "groove-bottom diameter (one of groove_bottom_diameter, bottom_diameter, or a radial depth under groove_depth, depth)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0026"
+    }
+   ]
+  },
+  "kefc_gate_sets": null
+ },
+ "machine_mill_turn_ablation_serialisation_profile": {
+  "entities": 22,
+  "reconciliation": {
+   "merged": 8,
+   "primary_only": 11,
+   "secondary_only": 3
+  },
+  "merges": 8,
+  "merges_by_tau": {
+   "0.7": 2,
+   "1.0": 6
+  },
+  "slots": 3,
+  "steps": 32,
+  "approved": 29,
+  "withheld": 3,
+  "withheld_steps": [
+   [
+    30,
+    13,
+    "Slot",
+    "milling"
+   ],
+   [
+    31,
+    14,
+    "Slot",
+    "milling"
+   ],
+   [
+    32,
+    22,
+    "Slot",
+    "milling"
+   ]
+  ],
+  "param_records": 128,
+  "param_records_with_provenance": 128,
+  "rules_fired": 24,
+  "tool_rule_ids": {
+   "preferred_tool_selection": 9,
+   "feature_tool_from_operation": 23
+  },
+  "segments": 9,
+  "blocks_executed": 85,
+  "tool_changes": 4,
+  "travel_total_mm": 1111.77,
+  "travel_cut_mm": 260.18,
+  "cycle_time_min": 4.38,
+  "validation_status": "PASS",
+  "tool_wear_saturated": [],
+  "wear_flags": 0,
+  "requests_total": 26,
+  "requests_by_code": {
+   "low_confidence_mapping": 6,
+   "serialisation_input_missing": 20
+  },
+  "graph_nodes": 78,
+  "graph_edges": 191,
+  "triples": 4493,
+  "sparql_passed": 54,
+  "average_cutting_force_N": 548.0,
+  "average_cutting_power_kW": 0.2928,
+  "max_cutting_force_N": 1000.0,
+  "max_cutting_power_kW": 0.6271,
+  "force_power_moves_analysed": 9,
+  "force_power_moves_with_force": 9,
+  "force_power_kc_N_per_mm2": 2000.0,
+  "force_power_inputs_source": "plan step parameter package",
+  "average_mrr_mm3_per_min": 8504.08,
+  "pellet_reasoning_s": [
+   4.47
+  ],
+  "wall_clock_s": 23.37,
+  "cli_args": [
+   "--machine",
+   "cnc_mill_turn",
+   "--ablation",
+   "serialisation_profile"
+  ],
+  "ontologies_loaded": [
+   "http://onto.brep.org/manufacturing/machining-process#",
+   "http://onto.brep.org/manufacturing/materials#",
+   "http://onto.brep.org/manufacturing/tools#",
+   "http://onto.brep.org/manufacturing/machines#",
+   "http://onto.brep.org/manufacturing/cutting-parameters#",
+   "http://onto.brep.org/manufacturing/motor-shaft-case#",
+   "http://onto.brep.org/manufacturing/serialisation-profiles#",
+   "http://onto.brep.org/manufacturing/mill-turn-configuration#"
+  ],
+  "parameter_fidelity": {
+   "segments_checked": 9,
+   "spindle_match": 9,
+   "feed_match": 9,
+   "coolant_match": 9
+  },
+  "sparql": {
+   "passed": 54,
+   "total": 54
+  },
+  "sparql_failed_indices": [],
+  "wear_flags_by_tool": {},
+  "parameter_records_sparql": {
+   "q52_records_with_rule_and_source": 128,
+   "expected_4_x_planned_steps": 128
+  },
+  "envelope_excursions": {
+   "count": 0,
+   "steps": [],
+   "details": []
+  },
+  "validator_errors": 0,
+  "validator_warnings": 0,
+  "validator_violations_by_category": {},
+  "cycle_time_breakdown": {
+   "rapid_time_seconds": 9.81,
+   "cutting_time_seconds": 198.61,
+   "tool_change_time_seconds": 12.0,
+   "positioning_time_seconds": 42.5,
+   "total_cycle_time_seconds": 262.92,
+   "timed_feed_length_mm": 225.9,
+   "timed_cycle_depth_mm": 34.28,
+   "untimed_feed_moves": 0
+  },
+  "dimension_fidelity": {
+   "segments": 9,
+   "segments_with_inputs": 9,
+   "lookups": 27,
+   "traced_to_plan": 27,
+   "defaulted": 0,
+   "cutting_words_checked": 9,
+   "unexplained_cutting_words": 0,
+   "passed": true,
+   "by_operation": {
+    "rough_turning": {
+     "segments": 3,
+     "lookups": 9,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "finish_turning": {
+     "segments": 3,
+     "lookups": 9,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "drilling": {
+     "segments": 2,
+     "lookups": 6,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    },
+    "counterboring": {
+     "segments": 1,
+     "lookups": 3,
+     "sources": {
+      "diameter": [
+       "Ø"
+      ],
+      "length": [
+       "L"
+      ],
+      "z_centre": [
+       "location Z"
+      ]
+     }
+    }
+   }
+  },
+  "serialiser_default_dimension_lookups": {
+   "lookups": 27,
+   "defaulted": 0,
+   "source": "dimension_fidelity.json"
+  },
+  "kefc_approved": 29,
+  "kefc_withheld_steps": [
+   30,
+   31,
+   32
+  ],
+  "handed_to_ral": 29,
+  "serialised_steps": [
+   3,
+   4,
+   5,
+   10,
+   11,
+   12,
+   17,
+   18,
+   24
+  ],
+  "ral_accounting": {
+   "handed": 29,
+   "serialised": 9,
+   "refused": 20,
+   "serialised_steps": [
+    3,
+    4,
+    5,
+    10,
+    11,
+    12,
+    17,
+    18,
+    24
+   ],
+   "refused_steps": [
+    1,
+    2,
+    6,
+    7,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    19,
+    20,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "unrecorded_refusals": [],
+   "passed": true,
+   "problems": []
+  },
+  "serialised_segments": 9,
+  "ral_refused": {
+   "count": 20,
+   "steps": [
+    1,
+    2,
+    6,
+    7,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    19,
+    20,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "by_operation": {
+    "chamfering": 4,
+    "drilling": 5,
+    "facing": 2,
+    "finish_turning": 4,
+    "grooving": 1,
+    "rough_turning": 4
+   },
+   "by_kind": {
+    "missing_inputs": 20
+   },
+   "records": [
+    {
+     "step_number": 1,
+     "operation": "facing",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0007"
+    },
+    {
+     "step_number": 2,
+     "operation": "facing",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0008"
+    },
+    {
+     "step_number": 6,
+     "operation": "rough_turning",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0009"
+    },
+    {
+     "step_number": 7,
+     "operation": "rough_turning",
+     "feature_id": 15,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0010"
+    },
+    {
+     "step_number": 8,
+     "operation": "rough_turning",
+     "feature_id": 16,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0011"
+    },
+    {
+     "step_number": 9,
+     "operation": "rough_turning",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0012"
+    },
+    {
+     "step_number": 13,
+     "operation": "finish_turning",
+     "feature_id": 10,
+     "feature_type": "Boss",
+     "feature_dimensions": {
+      "W": 8.0
+     },
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0013"
+    },
+    {
+     "step_number": 14,
+     "operation": "finish_turning",
+     "feature_id": 15,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0014"
+    },
+    {
+     "step_number": 15,
+     "operation": "finish_turning",
+     "feature_id": 16,
+     "feature_type": "Cylinder",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0015"
+    },
+    {
+     "step_number": 16,
+     "operation": "finish_turning",
+     "feature_id": 18,
+     "feature_type": "Boss",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0016"
+    },
+    {
+     "step_number": 19,
+     "operation": "drilling",
+     "feature_id": 11,
+     "feature_type": "Through Hole",
+     "feature_dimensions": {
+      "Ø": 8.0
+     },
+     "missing_inputs": [
+      "axial length (L or length)",
+      "an on-axis position (location X=0.0, Y=15.0; off-axis axial features need C-axis indexing, not declared in RALTurningProfile)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0017"
+    },
+    {
+     "step_number": 20,
+     "operation": "drilling",
+     "feature_id": 12,
+     "feature_type": "Through Hole",
+     "feature_dimensions": {
+      "Ø": 8.0
+     },
+     "missing_inputs": [
+      "axial length (L or length)",
+      "an on-axis position (location X=0.0, Y=15.0; off-axis axial features need C-axis indexing, not declared in RALTurningProfile)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0018"
+    },
+    {
+     "step_number": 21,
+     "operation": "drilling",
+     "feature_id": 19,
+     "feature_type": "Hole",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0019"
+    },
+    {
+     "step_number": 22,
+     "operation": "drilling",
+     "feature_id": 20,
+     "feature_type": "Hole",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0020"
+    },
+    {
+     "step_number": 23,
+     "operation": "drilling",
+     "feature_id": 21,
+     "feature_type": "Hole",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "diameter (Ø or diameter or R or radius)",
+      "axial length (L or length)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0021"
+    },
+    {
+     "step_number": 25,
+     "operation": "chamfering",
+     "feature_id": 2,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.95,
+      "L": 0.5
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0022"
+    },
+    {
+     "step_number": 26,
+     "operation": "chamfering",
+     "feature_id": 4,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.0,
+      "L": 0.75
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0023"
+    },
+    {
+     "step_number": 27,
+     "operation": "chamfering",
+     "feature_id": 6,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 24.0,
+      "L": 1.0
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0024"
+    },
+    {
+     "step_number": 28,
+     "operation": "chamfering",
+     "feature_id": 9,
+     "feature_type": "Chamfer",
+     "feature_dimensions": {
+      "Ø": 12.2,
+      "L": 3.3
+     },
+     "missing_inputs": [
+      "chamfer angle (angle or chamfer_angle)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0025"
+    },
+    {
+     "step_number": 29,
+     "operation": "grooving",
+     "feature_id": 17,
+     "feature_type": "Groove",
+     "feature_dimensions": {},
+     "missing_inputs": [
+      "outer diameter (one of outer_diameter)",
+      "groove-bottom diameter (one of groove_bottom_diameter, bottom_diameter, or a radial depth under groove_depth, depth)"
+     ],
+     "kefc_validation_status": "auto_approved",
+     "request_id": "evr_0026"
+    }
+   ]
+  },
+  "kefc_gate_sets": null
+ },
+ "_tests": {
+  "passed": 90,
+  "failed": 0,
+  "pytest_reported_s": 123.16
+ }
+}

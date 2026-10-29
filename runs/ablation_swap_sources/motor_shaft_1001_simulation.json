@@ -1,0 +1,162 @@
+{
+  "simulation_timestamp": "2026-10-24T17:47:46.992556",
+  "machine_id": "cnc_lathe",
+  "material_id": "steel_1045",
+  "workpiece": {
+    "stock_diameter_mm": 80.0,
+    "stock_length_mm": 200.0
+  },
+  "basic_simulation": {
+    "total_travel_distance": 315.77,
+    "rapid_distance": 280.59,
+    "cut_distance": 35.18,
+    "tool_changes": 2,
+    "blocks_executed": 41,
+    "cycle_count": 3,
+    "final_position": {
+      "x": 0.0,
+      "z": 0.0
+    }
+  },
+  "collision_detection": {
+    "total_collisions": 0,
+    "by_type": {
+      "tool_workpiece": 0,
+      "tool_tool": 0,
+      "boundary": 0
+    },
+    "by_severity": {
+      "critical": 0,
+      "error": 0,
+      "warning": 0
+    },
+    "collisions": []
+  },
+  "cutting_time": {
+    "rapid_time_seconds": 2.94,
+    "cutting_time_seconds": 17.05,
+    "tool_change_time_seconds": 6.0,
+    "positioning_time_seconds": 20.5,
+    "total_cycle_time_seconds": 46.5,
+    "total_cycle_time_minutes": 0.77,
+    "timed_feed_length_mm": 0.0,
+    "timed_cycle_depth_mm": 35.18,
+    "untimed_feed_moves": 0
+  },
+  "chip_load_analysis": {
+    "operations_analyzed": 3,
+    "average_mrr": 25217.961999999996,
+    "max_mrr": 64275.17399999996,
+    "average_cutting_force": 620.0,
+    "average_cutting_power": 0.24315927138784998,
+    "force_power_model": {
+      "specific_cutting_force_kc_N_per_mm2": 2000.0,
+      "kc_status": "nominal handbook-order constant, uncalibrated, no chip-thickness correction",
+      "force_units": "N",
+      "power_units": "kW",
+      "cutting_speed_units": "m/min",
+      "models": [
+        "drilling_per_lip: Fc = kc*(D/2)*(f/2); P = Fc*vc/60000 (= kc*D*f*vc/240000)",
+        "single_point: Fc = kc*ap*f; P = Fc*vc/60000"
+      ],
+      "inputs_source": "plan step parameter package",
+      "moves_with_force": 3,
+      "moves_with_power": 3,
+      "max_cutting_force": 720.0,
+      "max_cutting_power": 0.31667253948185115
+    },
+    "parameters": [
+      {
+        "operation_type": "DrillingOp",
+        "feed_rate_mm_per_rev": 0.15,
+        "spindle_speed_rpm": 900.0,
+        "cutting_speed_m_per_min": 0.0,
+        "depth_of_cut_mm": 21.82,
+        "width_of_cut_mm": 21.82,
+        "chip_load_mm_per_tooth": 0.01,
+        "material_removal_rate_mm3_per_min": 64275.17,
+        "cutting_time_seconds": 581.87,
+        "cutting_force_N": 510.0,
+        "cutting_power_kW": 0.1634,
+        "force_model": "drilling_per_lip: Fc = kc*(D/2)*(f/2); P = Fc*vc/60000 (= kc*D*f*vc/240000)",
+        "force_inputs": {
+          "plan_step_number": 18,
+          "feed_mm_per_rev": 0.15,
+          "depth_of_cut_mm": 5.0,
+          "diameter_mm": 6.800000000000001,
+          "spindle_speed_rpm": 900.0,
+          "cutting_speed_m_per_min": 19.227
+        }
+      },
+      {
+        "operation_type": "DrillingOp",
+        "feed_rate_mm_per_rev": 0.15,
+        "spindle_speed_rpm": 900.0,
+        "cutting_speed_m_per_min": 0.0,
+        "depth_of_cut_mm": 6.68,
+        "width_of_cut_mm": 6.68,
+        "chip_load_mm_per_tooth": 0.01,
+        "material_removal_rate_mm3_per_min": 6024.02,
+        "cutting_time_seconds": 178.13,
+        "cutting_force_N": 630.0,
+        "cutting_power_kW": 0.2494,
+        "force_model": "drilling_per_lip: Fc = kc*(D/2)*(f/2); P = Fc*vc/60000 (= kc*D*f*vc/240000)",
+        "force_inputs": {
+          "plan_step_number": 19,
+          "feed_mm_per_rev": 0.15,
+          "depth_of_cut_mm": 5.0,
+          "diameter_mm": 8.4,
+          "spindle_speed_rpm": 900.0,
+          "cutting_speed_m_per_min": 23.75
+        }
+      },
+      {
+        "operation_type": "CounterboringOp",
+        "feed_rate_mm_per_rev": 0.12,
+        "spindle_speed_rpm": 1000.0,
+        "cutting_speed_m_per_min": 0.0,
+        "depth_of_cut_mm": 6.68,
+        "width_of_cut_mm": 6.68,
+        "chip_load_mm_per_tooth": 0.0072,
+        "material_removal_rate_mm3_per_min": 5354.69,
+        "cutting_time_seconds": 200.4,
+        "cutting_force_N": 720.0,
+        "cutting_power_kW": 0.3167,
+        "force_model": "single_point: Fc = kc*ap*f; P = Fc*vc/60000",
+        "force_inputs": {
+          "plan_step_number": 25,
+          "feed_mm_per_rev": 0.12,
+          "depth_of_cut_mm": 3.0,
+          "diameter_mm": 8.4,
+          "spindle_speed_rpm": 1000.0,
+          "cutting_speed_m_per_min": 26.389
+        }
+      }
+    ]
+  },
+  "tool_wear": {
+    "drill_bit": {
+      "tool_id": "drill_bit",
+      "material_id": "steel_1045",
+      "cumulative_cutting_time_minutes": 12.67,
+      "cumulative_wear": 0.4484,
+      "wear_percentage": 44.84,
+      "nominal_tool_life_at_current_speed_minutes": Infinity,
+      "remaining_tool_life_minutes": 66.19,
+      "wear_status": "fair"
+    },
+    "counterbore_cutter": {
+      "tool_id": "counterbore_cutter",
+      "material_id": "steel_1045",
+      "cumulative_cutting_time_minutes": 3.34,
+      "cumulative_wear": 0.0905,
+      "wear_percentage": 9.05,
+      "nominal_tool_life_at_current_speed_minutes": Infinity,
+      "remaining_tool_life_minutes": 109.14,
+      "wear_status": "good"
+    }
+  },
+  "recommendations": [
+    "Simulation completed successfully. No issues detected."
+  ]
+}

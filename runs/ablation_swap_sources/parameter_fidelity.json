@@ -1,0 +1,13 @@
+{
+  "segments_checked": 3,
+  "spindle_match": 3,
+  "feed_match": 3,
+  "coolant_match": 3,
+  "segments_without_cutting_moves": 0,
+  "unmapped_segments": 0,
+  "mapping": [
+    "step_tag"
+  ],
+  "mismatches": [],
+  "passed": true
+}

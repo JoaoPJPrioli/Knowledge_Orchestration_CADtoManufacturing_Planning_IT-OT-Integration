@@ -1,0 +1,2883 @@
+[
+  {
+    "step_number": 1,
+    "operation": "facing",
+    "operation_name": "Facing",
+    "ontology_operation": "FacingOp",
+    "operation_selection_rule_id": "boss_requires_facing",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 10,
+    "feature_type": "Boss",
+    "feature_dimensions": {
+      "W": 8.0
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 15.0,
+      "Z": 143.5
+    },
+    "tool_id": "turning_insert_rough",
+    "ontology_tool": "TurningInsertRough",
+    "tool_selection_rule_id": "preferred_tool_selection",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.2,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "facing_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 10,
+          "feature_type": "Boss",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      },
+      "spindle_speed": {
+        "value": 800.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "facing_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 10,
+          "feature_type": "Boss",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      },
+      "depth_of_cut": {
+        "value": 1.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "facing_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 10,
+          "feature_type": "Boss",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "facing_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 10,
+          "feature_type": "Boss",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 2,
+    "operation": "facing",
+    "operation_name": "Facing",
+    "ontology_operation": "FacingOp",
+    "operation_selection_rule_id": "boss_requires_facing",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 18,
+    "feature_type": "Boss",
+    "feature_dimensions": {},
+    "feature_location": {
+      "X": -6.014,
+      "Y": -8.1,
+      "Z": 68.05
+    },
+    "tool_id": "turning_insert_rough",
+    "ontology_tool": "TurningInsertRough",
+    "tool_selection_rule_id": "preferred_tool_selection",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.2,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "facing_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 18,
+          "feature_type": "Boss",
+          "material": null,
+          "mapping_confidence": 0.6609360204797806
+        }
+      },
+      "spindle_speed": {
+        "value": 800.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "facing_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 18,
+          "feature_type": "Boss",
+          "material": null,
+          "mapping_confidence": 0.6609360204797806
+        }
+      },
+      "depth_of_cut": {
+        "value": 1.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "facing_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 18,
+          "feature_type": "Boss",
+          "material": null,
+          "mapping_confidence": 0.6609360204797806
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "facing_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 18,
+          "feature_type": "Boss",
+          "material": null,
+          "mapping_confidence": 0.6609360204797806
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 3,
+    "operation": "rough_turning",
+    "operation_name": "Rough Turning",
+    "ontology_operation": "RoughTurningOp",
+    "operation_selection_rule_id": "step_requires_rough_turning",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 1,
+    "feature_type": "Step",
+    "feature_dimensions": {
+      "L": 57.7,
+      "R": 12.475,
+      "\u00d8": 24.95
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 109.35
+    },
+    "tool_id": "turning_insert_rough",
+    "ontology_tool": "TurningInsertRough",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.25,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 1,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.6206136363636363
+        }
+      },
+      "spindle_speed": {
+        "value": 480.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 1,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.6206136363636363
+        }
+      },
+      "depth_of_cut": {
+        "value": 2.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 1,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.6206136363636363
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 1,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.6206136363636363
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "serialised"
+  },
+  {
+    "step_number": 4,
+    "operation": "rough_turning",
+    "operation_name": "Rough Turning",
+    "ontology_operation": "RoughTurningOp",
+    "operation_selection_rule_id": "step_requires_rough_turning",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 3,
+    "feature_type": "Step",
+    "feature_dimensions": {
+      "\u00d8": 23.6,
+      "L": 1.75
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 119.375
+    },
+    "tool_id": "turning_insert_rough",
+    "ontology_tool": "TurningInsertRough",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.25,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 3,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "spindle_speed": {
+        "value": 480.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 3,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "depth_of_cut": {
+        "value": 2.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 3,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 3,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "serialised"
+  },
+  {
+    "step_number": 5,
+    "operation": "rough_turning",
+    "operation_name": "Rough Turning",
+    "ontology_operation": "RoughTurningOp",
+    "operation_selection_rule_id": "step_requires_rough_turning",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 5,
+    "feature_type": "Step",
+    "feature_dimensions": {
+      "\u00d8": 24.0,
+      "L": 47.5
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 144.75
+    },
+    "tool_id": "turning_insert_rough",
+    "ontology_tool": "TurningInsertRough",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.25,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 5,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "spindle_speed": {
+        "value": 480.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 5,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "depth_of_cut": {
+        "value": 2.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 5,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 5,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "serialised"
+  },
+  {
+    "step_number": 6,
+    "operation": "rough_turning",
+    "operation_name": "Rough Turning",
+    "ontology_operation": "RoughTurningOp",
+    "operation_selection_rule_id": "boss_requires_rough_turning",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 10,
+    "feature_type": "Boss",
+    "feature_dimensions": {
+      "W": 8.0
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 15.0,
+      "Z": 143.5
+    },
+    "tool_id": "turning_insert_rough",
+    "ontology_tool": "TurningInsertRough",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.25,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 10,
+          "feature_type": "Boss",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "spindle_speed": {
+        "value": 480.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 10,
+          "feature_type": "Boss",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "depth_of_cut": {
+        "value": 2.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 10,
+          "feature_type": "Boss",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 10,
+          "feature_type": "Boss",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 7,
+    "operation": "rough_turning",
+    "operation_name": "Rough Turning",
+    "ontology_operation": "RoughTurningOp",
+    "operation_selection_rule_id": "cylinder_requires_rough_turning",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 15,
+    "feature_type": "Cylinder",
+    "feature_dimensions": {},
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 61.8
+    },
+    "tool_id": "turning_insert_rough",
+    "ontology_tool": "TurningInsertRough",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.25,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 15,
+          "feature_type": "Cylinder",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.786
+        }
+      },
+      "spindle_speed": {
+        "value": 480.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 15,
+          "feature_type": "Cylinder",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.786
+        }
+      },
+      "depth_of_cut": {
+        "value": 2.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 15,
+          "feature_type": "Cylinder",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.786
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 15,
+          "feature_type": "Cylinder",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.786
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 8,
+    "operation": "rough_turning",
+    "operation_name": "Rough Turning",
+    "ontology_operation": "RoughTurningOp",
+    "operation_selection_rule_id": "cylinder_requires_rough_turning",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 16,
+    "feature_type": "Cylinder",
+    "feature_dimensions": {},
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 18.75
+    },
+    "tool_id": "turning_insert_rough",
+    "ontology_tool": "TurningInsertRough",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.25,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 16,
+          "feature_type": "Cylinder",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.8
+        }
+      },
+      "spindle_speed": {
+        "value": 480.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 16,
+          "feature_type": "Cylinder",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.8
+        }
+      },
+      "depth_of_cut": {
+        "value": 2.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 16,
+          "feature_type": "Cylinder",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.8
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 16,
+          "feature_type": "Cylinder",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.8
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 9,
+    "operation": "rough_turning",
+    "operation_name": "Rough Turning",
+    "ontology_operation": "RoughTurningOp",
+    "operation_selection_rule_id": "boss_requires_rough_turning",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 18,
+    "feature_type": "Boss",
+    "feature_dimensions": {},
+    "feature_location": {
+      "X": -6.014,
+      "Y": -8.1,
+      "Z": 68.05
+    },
+    "tool_id": "turning_insert_rough",
+    "ontology_tool": "TurningInsertRough",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.25,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 18,
+          "feature_type": "Boss",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.6609360204797806
+        }
+      },
+      "spindle_speed": {
+        "value": 480.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 18,
+          "feature_type": "Boss",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.6609360204797806
+        }
+      },
+      "depth_of_cut": {
+        "value": 2.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 18,
+          "feature_type": "Boss",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.6609360204797806
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_roughturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 18,
+          "feature_type": "Boss",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.6609360204797806
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 10,
+    "operation": "finish_turning",
+    "operation_name": "Finish Turning",
+    "ontology_operation": "FinishTurningOp",
+    "operation_selection_rule_id": "step_requires_finish_turning",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 1,
+    "feature_type": "Step",
+    "feature_dimensions": {
+      "L": 57.7,
+      "R": 12.475,
+      "\u00d8": 24.95
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 109.35
+    },
+    "tool_id": "turning_insert_finish",
+    "ontology_tool": "TurningInsertFinish",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.06,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 1,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.6206136363636363
+        }
+      },
+      "spindle_speed": {
+        "value": 900.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 1,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.6206136363636363
+        }
+      },
+      "depth_of_cut": {
+        "value": 0.2,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 1,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.6206136363636363
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 1,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.6206136363636363
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "serialised"
+  },
+  {
+    "step_number": 11,
+    "operation": "finish_turning",
+    "operation_name": "Finish Turning",
+    "ontology_operation": "FinishTurningOp",
+    "operation_selection_rule_id": "step_requires_finish_turning",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 3,
+    "feature_type": "Step",
+    "feature_dimensions": {
+      "\u00d8": 23.6,
+      "L": 1.75
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 119.375
+    },
+    "tool_id": "turning_insert_finish",
+    "ontology_tool": "TurningInsertFinish",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.06,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 3,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "spindle_speed": {
+        "value": 900.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 3,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "depth_of_cut": {
+        "value": 0.2,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 3,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 3,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "serialised"
+  },
+  {
+    "step_number": 12,
+    "operation": "finish_turning",
+    "operation_name": "Finish Turning",
+    "ontology_operation": "FinishTurningOp",
+    "operation_selection_rule_id": "step_requires_finish_turning",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 5,
+    "feature_type": "Step",
+    "feature_dimensions": {
+      "\u00d8": 24.0,
+      "L": 47.5
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 144.75
+    },
+    "tool_id": "turning_insert_finish",
+    "ontology_tool": "TurningInsertFinish",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.06,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 5,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "spindle_speed": {
+        "value": 900.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 5,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "depth_of_cut": {
+        "value": 0.2,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 5,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 5,
+          "feature_type": "Step",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "serialised"
+  },
+  {
+    "step_number": 13,
+    "operation": "finish_turning",
+    "operation_name": "Finish Turning",
+    "ontology_operation": "FinishTurningOp",
+    "operation_selection_rule_id": "boss_requires_finish_turning",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 10,
+    "feature_type": "Boss",
+    "feature_dimensions": {
+      "W": 8.0
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 15.0,
+      "Z": 143.5
+    },
+    "tool_id": "turning_insert_finish",
+    "ontology_tool": "TurningInsertFinish",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.06,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 10,
+          "feature_type": "Boss",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "spindle_speed": {
+        "value": 900.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 10,
+          "feature_type": "Boss",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "depth_of_cut": {
+        "value": 0.2,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 10,
+          "feature_type": "Boss",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 10,
+          "feature_type": "Boss",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 14,
+    "operation": "finish_turning",
+    "operation_name": "Finish Turning",
+    "ontology_operation": "FinishTurningOp",
+    "operation_selection_rule_id": "cylinder_requires_finish_turning",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 15,
+    "feature_type": "Cylinder",
+    "feature_dimensions": {},
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 61.8
+    },
+    "tool_id": "turning_insert_finish",
+    "ontology_tool": "TurningInsertFinish",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.06,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 15,
+          "feature_type": "Cylinder",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.786
+        }
+      },
+      "spindle_speed": {
+        "value": 900.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 15,
+          "feature_type": "Cylinder",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.786
+        }
+      },
+      "depth_of_cut": {
+        "value": 0.2,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 15,
+          "feature_type": "Cylinder",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.786
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 15,
+          "feature_type": "Cylinder",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.786
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 15,
+    "operation": "finish_turning",
+    "operation_name": "Finish Turning",
+    "ontology_operation": "FinishTurningOp",
+    "operation_selection_rule_id": "cylinder_requires_finish_turning",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 16,
+    "feature_type": "Cylinder",
+    "feature_dimensions": {},
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 18.75
+    },
+    "tool_id": "turning_insert_finish",
+    "ontology_tool": "TurningInsertFinish",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.06,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 16,
+          "feature_type": "Cylinder",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.8
+        }
+      },
+      "spindle_speed": {
+        "value": 900.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 16,
+          "feature_type": "Cylinder",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.8
+        }
+      },
+      "depth_of_cut": {
+        "value": 0.2,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 16,
+          "feature_type": "Cylinder",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.8
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 16,
+          "feature_type": "Cylinder",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.8
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 16,
+    "operation": "finish_turning",
+    "operation_name": "Finish Turning",
+    "ontology_operation": "FinishTurningOp",
+    "operation_selection_rule_id": "boss_requires_finish_turning",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 18,
+    "feature_type": "Boss",
+    "feature_dimensions": {},
+    "feature_location": {
+      "X": -6.014,
+      "Y": -8.1,
+      "Z": 68.05
+    },
+    "tool_id": "turning_insert_finish",
+    "ontology_tool": "TurningInsertFinish",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.06,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 18,
+          "feature_type": "Boss",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.6609360204797806
+        }
+      },
+      "spindle_speed": {
+        "value": 900.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 18,
+          "feature_type": "Boss",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.6609360204797806
+        }
+      },
+      "depth_of_cut": {
+        "value": 0.2,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 18,
+          "feature_type": "Boss",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.6609360204797806
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_finishturning_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 18,
+          "feature_type": "Boss",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.6609360204797806
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 17,
+    "operation": "drilling",
+    "operation_name": "Drilling",
+    "ontology_operation": "DrillingOp",
+    "operation_selection_rule_id": "blindhole_requires_drilling",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 7,
+    "feature_type": "Blind Hole",
+    "feature_dimensions": {
+      "L": 20.23,
+      "W": 6.8,
+      "R": 3.4,
+      "\u00d8": 6.800000000000001
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 162.5
+    },
+    "tool_id": "drill_bit",
+    "ontology_tool": "DrillBit",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.15,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 7,
+          "feature_type": "Blind Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.9902612826603325
+        }
+      },
+      "spindle_speed": {
+        "value": 900.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 7,
+          "feature_type": "Blind Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.9902612826603325
+        }
+      },
+      "depth_of_cut": {
+        "value": 5.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 7,
+          "feature_type": "Blind Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.9902612826603325
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 7,
+          "feature_type": "Blind Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.9902612826603325
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "serialised"
+  },
+  {
+    "step_number": 18,
+    "operation": "drilling",
+    "operation_name": "Drilling",
+    "ontology_operation": "DrillingOp",
+    "operation_selection_rule_id": "counterbore_requires_drilling",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 8,
+    "feature_type": "Counterbore",
+    "feature_dimensions": {
+      "L": 4.0200000000000005,
+      "W": 8.4,
+      "R": 4.2,
+      "\u00d8": 8.4
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 166.51999999999998
+    },
+    "tool_id": "drill_bit",
+    "ontology_tool": "DrillBit",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.15,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 8,
+          "feature_type": "Counterbore",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.9186
+        }
+      },
+      "spindle_speed": {
+        "value": 900.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 8,
+          "feature_type": "Counterbore",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.9186
+        }
+      },
+      "depth_of_cut": {
+        "value": 5.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 8,
+          "feature_type": "Counterbore",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.9186
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 8,
+          "feature_type": "Counterbore",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.9186
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "serialised"
+  },
+  {
+    "step_number": 19,
+    "operation": "drilling",
+    "operation_name": "Drilling",
+    "ontology_operation": "DrillingOp",
+    "operation_selection_rule_id": "throughhole_requires_drilling",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 11,
+    "feature_type": "Through Hole",
+    "feature_dimensions": {
+      "\u00d8": 8.0
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 15.0,
+      "Z": 159.5
+    },
+    "tool_id": "drill_bit",
+    "ontology_tool": "DrillBit",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.15,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 11,
+          "feature_type": "Through Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "spindle_speed": {
+        "value": 900.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 11,
+          "feature_type": "Through Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "depth_of_cut": {
+        "value": 5.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 11,
+          "feature_type": "Through Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 11,
+          "feature_type": "Through Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 20,
+    "operation": "drilling",
+    "operation_name": "Drilling",
+    "ontology_operation": "DrillingOp",
+    "operation_selection_rule_id": "throughhole_requires_drilling",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 12,
+    "feature_type": "Through Hole",
+    "feature_dimensions": {
+      "\u00d8": 8.0
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 15.0,
+      "Z": 127.5
+    },
+    "tool_id": "drill_bit",
+    "ontology_tool": "DrillBit",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.15,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 12,
+          "feature_type": "Through Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "spindle_speed": {
+        "value": 900.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 12,
+          "feature_type": "Through Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "depth_of_cut": {
+        "value": 5.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 12,
+          "feature_type": "Through Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 12,
+          "feature_type": "Through Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 21,
+    "operation": "drilling",
+    "operation_name": "Drilling",
+    "ontology_operation": "DrillingOp",
+    "operation_selection_rule_id": "hole_requires_drilling",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 19,
+    "feature_type": "Hole",
+    "feature_dimensions": {},
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 42.525
+    },
+    "tool_id": "drill_bit",
+    "ontology_tool": "DrillBit",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.15,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 19,
+          "feature_type": "Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.673
+        }
+      },
+      "spindle_speed": {
+        "value": 900.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 19,
+          "feature_type": "Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.673
+        }
+      },
+      "depth_of_cut": {
+        "value": 5.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 19,
+          "feature_type": "Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.673
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 19,
+          "feature_type": "Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.673
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 22,
+    "operation": "drilling",
+    "operation_name": "Drilling",
+    "ontology_operation": "DrillingOp",
+    "operation_selection_rule_id": "hole_requires_drilling",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 20,
+    "feature_type": "Hole",
+    "feature_dimensions": {},
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 42.875
+    },
+    "tool_id": "drill_bit",
+    "ontology_tool": "DrillBit",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.15,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 20,
+          "feature_type": "Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "spindle_speed": {
+        "value": 900.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 20,
+          "feature_type": "Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "depth_of_cut": {
+        "value": 5.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 20,
+          "feature_type": "Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 20,
+          "feature_type": "Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 23,
+    "operation": "drilling",
+    "operation_name": "Drilling",
+    "ontology_operation": "DrillingOp",
+    "operation_selection_rule_id": "hole_requires_drilling",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 21,
+    "feature_type": "Hole",
+    "feature_dimensions": {},
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 42.875
+    },
+    "tool_id": "drill_bit",
+    "ontology_tool": "DrillBit",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.15,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 21,
+          "feature_type": "Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "spindle_speed": {
+        "value": 900.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 21,
+          "feature_type": "Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "depth_of_cut": {
+        "value": 5.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 21,
+          "feature_type": "Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_drilling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 21,
+          "feature_type": "Hole",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 1.0
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 24,
+    "operation": "counterboring",
+    "operation_name": "Counterboring",
+    "ontology_operation": "CounterboringOp",
+    "operation_selection_rule_id": "counterbore_requires_counterboring",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 8,
+    "feature_type": "Counterbore",
+    "feature_dimensions": {
+      "L": 4.0200000000000005,
+      "W": 8.4,
+      "R": 4.2,
+      "\u00d8": 8.4
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 166.51999999999998
+    },
+    "tool_id": "counterbore_cutter",
+    "ontology_tool": "CounterboreCutter",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.12,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "counterboring_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 8,
+          "feature_type": "Counterbore",
+          "material": null,
+          "mapping_confidence": 0.9186
+        }
+      },
+      "spindle_speed": {
+        "value": 1000.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "counterboring_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 8,
+          "feature_type": "Counterbore",
+          "material": null,
+          "mapping_confidence": 0.9186
+        }
+      },
+      "depth_of_cut": {
+        "value": 3.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "counterboring_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 8,
+          "feature_type": "Counterbore",
+          "material": null,
+          "mapping_confidence": 0.9186
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "counterboring_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 8,
+          "feature_type": "Counterbore",
+          "material": null,
+          "mapping_confidence": 0.9186
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "serialised"
+  },
+  {
+    "step_number": 25,
+    "operation": "chamfering",
+    "operation_name": "Chamfering",
+    "ontology_operation": "ChamferingOp",
+    "operation_selection_rule_id": "chamfer_requires_chamfering",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 2,
+    "feature_type": "Chamfer",
+    "feature_dimensions": {
+      "\u00d8": 24.95,
+      "L": 0.5
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 118.25
+    },
+    "tool_id": "chamfer_mill",
+    "ontology_tool": "ChamferMill",
+    "tool_selection_rule_id": "preferred_tool_selection",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.1,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "chamfering_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 2,
+          "feature_type": "Chamfer",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      },
+      "spindle_speed": {
+        "value": 1200.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "chamfering_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 2,
+          "feature_type": "Chamfer",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      },
+      "depth_of_cut": {
+        "value": 1.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "chamfering_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 2,
+          "feature_type": "Chamfer",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "chamfering_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 2,
+          "feature_type": "Chamfer",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 26,
+    "operation": "chamfering",
+    "operation_name": "Chamfering",
+    "ontology_operation": "ChamferingOp",
+    "operation_selection_rule_id": "chamfer_requires_chamfering",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 4,
+    "feature_type": "Chamfer",
+    "feature_dimensions": {
+      "\u00d8": 24.0,
+      "L": 0.75
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 120.625
+    },
+    "tool_id": "chamfer_mill",
+    "ontology_tool": "ChamferMill",
+    "tool_selection_rule_id": "preferred_tool_selection",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.1,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "chamfering_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 4,
+          "feature_type": "Chamfer",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      },
+      "spindle_speed": {
+        "value": 1200.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "chamfering_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 4,
+          "feature_type": "Chamfer",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      },
+      "depth_of_cut": {
+        "value": 1.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "chamfering_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 4,
+          "feature_type": "Chamfer",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "chamfering_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 4,
+          "feature_type": "Chamfer",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 27,
+    "operation": "chamfering",
+    "operation_name": "Chamfering",
+    "ontology_operation": "ChamferingOp",
+    "operation_selection_rule_id": "chamfer_requires_chamfering",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 6,
+    "feature_type": "Chamfer",
+    "feature_dimensions": {
+      "\u00d8": 24.0,
+      "L": 1.0
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 168.0
+    },
+    "tool_id": "chamfer_mill",
+    "ontology_tool": "ChamferMill",
+    "tool_selection_rule_id": "preferred_tool_selection",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.1,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "chamfering_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 6,
+          "feature_type": "Chamfer",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      },
+      "spindle_speed": {
+        "value": 1200.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "chamfering_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 6,
+          "feature_type": "Chamfer",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      },
+      "depth_of_cut": {
+        "value": 1.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "chamfering_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 6,
+          "feature_type": "Chamfer",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "chamfering_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 6,
+          "feature_type": "Chamfer",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 28,
+    "operation": "chamfering",
+    "operation_name": "Chamfering",
+    "ontology_operation": "ChamferingOp",
+    "operation_selection_rule_id": "chamfer_requires_chamfering",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 9,
+    "feature_type": "Chamfer",
+    "feature_dimensions": {
+      "\u00d8": 12.2,
+      "L": 3.3
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 168.5
+    },
+    "tool_id": "chamfer_mill",
+    "ontology_tool": "ChamferMill",
+    "tool_selection_rule_id": "preferred_tool_selection",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.1,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "chamfering_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 9,
+          "feature_type": "Chamfer",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      },
+      "spindle_speed": {
+        "value": 1200.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "chamfering_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 9,
+          "feature_type": "Chamfer",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      },
+      "depth_of_cut": {
+        "value": 1.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "chamfering_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 9,
+          "feature_type": "Chamfer",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "chamfering_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 9,
+          "feature_type": "Chamfer",
+          "material": null,
+          "mapping_confidence": 1.0
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 29,
+    "operation": "grooving",
+    "operation_name": "Grooving",
+    "ontology_operation": "GroovingOp",
+    "operation_selection_rule_id": "groove_requires_grooving",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 17,
+    "feature_type": "Groove",
+    "feature_dimensions": {},
+    "feature_location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 38.025
+    },
+    "tool_id": "grooving_tool",
+    "ontology_tool": "GroovingTool",
+    "tool_selection_rule_id": "feature_tool_from_operation",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.08,
+        "unit": "mm/rev",
+        "source": "swrl_rule",
+        "rule_id": "grooving_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 17,
+          "feature_type": "Groove",
+          "material": null,
+          "mapping_confidence": 0.793
+        }
+      },
+      "spindle_speed": {
+        "value": 600.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "grooving_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 17,
+          "feature_type": "Groove",
+          "material": null,
+          "mapping_confidence": 0.793
+        }
+      },
+      "depth_of_cut": {
+        "value": 0.5,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "grooving_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 17,
+          "feature_type": "Groove",
+          "material": null,
+          "mapping_confidence": 0.793
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "grooving_default_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 17,
+          "feature_type": "Groove",
+          "material": null,
+          "mapping_confidence": 0.793
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "auto_approved",
+    "ral_status": "refused"
+  },
+  {
+    "step_number": 30,
+    "operation": "milling",
+    "operation_name": "Milling",
+    "ontology_operation": "MillingOp",
+    "operation_selection_rule_id": "slot_requires_milling",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 13,
+    "feature_type": "Slot",
+    "feature_dimensions": {
+      "\u00d8": 8.0,
+      "R": 4.0,
+      "W": 8.0
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 15.0,
+      "Z": 159.5
+    },
+    "tool_id": "end_mill",
+    "ontology_tool": "EndMill",
+    "tool_selection_rule_id": "preferred_tool_selection",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.05,
+        "unit": "mm/tooth",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_milling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 13,
+          "feature_type": "Slot",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.4
+        }
+      },
+      "spindle_speed": {
+        "value": 1200.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_milling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 13,
+          "feature_type": "Slot",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.4
+        }
+      },
+      "depth_of_cut": {
+        "value": 1.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_milling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 13,
+          "feature_type": "Slot",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.4
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_milling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 13,
+          "feature_type": "Slot",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.4
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "requires_review",
+    "ral_status": "not_handed_to_ral"
+  },
+  {
+    "step_number": 31,
+    "operation": "milling",
+    "operation_name": "Milling",
+    "ontology_operation": "MillingOp",
+    "operation_selection_rule_id": "slot_requires_milling",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 14,
+    "feature_type": "Slot",
+    "feature_dimensions": {
+      "\u00d8": 8.0,
+      "R": 4.0,
+      "W": 8.0
+    },
+    "feature_location": {
+      "X": 0.0,
+      "Y": 15.0,
+      "Z": 127.5
+    },
+    "tool_id": "end_mill",
+    "ontology_tool": "EndMill",
+    "tool_selection_rule_id": "preferred_tool_selection",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.05,
+        "unit": "mm/tooth",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_milling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 14,
+          "feature_type": "Slot",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.4
+        }
+      },
+      "spindle_speed": {
+        "value": 1200.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_milling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 14,
+          "feature_type": "Slot",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.4
+        }
+      },
+      "depth_of_cut": {
+        "value": 1.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_milling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 14,
+          "feature_type": "Slot",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.4
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_milling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 14,
+          "feature_type": "Slot",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.4
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "requires_review",
+    "ral_status": "not_handed_to_ral"
+  },
+  {
+    "step_number": 32,
+    "operation": "milling",
+    "operation_name": "Milling",
+    "ontology_operation": "MillingOp",
+    "operation_selection_rule_id": "slot_requires_milling",
+    "operation_ontology_sources": [
+      "http://onto.brep.org/manufacturing/machining-process#",
+      "http://onto.brep.org/manufacturing/motor-shaft-case#"
+    ],
+    "feature_id": 22,
+    "feature_type": "Slot",
+    "feature_dimensions": {},
+    "feature_location": {
+      "X": 11.0,
+      "Y": 0.0,
+      "Z": 60.75
+    },
+    "tool_id": "end_mill",
+    "ontology_tool": "EndMill",
+    "tool_selection_rule_id": "preferred_tool_selection",
+    "parameters": {
+      "feed_rate": {
+        "value": 0.05,
+        "unit": "mm/tooth",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_milling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 22,
+          "feature_type": "Slot",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.4
+        }
+      },
+      "spindle_speed": {
+        "value": 1200.0,
+        "unit": "RPM",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_milling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 22,
+          "feature_type": "Slot",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.4
+        }
+      },
+      "depth_of_cut": {
+        "value": 1.0,
+        "unit": "mm",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_milling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 22,
+          "feature_type": "Slot",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.4
+        }
+      },
+      "coolant": {
+        "value": true,
+        "unit": "bool",
+        "source": "swrl_rule",
+        "rule_id": "aisi1045_milling_params",
+        "ontology_sources": [
+          "http://onto.brep.org/manufacturing/cutting-parameters#"
+        ],
+        "input_facts": {
+          "feature_id": 22,
+          "feature_type": "Slot",
+          "material": "AISI1045Steel",
+          "mapping_confidence": 0.4
+        }
+      }
+    },
+    "material": "steel_1045",
+    "machine": "cnc_lathe",
+    "validation_status": "requires_review",
+    "ral_status": "not_handed_to_ral"
+  }
+]

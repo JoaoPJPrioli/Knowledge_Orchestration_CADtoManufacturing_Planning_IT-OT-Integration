@@ -1,0 +1,689 @@
+{
+  "accounting": {
+    "handed": 32,
+    "serialised": 9,
+    "refused": 23,
+    "serialised_steps": [
+      3,
+      4,
+      5,
+      10,
+      11,
+      12,
+      17,
+      18,
+      24
+    ],
+    "refused_steps": [
+      1,
+      2,
+      6,
+      7,
+      8,
+      9,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21,
+      22,
+      23,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "unrecorded_refusals": [],
+    "passed": true,
+    "problems": []
+  },
+  "refusals": [
+    {
+      "step_number": 1,
+      "operation": "facing",
+      "ontology_operation": "FacingOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 10,
+        "feature_type": "Boss",
+        "feature_dimensions": {
+          "W": 8.0
+        },
+        "feature_location": {
+          "X": 0.0,
+          "Y": 15.0,
+          "Z": 143.5
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0012"
+    },
+    {
+      "step_number": 2,
+      "operation": "facing",
+      "ontology_operation": "FacingOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 18,
+        "feature_type": "Boss",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": -6.014,
+          "Y": -8.1,
+          "Z": 68.05
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0013"
+    },
+    {
+      "step_number": 6,
+      "operation": "rough_turning",
+      "ontology_operation": "RoughTurningOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 10,
+        "feature_type": "Boss",
+        "feature_dimensions": {
+          "W": 8.0
+        },
+        "feature_location": {
+          "X": 0.0,
+          "Y": 15.0,
+          "Z": 143.5
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0014"
+    },
+    {
+      "step_number": 7,
+      "operation": "rough_turning",
+      "ontology_operation": "RoughTurningOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 15,
+        "feature_type": "Cylinder",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 61.8
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0015"
+    },
+    {
+      "step_number": 8,
+      "operation": "rough_turning",
+      "ontology_operation": "RoughTurningOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 16,
+        "feature_type": "Cylinder",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 18.75
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0016"
+    },
+    {
+      "step_number": 9,
+      "operation": "rough_turning",
+      "ontology_operation": "RoughTurningOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 18,
+        "feature_type": "Boss",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": -6.014,
+          "Y": -8.1,
+          "Z": 68.05
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0017"
+    },
+    {
+      "step_number": 13,
+      "operation": "finish_turning",
+      "ontology_operation": "FinishTurningOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 10,
+        "feature_type": "Boss",
+        "feature_dimensions": {
+          "W": 8.0
+        },
+        "feature_location": {
+          "X": 0.0,
+          "Y": 15.0,
+          "Z": 143.5
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0018"
+    },
+    {
+      "step_number": 14,
+      "operation": "finish_turning",
+      "ontology_operation": "FinishTurningOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 15,
+        "feature_type": "Cylinder",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 61.8
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0019"
+    },
+    {
+      "step_number": 15,
+      "operation": "finish_turning",
+      "ontology_operation": "FinishTurningOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 16,
+        "feature_type": "Cylinder",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 18.75
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0020"
+    },
+    {
+      "step_number": 16,
+      "operation": "finish_turning",
+      "ontology_operation": "FinishTurningOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 18,
+        "feature_type": "Boss",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": -6.014,
+          "Y": -8.1,
+          "Z": 68.05
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0021"
+    },
+    {
+      "step_number": 19,
+      "operation": "drilling",
+      "ontology_operation": "DrillingOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "axial length (L or length)",
+        "an on-axis position (location X=0.0, Y=15.0; off-axis axial features need C-axis indexing, not declared in RALTurningProfile)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre",
+        "on_axis"
+      ],
+      "source_entity": {
+        "feature_id": 11,
+        "feature_type": "Through Hole",
+        "feature_dimensions": {
+          "Ø": 8.0
+        },
+        "feature_location": {
+          "X": 0.0,
+          "Y": 15.0,
+          "Z": 159.5
+        }
+      },
+      "kefc_validation_status": "requires_review",
+      "request_id": "evr_0022"
+    },
+    {
+      "step_number": 20,
+      "operation": "drilling",
+      "ontology_operation": "DrillingOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "axial length (L or length)",
+        "an on-axis position (location X=0.0, Y=15.0; off-axis axial features need C-axis indexing, not declared in RALTurningProfile)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre",
+        "on_axis"
+      ],
+      "source_entity": {
+        "feature_id": 12,
+        "feature_type": "Through Hole",
+        "feature_dimensions": {
+          "Ø": 8.0
+        },
+        "feature_location": {
+          "X": 0.0,
+          "Y": 15.0,
+          "Z": 127.5
+        }
+      },
+      "kefc_validation_status": "requires_review",
+      "request_id": "evr_0023"
+    },
+    {
+      "step_number": 21,
+      "operation": "drilling",
+      "ontology_operation": "DrillingOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre",
+        "on_axis"
+      ],
+      "source_entity": {
+        "feature_id": 19,
+        "feature_type": "Hole",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 42.525
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0024"
+    },
+    {
+      "step_number": 22,
+      "operation": "drilling",
+      "ontology_operation": "DrillingOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre",
+        "on_axis"
+      ],
+      "source_entity": {
+        "feature_id": 20,
+        "feature_type": "Hole",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 42.875
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0025"
+    },
+    {
+      "step_number": 23,
+      "operation": "drilling",
+      "ontology_operation": "DrillingOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "diameter (Ø or diameter or R or radius)",
+        "axial length (L or length)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "z_centre",
+        "on_axis"
+      ],
+      "source_entity": {
+        "feature_id": 21,
+        "feature_type": "Hole",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 42.875
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0026"
+    },
+    {
+      "step_number": 25,
+      "operation": "chamfering",
+      "ontology_operation": "ChamferingOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "chamfer angle (angle or chamfer_angle)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "chamfer_angle",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 2,
+        "feature_type": "Chamfer",
+        "feature_dimensions": {
+          "Ø": 24.95,
+          "L": 0.5
+        },
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 118.25
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0027"
+    },
+    {
+      "step_number": 26,
+      "operation": "chamfering",
+      "ontology_operation": "ChamferingOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "chamfer angle (angle or chamfer_angle)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "chamfer_angle",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 4,
+        "feature_type": "Chamfer",
+        "feature_dimensions": {
+          "Ø": 24.0,
+          "L": 0.75
+        },
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 120.625
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0028"
+    },
+    {
+      "step_number": 27,
+      "operation": "chamfering",
+      "ontology_operation": "ChamferingOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "chamfer angle (angle or chamfer_angle)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "chamfer_angle",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 6,
+        "feature_type": "Chamfer",
+        "feature_dimensions": {
+          "Ø": 24.0,
+          "L": 1.0
+        },
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 168.0
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0029"
+    },
+    {
+      "step_number": 28,
+      "operation": "chamfering",
+      "ontology_operation": "ChamferingOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "chamfer angle (angle or chamfer_angle)"
+      ],
+      "required_inputs": [
+        "diameter",
+        "length",
+        "chamfer_angle",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 9,
+        "feature_type": "Chamfer",
+        "feature_dimensions": {
+          "Ø": 12.2,
+          "L": 3.3
+        },
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 168.5
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0030"
+    },
+    {
+      "step_number": 29,
+      "operation": "grooving",
+      "ontology_operation": "GroovingOp",
+      "kind": "missing_inputs",
+      "missing_inputs": [
+        "outer diameter (one of outer_diameter)",
+        "groove-bottom diameter (one of groove_bottom_diameter, bottom_diameter, or a radial depth under groove_depth, depth)"
+      ],
+      "required_inputs": [
+        "outer_diameter",
+        "groove_bottom_diameter",
+        "z_centre"
+      ],
+      "source_entity": {
+        "feature_id": 17,
+        "feature_type": "Groove",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 38.025
+        }
+      },
+      "kefc_validation_status": "auto_approved",
+      "request_id": "evr_0031"
+    },
+    {
+      "step_number": 30,
+      "operation": "milling",
+      "ontology_operation": "MillingOp",
+      "kind": "no_toolpath_pattern",
+      "missing_inputs": [
+        "a toolpath pattern for 'milling' (none declared in RALTurningProfile)"
+      ],
+      "required_inputs": [],
+      "source_entity": {
+        "feature_id": 13,
+        "feature_type": "Slot",
+        "feature_dimensions": {
+          "Ø": 8.0,
+          "R": 4.0,
+          "W": 8.0
+        },
+        "feature_location": {
+          "X": 0.0,
+          "Y": 15.0,
+          "Z": 159.5
+        }
+      },
+      "kefc_validation_status": "requires_review",
+      "request_id": "evr_0032"
+    },
+    {
+      "step_number": 31,
+      "operation": "milling",
+      "ontology_operation": "MillingOp",
+      "kind": "no_toolpath_pattern",
+      "missing_inputs": [
+        "a toolpath pattern for 'milling' (none declared in RALTurningProfile)"
+      ],
+      "required_inputs": [],
+      "source_entity": {
+        "feature_id": 14,
+        "feature_type": "Slot",
+        "feature_dimensions": {
+          "Ø": 8.0,
+          "R": 4.0,
+          "W": 8.0
+        },
+        "feature_location": {
+          "X": 0.0,
+          "Y": 15.0,
+          "Z": 127.5
+        }
+      },
+      "kefc_validation_status": "requires_review",
+      "request_id": "evr_0033"
+    },
+    {
+      "step_number": 32,
+      "operation": "milling",
+      "ontology_operation": "MillingOp",
+      "kind": "no_toolpath_pattern",
+      "missing_inputs": [
+        "a toolpath pattern for 'milling' (none declared in RALTurningProfile)"
+      ],
+      "required_inputs": [],
+      "source_entity": {
+        "feature_id": 22,
+        "feature_type": "Slot",
+        "feature_dimensions": {},
+        "feature_location": {
+          "X": 11.0,
+          "Y": 0.0,
+          "Z": 60.75
+        }
+      },
+      "kefc_validation_status": "requires_review",
+      "request_id": "evr_0034"
+    }
+  ]
+}

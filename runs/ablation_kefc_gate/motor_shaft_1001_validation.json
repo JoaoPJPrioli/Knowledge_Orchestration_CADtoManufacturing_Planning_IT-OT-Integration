@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "status": "PASS",
+    "source": "../runs_v7/ablation_kefc_gate/motor_shaft_1001.nc",
+    "timestamp": "2026-10-24T17:47:20.738087",
+    "machine_id": "cnc_lathe",
+    "machine_name": "CNC Lathe",
+    "total_violations": 0,
+    "errors": 0,
+    "warnings": 0
+  },
+  "violations": [],
+  "statistics": {
+    "total_travel_distance": 1111.77,
+    "rapid_distance": 851.59,
+    "cut_distance": 260.18,
+    "tool_changes": 4,
+    "blocks_executed": 85,
+    "cycle_count": 3,
+    "final_position": {
+      "x": 0.0,
+      "z": 0.0
+    }
+  },
+  "machine_limits": {
+    "x_axis_travel": {
+      "min": 0.0,
+      "max": 150.0
+    },
+    "z_axis_travel": {
+      "min": 0.0,
+      "max": 1000.0
+    },
+    "max_rpm": 4500.0,
+    "max_feed_rate": 5.0,
+    "max_depth_of_cut": 5.0
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "total_features": 22,
+  "total_steps": 34,
+  "feature_types": {
+    "Blind Hole": 1,
+    "Counterbore": 1,
+    "Slot": 3,
+    "Boss": 3,
+    "Step": 2,
+    "Chamfer": 4,
+    "Through Hole": 2,
+    "Cylinder": 2,
+    "Groove": 1,
+    "Bore": 1,
+    "Hole": 2
+  },
+  "operations": {
+    "Facing": 3,
+    "Rough Turning": 7,
+    "Finish Turning": 7,
+    "Drilling": 7,
+    "Counterboring": 1,
+    "Boring": 1,
+    "Chamfering": 4,
+    "Grooving": 1,
+    "Milling": 3
+  },
+  "gcode_files": [
+    "../runs_v7/ablation_swap_sources/motor_shaft_1001.nc"
+  ],
+  "validation": {
+    "files_validated": 1,
+    "total_errors": 0,
+    "total_warnings": 0,
+    "status": "PASS"
+  },
+  "simulation": {
+    "files_simulated": 1,
+    "total_collisions": 0,
+    "total_cycle_time_minutes": 0.77,
+    "average_mrr": 25217.961999999996
+  },
+  "skl_version": "0.1.0",
+  "reasoner": "Pellet (via owlready2 sync_reasoner_pellet)",
+  "reasoning_status": "ok",
+  "expert_validation_summary": {
+    "total_requests": 44,
+    "by_status": {
+      "requires_review": 44,
+      "auto_approved": 0,
+      "expert_approved": 0,
+      "expert_rejected": 0,
+      "knowledge_update_suggested": 0
+    }
+  },
+  "critical_simulation_findings": [],
+  "unified_graph_stats": {
+    "total_nodes": 79,
+    "total_edges": 203,
+    "node_types": {
+      "operation": 9,
+      "tool": 10,
+      "machine": 1,
+      "material": 3,
+      "feature": 22,
+      "operation_instance": 34
+    },
+    "edge_types": {
+      "REQUIRES": 34,
+      "INSTANCE_OF": 34,
+      "USES": 34,
+      "RUNS_ON": 34,
+      "REMOVES": 34,
+      "SEQUENCE_BEFORE": 33
+    }
+  }
+}

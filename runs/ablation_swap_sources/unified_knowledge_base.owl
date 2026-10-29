@@ -1,0 +1,2558 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+         xmlns:mach="http://onto.brep.org/manufacturing/machining-process#"
+         xmlns:tool="http://onto.brep.org/manufacturing/tools#"
+         xmlns:mate="http://onto.brep.org/manufacturing/materials#"
+         xmlns:mach2="http://onto.brep.org/manufacturing/machines#"
+         xmlns:cutt="http://onto.brep.org/manufacturing/cutting-parameters#"
+         xmlns:moto="http://onto.brep.org/manufacturing/motor-shaft-case#"
+         xmlns:seri="http://onto.brep.org/manufacturing/serialisation-profiles#">
+
+<owl:Ontology rdf:about="http://onto.brep.org/manufacturing/unified-knowledge-base"/>
+
+<owl:Ontology rdf:about="http://onto.brep.org/manufacturing/machining-process"/>
+
+<owl:Ontology rdf:about="http://onto.brep.org/manufacturing/materials"/>
+
+<owl:Ontology rdf:about="http://onto.brep.org/manufacturing/tools">
+  <owl:imports rdf:resource="http://onto.brep.org/manufacturing/machining-process"/>
+</owl:Ontology>
+
+<owl:Ontology rdf:about="http://onto.brep.org/manufacturing/machines">
+  <owl:imports rdf:resource="http://onto.brep.org/manufacturing/machining-process"/>
+</owl:Ontology>
+
+<owl:Ontology rdf:about="http://onto.brep.org/manufacturing/cutting-parameters">
+  <owl:imports rdf:resource="http://onto.brep.org/manufacturing/materials"/>
+  <owl:imports rdf:resource="http://onto.brep.org/manufacturing/machining-process"/>
+</owl:Ontology>
+
+<owl:Ontology rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case">
+  <owl:imports rdf:resource="http://onto.brep.org/manufacturing/machining-process"/>
+  <owl:imports rdf:resource="http://onto.brep.org/manufacturing/materials"/>
+  <owl:imports rdf:resource="http://onto.brep.org/manufacturing/tools"/>
+  <owl:imports rdf:resource="http://onto.brep.org/manufacturing/machines"/>
+  <owl:imports rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters"/>
+</owl:Ontology>
+
+<owl:Ontology rdf:about="http://onto.brep.org/manufacturing/serialisation-profiles">
+  <owl:imports rdf:resource="http://onto.brep.org/manufacturing/machines"/>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="http://onto.brep.org/manufacturing/machining-process#requiresOperation">
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+  <rdfs:range rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://onto.brep.org/manufacturing/tools#recommendedForOperation">
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+  <rdfs:range rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://onto.brep.org/manufacturing/tools#hasPreferredTool">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+  <rdfs:range rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://onto.brep.org/manufacturing/machines#supportsOperation">
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machines#Machine"/>
+  <rdfs:range rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://onto.brep.org/manufacturing/machines#supportsToolOrientation">
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machines#Machine"/>
+  <rdfs:range rdf:resource="http://onto.brep.org/manufacturing/machines#ToolOrientation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#forMaterial">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <rdfs:range rdf:resource="http://onto.brep.org/manufacturing/materials#Material"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#forOperation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <rdfs:range rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#hasCuttingParameterSet">
+  <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:range rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#madeOfMaterial">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+  <rdfs:range rdf:resource="http://onto.brep.org/manufacturing/materials#Material"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#machinedOn">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+  <rdfs:range rdf:resource="http://onto.brep.org/manufacturing/machines#Machine"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#requiresTool">
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+  <rdfs:range rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://onto.brep.org/manufacturing/serialisation-profiles#profileSupportsToolOrientation">
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/serialisation-profiles#SerialisationProfile"/>
+  <rdfs:range rdf:resource="http://onto.brep.org/manufacturing/machines#ToolOrientation"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/machining-process#requiresToolAlongFeatureAxis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/machining-process#hasPrecedenceOrder">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/machining-process#hasOperationLabel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/machining-process#hasDescription">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/machining-process#hasGCode">
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/machining-process#hasCycleCode">
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/materials#hasHardnessHRC">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/materials#Material"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/materials#hasTensileStrengthMPa">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/materials#Material"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/materials#hasYieldStrengthMPa">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/materials#Material"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/materials#hasDensityGCM3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/materials#Material"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/materials#hasMachinabilityRating">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/materials#Material"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/materials#hasRecommendedCoolant">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/materials#Material"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/materials#hasMaterialLabel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/materials#Material"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/tools#hasToolLabel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/tools#hasToolType">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/tools#hasToolMaterial">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/tools#hasGeometry">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/tools#hasMaxDiameterMM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/tools#hasMinDiameterMM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/tools#hasMaxDepthMM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/tools#hasCostPerUnit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/machines#hasMachineLabel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machines#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/machines#hasModel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machines#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/machines#hasMaxSpindleSpeedRPM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machines#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/machines#hasMaxBarDiameterMM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machines#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/machines#hasMaxSwingDiameterMM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machines#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/machines#hasTurretStations">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machines#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/machines#hasControlSystem">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machines#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/machines#hasGCodeDialect">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machines#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/machines#hasSafetyMaxRPM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machines#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/machines#hasSafetyMaxFeedRate">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machines#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/machines#hasSafetyMaxDepthOfCut">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machines#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/machines#hasSafetyMinToolClearanceMM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machines#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/machines#hasSpindleAxis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/machines#Machine"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#hasFeedRateValue">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#hasFeedRateUnit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#hasSpindleSpeedValue">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#hasSpindleSpeedUnit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#hasDepthOfCutValue">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#hasDepthOfCutUnit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#requiresCoolant">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#hasCase">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/serialisation-profiles#hasProfileLabel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/serialisation-profiles#SerialisationProfile"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://onto.brep.org/manufacturing/serialisation-profiles#hasProfileDescription">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/serialisation-profiles#SerialisationProfile"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:AnnotationProperty rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#hasSourceFile">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:AnnotationProperty>
+
+<owl:AnnotationProperty rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#hasSourceFeatureId">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:AnnotationProperty>
+
+<owl:AnnotationProperty rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#hasCFRMConfidence">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:AnnotationProperty>
+
+<owl:AnnotationProperty rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#isUnmappedFeature">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:AnnotationProperty>
+
+<owl:AnnotationProperty rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#isLowConfidenceMapping">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:AnnotationProperty>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#Feature">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#Operation">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#Step">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#Cylinder">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#ChamferFeature">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#BlindHole">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#HoleFeature">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#Bore">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#Counterbore">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#Boss">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#ThroughHole">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#Slot">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#Groove">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#KeyFeature">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#RoughTurning">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#FinishTurning">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#Drilling">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#Counterboring">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#Chamfering">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#Boring">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#Facing">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#Milling">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machining-process#Grooving">
+  <rdfs:subClassOf rdf:resource="http://onto.brep.org/manufacturing/machining-process#Operation"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/materials#Material">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/tools#Tool">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machines#Machine">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/machines#ToolOrientation">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://onto.brep.org/manufacturing/serialisation-profiles#SerialisationProfile">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/machining-process#RoughTurningOp">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#RoughTurning"/>
+  <mach:requiresToolAlongFeatureAxis rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</mach:requiresToolAlongFeatureAxis>
+  <mach:hasPrecedenceOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</mach:hasPrecedenceOrder>
+  <mach:hasOperationLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rough Turning</mach:hasOperationLabel>
+  <mach:hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove bulk material to near-final dimensions</mach:hasDescription>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G00</mach:hasGCode>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G01</mach:hasGCode>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G02</mach:hasGCode>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G03</mach:hasGCode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/machining-process#FinishTurningOp">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#FinishTurning"/>
+  <mach:requiresToolAlongFeatureAxis rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</mach:requiresToolAlongFeatureAxis>
+  <mach:hasPrecedenceOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</mach:hasPrecedenceOrder>
+  <mach:hasOperationLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finish Turning</mach:hasOperationLabel>
+  <mach:hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Final pass to achieve surface finish and tolerance</mach:hasDescription>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G00</mach:hasGCode>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G01</mach:hasGCode>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G02</mach:hasGCode>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G03</mach:hasGCode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/machining-process#DrillingOp">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Drilling"/>
+  <mach:requiresToolAlongFeatureAxis rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</mach:requiresToolAlongFeatureAxis>
+  <mach:hasPrecedenceOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</mach:hasPrecedenceOrder>
+  <mach:hasOperationLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drilling</mach:hasOperationLabel>
+  <mach:hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Create hole using drill bit</mach:hasDescription>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G00</mach:hasGCode>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G01</mach:hasGCode>
+  <mach:hasCycleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G83</mach:hasCycleCode>
+  <mach:hasCycleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G81</mach:hasCycleCode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/machining-process#CounterboringOp">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Counterboring"/>
+  <mach:requiresToolAlongFeatureAxis rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</mach:requiresToolAlongFeatureAxis>
+  <mach:hasPrecedenceOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</mach:hasPrecedenceOrder>
+  <mach:hasOperationLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Counterboring</mach:hasOperationLabel>
+  <mach:hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enlarge entrance of hole for head clearance</mach:hasDescription>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G00</mach:hasGCode>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G01</mach:hasGCode>
+  <mach:hasCycleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G82</mach:hasCycleCode>
+  <mach:hasCycleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G81</mach:hasCycleCode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/machining-process#ChamferingOp">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Chamfering"/>
+  <tool:hasPreferredTool rdf:resource="http://onto.brep.org/manufacturing/tools#ChamferMill"/>
+  <mach:requiresToolAlongFeatureAxis rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</mach:requiresToolAlongFeatureAxis>
+  <mach:hasPrecedenceOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</mach:hasPrecedenceOrder>
+  <mach:hasOperationLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamfering</mach:hasOperationLabel>
+  <mach:hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Create angled edge transition</mach:hasDescription>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G00</mach:hasGCode>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G01</mach:hasGCode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/machining-process#BoringOp">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Boring"/>
+  <mach:requiresToolAlongFeatureAxis rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</mach:requiresToolAlongFeatureAxis>
+  <mach:hasPrecedenceOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</mach:hasPrecedenceOrder>
+  <mach:hasOperationLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boring</mach:hasOperationLabel>
+  <mach:hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enlarge or finish existing hole to precise diameter</mach:hasDescription>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G00</mach:hasGCode>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G01</mach:hasGCode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/machining-process#FacingOp">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Facing"/>
+  <tool:hasPreferredTool rdf:resource="http://onto.brep.org/manufacturing/tools#TurningInsertRough"/>
+  <mach:requiresToolAlongFeatureAxis rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</mach:requiresToolAlongFeatureAxis>
+  <mach:hasPrecedenceOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mach:hasPrecedenceOrder>
+  <mach:hasOperationLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Facing</mach:hasOperationLabel>
+  <mach:hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Machine flat surface perpendicular to axis of rotation</mach:hasDescription>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G00</mach:hasGCode>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G01</mach:hasGCode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/machining-process#MillingOp">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Milling"/>
+  <tool:hasPreferredTool rdf:resource="http://onto.brep.org/manufacturing/tools#EndMill"/>
+  <mach:requiresToolAlongFeatureAxis rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</mach:requiresToolAlongFeatureAxis>
+  <mach:hasPrecedenceOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</mach:hasPrecedenceOrder>
+  <mach:hasOperationLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milling</mach:hasOperationLabel>
+  <mach:hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove material using rotating multi-point cutter</mach:hasDescription>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G00</mach:hasGCode>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G01</mach:hasGCode>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G02</mach:hasGCode>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G03</mach:hasGCode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/machining-process#GroovingOp">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Grooving"/>
+  <mach:requiresToolAlongFeatureAxis rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</mach:requiresToolAlongFeatureAxis>
+  <mach:hasPrecedenceOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</mach:hasPrecedenceOrder>
+  <mach:hasOperationLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grooving</mach:hasOperationLabel>
+  <mach:hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cut narrow groove into workpiece</mach:hasDescription>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G00</mach:hasGCode>
+  <mach:hasGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G01</mach:hasGCode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/materials#AISI1045Steel">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/materials#Material"/>
+  <mate:hasMaterialLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AISI 1045 Steel</mate:hasMaterialLabel>
+  <mate:hasHardnessHRC rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25.0</mate:hasHardnessHRC>
+  <mate:hasTensileStrengthMPa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">570.0</mate:hasTensileStrengthMPa>
+  <mate:hasYieldStrengthMPa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">440.0</mate:hasYieldStrengthMPa>
+  <mate:hasDensityGCM3 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.85</mate:hasDensityGCM3>
+  <mate:hasMachinabilityRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.6</mate:hasMachinabilityRating>
+  <mate:hasRecommendedCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soluble Oil</mate:hasRecommendedCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/materials#Aluminum6061T6">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/materials#Material"/>
+  <mate:hasMaterialLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aluminum 6061-T6</mate:hasMaterialLabel>
+  <mate:hasHardnessHRC rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.0</mate:hasHardnessHRC>
+  <mate:hasTensileStrengthMPa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">310.0</mate:hasTensileStrengthMPa>
+  <mate:hasYieldStrengthMPa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">276.0</mate:hasYieldStrengthMPa>
+  <mate:hasDensityGCM3 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.7</mate:hasDensityGCM3>
+  <mate:hasMachinabilityRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</mate:hasMachinabilityRating>
+  <mate:hasRecommendedCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Air or Mist</mate:hasRecommendedCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/materials#StainlessSteel304">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/materials#Material"/>
+  <mate:hasMaterialLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stainless Steel 304</mate:hasMaterialLabel>
+  <mate:hasHardnessHRC rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70.0</mate:hasHardnessHRC>
+  <mate:hasTensileStrengthMPa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">515.0</mate:hasTensileStrengthMPa>
+  <mate:hasYieldStrengthMPa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">205.0</mate:hasYieldStrengthMPa>
+  <mate:hasDensityGCM3 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</mate:hasDensityGCM3>
+  <mate:hasMachinabilityRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</mate:hasMachinabilityRating>
+  <mate:hasRecommendedCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soluble Oil</mate:hasRecommendedCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/tools#TurningInsertRough">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+  <tool:recommendedForOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#RoughTurningOp"/>
+  <tool:recommendedForOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#FacingOp"/>
+  <tool:hasToolLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rough Turning Insert</tool:hasToolLabel>
+  <tool:hasToolType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turning Insert</tool:hasToolType>
+  <tool:hasToolMaterial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carbide</tool:hasToolMaterial>
+  <tool:hasGeometry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CNMG 120408</tool:hasGeometry>
+  <tool:hasMaxDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</tool:hasMaxDiameterMM>
+  <tool:hasMinDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</tool:hasMinDiameterMM>
+  <tool:hasMaxDepthMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</tool:hasMaxDepthMM>
+  <tool:hasCostPerUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.5</tool:hasCostPerUnit>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/tools#TurningInsertFinish">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+  <tool:recommendedForOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#FinishTurningOp"/>
+  <tool:recommendedForOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#FacingOp"/>
+  <tool:hasToolLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finish Turning Insert</tool:hasToolLabel>
+  <tool:hasToolType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turning Insert</tool:hasToolType>
+  <tool:hasToolMaterial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carbide with Coating</tool:hasToolMaterial>
+  <tool:hasGeometry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CNMG 120404</tool:hasGeometry>
+  <tool:hasMaxDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</tool:hasMaxDiameterMM>
+  <tool:hasMinDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</tool:hasMinDiameterMM>
+  <tool:hasMaxDepthMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</tool:hasMaxDepthMM>
+  <tool:hasCostPerUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.75</tool:hasCostPerUnit>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/tools#DrillBit">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+  <tool:recommendedForOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#DrillingOp"/>
+  <tool:hasToolLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Twist Drill Bit</tool:hasToolLabel>
+  <tool:hasToolType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drill Bit</tool:hasToolType>
+  <tool:hasToolMaterial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High-Speed Steel</tool:hasToolMaterial>
+  <tool:hasGeometry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">118deg Point Angle</tool:hasGeometry>
+  <tool:hasMaxDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</tool:hasMaxDiameterMM>
+  <tool:hasMinDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</tool:hasMinDiameterMM>
+  <tool:hasMaxDepthMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50.0</tool:hasMaxDepthMM>
+  <tool:hasCostPerUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.5</tool:hasCostPerUnit>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/tools#CounterboreCutter">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+  <tool:recommendedForOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#CounterboringOp"/>
+  <tool:hasToolLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Counterbore Cutter</tool:hasToolLabel>
+  <tool:hasToolType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Counterbore</tool:hasToolType>
+  <tool:hasToolMaterial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carbide</tool:hasToolMaterial>
+  <tool:hasGeometry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">90deg Cutting Edge</tool:hasGeometry>
+  <tool:hasMaxDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</tool:hasMaxDiameterMM>
+  <tool:hasMinDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</tool:hasMinDiameterMM>
+  <tool:hasMaxDepthMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.0</tool:hasMaxDepthMM>
+  <tool:hasCostPerUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45.0</tool:hasCostPerUnit>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/tools#ChamferMill">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+  <tool:recommendedForOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#ChamferingOp"/>
+  <tool:hasToolLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamfer Mill</tool:hasToolLabel>
+  <tool:hasToolType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamfer Tool</tool:hasToolType>
+  <tool:hasToolMaterial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carbide</tool:hasToolMaterial>
+  <tool:hasGeometry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">90deg Chamfer</tool:hasGeometry>
+  <tool:hasMaxDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</tool:hasMaxDiameterMM>
+  <tool:hasMinDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</tool:hasMinDiameterMM>
+  <tool:hasMaxDepthMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</tool:hasMaxDepthMM>
+  <tool:hasCostPerUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.0</tool:hasCostPerUnit>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/tools#ChamferDrill">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+  <tool:recommendedForOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#ChamferingOp"/>
+  <tool:hasToolLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamfer Drill (Countersink)</tool:hasToolLabel>
+  <tool:hasToolType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamfer Tool</tool:hasToolType>
+  <tool:hasToolMaterial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High-Speed Steel</tool:hasToolMaterial>
+  <tool:hasGeometry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">90deg Point Angle</tool:hasGeometry>
+  <tool:hasMaxDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.0</tool:hasMaxDiameterMM>
+  <tool:hasMinDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</tool:hasMinDiameterMM>
+  <tool:hasMaxDepthMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</tool:hasMaxDepthMM>
+  <tool:hasCostPerUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</tool:hasCostPerUnit>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/tools#BoringBar">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+  <tool:recommendedForOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#BoringOp"/>
+  <tool:hasToolLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boring Bar</tool:hasToolLabel>
+  <tool:hasToolType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boring Tool</tool:hasToolType>
+  <tool:hasToolMaterial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carbide Insert</tool:hasToolMaterial>
+  <tool:hasGeometry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adjustable Boring Head</tool:hasGeometry>
+  <tool:hasMaxDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50.0</tool:hasMaxDiameterMM>
+  <tool:hasMinDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</tool:hasMinDiameterMM>
+  <tool:hasMaxDepthMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</tool:hasMaxDepthMM>
+  <tool:hasCostPerUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">85.0</tool:hasCostPerUnit>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/tools#EndMill">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+  <tool:recommendedForOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#MillingOp"/>
+  <tool:hasToolLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">End Mill</tool:hasToolLabel>
+  <tool:hasToolType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milling Cutter</tool:hasToolType>
+  <tool:hasToolMaterial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carbide</tool:hasToolMaterial>
+  <tool:hasGeometry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4-Flute</tool:hasGeometry>
+  <tool:hasMaxDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</tool:hasMaxDiameterMM>
+  <tool:hasMinDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</tool:hasMinDiameterMM>
+  <tool:hasMaxDepthMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.0</tool:hasMaxDepthMM>
+  <tool:hasCostPerUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.0</tool:hasCostPerUnit>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/tools#FaceMill">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+  <tool:recommendedForOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#FacingOp"/>
+  <tool:recommendedForOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#MillingOp"/>
+  <tool:hasToolLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Face Mill</tool:hasToolLabel>
+  <tool:hasToolType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milling Cutter</tool:hasToolType>
+  <tool:hasToolMaterial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carbide Inserts</tool:hasToolMaterial>
+  <tool:hasGeometry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6-Insert Head</tool:hasGeometry>
+  <tool:hasMaxDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</tool:hasMaxDiameterMM>
+  <tool:hasMinDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</tool:hasMinDiameterMM>
+  <tool:hasMaxDepthMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</tool:hasMaxDepthMM>
+  <tool:hasCostPerUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</tool:hasCostPerUnit>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/tools#GroovingTool">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/tools#Tool"/>
+  <tool:recommendedForOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#GroovingOp"/>
+  <tool:hasToolLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grooving Tool</tool:hasToolLabel>
+  <tool:hasToolType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grooving Insert</tool:hasToolType>
+  <tool:hasToolMaterial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carbide</tool:hasToolMaterial>
+  <tool:hasGeometry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2mm Width</tool:hasGeometry>
+  <tool:hasMaxDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80.0</tool:hasMaxDiameterMM>
+  <tool:hasMinDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</tool:hasMinDiameterMM>
+  <tool:hasMaxDepthMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</tool:hasMaxDepthMM>
+  <tool:hasCostPerUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.0</tool:hasCostPerUnit>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/machines#AxialToolOrientation">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machines#ToolOrientation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/machines#RadialToolOrientation">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machines#ToolOrientation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machines#Machine"/>
+  <mach2:supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#FinishTurningOp"/>
+  <mach2:supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#CounterboringOp"/>
+  <mach2:supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#FacingOp"/>
+  <mach2:supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#BoringOp"/>
+  <mach2:supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#RoughTurningOp"/>
+  <mach2:supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#DrillingOp"/>
+  <mach2:supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#ChamferingOp"/>
+  <mach2:supportsOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#GroovingOp"/>
+  <mach2:supportsToolOrientation rdf:resource="http://onto.brep.org/manufacturing/machines#AxialToolOrientation"/>
+  <mach2:hasMachineLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CNC Lathe</mach2:hasMachineLabel>
+  <mach2:hasModel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fanuc Series 0i-TD</mach2:hasModel>
+  <mach2:hasMaxSpindleSpeedRPM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4500.0</mach2:hasMaxSpindleSpeedRPM>
+  <mach2:hasMaxBarDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50.0</mach2:hasMaxBarDiameterMM>
+  <mach2:hasMaxSwingDiameterMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300.0</mach2:hasMaxSwingDiameterMM>
+  <mach2:hasTurretStations rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</mach2:hasTurretStations>
+  <mach2:hasControlSystem rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fanuc 0i-TD</mach2:hasControlSystem>
+  <mach2:hasGCodeDialect rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fanuc</mach2:hasGCodeDialect>
+  <mach2:hasSafetyMaxRPM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4500.0</mach2:hasSafetyMaxRPM>
+  <mach2:hasSafetyMaxFeedRate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</mach2:hasSafetyMaxFeedRate>
+  <mach2:hasSafetyMaxDepthOfCut rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</mach2:hasSafetyMaxDepthOfCut>
+  <mach2:hasSafetyMinToolClearanceMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</mach2:hasSafetyMinToolClearanceMM>
+  <mach2:hasSpindleAxis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Z</mach2:hasSpindleAxis>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#AISI1045_RoughTurning_Params">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <cutt:forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <cutt:forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#RoughTurningOp"/>
+  <cutt:hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.25</cutt:hasFeedRateValue>
+  <cutt:hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</cutt:hasFeedRateUnit>
+  <cutt:hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">480.0</cutt:hasSpindleSpeedValue>
+  <cutt:hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</cutt:hasSpindleSpeedUnit>
+  <cutt:hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</cutt:hasDepthOfCutValue>
+  <cutt:hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</cutt:hasDepthOfCutUnit>
+  <cutt:requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cutt:requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#AISI1045_FinishTurning_Params">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <cutt:forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <cutt:forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#FinishTurningOp"/>
+  <cutt:hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.06</cutt:hasFeedRateValue>
+  <cutt:hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</cutt:hasFeedRateUnit>
+  <cutt:hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">900.0</cutt:hasSpindleSpeedValue>
+  <cutt:hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</cutt:hasSpindleSpeedUnit>
+  <cutt:hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</cutt:hasDepthOfCutValue>
+  <cutt:hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</cutt:hasDepthOfCutUnit>
+  <cutt:requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cutt:requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#AISI1045_Drilling_Params">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <cutt:forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <cutt:forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#DrillingOp"/>
+  <cutt:hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.15</cutt:hasFeedRateValue>
+  <cutt:hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</cutt:hasFeedRateUnit>
+  <cutt:hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">900.0</cutt:hasSpindleSpeedValue>
+  <cutt:hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</cutt:hasSpindleSpeedUnit>
+  <cutt:hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</cutt:hasDepthOfCutValue>
+  <cutt:hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</cutt:hasDepthOfCutUnit>
+  <cutt:requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cutt:requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#AISI1045_Milling_Params">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <cutt:forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <cutt:forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#MillingOp"/>
+  <cutt:hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.05</cutt:hasFeedRateValue>
+  <cutt:hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/tooth</cutt:hasFeedRateUnit>
+  <cutt:hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1200.0</cutt:hasSpindleSpeedValue>
+  <cutt:hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</cutt:hasSpindleSpeedUnit>
+  <cutt:hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</cutt:hasDepthOfCutValue>
+  <cutt:hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</cutt:hasDepthOfCutUnit>
+  <cutt:requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cutt:requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#Aluminum6061_RoughTurning_Params">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <cutt:forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#Aluminum6061T6"/>
+  <cutt:forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#RoughTurningOp"/>
+  <cutt:hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</cutt:hasFeedRateValue>
+  <cutt:hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</cutt:hasFeedRateUnit>
+  <cutt:hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">800.0</cutt:hasSpindleSpeedValue>
+  <cutt:hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</cutt:hasSpindleSpeedUnit>
+  <cutt:hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</cutt:hasDepthOfCutValue>
+  <cutt:hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</cutt:hasDepthOfCutUnit>
+  <cutt:requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cutt:requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#Aluminum6061_FinishTurning_Params">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <cutt:forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#Aluminum6061T6"/>
+  <cutt:forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#FinishTurningOp"/>
+  <cutt:hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.12</cutt:hasFeedRateValue>
+  <cutt:hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</cutt:hasFeedRateUnit>
+  <cutt:hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1500.0</cutt:hasSpindleSpeedValue>
+  <cutt:hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</cutt:hasSpindleSpeedUnit>
+  <cutt:hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</cutt:hasDepthOfCutValue>
+  <cutt:hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</cutt:hasDepthOfCutUnit>
+  <cutt:requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cutt:requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#Aluminum6061_Drilling_Params">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <cutt:forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#Aluminum6061T6"/>
+  <cutt:forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#DrillingOp"/>
+  <cutt:hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.18</cutt:hasFeedRateValue>
+  <cutt:hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</cutt:hasFeedRateUnit>
+  <cutt:hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1500.0</cutt:hasSpindleSpeedValue>
+  <cutt:hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</cutt:hasSpindleSpeedUnit>
+  <cutt:hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</cutt:hasDepthOfCutValue>
+  <cutt:hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</cutt:hasDepthOfCutUnit>
+  <cutt:requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cutt:requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#Aluminum6061_Milling_Params">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <cutt:forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#Aluminum6061T6"/>
+  <cutt:forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#MillingOp"/>
+  <cutt:hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.08</cutt:hasFeedRateValue>
+  <cutt:hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/tooth</cutt:hasFeedRateUnit>
+  <cutt:hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2000.0</cutt:hasSpindleSpeedValue>
+  <cutt:hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</cutt:hasSpindleSpeedUnit>
+  <cutt:hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</cutt:hasDepthOfCutValue>
+  <cutt:hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</cutt:hasDepthOfCutUnit>
+  <cutt:requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cutt:requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#Stainless304_RoughTurning_Params">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <cutt:forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#StainlessSteel304"/>
+  <cutt:forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#RoughTurningOp"/>
+  <cutt:hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</cutt:hasFeedRateValue>
+  <cutt:hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</cutt:hasFeedRateUnit>
+  <cutt:hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">320.0</cutt:hasSpindleSpeedValue>
+  <cutt:hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</cutt:hasSpindleSpeedUnit>
+  <cutt:hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.5</cutt:hasDepthOfCutValue>
+  <cutt:hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</cutt:hasDepthOfCutUnit>
+  <cutt:requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cutt:requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#Stainless304_FinishTurning_Params">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <cutt:forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#StainlessSteel304"/>
+  <cutt:forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#FinishTurningOp"/>
+  <cutt:hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.032</cutt:hasFeedRateValue>
+  <cutt:hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</cutt:hasFeedRateUnit>
+  <cutt:hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600.0</cutt:hasSpindleSpeedValue>
+  <cutt:hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</cutt:hasSpindleSpeedUnit>
+  <cutt:hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.15</cutt:hasDepthOfCutValue>
+  <cutt:hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</cutt:hasDepthOfCutUnit>
+  <cutt:requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cutt:requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#Stainless304_Drilling_Params">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <cutt:forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#StainlessSteel304"/>
+  <cutt:forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#DrillingOp"/>
+  <cutt:hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.12</cutt:hasFeedRateValue>
+  <cutt:hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</cutt:hasFeedRateUnit>
+  <cutt:hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600.0</cutt:hasSpindleSpeedValue>
+  <cutt:hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</cutt:hasSpindleSpeedUnit>
+  <cutt:hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</cutt:hasDepthOfCutValue>
+  <cutt:hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</cutt:hasDepthOfCutUnit>
+  <cutt:requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cutt:requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#Stainless304_Milling_Params">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <cutt:forMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#StainlessSteel304"/>
+  <cutt:forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#MillingOp"/>
+  <cutt:hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.04</cutt:hasFeedRateValue>
+  <cutt:hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/tooth</cutt:hasFeedRateUnit>
+  <cutt:hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">800.0</cutt:hasSpindleSpeedValue>
+  <cutt:hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</cutt:hasSpindleSpeedUnit>
+  <cutt:hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</cutt:hasDepthOfCutValue>
+  <cutt:hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</cutt:hasDepthOfCutUnit>
+  <cutt:requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cutt:requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#Counterboring_Default_Params">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <cutt:forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#CounterboringOp"/>
+  <cutt:hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.12</cutt:hasFeedRateValue>
+  <cutt:hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</cutt:hasFeedRateUnit>
+  <cutt:hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000.0</cutt:hasSpindleSpeedValue>
+  <cutt:hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</cutt:hasSpindleSpeedUnit>
+  <cutt:hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</cutt:hasDepthOfCutValue>
+  <cutt:hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</cutt:hasDepthOfCutUnit>
+  <cutt:requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cutt:requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#Chamfering_Default_Params">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <cutt:forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#ChamferingOp"/>
+  <cutt:hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</cutt:hasFeedRateValue>
+  <cutt:hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</cutt:hasFeedRateUnit>
+  <cutt:hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1200.0</cutt:hasSpindleSpeedValue>
+  <cutt:hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</cutt:hasSpindleSpeedUnit>
+  <cutt:hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</cutt:hasDepthOfCutValue>
+  <cutt:hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</cutt:hasDepthOfCutUnit>
+  <cutt:requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cutt:requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#Boring_Default_Params">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <cutt:forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#BoringOp"/>
+  <cutt:hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</cutt:hasFeedRateValue>
+  <cutt:hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</cutt:hasFeedRateUnit>
+  <cutt:hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">800.0</cutt:hasSpindleSpeedValue>
+  <cutt:hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</cutt:hasSpindleSpeedUnit>
+  <cutt:hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</cutt:hasDepthOfCutValue>
+  <cutt:hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</cutt:hasDepthOfCutUnit>
+  <cutt:requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cutt:requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#Facing_Default_Params">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <cutt:forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#FacingOp"/>
+  <cutt:hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</cutt:hasFeedRateValue>
+  <cutt:hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</cutt:hasFeedRateUnit>
+  <cutt:hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">800.0</cutt:hasSpindleSpeedValue>
+  <cutt:hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</cutt:hasSpindleSpeedUnit>
+  <cutt:hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</cutt:hasDepthOfCutValue>
+  <cutt:hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</cutt:hasDepthOfCutUnit>
+  <cutt:requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cutt:requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/cutting-parameters#Grooving_Default_Params">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#CuttingParameterSet"/>
+  <cutt:forOperation rdf:resource="http://onto.brep.org/manufacturing/machining-process#GroovingOp"/>
+  <cutt:hasFeedRateValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.08</cutt:hasFeedRateValue>
+  <cutt:hasFeedRateUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/rev</cutt:hasFeedRateUnit>
+  <cutt:hasSpindleSpeedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600.0</cutt:hasSpindleSpeedValue>
+  <cutt:hasSpindleSpeedUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RPM</cutt:hasSpindleSpeedUnit>
+  <cutt:hasDepthOfCutValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</cutt:hasDepthOfCutValue>
+  <cutt:hasDepthOfCutUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</cutt:hasDepthOfCutUnit>
+  <cutt:requiresCoolant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cutt:requiresCoolant>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#MotorShaftCaseMarker">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+  <moto:hasCase rdf:datatype="http://www.w3.org/2001/XMLSchema#string">motor_shaft_eixo</moto:hasCase>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/serialisation-profiles#RALTurningProfile">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/serialisation-profiles#SerialisationProfile"/>
+  <seri:profileSupportsToolOrientation rdf:resource="http://onto.brep.org/manufacturing/machines#AxialToolOrientation"/>
+  <seri:hasProfileLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RAL turning profile (gcode_generator.py)</seri:hasProfileLabel>
+  <seri:hasProfileDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G18/G21/G40/G54/G80/G90/G97/G99 turning profile; drilling and counterboring as G81/G83 canned cycles on the spindle centreline; no driven-tool (radial) cycle and no C-axis positioning.</seri:hasProfileDescription>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_1">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#BlindHole"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">features_eixo_step_Gemini35flash.txt+features_eixo_step_Gemini31Pro.txt</moto:hasSourceFile>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9902612826603325</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_2">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Counterbore"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">features_eixo_step_Gemini35flash.txt+features_eixo_step_Gemini31Pro.txt</moto:hasSourceFile>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9186</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_3">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Slot"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">features_eixo_step_Gemini35flash.txt</moto:hasSourceFile>
+  <moto:hasSourceFeatureId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</moto:hasSourceFeatureId>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_4">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Slot"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">features_eixo_step_Gemini35flash.txt</moto:hasSourceFile>
+  <moto:hasSourceFeatureId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</moto:hasSourceFeatureId>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_5">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Boss"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">features_eixo_step_Gemini35flash.txt+features_eixo_step_Gemini31Pro.txt</moto:hasSourceFile>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7355778147203498</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_6">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Step"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">features_eixo_step_Gemini31Pro.txt</moto:hasSourceFile>
+  <moto:hasSourceFeatureId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</moto:hasSourceFeatureId>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_7">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#ChamferFeature"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">features_eixo_step_Gemini31Pro.txt</moto:hasSourceFile>
+  <moto:hasSourceFeatureId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</moto:hasSourceFeatureId>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_8">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#ChamferFeature"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">features_eixo_step_Gemini31Pro.txt</moto:hasSourceFile>
+  <moto:hasSourceFeatureId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</moto:hasSourceFeatureId>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_9">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Step"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">features_eixo_step_Gemini31Pro.txt</moto:hasSourceFile>
+  <moto:hasSourceFeatureId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</moto:hasSourceFeatureId>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_10">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#ChamferFeature"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">features_eixo_step_Gemini31Pro.txt</moto:hasSourceFile>
+  <moto:hasSourceFeatureId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</moto:hasSourceFeatureId>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_11">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#ChamferFeature"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">features_eixo_step_Gemini31Pro.txt</moto:hasSourceFile>
+  <moto:hasSourceFeatureId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</moto:hasSourceFeatureId>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_12">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Boss"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">features_eixo_step_Gemini31Pro.txt</moto:hasSourceFile>
+  <moto:hasSourceFeatureId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</moto:hasSourceFeatureId>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_13">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#ThroughHole"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">features_eixo_step_Gemini31Pro.txt</moto:hasSourceFile>
+  <moto:hasSourceFeatureId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</moto:hasSourceFeatureId>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_14">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#ThroughHole"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">features_eixo_step_Gemini31Pro.txt</moto:hasSourceFile>
+  <moto:hasSourceFeatureId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</moto:hasSourceFeatureId>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_15">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Cylinder"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">draw_features_eixo_Gemini35flash.txt+draw_features_eixo_Gemini31Pro.txt</moto:hasSourceFile>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_16">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Cylinder"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">draw_features_eixo_Gemini35flash.txt+draw_features_eixo_Gemini31Pro.txt</moto:hasSourceFile>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.786</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_17">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Groove"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">draw_features_eixo_Gemini35flash.txt+draw_features_eixo_Gemini31Pro.txt</moto:hasSourceFile>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.793</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_18">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Boss"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">draw_features_eixo_Gemini35flash.txt+draw_features_eixo_Gemini31Pro.txt</moto:hasSourceFile>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.6609360204797806</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_19">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Slot"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">draw_features_eixo_Gemini35flash.txt</moto:hasSourceFile>
+  <moto:hasSourceFeatureId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</moto:hasSourceFeatureId>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_20">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#Bore"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">draw_features_eixo_Gemini35flash.txt+draw_features_eixo_Gemini31Pro.txt</moto:hasSourceFile>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.673</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_21">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#HoleFeature"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">draw_features_eixo_Gemini31Pro.txt</moto:hasSourceFile>
+  <moto:hasSourceFeatureId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</moto:hasSourceFeatureId>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://onto.brep.org/manufacturing/motor-shaft-case#feature_22">
+  <rdf:type rdf:resource="http://onto.brep.org/manufacturing/machining-process#HoleFeature"/>
+  <moto:madeOfMaterial rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+  <moto:machinedOn rdf:resource="http://onto.brep.org/manufacturing/machines#CNCLatheFanuc0iTD"/>
+  <moto:hasSourceFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">draw_features_eixo_Gemini31Pro.txt</moto:hasSourceFile>
+  <moto:hasSourceFeatureId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</moto:hasSourceFeatureId>
+  <moto:hasCFRMConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</moto:hasCFRMConfidence>
+  <moto:isUnmappedFeature rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</moto:isUnmappedFeature>
+  <moto:isLowConfidenceMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</moto:isLowConfidenceMapping>
+</owl:NamedIndividual>
+
+<swrl:Variable rdf:about="urn:swrl#f"/>
+
+<swrl:Variable rdf:about="urn:swrl#op"/>
+
+<swrl:Variable rdf:about="urn:swrl#t"/>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+              <swrl:argument1 rdf:resource="urn:swrl#f"/>
+              <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#GroovingOp"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#hasCuttingParameterSet"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#Grooving_Default_Params"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+              <swrl:argument1 rdf:resource="urn:swrl#f"/>
+              <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#FacingOp"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#hasCuttingParameterSet"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#Facing_Default_Params"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+              <swrl:argument1 rdf:resource="urn:swrl#f"/>
+              <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#BoringOp"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#hasCuttingParameterSet"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#Boring_Default_Params"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+              <swrl:argument1 rdf:resource="urn:swrl#f"/>
+              <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#ChamferingOp"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#hasCuttingParameterSet"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#Chamfering_Default_Params"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+              <swrl:argument1 rdf:resource="urn:swrl#f"/>
+              <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#CounterboringOp"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#hasCuttingParameterSet"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#Counterboring_Default_Params"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+              <swrl:argument1 rdf:resource="urn:swrl#f"/>
+              <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#MillingOp"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/motor-shaft-case#madeOfMaterial"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#f"/>
+                  <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/materials#StainlessSteel304"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#hasCuttingParameterSet"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#Stainless304_Milling_Params"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+              <swrl:argument1 rdf:resource="urn:swrl#f"/>
+              <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#DrillingOp"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/motor-shaft-case#madeOfMaterial"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#f"/>
+                  <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/materials#StainlessSteel304"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#hasCuttingParameterSet"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#Stainless304_Drilling_Params"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+              <swrl:argument1 rdf:resource="urn:swrl#f"/>
+              <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#FinishTurningOp"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/motor-shaft-case#madeOfMaterial"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#f"/>
+                  <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/materials#StainlessSteel304"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#hasCuttingParameterSet"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#Stainless304_FinishTurning_Params"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+              <swrl:argument1 rdf:resource="urn:swrl#f"/>
+              <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#RoughTurningOp"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/motor-shaft-case#madeOfMaterial"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#f"/>
+                  <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/materials#StainlessSteel304"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#hasCuttingParameterSet"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#Stainless304_RoughTurning_Params"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+              <swrl:argument1 rdf:resource="urn:swrl#f"/>
+              <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#MillingOp"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/motor-shaft-case#madeOfMaterial"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#f"/>
+                  <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/materials#Aluminum6061T6"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#hasCuttingParameterSet"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#Aluminum6061_Milling_Params"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+              <swrl:argument1 rdf:resource="urn:swrl#f"/>
+              <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#DrillingOp"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/motor-shaft-case#madeOfMaterial"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#f"/>
+                  <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/materials#Aluminum6061T6"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#hasCuttingParameterSet"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#Aluminum6061_Drilling_Params"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+              <swrl:argument1 rdf:resource="urn:swrl#f"/>
+              <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#FinishTurningOp"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/motor-shaft-case#madeOfMaterial"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#f"/>
+                  <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/materials#Aluminum6061T6"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#hasCuttingParameterSet"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#Aluminum6061_FinishTurning_Params"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+              <swrl:argument1 rdf:resource="urn:swrl#f"/>
+              <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#RoughTurningOp"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/motor-shaft-case#madeOfMaterial"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#f"/>
+                  <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/materials#Aluminum6061T6"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#hasCuttingParameterSet"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#Aluminum6061_RoughTurning_Params"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+              <swrl:argument1 rdf:resource="urn:swrl#f"/>
+              <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#MillingOp"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/motor-shaft-case#madeOfMaterial"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#f"/>
+                  <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#hasCuttingParameterSet"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#AISI1045_Milling_Params"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+              <swrl:argument1 rdf:resource="urn:swrl#f"/>
+              <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#DrillingOp"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/motor-shaft-case#madeOfMaterial"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#f"/>
+                  <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#hasCuttingParameterSet"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#AISI1045_Drilling_Params"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+              <swrl:argument1 rdf:resource="urn:swrl#f"/>
+              <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#FinishTurningOp"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/motor-shaft-case#madeOfMaterial"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#f"/>
+                  <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#hasCuttingParameterSet"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#AISI1045_FinishTurning_Params"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+              <swrl:argument1 rdf:resource="urn:swrl#f"/>
+              <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#RoughTurningOp"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/motor-shaft-case#madeOfMaterial"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#f"/>
+                  <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/materials#AISI1045Steel"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#hasCuttingParameterSet"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/cutting-parameters#AISI1045_RoughTurning_Params"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Feature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+              <swrl:argument1 rdf:resource="urn:swrl#f"/>
+              <swrl:argument2 rdf:resource="urn:swrl#op"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/tools#recommendedForOperation"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#t"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#op"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/motor-shaft-case#requiresTool"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="urn:swrl#t"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#KeyFeature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#MillingOp"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Groove"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#GroovingOp"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Slot"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#MillingOp"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#ThroughHole"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#DrillingOp"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Boss"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#FinishTurningOp"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Boss"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#RoughTurningOp"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Boss"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#FacingOp"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Counterbore"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#CounterboringOp"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Counterbore"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#DrillingOp"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Bore"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#BoringOp"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Bore"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#DrillingOp"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#HoleFeature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#DrillingOp"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#BlindHole"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#DrillingOp"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#ChamferFeature"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#ChamferingOp"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Cylinder"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#FinishTurningOp"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Cylinder"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#RoughTurningOp"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Step"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#FinishTurningOp"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#Step"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://onto.brep.org/manufacturing/machining-process#requiresOperation"/>
+          <swrl:argument1 rdf:resource="urn:swrl#f"/>
+          <swrl:argument2 rdf:resource="http://onto.brep.org/manufacturing/machining-process#RoughTurningOp"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+
+</rdf:RDF>
