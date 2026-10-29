@@ -1,0 +1,17 @@
+{
+  "skl_version": "0.1.0",
+  "reasoner": "Pellet (via owlready2 sync_reasoner_pellet)",
+  "reasoning_status": "ok",
+  "java_exe": "<JAVA_HOME>\\bin\\java.exe",
+  "rule_count": 36,
+  "ontologies": [
+    "http://onto.brep.org/manufacturing/machining-process#",
+    "http://onto.brep.org/manufacturing/materials#",
+    "http://onto.brep.org/manufacturing/tools#",
+    "http://onto.brep.org/manufacturing/machines#",
+    "http://onto.brep.org/manufacturing/cutting-parameters#",
+    "http://onto.brep.org/manufacturing/motor-shaft-case#",
+    "http://onto.brep.org/manufacturing/serialisation-profiles#",
+    "http://onto.brep.org/manufacturing/mill-turn-configuration#"
+  ]
+}

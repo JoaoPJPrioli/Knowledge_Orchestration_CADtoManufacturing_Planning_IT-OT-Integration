@@ -1,0 +1,220 @@
+{
+  "segments": 9,
+  "segments_with_inputs": 9,
+  "lookups": 27,
+  "traced_to_plan": 27,
+  "defaulted": 0,
+  "cutting_words_checked": 9,
+  "unexplained_cutting_words": 0,
+  "passed": true,
+  "problems": [],
+  "per_segment": [
+    {
+      "step_number": 3,
+      "operation": "rough_turning",
+      "inputs": {
+        "diameter": {
+          "value": 24.95,
+          "source": "Ø",
+          "traced_to_plan": true
+        },
+        "length": {
+          "value": 57.7,
+          "source": "L",
+          "traced_to_plan": true
+        },
+        "z_centre": {
+          "value": 109.35,
+          "source": "location Z",
+          "traced_to_plan": true
+        }
+      },
+      "cutting_words_checked": 1,
+      "unexplained_cutting_words": []
+    },
+    {
+      "step_number": 4,
+      "operation": "rough_turning",
+      "inputs": {
+        "diameter": {
+          "value": 23.6,
+          "source": "Ø",
+          "traced_to_plan": true
+        },
+        "length": {
+          "value": 1.75,
+          "source": "L",
+          "traced_to_plan": true
+        },
+        "z_centre": {
+          "value": 119.375,
+          "source": "location Z",
+          "traced_to_plan": true
+        }
+      },
+      "cutting_words_checked": 1,
+      "unexplained_cutting_words": []
+    },
+    {
+      "step_number": 5,
+      "operation": "rough_turning",
+      "inputs": {
+        "diameter": {
+          "value": 24.0,
+          "source": "Ø",
+          "traced_to_plan": true
+        },
+        "length": {
+          "value": 47.5,
+          "source": "L",
+          "traced_to_plan": true
+        },
+        "z_centre": {
+          "value": 144.75,
+          "source": "location Z",
+          "traced_to_plan": true
+        }
+      },
+      "cutting_words_checked": 1,
+      "unexplained_cutting_words": []
+    },
+    {
+      "step_number": 10,
+      "operation": "finish_turning",
+      "inputs": {
+        "diameter": {
+          "value": 24.95,
+          "source": "Ø",
+          "traced_to_plan": true
+        },
+        "length": {
+          "value": 57.7,
+          "source": "L",
+          "traced_to_plan": true
+        },
+        "z_centre": {
+          "value": 109.35,
+          "source": "location Z",
+          "traced_to_plan": true
+        }
+      },
+      "cutting_words_checked": 1,
+      "unexplained_cutting_words": []
+    },
+    {
+      "step_number": 11,
+      "operation": "finish_turning",
+      "inputs": {
+        "diameter": {
+          "value": 23.6,
+          "source": "Ø",
+          "traced_to_plan": true
+        },
+        "length": {
+          "value": 1.75,
+          "source": "L",
+          "traced_to_plan": true
+        },
+        "z_centre": {
+          "value": 119.375,
+          "source": "location Z",
+          "traced_to_plan": true
+        }
+      },
+      "cutting_words_checked": 1,
+      "unexplained_cutting_words": []
+    },
+    {
+      "step_number": 12,
+      "operation": "finish_turning",
+      "inputs": {
+        "diameter": {
+          "value": 24.0,
+          "source": "Ø",
+          "traced_to_plan": true
+        },
+        "length": {
+          "value": 47.5,
+          "source": "L",
+          "traced_to_plan": true
+        },
+        "z_centre": {
+          "value": 144.75,
+          "source": "location Z",
+          "traced_to_plan": true
+        }
+      },
+      "cutting_words_checked": 1,
+      "unexplained_cutting_words": []
+    },
+    {
+      "step_number": 17,
+      "operation": "drilling",
+      "inputs": {
+        "diameter": {
+          "value": 6.8,
+          "source": "Ø",
+          "traced_to_plan": true
+        },
+        "length": {
+          "value": 20.23,
+          "source": "L",
+          "traced_to_plan": true
+        },
+        "z_centre": {
+          "value": 162.5,
+          "source": "location Z",
+          "traced_to_plan": true
+        }
+      },
+      "cutting_words_checked": 1,
+      "unexplained_cutting_words": []
+    },
+    {
+      "step_number": 18,
+      "operation": "drilling",
+      "inputs": {
+        "diameter": {
+          "value": 8.4,
+          "source": "Ø",
+          "traced_to_plan": true
+        },
+        "length": {
+          "value": 4.02,
+          "source": "L",
+          "traced_to_plan": true
+        },
+        "z_centre": {
+          "value": 166.52,
+          "source": "location Z",
+          "traced_to_plan": true
+        }
+      },
+      "cutting_words_checked": 1,
+      "unexplained_cutting_words": []
+    },
+    {
+      "step_number": 24,
+      "operation": "counterboring",
+      "inputs": {
+        "diameter": {
+          "value": 8.4,
+          "source": "Ø",
+          "traced_to_plan": true
+        },
+        "length": {
+          "value": 4.02,
+          "source": "L",
+          "traced_to_plan": true
+        },
+        "z_centre": {
+          "value": 166.52,
+          "source": "location Z",
+          "traced_to_plan": true
+        }
+      },
+      "cutting_words_checked": 1,
+      "unexplained_cutting_words": []
+    }
+  ]
+}
