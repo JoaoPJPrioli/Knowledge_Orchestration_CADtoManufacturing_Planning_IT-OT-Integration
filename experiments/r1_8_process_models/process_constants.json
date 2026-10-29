@@ -1,0 +1,148 @@
+{
+  "_status": "NOMINAL, UNCALIBRATED. Every constant below is a handbook-order value declared for this experiment, not a measurement for this shaft, tool, or machine. Each conclusion drawn from these models is checked over the sweep ranges given with each constant. Values marked 'verify' have not been checked against the primary handbook; the manuscript reports the conclusions over the sweep ranges and states that the tool lives are not validated.",
+  "kienzle": {
+    "_form": "Fc = kc11 * b * h**(1 - mc) per cutting edge, with b the undeformed chip width and h the undeformed chip thickness (mm); kc = kc11 * h**(-mc). Correction factors for rake angle, cutting speed, tool material, wear and coolant are not applied (taken as 1); their combined effect is bounded by the kc11 sweep.",
+    "steel_1045": {
+      "kc11_N_per_mm2": 2220.0,
+      "mc": 0.14,
+      "source": "nominal value for C45/Ck45-class unalloyed medium-carbon steel (verify against handbook)",
+      "sweep": {
+        "kc11_N_per_mm2": [
+          1500.0,
+          2000.0,
+          2220.0,
+          2500.0
+        ],
+        "mc": [
+          0.14,
+          0.2,
+          0.26,
+          0.3
+        ]
+      }
+    },
+    "aluminum_6061": {
+      "kc11_N_per_mm2": 830.0,
+      "mc": 0.23,
+      "source": "nominal value for wrought Al-Mg-Si alloys (verify against handbook)",
+      "sweep": {
+        "kc11_N_per_mm2": [
+          600.0,
+          830.0,
+          1000.0
+        ],
+        "mc": [
+          0.2,
+          0.23,
+          0.3
+        ]
+      }
+    }
+  },
+  "geometry": {
+    "turning_entering_angle_deg": {
+      "value": 95.0,
+      "source": "assumed holder (CNMG insert in a 95-degree holder); the tool ontology records the insert designation but not the holder",
+      "sweep": [
+        75.0,
+        90.0,
+        95.0
+      ]
+    },
+    "drill_point_angle_deg": {
+      "source": "tools.owl hasGeometry of the selected drill ('118deg Point Angle')"
+    },
+    "counterbore_entering_angle_deg": {
+      "source": "tools.owl hasGeometry of the selected counterbore ('90deg Cutting Edge')"
+    }
+  },
+  "taylor": {
+    "_form": "T = T_ref * (v_ref / v)**(1/n): tool life T (min) at cutting speed v (m/min), anchored at the handbook-recommended speed v_ref for which the handbook life T_ref applies. Consumption of a tool over a programme is the linear (Palmgren-Miner) sum of t_i / T(v_i) over its cuts, never clamped. Below v_ref the relation is extrapolated outside its validated range.",
+    "steel_1045": {
+      "Carbide|turning": {
+        "v_ref_m_per_min": 90.0,
+        "T_ref_min": 15.0,
+        "n": 0.25,
+        "source": "v_ref: lower bound of the candidate handbook band for uncoated carbide turning of medium-carbon steel (reference_plan/parameter_audit.json); T_ref and n: nominal (verify)",
+        "sweep": {
+          "n": [
+            0.2,
+            0.25,
+            0.3,
+            0.35
+          ],
+          "T_ref_min": [
+            10.0,
+            15.0,
+            30.0,
+            60.0
+          ]
+        }
+      },
+      "Carbide with Coating|turning": {
+        "v_ref_m_per_min": 150.0,
+        "T_ref_min": 15.0,
+        "n": 0.25,
+        "source": "v_ref: lower bound of the candidate handbook band for coated carbide turning (reference_plan/parameter_audit.json); T_ref and n: nominal (verify)",
+        "sweep": {
+          "n": [
+            0.2,
+            0.25,
+            0.3,
+            0.35
+          ],
+          "T_ref_min": [
+            10.0,
+            15.0,
+            30.0,
+            60.0
+          ]
+        }
+      },
+      "High-Speed Steel|drilling": {
+        "v_ref_m_per_min": 21.0,
+        "T_ref_min": 45.0,
+        "n": 0.125,
+        "source": "v_ref: lower bound of the candidate handbook value for HSS drilling of medium-carbon steel (reference_plan/parameter_audit.json); T_ref and n: nominal (verify)",
+        "sweep": {
+          "n": [
+            0.1,
+            0.125,
+            0.15,
+            0.175
+          ],
+          "T_ref_min": [
+            30.0,
+            45.0,
+            60.0,
+            90.0
+          ]
+        }
+      },
+      "Carbide|hole_making": {
+        "v_ref_m_per_min": 42.0,
+        "T_ref_min": 15.0,
+        "n": 0.25,
+        "source": "v_ref: derived band for carbide hole-making (reference_plan/parameter_audit.json, marked weak); T_ref and n: nominal (verify)",
+        "sweep": {
+          "n": [
+            0.2,
+            0.25,
+            0.3,
+            0.35
+          ],
+          "T_ref_min": [
+            10.0,
+            15.0,
+            30.0,
+            60.0
+          ]
+        }
+      }
+    }
+  },
+  "feedback": {
+    "life_fraction_threshold": 0.8,
+    "source": "declared policy: request expert review before a tool edge is expected to pass 80 % of its Taylor life"
+  }
+}

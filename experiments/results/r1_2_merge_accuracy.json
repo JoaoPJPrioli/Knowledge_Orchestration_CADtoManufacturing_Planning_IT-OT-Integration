@@ -1,0 +1,5714 @@
+{
+ "reference": {
+  "entities": 22,
+  "merges": 8,
+  "correct": 6,
+  "label_consistent_correct": 6,
+  "max_true": 10,
+  "duplicated_features": 2,
+  "merge_list": [
+   {
+    "family": "STEP",
+    "primary": [
+     1,
+     "Step",
+     "R01"
+    ],
+    "secondary": [
+     5,
+     "Boss",
+     "R05"
+    ],
+    "tau": 0.7,
+    "same_feature": false
+   },
+   {
+    "family": "STEP",
+    "primary": [
+     7,
+     "Blind Hole",
+     "R07"
+    ],
+    "secondary": [
+     1,
+     "Blind Hole",
+     "R07"
+    ],
+    "tau": 1.0,
+    "same_feature": true
+   },
+   {
+    "family": "STEP",
+    "primary": [
+     8,
+     "Counterbore",
+     "R08"
+    ],
+    "secondary": [
+     2,
+     "Counterbore",
+     "R08"
+    ],
+    "tau": 1.0,
+    "same_feature": true
+   },
+   {
+    "family": "DRAWING",
+    "primary": [
+     1,
+     "Cylinder",
+     "D01"
+    ],
+    "secondary": [
+     2,
+     "Cylinder",
+     "D01"
+    ],
+    "tau": 1.0,
+    "same_feature": true
+   },
+   {
+    "family": "DRAWING",
+    "primary": [
+     2,
+     "Cylinder",
+     "D02"
+    ],
+    "secondary": [
+     1,
+     "Cylinder",
+     "D02"
+    ],
+    "tau": 1.0,
+    "same_feature": true
+   },
+   {
+    "family": "DRAWING",
+    "primary": [
+     3,
+     "Groove",
+     "D03"
+    ],
+    "secondary": [
+     3,
+     "Groove",
+     "D03"
+    ],
+    "tau": 1.0,
+    "same_feature": true
+   },
+   {
+    "family": "DRAWING",
+    "primary": [
+     4,
+     "Boss",
+     "D04"
+    ],
+    "secondary": [
+     4,
+     "Boss",
+     "D04"
+    ],
+    "tau": 1.0,
+    "same_feature": true
+   },
+   {
+    "family": "DRAWING",
+    "primary": [
+     5,
+     "Hole",
+     "D05c"
+    ],
+    "secondary": [
+     6,
+     "Bore",
+     "D05a"
+    ],
+    "tau": 0.7,
+    "same_feature": false
+   }
+  ],
+  "step_attr": [
+   {
+    "entity": [
+     1,
+     5
+    ],
+    "ref": "R01",
+    "pos_err_primary": 0.0,
+    "pos_err_merged": 8.650000000000006,
+    "len_err_primary": 0.0,
+    "len_err_merged": 20.200000000000003
+   },
+   {
+    "entity": [
+     7,
+     1
+    ],
+    "ref": "R07",
+    "pos_err_primary": 0.0,
+    "pos_err_merged": 0.0,
+    "len_err_primary": 2.0500000000000007,
+    "len_err_merged": 1.2300000000000004
+   },
+   {
+    "entity": [
+     8,
+     2
+    ],
+    "ref": "R08",
+    "pos_err_primary": 0.009000000000014552,
+    "pos_err_merged": 1.3109999999999786,
+    "len_err_primary": 0.008999999999999897,
+    "len_err_merged": 1.3110000000000004
+   }
+  ],
+  "precision": 0.75,
+  "label_consistent_precision": 0.75,
+  "recall": 0.6,
+  "f1": 0.6666666666666665,
+  "step_merged_pos_err_mean": {
+   "primary": 0.0030000000000048508,
+   "merged": 3.3203333333333283
+  },
+  "step_merged_len_err_mean": {
+   "primary": 0.6863333333333336,
+   "merged": 7.580333333333335
+  }
+ },
+ "ablation_tau_min_0": {
+  "entities": 20,
+  "merges": 10,
+  "correct": 8,
+  "label_consistent_correct": 6,
+  "max_true": 10,
+  "duplicated_features": 2,
+  "merge_list": [
+   {
+    "family": "STEP",
+    "primary": [
+     1,
+     "Step",
+     "R01"
+    ],
+    "secondary": [
+     5,
+     "Boss",
+     "R05"
+    ],
+    "tau": 0.7,
+    "same_feature": false
+   },
+   {
+    "family": "STEP",
+    "primary": [
+     7,
+     "Blind Hole",
+     "R07"
+    ],
+    "secondary": [
+     1,
+     "Blind Hole",
+     "R07"
+    ],
+    "tau": 1.0,
+    "same_feature": true
+   },
+   {
+    "family": "STEP",
+    "primary": [
+     8,
+     "Counterbore",
+     "R08"
+    ],
+    "secondary": [
+     2,
+     "Counterbore",
+     "R08"
+    ],
+    "tau": 1.0,
+    "same_feature": true
+   },
+   {
+    "family": "STEP",
+    "primary": [
+     11,
+     "Through Hole",
+     "R06"
+    ],
+    "secondary": [
+     3,
+     "Slot",
+     "R06"
+    ],
+    "tau": 0.3,
+    "same_feature": true
+   },
+   {
+    "family": "STEP",
+    "primary": [
+     12,
+     "Through Hole",
+     "R06"
+    ],
+    "secondary": [
+     4,
+     "Slot",
+     "R06"
+    ],
+    "tau": 0.3,
+    "same_feature": true
+   },
+   {
+    "family": "DRAWING",
+    "primary": [
+     1,
+     "Cylinder",
+     "D01"
+    ],
+    "secondary": [
+     2,
+     "Cylinder",
+     "D01"
+    ],
+    "tau": 1.0,
+    "same_feature": true
+   },
+   {
+    "family": "DRAWING",
+    "primary": [
+     2,
+     "Cylinder",
+     "D02"
+    ],
+    "secondary": [
+     1,
+     "Cylinder",
+     "D02"
+    ],
+    "tau": 1.0,
+    "same_feature": true
+   },
+   {
+    "family": "DRAWING",
+    "primary": [
+     3,
+     "Groove",
+     "D03"
+    ],
+    "secondary": [
+     3,
+     "Groove",
+     "D03"
+    ],
+    "tau": 1.0,
+    "same_feature": true
+   },
+   {
+    "family": "DRAWING",
+    "primary": [
+     4,
+     "Boss",
+     "D04"
+    ],
+    "secondary": [
+     4,
+     "Boss",
+     "D04"
+    ],
+    "tau": 1.0,
+    "same_feature": true
+   },
+   {
+    "family": "DRAWING",
+    "primary": [
+     5,
+     "Hole",
+     "D05c"
+    ],
+    "secondary": [
+     6,
+     "Bore",
+     "D05a"
+    ],
+    "tau": 0.7,
+    "same_feature": false
+   }
+  ],
+  "step_attr": [
+   {
+    "entity": [
+     1,
+     5
+    ],
+    "ref": "R01",
+    "pos_err_primary": 0.0,
+    "pos_err_merged": 8.650000000000006,
+    "len_err_primary": 0.0,
+    "len_err_merged": 20.200000000000003
+   },
+   {
+    "entity": [
+     7,
+     1
+    ],
+    "ref": "R07",
+    "pos_err_primary": 0.0,
+    "pos_err_merged": 0.0,
+    "len_err_primary": 2.0500000000000007,
+    "len_err_merged": 1.2300000000000004
+   },
+   {
+    "entity": [
+     8,
+     2
+    ],
+    "ref": "R08",
+    "pos_err_primary": 0.009000000000014552,
+    "pos_err_merged": 1.3109999999999786,
+    "len_err_primary": 0.008999999999999897,
+    "len_err_merged": 1.3110000000000004
+   },
+   {
+    "entity": [
+     11,
+     3
+    ],
+    "ref": "R06",
+    "pos_err_primary": 0.0,
+    "pos_err_merged": 0.0,
+    "len_err_primary": null,
+    "len_err_merged": null
+   },
+   {
+    "entity": [
+     12,
+     4
+    ],
+    "ref": "R06",
+    "pos_err_primary": 0.0,
+    "pos_err_merged": 0.0,
+    "len_err_primary": null,
+    "len_err_merged": null
+   }
+  ],
+  "precision": 0.8,
+  "label_consistent_precision": 0.6,
+  "recall": 0.8,
+  "f1": 0.8000000000000002,
+  "step_merged_pos_err_mean": {
+   "primary": 0.0018000000000029104,
+   "merged": 1.9921999999999969
+  },
+  "step_merged_len_err_mean": {
+   "primary": 0.6863333333333336,
+   "merged": 7.580333333333335
+  }
+ },
+ "tau_min_1": {
+  "entities": 23,
+  "merges": 7,
+  "correct": 6,
+  "label_consistent_correct": 6,
+  "max_true": 10,
+  "duplicated_features": 3,
+  "merge_list": [
+   {
+    "family": "STEP",
+    "primary": [
+     7,
+     "Blind Hole",
+     "R07"
+    ],
+    "secondary": [
+     1,
+     "Blind Hole",
+     "R07"
+    ],
+    "tau": 1.0,
+    "same_feature": true
+   },
+   {
+    "family": "STEP",
+    "primary": [
+     8,
+     "Counterbore",
+     "R08"
+    ],
+    "secondary": [
+     2,
+     "Counterbore",
+     "R08"
+    ],
+    "tau": 1.0,
+    "same_feature": true
+   },
+   {
+    "family": "STEP",
+    "primary": [
+     10,
+     "Boss",
+     "R06"
+    ],
+    "secondary": [
+     5,
+     "Boss",
+     "R05"
+    ],
+    "tau": 1.0,
+    "same_feature": false
+   },
+   {
+    "family": "DRAWING",
+    "primary": [
+     1,
+     "Cylinder",
+     "D01"
+    ],
+    "secondary": [
+     2,
+     "Cylinder",
+     "D01"
+    ],
+    "tau": 1.0,
+    "same_feature": true
+   },
+   {
+    "family": "DRAWING",
+    "primary": [
+     2,
+     "Cylinder",
+     "D02"
+    ],
+    "secondary": [
+     1,
+     "Cylinder",
+     "D02"
+    ],
+    "tau": 1.0,
+    "same_feature": true
+   },
+   {
+    "family": "DRAWING",
+    "primary": [
+     3,
+     "Groove",
+     "D03"
+    ],
+    "secondary": [
+     3,
+     "Groove",
+     "D03"
+    ],
+    "tau": 1.0,
+    "same_feature": true
+   },
+   {
+    "family": "DRAWING",
+    "primary": [
+     4,
+     "Boss",
+     "D04"
+    ],
+    "secondary": [
+     4,
+     "Boss",
+     "D04"
+    ],
+    "tau": 1.0,
+    "same_feature": true
+   }
+  ],
+  "step_attr": [
+   {
+    "entity": [
+     7,
+     1
+    ],
+    "ref": "R07",
+    "pos_err_primary": 0.0,
+    "pos_err_merged": 0.0,
+    "len_err_primary": 2.0500000000000007,
+    "len_err_merged": 1.2300000000000004
+   },
+   {
+    "entity": [
+     8,
+     2
+    ],
+    "ref": "R08",
+    "pos_err_primary": 0.009000000000014552,
+    "pos_err_merged": 1.3109999999999786,
+    "len_err_primary": 0.008999999999999897,
+    "len_err_merged": 1.3110000000000004
+   },
+   {
+    "entity": [
+     10,
+     5
+    ],
+    "ref": "R06",
+    "pos_err_primary": 0.0,
+    "pos_err_merged": 8.832326986700613,
+    "len_err_primary": null,
+    "len_err_merged": 48.0
+   }
+  ],
+  "precision": 0.8571428571428571,
+  "label_consistent_precision": 0.8571428571428571,
+  "recall": 0.6,
+  "f1": 0.7058823529411764,
+  "step_merged_pos_err_mean": {
+   "primary": 0.0030000000000048508,
+   "merged": 3.381108995566864
+  },
+  "step_merged_len_err_mean": {
+   "primary": 1.0295000000000003,
+   "merged": 1.2705000000000004
+  }
+ },
+ "theta": {
+  "gated": {
+   "0.3": {
+    "entities": 22,
+    "merges": 8,
+    "correct": 6,
+    "label_consistent_correct": 6,
+    "max_true": 10,
+    "duplicated_features": 2,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       1,
+       "Step",
+       "R01"
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       "R05"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       8,
+       "Counterbore",
+       "R08"
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       "R08"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       1,
+       "Cylinder",
+       "D01"
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       "D01"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       2,
+       "Cylinder",
+       "D02"
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       "D02"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       5,
+       "Hole",
+       "D05c"
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       "D05a"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       1,
+       5
+      ],
+      "ref": "R01",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 8.650000000000006,
+      "len_err_primary": 0.0,
+      "len_err_merged": 20.200000000000003
+     },
+     {
+      "entity": [
+       7,
+       1
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 1.2300000000000004
+     },
+     {
+      "entity": [
+       8,
+       2
+      ],
+      "ref": "R08",
+      "pos_err_primary": 0.009000000000014552,
+      "pos_err_merged": 1.3109999999999786,
+      "len_err_primary": 0.008999999999999897,
+      "len_err_merged": 1.3110000000000004
+     }
+    ],
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665,
+    "step_merged_pos_err_mean": {
+     "primary": 0.0030000000000048508,
+     "merged": 3.3203333333333283
+    },
+    "step_merged_len_err_mean": {
+     "primary": 0.6863333333333336,
+     "merged": 7.580333333333335
+    }
+   },
+   "0.4": {
+    "entities": 22,
+    "merges": 8,
+    "correct": 6,
+    "label_consistent_correct": 6,
+    "max_true": 10,
+    "duplicated_features": 2,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       1,
+       "Step",
+       "R01"
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       "R05"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       8,
+       "Counterbore",
+       "R08"
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       "R08"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       1,
+       "Cylinder",
+       "D01"
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       "D01"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       2,
+       "Cylinder",
+       "D02"
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       "D02"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       5,
+       "Hole",
+       "D05c"
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       "D05a"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       1,
+       5
+      ],
+      "ref": "R01",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 8.650000000000006,
+      "len_err_primary": 0.0,
+      "len_err_merged": 20.200000000000003
+     },
+     {
+      "entity": [
+       7,
+       1
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 1.2300000000000004
+     },
+     {
+      "entity": [
+       8,
+       2
+      ],
+      "ref": "R08",
+      "pos_err_primary": 0.009000000000014552,
+      "pos_err_merged": 1.3109999999999786,
+      "len_err_primary": 0.008999999999999897,
+      "len_err_merged": 1.3110000000000004
+     }
+    ],
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665,
+    "step_merged_pos_err_mean": {
+     "primary": 0.0030000000000048508,
+     "merged": 3.3203333333333283
+    },
+    "step_merged_len_err_mean": {
+     "primary": 0.6863333333333336,
+     "merged": 7.580333333333335
+    }
+   },
+   "0.5": {
+    "entities": 22,
+    "merges": 8,
+    "correct": 6,
+    "label_consistent_correct": 6,
+    "max_true": 10,
+    "duplicated_features": 2,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       1,
+       "Step",
+       "R01"
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       "R05"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       8,
+       "Counterbore",
+       "R08"
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       "R08"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       1,
+       "Cylinder",
+       "D01"
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       "D01"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       2,
+       "Cylinder",
+       "D02"
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       "D02"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       5,
+       "Hole",
+       "D05c"
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       "D05a"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       1,
+       5
+      ],
+      "ref": "R01",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 8.650000000000006,
+      "len_err_primary": 0.0,
+      "len_err_merged": 20.200000000000003
+     },
+     {
+      "entity": [
+       7,
+       1
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 1.2300000000000004
+     },
+     {
+      "entity": [
+       8,
+       2
+      ],
+      "ref": "R08",
+      "pos_err_primary": 0.009000000000014552,
+      "pos_err_merged": 1.3109999999999786,
+      "len_err_primary": 0.008999999999999897,
+      "len_err_merged": 1.3110000000000004
+     }
+    ],
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665,
+    "step_merged_pos_err_mean": {
+     "primary": 0.0030000000000048508,
+     "merged": 3.3203333333333283
+    },
+    "step_merged_len_err_mean": {
+     "primary": 0.6863333333333336,
+     "merged": 7.580333333333335
+    }
+   },
+   "0.6": {
+    "entities": 22,
+    "merges": 8,
+    "correct": 6,
+    "label_consistent_correct": 6,
+    "max_true": 10,
+    "duplicated_features": 2,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       1,
+       "Step",
+       "R01"
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       "R05"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       8,
+       "Counterbore",
+       "R08"
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       "R08"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       1,
+       "Cylinder",
+       "D01"
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       "D01"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       2,
+       "Cylinder",
+       "D02"
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       "D02"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       5,
+       "Hole",
+       "D05c"
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       "D05a"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       1,
+       5
+      ],
+      "ref": "R01",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 8.650000000000006,
+      "len_err_primary": 0.0,
+      "len_err_merged": 20.200000000000003
+     },
+     {
+      "entity": [
+       7,
+       1
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 1.2300000000000004
+     },
+     {
+      "entity": [
+       8,
+       2
+      ],
+      "ref": "R08",
+      "pos_err_primary": 0.009000000000014552,
+      "pos_err_merged": 1.3109999999999786,
+      "len_err_primary": 0.008999999999999897,
+      "len_err_merged": 1.3110000000000004
+     }
+    ],
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665,
+    "step_merged_pos_err_mean": {
+     "primary": 0.0030000000000048508,
+     "merged": 3.3203333333333283
+    },
+    "step_merged_len_err_mean": {
+     "primary": 0.6863333333333336,
+     "merged": 7.580333333333335
+    }
+   },
+   "0.7": {
+    "entities": 24,
+    "merges": 6,
+    "correct": 5,
+    "label_consistent_correct": 5,
+    "max_true": 10,
+    "duplicated_features": 3,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       3,
+       "Step",
+       "R03"
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       "R05"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       8,
+       "Counterbore",
+       "R08"
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       "R08"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       1,
+       "Cylinder",
+       "D01"
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       "D01"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       2,
+       "Cylinder",
+       "D02"
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       "D02"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       3,
+       5
+      ],
+      "ref": "R03",
+      "pos_err_primary": 0.001999999999995339,
+      "pos_err_merged": 1.1710000000000065,
+      "len_err_primary": 0.0040000000000000036,
+      "len_err_merged": 34.496
+     },
+     {
+      "entity": [
+       7,
+       1
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 1.2300000000000004
+     },
+     {
+      "entity": [
+       8,
+       2
+      ],
+      "ref": "R08",
+      "pos_err_primary": 0.009000000000014552,
+      "pos_err_merged": 1.3109999999999786,
+      "len_err_primary": 0.008999999999999897,
+      "len_err_merged": 1.3110000000000004
+     }
+    ],
+    "precision": 0.8333333333333334,
+    "label_consistent_precision": 0.8333333333333334,
+    "recall": 0.5,
+    "f1": 0.625,
+    "step_merged_pos_err_mean": {
+     "primary": 0.0036666666666699634,
+     "merged": 0.8273333333333284
+    },
+    "step_merged_len_err_mean": {
+     "primary": 0.6876666666666669,
+     "merged": 12.345666666666668
+    }
+   },
+   "0.8": {
+    "entities": 28,
+    "merges": 2,
+    "correct": 2,
+    "label_consistent_correct": 2,
+    "max_true": 10,
+    "duplicated_features": 7,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       8,
+       "Counterbore",
+       "R08"
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       "R08"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       7,
+       1
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 1.2300000000000004
+     },
+     {
+      "entity": [
+       8,
+       2
+      ],
+      "ref": "R08",
+      "pos_err_primary": 0.009000000000014552,
+      "pos_err_merged": 1.3109999999999786,
+      "len_err_primary": 0.008999999999999897,
+      "len_err_merged": 1.3110000000000004
+     }
+    ],
+    "precision": 1.0,
+    "label_consistent_precision": 1.0,
+    "recall": 0.2,
+    "f1": 0.33333333333333337,
+    "step_merged_pos_err_mean": {
+     "primary": 0.004500000000007276,
+     "merged": 0.6554999999999893
+    },
+    "step_merged_len_err_mean": {
+     "primary": 1.0295000000000003,
+     "merged": 1.2705000000000004
+    }
+   }
+  },
+  "ablated": {
+   "0.3": {
+    "entities": 19,
+    "merges": 11,
+    "correct": 4,
+    "label_consistent_correct": 4,
+    "max_true": 10,
+    "duplicated_features": 1,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       1,
+       "Step",
+       "R01"
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       "R05"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       2,
+       "Chamfer",
+       "R02"
+      ],
+      "secondary": [
+       4,
+       "Slot",
+       "R06"
+      ],
+      "tau": 0.0,
+      "same_feature": false
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       5,
+       "Step",
+       "R05"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 0.0,
+      "same_feature": false
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       6,
+       "Chamfer",
+       "R10"
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       "R08"
+      ],
+      "tau": 0.0,
+      "same_feature": false
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       3,
+       "Slot",
+       "R06"
+      ],
+      "tau": 0.0,
+      "same_feature": false
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       1,
+       "Cylinder",
+       "D01"
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       "D01"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       2,
+       "Cylinder",
+       "D02"
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       "D02"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       5,
+       "Hole",
+       "D05c"
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       "D05a"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       6,
+       "Hole",
+       "D05b"
+      ],
+      "secondary": [
+       5,
+       "Slot",
+       "D04"
+      ],
+      "tau": 0.3,
+      "same_feature": false
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       1,
+       5
+      ],
+      "ref": "R01",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 8.650000000000006,
+      "len_err_primary": 0.0,
+      "len_err_merged": 20.200000000000003
+     },
+     {
+      "entity": [
+       2,
+       4
+      ],
+      "ref": "R02",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 6.921163197035598,
+      "len_err_primary": 0.0,
+      "len_err_merged": 0.0
+     },
+     {
+      "entity": [
+       5,
+       1
+      ],
+      "ref": "R05",
+      "pos_err_primary": 0.5,
+      "pos_err_merged": 7.599999999999994,
+      "len_err_primary": 1.0,
+      "len_err_merged": 10.399999999999999
+     },
+     {
+      "entity": [
+       6,
+       2
+      ],
+      "ref": "R10",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.19999999999998863,
+      "len_err_primary": 0.0,
+      "len_err_merged": 2.0000000000000004
+     },
+     {
+      "entity": [
+       7,
+       3
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 6.11882341631134,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 2.0500000000000007
+     }
+    ],
+    "precision": 0.36363636363636365,
+    "label_consistent_precision": 0.36363636363636365,
+    "recall": 0.4,
+    "f1": 0.380952380952381,
+    "step_merged_pos_err_mean": {
+     "primary": 0.1,
+     "merged": 5.897997322669385
+    },
+    "step_merged_len_err_mean": {
+     "primary": 0.6100000000000001,
+     "merged": 6.9300000000000015
+    }
+   },
+   "0.4": {
+    "entities": 20,
+    "merges": 10,
+    "correct": 6,
+    "label_consistent_correct": 5,
+    "max_true": 10,
+    "duplicated_features": 2,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       1,
+       "Step",
+       "R01"
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       "R05"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       6,
+       "Chamfer",
+       "R10"
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       "R08"
+      ],
+      "tau": 0.0,
+      "same_feature": false
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       8,
+       "Counterbore",
+       "R08"
+      ],
+      "secondary": [
+       3,
+       "Slot",
+       "R06"
+      ],
+      "tau": 0.0,
+      "same_feature": false
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       10,
+       "Boss",
+       "R06"
+      ],
+      "secondary": [
+       4,
+       "Slot",
+       "R06"
+      ],
+      "tau": 0.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       1,
+       "Cylinder",
+       "D01"
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       "D01"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       2,
+       "Cylinder",
+       "D02"
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       "D02"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       5,
+       "Hole",
+       "D05c"
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       "D05a"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       1,
+       5
+      ],
+      "ref": "R01",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 8.650000000000006,
+      "len_err_primary": 0.0,
+      "len_err_merged": 20.200000000000003
+     },
+     {
+      "entity": [
+       6,
+       2
+      ],
+      "ref": "R10",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.19999999999998863,
+      "len_err_primary": 0.0,
+      "len_err_merged": 2.0000000000000004
+     },
+     {
+      "entity": [
+       7,
+       1
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 1.2300000000000004
+     },
+     {
+      "entity": [
+       8,
+       3
+      ],
+      "ref": "R08",
+      "pos_err_primary": 0.009000000000014552,
+      "pos_err_merged": 6.014682036483723,
+      "len_err_primary": 0.008999999999999897,
+      "len_err_merged": 0.008999999999999897
+     },
+     {
+      "entity": [
+       10,
+       4
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 6.400000000000006,
+      "len_err_primary": null,
+      "len_err_merged": null
+     }
+    ],
+    "precision": 0.6,
+    "label_consistent_precision": 0.5,
+    "recall": 0.6,
+    "f1": 0.6,
+    "step_merged_pos_err_mean": {
+     "primary": 0.0018000000000029104,
+     "merged": 4.252936407296745
+    },
+    "step_merged_len_err_mean": {
+     "primary": 0.5147500000000002,
+     "merged": 5.859750000000001
+    }
+   },
+   "0.5": {
+    "entities": 20,
+    "merges": 10,
+    "correct": 8,
+    "label_consistent_correct": 6,
+    "max_true": 10,
+    "duplicated_features": 2,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       1,
+       "Step",
+       "R01"
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       "R05"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       8,
+       "Counterbore",
+       "R08"
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       "R08"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       11,
+       "Through Hole",
+       "R06"
+      ],
+      "secondary": [
+       3,
+       "Slot",
+       "R06"
+      ],
+      "tau": 0.3,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       12,
+       "Through Hole",
+       "R06"
+      ],
+      "secondary": [
+       4,
+       "Slot",
+       "R06"
+      ],
+      "tau": 0.3,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       1,
+       "Cylinder",
+       "D01"
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       "D01"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       2,
+       "Cylinder",
+       "D02"
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       "D02"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       5,
+       "Hole",
+       "D05c"
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       "D05a"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       1,
+       5
+      ],
+      "ref": "R01",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 8.650000000000006,
+      "len_err_primary": 0.0,
+      "len_err_merged": 20.200000000000003
+     },
+     {
+      "entity": [
+       7,
+       1
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 1.2300000000000004
+     },
+     {
+      "entity": [
+       8,
+       2
+      ],
+      "ref": "R08",
+      "pos_err_primary": 0.009000000000014552,
+      "pos_err_merged": 1.3109999999999786,
+      "len_err_primary": 0.008999999999999897,
+      "len_err_merged": 1.3110000000000004
+     },
+     {
+      "entity": [
+       11,
+       3
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": null,
+      "len_err_merged": null
+     },
+     {
+      "entity": [
+       12,
+       4
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": null,
+      "len_err_merged": null
+     }
+    ],
+    "precision": 0.8,
+    "label_consistent_precision": 0.6,
+    "recall": 0.8,
+    "f1": 0.8000000000000002,
+    "step_merged_pos_err_mean": {
+     "primary": 0.0018000000000029104,
+     "merged": 1.9921999999999969
+    },
+    "step_merged_len_err_mean": {
+     "primary": 0.6863333333333336,
+     "merged": 7.580333333333335
+    }
+   },
+   "0.6": {
+    "entities": 20,
+    "merges": 10,
+    "correct": 8,
+    "label_consistent_correct": 6,
+    "max_true": 10,
+    "duplicated_features": 2,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       1,
+       "Step",
+       "R01"
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       "R05"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       8,
+       "Counterbore",
+       "R08"
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       "R08"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       11,
+       "Through Hole",
+       "R06"
+      ],
+      "secondary": [
+       3,
+       "Slot",
+       "R06"
+      ],
+      "tau": 0.3,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       12,
+       "Through Hole",
+       "R06"
+      ],
+      "secondary": [
+       4,
+       "Slot",
+       "R06"
+      ],
+      "tau": 0.3,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       1,
+       "Cylinder",
+       "D01"
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       "D01"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       2,
+       "Cylinder",
+       "D02"
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       "D02"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       5,
+       "Hole",
+       "D05c"
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       "D05a"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       1,
+       5
+      ],
+      "ref": "R01",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 8.650000000000006,
+      "len_err_primary": 0.0,
+      "len_err_merged": 20.200000000000003
+     },
+     {
+      "entity": [
+       7,
+       1
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 1.2300000000000004
+     },
+     {
+      "entity": [
+       8,
+       2
+      ],
+      "ref": "R08",
+      "pos_err_primary": 0.009000000000014552,
+      "pos_err_merged": 1.3109999999999786,
+      "len_err_primary": 0.008999999999999897,
+      "len_err_merged": 1.3110000000000004
+     },
+     {
+      "entity": [
+       11,
+       3
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": null,
+      "len_err_merged": null
+     },
+     {
+      "entity": [
+       12,
+       4
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": null,
+      "len_err_merged": null
+     }
+    ],
+    "precision": 0.8,
+    "label_consistent_precision": 0.6,
+    "recall": 0.8,
+    "f1": 0.8000000000000002,
+    "step_merged_pos_err_mean": {
+     "primary": 0.0018000000000029104,
+     "merged": 1.9921999999999969
+    },
+    "step_merged_len_err_mean": {
+     "primary": 0.6863333333333336,
+     "merged": 7.580333333333335
+    }
+   },
+   "0.7": {
+    "entities": 22,
+    "merges": 8,
+    "correct": 7,
+    "label_consistent_correct": 5,
+    "max_true": 10,
+    "duplicated_features": 3,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       3,
+       "Step",
+       "R03"
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       "R05"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       8,
+       "Counterbore",
+       "R08"
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       "R08"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       11,
+       "Through Hole",
+       "R06"
+      ],
+      "secondary": [
+       3,
+       "Slot",
+       "R06"
+      ],
+      "tau": 0.3,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       12,
+       "Through Hole",
+       "R06"
+      ],
+      "secondary": [
+       4,
+       "Slot",
+       "R06"
+      ],
+      "tau": 0.3,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       1,
+       "Cylinder",
+       "D01"
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       "D01"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       2,
+       "Cylinder",
+       "D02"
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       "D02"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       3,
+       5
+      ],
+      "ref": "R03",
+      "pos_err_primary": 0.001999999999995339,
+      "pos_err_merged": 1.1710000000000065,
+      "len_err_primary": 0.0040000000000000036,
+      "len_err_merged": 34.496
+     },
+     {
+      "entity": [
+       7,
+       1
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 1.2300000000000004
+     },
+     {
+      "entity": [
+       8,
+       2
+      ],
+      "ref": "R08",
+      "pos_err_primary": 0.009000000000014552,
+      "pos_err_merged": 1.3109999999999786,
+      "len_err_primary": 0.008999999999999897,
+      "len_err_merged": 1.3110000000000004
+     },
+     {
+      "entity": [
+       11,
+       3
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": null,
+      "len_err_merged": null
+     },
+     {
+      "entity": [
+       12,
+       4
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": null,
+      "len_err_merged": null
+     }
+    ],
+    "precision": 0.875,
+    "label_consistent_precision": 0.625,
+    "recall": 0.7,
+    "f1": 0.7777777777777777,
+    "step_merged_pos_err_mean": {
+     "primary": 0.002200000000001978,
+     "merged": 0.496399999999997
+    },
+    "step_merged_len_err_mean": {
+     "primary": 0.6876666666666669,
+     "merged": 12.345666666666668
+    }
+   },
+   "0.8": {
+    "entities": 28,
+    "merges": 2,
+    "correct": 2,
+    "label_consistent_correct": 2,
+    "max_true": 10,
+    "duplicated_features": 7,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       8,
+       "Counterbore",
+       "R08"
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       "R08"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       7,
+       1
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 1.2300000000000004
+     },
+     {
+      "entity": [
+       8,
+       2
+      ],
+      "ref": "R08",
+      "pos_err_primary": 0.009000000000014552,
+      "pos_err_merged": 1.3109999999999786,
+      "len_err_primary": 0.008999999999999897,
+      "len_err_merged": 1.3110000000000004
+     }
+    ],
+    "precision": 1.0,
+    "label_consistent_precision": 1.0,
+    "recall": 0.2,
+    "f1": 0.33333333333333337,
+    "step_merged_pos_err_mean": {
+     "primary": 0.004500000000007276,
+     "merged": 0.6554999999999893
+    },
+    "step_merged_len_err_mean": {
+     "primary": 1.0295000000000003,
+     "merged": 1.2705000000000004
+    }
+   }
+  }
+ },
+ "dmax": {
+  "10.0": {
+   "entities": 23,
+   "merges": 7,
+   "correct": 5,
+   "label_consistent_correct": 5,
+   "max_true": 10,
+   "duplicated_features": 2,
+   "merge_list": [
+    {
+     "family": "STEP",
+     "primary": [
+      3,
+      "Step",
+      "R03"
+     ],
+     "secondary": [
+      5,
+      "Boss",
+      "R05"
+     ],
+     "tau": 0.7,
+     "same_feature": false
+    },
+    {
+     "family": "STEP",
+     "primary": [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     "secondary": [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "STEP",
+     "primary": [
+      8,
+      "Counterbore",
+      "R08"
+     ],
+     "secondary": [
+      2,
+      "Counterbore",
+      "R08"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     "secondary": [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     "secondary": [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      3,
+      "Groove",
+      "D03"
+     ],
+     "secondary": [
+      3,
+      "Groove",
+      "D03"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     "secondary": [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     "tau": 0.7,
+     "same_feature": false
+    }
+   ],
+   "step_attr": [
+    {
+     "entity": [
+      3,
+      5
+     ],
+     "ref": "R03",
+     "pos_err_primary": 0.001999999999995339,
+     "pos_err_merged": 1.1710000000000065,
+     "len_err_primary": 0.0040000000000000036,
+     "len_err_merged": 34.496
+    },
+    {
+     "entity": [
+      7,
+      1
+     ],
+     "ref": "R07",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 0.0,
+     "len_err_primary": 2.0500000000000007,
+     "len_err_merged": 1.2300000000000004
+    },
+    {
+     "entity": [
+      8,
+      2
+     ],
+     "ref": "R08",
+     "pos_err_primary": 0.009000000000014552,
+     "pos_err_merged": 1.3109999999999786,
+     "len_err_primary": 0.008999999999999897,
+     "len_err_merged": 1.3110000000000004
+    }
+   ],
+   "precision": 0.7142857142857143,
+   "label_consistent_precision": 0.7142857142857143,
+   "recall": 0.5,
+   "f1": 0.588235294117647,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0036666666666699634,
+    "merged": 0.8273333333333284
+   },
+   "step_merged_len_err_mean": {
+    "primary": 0.6876666666666669,
+    "merged": 12.345666666666668
+   }
+  },
+  "25.0": {
+   "entities": 22,
+   "merges": 8,
+   "correct": 6,
+   "label_consistent_correct": 6,
+   "max_true": 10,
+   "duplicated_features": 2,
+   "merge_list": [
+    {
+     "family": "STEP",
+     "primary": [
+      3,
+      "Step",
+      "R03"
+     ],
+     "secondary": [
+      5,
+      "Boss",
+      "R05"
+     ],
+     "tau": 0.7,
+     "same_feature": false
+    },
+    {
+     "family": "STEP",
+     "primary": [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     "secondary": [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "STEP",
+     "primary": [
+      8,
+      "Counterbore",
+      "R08"
+     ],
+     "secondary": [
+      2,
+      "Counterbore",
+      "R08"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     "secondary": [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     "secondary": [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      3,
+      "Groove",
+      "D03"
+     ],
+     "secondary": [
+      3,
+      "Groove",
+      "D03"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      4,
+      "Boss",
+      "D04"
+     ],
+     "secondary": [
+      4,
+      "Boss",
+      "D04"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     "secondary": [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     "tau": 0.7,
+     "same_feature": false
+    }
+   ],
+   "step_attr": [
+    {
+     "entity": [
+      3,
+      5
+     ],
+     "ref": "R03",
+     "pos_err_primary": 0.001999999999995339,
+     "pos_err_merged": 1.1710000000000065,
+     "len_err_primary": 0.0040000000000000036,
+     "len_err_merged": 34.496
+    },
+    {
+     "entity": [
+      7,
+      1
+     ],
+     "ref": "R07",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 0.0,
+     "len_err_primary": 2.0500000000000007,
+     "len_err_merged": 1.2300000000000004
+    },
+    {
+     "entity": [
+      8,
+      2
+     ],
+     "ref": "R08",
+     "pos_err_primary": 0.009000000000014552,
+     "pos_err_merged": 1.3109999999999786,
+     "len_err_primary": 0.008999999999999897,
+     "len_err_merged": 1.3110000000000004
+    }
+   ],
+   "precision": 0.75,
+   "label_consistent_precision": 0.75,
+   "recall": 0.6,
+   "f1": 0.6666666666666665,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0036666666666699634,
+    "merged": 0.8273333333333284
+   },
+   "step_merged_len_err_mean": {
+    "primary": 0.6876666666666669,
+    "merged": 12.345666666666668
+   }
+  },
+  "50.0": {
+   "entities": 22,
+   "merges": 8,
+   "correct": 6,
+   "label_consistent_correct": 6,
+   "max_true": 10,
+   "duplicated_features": 2,
+   "merge_list": [
+    {
+     "family": "STEP",
+     "primary": [
+      1,
+      "Step",
+      "R01"
+     ],
+     "secondary": [
+      5,
+      "Boss",
+      "R05"
+     ],
+     "tau": 0.7,
+     "same_feature": false
+    },
+    {
+     "family": "STEP",
+     "primary": [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     "secondary": [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "STEP",
+     "primary": [
+      8,
+      "Counterbore",
+      "R08"
+     ],
+     "secondary": [
+      2,
+      "Counterbore",
+      "R08"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     "secondary": [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     "secondary": [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      3,
+      "Groove",
+      "D03"
+     ],
+     "secondary": [
+      3,
+      "Groove",
+      "D03"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      4,
+      "Boss",
+      "D04"
+     ],
+     "secondary": [
+      4,
+      "Boss",
+      "D04"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     "secondary": [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     "tau": 0.7,
+     "same_feature": false
+    }
+   ],
+   "step_attr": [
+    {
+     "entity": [
+      1,
+      5
+     ],
+     "ref": "R01",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 8.650000000000006,
+     "len_err_primary": 0.0,
+     "len_err_merged": 20.200000000000003
+    },
+    {
+     "entity": [
+      7,
+      1
+     ],
+     "ref": "R07",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 0.0,
+     "len_err_primary": 2.0500000000000007,
+     "len_err_merged": 1.2300000000000004
+    },
+    {
+     "entity": [
+      8,
+      2
+     ],
+     "ref": "R08",
+     "pos_err_primary": 0.009000000000014552,
+     "pos_err_merged": 1.3109999999999786,
+     "len_err_primary": 0.008999999999999897,
+     "len_err_merged": 1.3110000000000004
+    }
+   ],
+   "precision": 0.75,
+   "label_consistent_precision": 0.75,
+   "recall": 0.6,
+   "f1": 0.6666666666666665,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0030000000000048508,
+    "merged": 3.3203333333333283
+   },
+   "step_merged_len_err_mean": {
+    "primary": 0.6863333333333336,
+    "merged": 7.580333333333335
+   }
+  },
+  "100.0": {
+   "entities": 22,
+   "merges": 8,
+   "correct": 6,
+   "label_consistent_correct": 6,
+   "max_true": 10,
+   "duplicated_features": 2,
+   "merge_list": [
+    {
+     "family": "STEP",
+     "primary": [
+      1,
+      "Step",
+      "R01"
+     ],
+     "secondary": [
+      5,
+      "Boss",
+      "R05"
+     ],
+     "tau": 0.7,
+     "same_feature": false
+    },
+    {
+     "family": "STEP",
+     "primary": [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     "secondary": [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "STEP",
+     "primary": [
+      8,
+      "Counterbore",
+      "R08"
+     ],
+     "secondary": [
+      2,
+      "Counterbore",
+      "R08"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     "secondary": [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     "secondary": [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      3,
+      "Groove",
+      "D03"
+     ],
+     "secondary": [
+      3,
+      "Groove",
+      "D03"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      4,
+      "Boss",
+      "D04"
+     ],
+     "secondary": [
+      4,
+      "Boss",
+      "D04"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     "secondary": [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     "tau": 0.7,
+     "same_feature": false
+    }
+   ],
+   "step_attr": [
+    {
+     "entity": [
+      1,
+      5
+     ],
+     "ref": "R01",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 8.650000000000006,
+     "len_err_primary": 0.0,
+     "len_err_merged": 20.200000000000003
+    },
+    {
+     "entity": [
+      7,
+      1
+     ],
+     "ref": "R07",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 0.0,
+     "len_err_primary": 2.0500000000000007,
+     "len_err_merged": 1.2300000000000004
+    },
+    {
+     "entity": [
+      8,
+      2
+     ],
+     "ref": "R08",
+     "pos_err_primary": 0.009000000000014552,
+     "pos_err_merged": 1.3109999999999786,
+     "len_err_primary": 0.008999999999999897,
+     "len_err_merged": 1.3110000000000004
+    }
+   ],
+   "precision": 0.75,
+   "label_consistent_precision": 0.75,
+   "recall": 0.6,
+   "f1": 0.6666666666666665,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0030000000000048508,
+    "merged": 3.3203333333333283
+   },
+   "step_merged_len_err_mean": {
+    "primary": 0.6863333333333336,
+    "merged": 7.580333333333335
+   }
+  },
+  "200.0": {
+   "entities": 22,
+   "merges": 8,
+   "correct": 6,
+   "label_consistent_correct": 6,
+   "max_true": 10,
+   "duplicated_features": 2,
+   "merge_list": [
+    {
+     "family": "STEP",
+     "primary": [
+      1,
+      "Step",
+      "R01"
+     ],
+     "secondary": [
+      5,
+      "Boss",
+      "R05"
+     ],
+     "tau": 0.7,
+     "same_feature": false
+    },
+    {
+     "family": "STEP",
+     "primary": [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     "secondary": [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "STEP",
+     "primary": [
+      8,
+      "Counterbore",
+      "R08"
+     ],
+     "secondary": [
+      2,
+      "Counterbore",
+      "R08"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     "secondary": [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     "secondary": [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      3,
+      "Groove",
+      "D03"
+     ],
+     "secondary": [
+      3,
+      "Groove",
+      "D03"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      4,
+      "Boss",
+      "D04"
+     ],
+     "secondary": [
+      4,
+      "Boss",
+      "D04"
+     ],
+     "tau": 1.0,
+     "same_feature": true
+    },
+    {
+     "family": "DRAWING",
+     "primary": [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     "secondary": [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     "tau": 0.7,
+     "same_feature": false
+    }
+   ],
+   "step_attr": [
+    {
+     "entity": [
+      1,
+      5
+     ],
+     "ref": "R01",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 8.650000000000006,
+     "len_err_primary": 0.0,
+     "len_err_merged": 20.200000000000003
+    },
+    {
+     "entity": [
+      7,
+      1
+     ],
+     "ref": "R07",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 0.0,
+     "len_err_primary": 2.0500000000000007,
+     "len_err_merged": 1.2300000000000004
+    },
+    {
+     "entity": [
+      8,
+      2
+     ],
+     "ref": "R08",
+     "pos_err_primary": 0.009000000000014552,
+     "pos_err_merged": 1.3109999999999786,
+     "len_err_primary": 0.008999999999999897,
+     "len_err_merged": 1.3110000000000004
+    }
+   ],
+   "precision": 0.75,
+   "label_consistent_precision": 0.75,
+   "recall": 0.6,
+   "f1": 0.6666666666666665,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0030000000000048508,
+    "merged": 3.3203333333333283
+   },
+   "step_merged_len_err_mean": {
+    "primary": 0.6863333333333336,
+    "merged": 7.580333333333335
+   }
+  }
+ },
+ "eps": {
+  "gated": {
+   "0.1": {
+    "entities": 23,
+    "merges": 7,
+    "correct": 5,
+    "label_consistent_correct": 5,
+    "max_true": 10,
+    "duplicated_features": 3,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       10,
+       "Boss",
+       "R06"
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       "R05"
+      ],
+      "tau": 1.0,
+      "same_feature": false
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       1,
+       "Cylinder",
+       "D01"
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       "D01"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       2,
+       "Cylinder",
+       "D02"
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       "D02"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       5,
+       "Hole",
+       "D05c"
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       "D05a"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       7,
+       1
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 1.2300000000000004
+     },
+     {
+      "entity": [
+       10,
+       5
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 8.832326986700613,
+      "len_err_primary": null,
+      "len_err_merged": 48.0
+     }
+    ],
+    "precision": 0.7142857142857143,
+    "label_consistent_precision": 0.7142857142857143,
+    "recall": 0.5,
+    "f1": 0.588235294117647,
+    "step_merged_pos_err_mean": {
+     "primary": 0.0,
+     "merged": 4.4161634933503064
+    },
+    "step_merged_len_err_mean": {
+     "primary": 2.0500000000000007,
+     "merged": 1.2300000000000004
+    }
+   },
+   "0.2": {
+    "entities": 23,
+    "merges": 7,
+    "correct": 5,
+    "label_consistent_correct": 5,
+    "max_true": 10,
+    "duplicated_features": 3,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       10,
+       "Boss",
+       "R06"
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       "R05"
+      ],
+      "tau": 1.0,
+      "same_feature": false
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       1,
+       "Cylinder",
+       "D01"
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       "D01"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       2,
+       "Cylinder",
+       "D02"
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       "D02"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       5,
+       "Hole",
+       "D05c"
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       "D05a"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       7,
+       1
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 1.2300000000000004
+     },
+     {
+      "entity": [
+       10,
+       5
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 8.832326986700613,
+      "len_err_primary": null,
+      "len_err_merged": 48.0
+     }
+    ],
+    "precision": 0.7142857142857143,
+    "label_consistent_precision": 0.7142857142857143,
+    "recall": 0.5,
+    "f1": 0.588235294117647,
+    "step_merged_pos_err_mean": {
+     "primary": 0.0,
+     "merged": 4.4161634933503064
+    },
+    "step_merged_len_err_mean": {
+     "primary": 2.0500000000000007,
+     "merged": 1.2300000000000004
+    }
+   },
+   "0.3": {
+    "entities": 23,
+    "merges": 7,
+    "correct": 5,
+    "label_consistent_correct": 5,
+    "max_true": 10,
+    "duplicated_features": 3,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       10,
+       "Boss",
+       "R06"
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       "R05"
+      ],
+      "tau": 1.0,
+      "same_feature": false
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       1,
+       "Cylinder",
+       "D01"
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       "D01"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       2,
+       "Cylinder",
+       "D02"
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       "D02"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       5,
+       "Hole",
+       "D05c"
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       "D05a"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       7,
+       1
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 1.2300000000000004
+     },
+     {
+      "entity": [
+       10,
+       5
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 8.832326986700613,
+      "len_err_primary": null,
+      "len_err_merged": 48.0
+     }
+    ],
+    "precision": 0.7142857142857143,
+    "label_consistent_precision": 0.7142857142857143,
+    "recall": 0.5,
+    "f1": 0.588235294117647,
+    "step_merged_pos_err_mean": {
+     "primary": 0.0,
+     "merged": 4.4161634933503064
+    },
+    "step_merged_len_err_mean": {
+     "primary": 2.0500000000000007,
+     "merged": 1.2300000000000004
+    }
+   },
+   "0.5": {
+    "entities": 23,
+    "merges": 7,
+    "correct": 6,
+    "label_consistent_correct": 6,
+    "max_true": 10,
+    "duplicated_features": 3,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       5,
+       "Step",
+       "R05"
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       "R05"
+      ],
+      "tau": 0.7,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       1,
+       "Cylinder",
+       "D01"
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       "D01"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       2,
+       "Cylinder",
+       "D02"
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       "D02"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       5,
+       "Hole",
+       "D05c"
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       "D05a"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       5,
+       5
+      ],
+      "ref": "R05",
+      "pos_err_primary": 0.5,
+      "pos_err_merged": 7.599999999999994,
+      "len_err_primary": 1.0,
+      "len_err_merged": 17.200000000000003
+     },
+     {
+      "entity": [
+       7,
+       1
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 1.2300000000000004
+     }
+    ],
+    "precision": 0.8571428571428571,
+    "label_consistent_precision": 0.8571428571428571,
+    "recall": 0.6,
+    "f1": 0.7058823529411764,
+    "step_merged_pos_err_mean": {
+     "primary": 0.25,
+     "merged": 3.799999999999997
+    },
+    "step_merged_len_err_mean": {
+     "primary": 1.5250000000000004,
+     "merged": 9.215000000000002
+    }
+   }
+  },
+  "ablated": {
+   "0.1": {
+    "entities": 21,
+    "merges": 9,
+    "correct": 7,
+    "label_consistent_correct": 5,
+    "max_true": 10,
+    "duplicated_features": 3,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       10,
+       "Boss",
+       "R06"
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       "R05"
+      ],
+      "tau": 1.0,
+      "same_feature": false
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       11,
+       "Through Hole",
+       "R06"
+      ],
+      "secondary": [
+       3,
+       "Slot",
+       "R06"
+      ],
+      "tau": 0.3,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       12,
+       "Through Hole",
+       "R06"
+      ],
+      "secondary": [
+       4,
+       "Slot",
+       "R06"
+      ],
+      "tau": 0.3,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       1,
+       "Cylinder",
+       "D01"
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       "D01"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       2,
+       "Cylinder",
+       "D02"
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       "D02"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       5,
+       "Hole",
+       "D05c"
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       "D05a"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       7,
+       1
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 1.2300000000000004
+     },
+     {
+      "entity": [
+       10,
+       5
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 8.832326986700613,
+      "len_err_primary": null,
+      "len_err_merged": 48.0
+     },
+     {
+      "entity": [
+       11,
+       3
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": null,
+      "len_err_merged": null
+     },
+     {
+      "entity": [
+       12,
+       4
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": null,
+      "len_err_merged": null
+     }
+    ],
+    "precision": 0.7777777777777778,
+    "label_consistent_precision": 0.5555555555555556,
+    "recall": 0.7,
+    "f1": 0.7368421052631577,
+    "step_merged_pos_err_mean": {
+     "primary": 0.0,
+     "merged": 2.2080817466751532
+    },
+    "step_merged_len_err_mean": {
+     "primary": 2.0500000000000007,
+     "merged": 1.2300000000000004
+    }
+   },
+   "0.2": {
+    "entities": 21,
+    "merges": 9,
+    "correct": 7,
+    "label_consistent_correct": 5,
+    "max_true": 10,
+    "duplicated_features": 3,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       10,
+       "Boss",
+       "R06"
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       "R05"
+      ],
+      "tau": 1.0,
+      "same_feature": false
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       11,
+       "Through Hole",
+       "R06"
+      ],
+      "secondary": [
+       3,
+       "Slot",
+       "R06"
+      ],
+      "tau": 0.3,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       12,
+       "Through Hole",
+       "R06"
+      ],
+      "secondary": [
+       4,
+       "Slot",
+       "R06"
+      ],
+      "tau": 0.3,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       1,
+       "Cylinder",
+       "D01"
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       "D01"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       2,
+       "Cylinder",
+       "D02"
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       "D02"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       5,
+       "Hole",
+       "D05c"
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       "D05a"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       7,
+       1
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 1.2300000000000004
+     },
+     {
+      "entity": [
+       10,
+       5
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 8.832326986700613,
+      "len_err_primary": null,
+      "len_err_merged": 48.0
+     },
+     {
+      "entity": [
+       11,
+       3
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": null,
+      "len_err_merged": null
+     },
+     {
+      "entity": [
+       12,
+       4
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": null,
+      "len_err_merged": null
+     }
+    ],
+    "precision": 0.7777777777777778,
+    "label_consistent_precision": 0.5555555555555556,
+    "recall": 0.7,
+    "f1": 0.7368421052631577,
+    "step_merged_pos_err_mean": {
+     "primary": 0.0,
+     "merged": 2.2080817466751532
+    },
+    "step_merged_len_err_mean": {
+     "primary": 2.0500000000000007,
+     "merged": 1.2300000000000004
+    }
+   },
+   "0.3": {
+    "entities": 21,
+    "merges": 9,
+    "correct": 7,
+    "label_consistent_correct": 5,
+    "max_true": 10,
+    "duplicated_features": 3,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       10,
+       "Boss",
+       "R06"
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       "R05"
+      ],
+      "tau": 1.0,
+      "same_feature": false
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       11,
+       "Through Hole",
+       "R06"
+      ],
+      "secondary": [
+       3,
+       "Slot",
+       "R06"
+      ],
+      "tau": 0.3,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       12,
+       "Through Hole",
+       "R06"
+      ],
+      "secondary": [
+       4,
+       "Slot",
+       "R06"
+      ],
+      "tau": 0.3,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       1,
+       "Cylinder",
+       "D01"
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       "D01"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       2,
+       "Cylinder",
+       "D02"
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       "D02"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       5,
+       "Hole",
+       "D05c"
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       "D05a"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       7,
+       1
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 1.2300000000000004
+     },
+     {
+      "entity": [
+       10,
+       5
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 8.832326986700613,
+      "len_err_primary": null,
+      "len_err_merged": 48.0
+     },
+     {
+      "entity": [
+       11,
+       3
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": null,
+      "len_err_merged": null
+     },
+     {
+      "entity": [
+       12,
+       4
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": null,
+      "len_err_merged": null
+     }
+    ],
+    "precision": 0.7777777777777778,
+    "label_consistent_precision": 0.5555555555555556,
+    "recall": 0.7,
+    "f1": 0.7368421052631577,
+    "step_merged_pos_err_mean": {
+     "primary": 0.0,
+     "merged": 2.2080817466751532
+    },
+    "step_merged_len_err_mean": {
+     "primary": 2.0500000000000007,
+     "merged": 1.2300000000000004
+    }
+   },
+   "0.5": {
+    "entities": 20,
+    "merges": 10,
+    "correct": 8,
+    "label_consistent_correct": 6,
+    "max_true": 10,
+    "duplicated_features": 2,
+    "merge_list": [
+     {
+      "family": "STEP",
+      "primary": [
+       5,
+       "Step",
+       "R05"
+      ],
+      "secondary": [
+       5,
+       "Boss",
+       "R05"
+      ],
+      "tau": 0.7,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       7,
+       "Blind Hole",
+       "R07"
+      ],
+      "secondary": [
+       1,
+       "Blind Hole",
+       "R07"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       9,
+       "Chamfer",
+       "R09"
+      ],
+      "secondary": [
+       2,
+       "Counterbore",
+       "R08"
+      ],
+      "tau": 0.0,
+      "same_feature": false
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       11,
+       "Through Hole",
+       "R06"
+      ],
+      "secondary": [
+       3,
+       "Slot",
+       "R06"
+      ],
+      "tau": 0.3,
+      "same_feature": true
+     },
+     {
+      "family": "STEP",
+      "primary": [
+       12,
+       "Through Hole",
+       "R06"
+      ],
+      "secondary": [
+       4,
+       "Slot",
+       "R06"
+      ],
+      "tau": 0.3,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       1,
+       "Cylinder",
+       "D01"
+      ],
+      "secondary": [
+       2,
+       "Cylinder",
+       "D01"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       2,
+       "Cylinder",
+       "D02"
+      ],
+      "secondary": [
+       1,
+       "Cylinder",
+       "D02"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "secondary": [
+       3,
+       "Groove",
+       "D03"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "secondary": [
+       4,
+       "Boss",
+       "D04"
+      ],
+      "tau": 1.0,
+      "same_feature": true
+     },
+     {
+      "family": "DRAWING",
+      "primary": [
+       5,
+       "Hole",
+       "D05c"
+      ],
+      "secondary": [
+       6,
+       "Bore",
+       "D05a"
+      ],
+      "tau": 0.7,
+      "same_feature": false
+     }
+    ],
+    "step_attr": [
+     {
+      "entity": [
+       5,
+       5
+      ],
+      "ref": "R05",
+      "pos_err_primary": 0.5,
+      "pos_err_merged": 7.599999999999994,
+      "len_err_primary": 1.0,
+      "len_err_merged": 17.200000000000003
+     },
+     {
+      "entity": [
+       7,
+       1
+      ],
+      "ref": "R07",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 2.0500000000000007,
+      "len_err_merged": 1.2300000000000004
+     },
+     {
+      "entity": [
+       9,
+       2
+      ],
+      "ref": "R09",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": 0.008999999999999897,
+      "len_err_merged": 1.089
+     },
+     {
+      "entity": [
+       11,
+       3
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": null,
+      "len_err_merged": null
+     },
+     {
+      "entity": [
+       12,
+       4
+      ],
+      "ref": "R06",
+      "pos_err_primary": 0.0,
+      "pos_err_merged": 0.0,
+      "len_err_primary": null,
+      "len_err_merged": null
+     }
+    ],
+    "precision": 0.8,
+    "label_consistent_precision": 0.6,
+    "recall": 0.8,
+    "f1": 0.8000000000000002,
+    "step_merged_pos_err_mean": {
+     "primary": 0.1,
+     "merged": 1.519999999999999
+    },
+    "step_merged_len_err_mean": {
+     "primary": 1.019666666666667,
+     "merged": 6.506333333333334
+    }
+   }
+  }
+ },
+ "weights": {
+  "0.2,0.2,0.6": {
+   "gated": {
+    "merges": 3,
+    "correct": 2,
+    "precision": 0.6666666666666666,
+    "label_consistent_precision": 0.6666666666666666,
+    "recall": 0.2,
+    "f1": 0.30769230769230765
+   },
+   "ablated": {
+    "merges": 5,
+    "correct": 3,
+    "precision": 0.6,
+    "label_consistent_precision": 0.4,
+    "recall": 0.3,
+    "f1": 0.4
+   }
+  },
+  "0.2,0.3,0.5": {
+   "gated": {
+    "merges": 3,
+    "correct": 2,
+    "precision": 0.6666666666666666,
+    "label_consistent_precision": 0.6666666666666666,
+    "recall": 0.2,
+    "f1": 0.30769230769230765
+   },
+   "ablated": {
+    "merges": 5,
+    "correct": 3,
+    "precision": 0.6,
+    "label_consistent_precision": 0.4,
+    "recall": 0.3,
+    "f1": 0.4
+   }
+  },
+  "0.2,0.4,0.4": {
+   "gated": {
+    "merges": 7,
+    "correct": 5,
+    "precision": 0.7142857142857143,
+    "label_consistent_precision": 0.7142857142857143,
+    "recall": 0.5,
+    "f1": 0.588235294117647
+   },
+   "ablated": {
+    "merges": 9,
+    "correct": 6,
+    "precision": 0.6666666666666666,
+    "label_consistent_precision": 0.5555555555555556,
+    "recall": 0.6,
+    "f1": 0.631578947368421
+   }
+  },
+  "0.2,0.5,0.3": {
+   "gated": {
+    "merges": 8,
+    "correct": 6,
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665
+   },
+   "ablated": {
+    "merges": 10,
+    "correct": 6,
+    "precision": 0.6,
+    "label_consistent_precision": 0.5,
+    "recall": 0.6,
+    "f1": 0.6
+   }
+  },
+  "0.2,0.6,0.2": {
+   "gated": {
+    "merges": 8,
+    "correct": 6,
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665
+   },
+   "ablated": {
+    "merges": 10,
+    "correct": 6,
+    "precision": 0.6,
+    "label_consistent_precision": 0.5,
+    "recall": 0.6,
+    "f1": 0.6
+   }
+  },
+  "0.3,0.1,0.6": {
+   "gated": {
+    "merges": 3,
+    "correct": 2,
+    "precision": 0.6666666666666666,
+    "label_consistent_precision": 0.6666666666666666,
+    "recall": 0.2,
+    "f1": 0.30769230769230765
+   },
+   "ablated": {
+    "merges": 5,
+    "correct": 4,
+    "precision": 0.8,
+    "label_consistent_precision": 0.4,
+    "recall": 0.4,
+    "f1": 0.5333333333333333
+   }
+  },
+  "0.3,0.2,0.5": {
+   "gated": {
+    "merges": 3,
+    "correct": 2,
+    "precision": 0.6666666666666666,
+    "label_consistent_precision": 0.6666666666666666,
+    "recall": 0.2,
+    "f1": 0.30769230769230765
+   },
+   "ablated": {
+    "merges": 5,
+    "correct": 4,
+    "precision": 0.8,
+    "label_consistent_precision": 0.4,
+    "recall": 0.4,
+    "f1": 0.5333333333333333
+   }
+  },
+  "0.3,0.3,0.4": {
+   "gated": {
+    "merges": 7,
+    "correct": 5,
+    "precision": 0.7142857142857143,
+    "label_consistent_precision": 0.7142857142857143,
+    "recall": 0.5,
+    "f1": 0.588235294117647
+   },
+   "ablated": {
+    "merges": 9,
+    "correct": 7,
+    "precision": 0.7777777777777778,
+    "label_consistent_precision": 0.5555555555555556,
+    "recall": 0.7,
+    "f1": 0.7368421052631577
+   }
+  },
+  "0.3,0.4,0.3": {
+   "gated": {
+    "merges": 8,
+    "correct": 6,
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665
+   },
+   "ablated": {
+    "merges": 10,
+    "correct": 8,
+    "precision": 0.8,
+    "label_consistent_precision": 0.6,
+    "recall": 0.8,
+    "f1": 0.8000000000000002
+   }
+  },
+  "0.3,0.5,0.2": {
+   "gated": {
+    "merges": 8,
+    "correct": 6,
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665
+   },
+   "ablated": {
+    "merges": 10,
+    "correct": 6,
+    "precision": 0.6,
+    "label_consistent_precision": 0.5,
+    "recall": 0.6,
+    "f1": 0.6
+   }
+  },
+  "0.3,0.6,0.1": {
+   "gated": {
+    "merges": 8,
+    "correct": 6,
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665
+   },
+   "ablated": {
+    "merges": 10,
+    "correct": 6,
+    "precision": 0.6,
+    "label_consistent_precision": 0.5,
+    "recall": 0.6,
+    "f1": 0.6
+   }
+  },
+  "0.4,0.1,0.5": {
+   "gated": {
+    "merges": 3,
+    "correct": 2,
+    "precision": 0.6666666666666666,
+    "label_consistent_precision": 0.6666666666666666,
+    "recall": 0.2,
+    "f1": 0.30769230769230765
+   },
+   "ablated": {
+    "merges": 5,
+    "correct": 4,
+    "precision": 0.8,
+    "label_consistent_precision": 0.4,
+    "recall": 0.4,
+    "f1": 0.5333333333333333
+   }
+  },
+  "0.4,0.2,0.4": {
+   "gated": {
+    "merges": 7,
+    "correct": 6,
+    "precision": 0.8571428571428571,
+    "label_consistent_precision": 0.8571428571428571,
+    "recall": 0.6,
+    "f1": 0.7058823529411764
+   },
+   "ablated": {
+    "merges": 9,
+    "correct": 8,
+    "precision": 0.8888888888888888,
+    "label_consistent_precision": 0.6666666666666666,
+    "recall": 0.8,
+    "f1": 0.8421052631578948
+   }
+  },
+  "0.4,0.3,0.3": {
+   "gated": {
+    "merges": 8,
+    "correct": 6,
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665
+   },
+   "ablated": {
+    "merges": 10,
+    "correct": 8,
+    "precision": 0.8,
+    "label_consistent_precision": 0.6,
+    "recall": 0.8,
+    "f1": 0.8000000000000002
+   }
+  },
+  "0.4,0.4,0.2": {
+   "gated": {
+    "merges": 8,
+    "correct": 6,
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665
+   },
+   "ablated": {
+    "merges": 10,
+    "correct": 8,
+    "precision": 0.8,
+    "label_consistent_precision": 0.6,
+    "recall": 0.8,
+    "f1": 0.8000000000000002
+   }
+  },
+  "0.4,0.5,0.1": {
+   "gated": {
+    "merges": 8,
+    "correct": 6,
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665
+   },
+   "ablated": {
+    "merges": 10,
+    "correct": 7,
+    "precision": 0.7,
+    "label_consistent_precision": 0.5,
+    "recall": 0.7,
+    "f1": 0.7
+   }
+  },
+  "0.4,0.6,0.0": {
+   "gated": {
+    "merges": 8,
+    "correct": 6,
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665
+   },
+   "ablated": {
+    "merges": 10,
+    "correct": 7,
+    "precision": 0.7,
+    "label_consistent_precision": 0.5,
+    "recall": 0.7,
+    "f1": 0.7
+   }
+  },
+  "0.5,0.1,0.4": {
+   "gated": {
+    "merges": 7,
+    "correct": 6,
+    "precision": 0.8571428571428571,
+    "label_consistent_precision": 0.8571428571428571,
+    "recall": 0.6,
+    "f1": 0.7058823529411764
+   },
+   "ablated": {
+    "merges": 9,
+    "correct": 8,
+    "precision": 0.8888888888888888,
+    "label_consistent_precision": 0.6666666666666666,
+    "recall": 0.8,
+    "f1": 0.8421052631578948
+   }
+  },
+  "0.5,0.2,0.3": {
+   "gated": {
+    "merges": 8,
+    "correct": 6,
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665
+   },
+   "ablated": {
+    "merges": 10,
+    "correct": 8,
+    "precision": 0.8,
+    "label_consistent_precision": 0.6,
+    "recall": 0.8,
+    "f1": 0.8000000000000002
+   }
+  },
+  "0.5,0.3,0.2": {
+   "gated": {
+    "merges": 8,
+    "correct": 6,
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665
+   },
+   "ablated": {
+    "merges": 10,
+    "correct": 8,
+    "precision": 0.8,
+    "label_consistent_precision": 0.6,
+    "recall": 0.8,
+    "f1": 0.8000000000000002
+   }
+  },
+  "0.5,0.4,0.1": {
+   "gated": {
+    "merges": 8,
+    "correct": 6,
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665
+   },
+   "ablated": {
+    "merges": 10,
+    "correct": 8,
+    "precision": 0.8,
+    "label_consistent_precision": 0.6,
+    "recall": 0.8,
+    "f1": 0.8000000000000002
+   }
+  },
+  "0.5,0.5,0.0": {
+   "gated": {
+    "merges": 8,
+    "correct": 6,
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665
+   },
+   "ablated": {
+    "merges": 10,
+    "correct": 8,
+    "precision": 0.8,
+    "label_consistent_precision": 0.6,
+    "recall": 0.8,
+    "f1": 0.8000000000000002
+   }
+  },
+  "0.6,0.1,0.3": {
+   "gated": {
+    "merges": 8,
+    "correct": 6,
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665
+   },
+   "ablated": {
+    "merges": 10,
+    "correct": 8,
+    "precision": 0.8,
+    "label_consistent_precision": 0.6,
+    "recall": 0.8,
+    "f1": 0.8000000000000002
+   }
+  },
+  "0.6,0.2,0.2": {
+   "gated": {
+    "merges": 8,
+    "correct": 6,
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665
+   },
+   "ablated": {
+    "merges": 10,
+    "correct": 8,
+    "precision": 0.8,
+    "label_consistent_precision": 0.6,
+    "recall": 0.8,
+    "f1": 0.8000000000000002
+   }
+  },
+  "0.6,0.3,0.1": {
+   "gated": {
+    "merges": 8,
+    "correct": 6,
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665
+   },
+   "ablated": {
+    "merges": 10,
+    "correct": 8,
+    "precision": 0.8,
+    "label_consistent_precision": 0.6,
+    "recall": 0.8,
+    "f1": 0.8000000000000002
+   }
+  },
+  "0.6,0.4,0.0": {
+   "gated": {
+    "merges": 8,
+    "correct": 6,
+    "precision": 0.75,
+    "label_consistent_precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665
+   },
+   "ablated": {
+    "merges": 10,
+    "correct": 8,
+    "precision": 0.8,
+    "label_consistent_precision": 0.6,
+    "recall": 0.8,
+    "f1": 0.8000000000000002
+   }
+  }
+ },
+ "partition_identity": {
+  "theta_gated": {
+   "0.3": true,
+   "0.4": true,
+   "0.5": true,
+   "0.6": true,
+   "0.7": false,
+   "0.8": false
+  },
+  "dmax": {
+   "10.0": false,
+   "25.0": false,
+   "50.0": true,
+   "100.0": true,
+   "200.0": true
+  },
+  "weights_identical_merge_set": 17,
+  "dmax_25_merges_not_in_reference": [
+   {
+    "family": "STEP",
+    "primary": [
+     3,
+     "Step",
+     "R03"
+    ],
+    "secondary": [
+     5,
+     "Boss",
+     "R05"
+    ],
+    "tau": 0.7,
+    "same_feature": false
+   }
+  ]
+ },
+ "global_assignment_probe": {
+  "reference": {
+   "merges": 8,
+   "correct": 6,
+   "precision": 0.75,
+   "recall": 0.6,
+   "wrong_merges": [
+    [
+     "STEP",
+     3,
+     "R03",
+     5,
+     "R05"
+    ],
+    [
+     "DRAWING",
+     5,
+     "D05c",
+     6,
+     "D05a"
+    ]
+   ]
+  },
+  "tau_min_0": {
+   "merges": 10,
+   "correct": 8,
+   "precision": 0.8,
+   "recall": 0.8,
+   "wrong_merges": [
+    [
+     "STEP",
+     3,
+     "R03",
+     5,
+     "R05"
+    ],
+    [
+     "DRAWING",
+     5,
+     "D05c",
+     6,
+     "D05a"
+    ]
+   ]
+  },
+  "tau_min_1": {
+   "merges": 7,
+   "correct": 6,
+   "precision": 0.8571428571428571,
+   "recall": 0.6,
+   "wrong_merges": [
+    [
+     "STEP",
+     10,
+     "R06",
+     5,
+     "R05"
+    ]
+   ]
+  },
+  "eps": {
+   "0.1": {
+    "merges": 7,
+    "correct": 5,
+    "precision": 0.7142857142857143,
+    "recall": 0.5,
+    "wrong_merges": [
+     [
+      "STEP",
+      10,
+      "R06",
+      5,
+      "R05"
+     ],
+     [
+      "DRAWING",
+      5,
+      "D05c",
+      6,
+      "D05a"
+     ]
+    ]
+   },
+   "0.2": {
+    "merges": 7,
+    "correct": 5,
+    "precision": 0.7142857142857143,
+    "recall": 0.5,
+    "wrong_merges": [
+     [
+      "STEP",
+      10,
+      "R06",
+      5,
+      "R05"
+     ],
+     [
+      "DRAWING",
+      5,
+      "D05c",
+      6,
+      "D05a"
+     ]
+    ]
+   },
+   "0.3": {
+    "merges": 7,
+    "correct": 5,
+    "precision": 0.7142857142857143,
+    "recall": 0.5,
+    "wrong_merges": [
+     [
+      "STEP",
+      10,
+      "R06",
+      5,
+      "R05"
+     ],
+     [
+      "DRAWING",
+      5,
+      "D05c",
+      6,
+      "D05a"
+     ]
+    ]
+   },
+   "0.5": {
+    "merges": 7,
+    "correct": 6,
+    "precision": 0.8571428571428571,
+    "recall": 0.6,
+    "wrong_merges": [
+     [
+      "DRAWING",
+      5,
+      "D05c",
+      6,
+      "D05a"
+     ]
+    ]
+   }
+  }
+ },
+ "weights_summary": {
+  "gated": {
+   "settings": 26,
+   "precision_range": [
+    0.6666666666666666,
+    0.8571428571428571
+   ],
+   "label_consistent_precision_range": [
+    0.6666666666666666,
+    0.8571428571428571
+   ],
+   "recall_range": [
+    0.2,
+    0.6
+   ]
+  },
+  "ablated": {
+   "settings": 26,
+   "precision_range": [
+    0.6,
+    0.8888888888888888
+   ],
+   "label_consistent_precision_range": [
+    0.4,
+    0.6666666666666666
+   ],
+   "recall_range": [
+    0.3,
+    0.8
+   ]
+  }
+ }
+}

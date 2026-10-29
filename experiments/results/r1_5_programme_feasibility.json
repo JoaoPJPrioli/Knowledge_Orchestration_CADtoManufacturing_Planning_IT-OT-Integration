@@ -1,0 +1,972 @@
+{
+ "tool_depth_limits_mm": {
+  "counterbore_cutter": 15.0,
+  "turning_insert_finish": 2.0,
+  "turning_insert_rough": 5.0,
+  "drill_bit": 50.0
+ },
+ "nominal_stock": {
+  "diameter_mm": 30.0,
+  "free_end_z": 169.5
+ },
+ "reference_nominal": {
+  "stock": {
+   "diameter_mm": 30.0,
+   "free_end_z": 169.5
+  },
+  "moves": [
+   {
+    "line": 34,
+    "step": 3,
+    "operation": "rough_turning",
+    "tool": "turning_insert_rough",
+    "radial_engagement_mm": 2.525,
+    "z_from": 80.5,
+    "z_to": 140.2,
+    "planned_depth_of_cut_mm": 2.0,
+    "tool_max_depth_mm": 5.0,
+    "exceeds_planned": true,
+    "exceeds_tool": false
+   },
+   {
+    "line": 42,
+    "step": 4,
+    "operation": "rough_turning",
+    "tool": "turning_insert_rough",
+    "radial_engagement_mm": 0.675,
+    "z_from": 118.5,
+    "z_to": 122.25,
+    "planned_depth_of_cut_mm": 2.0,
+    "tool_max_depth_mm": 5.0,
+    "exceeds_planned": false,
+    "exceeds_tool": false
+   },
+   {
+    "line": 50,
+    "step": 5,
+    "operation": "rough_turning",
+    "tool": "turning_insert_rough",
+    "radial_engagement_mm": 3.0,
+    "z_from": 121.0,
+    "z_to": 170.5,
+    "planned_depth_of_cut_mm": 2.0,
+    "tool_max_depth_mm": 5.0,
+    "exceeds_planned": true,
+    "exceeds_tool": false
+   },
+   {
+    "line": 67,
+    "step": 10,
+    "operation": "finish_turning",
+    "tool": "turning_insert_finish",
+    "radial_engagement_mm": 0.0,
+    "z_from": 80.5,
+    "z_to": 140.2,
+    "planned_depth_of_cut_mm": 0.2,
+    "tool_max_depth_mm": 2.0,
+    "exceeds_planned": false,
+    "exceeds_tool": false
+   },
+   {
+    "line": 75,
+    "step": 11,
+    "operation": "finish_turning",
+    "tool": "turning_insert_finish",
+    "radial_engagement_mm": 0.0,
+    "z_from": 118.5,
+    "z_to": 122.25,
+    "planned_depth_of_cut_mm": 0.2,
+    "tool_max_depth_mm": 2.0,
+    "exceeds_planned": false,
+    "exceeds_tool": false
+   },
+   {
+    "line": 83,
+    "step": 12,
+    "operation": "finish_turning",
+    "tool": "turning_insert_finish",
+    "radial_engagement_mm": 0.0,
+    "z_from": 121.0,
+    "z_to": 170.5,
+    "planned_depth_of_cut_mm": 0.2,
+    "tool_max_depth_mm": 2.0,
+    "exceeds_planned": false,
+    "exceeds_tool": false
+   },
+   {
+    "line": 99,
+    "step": 17,
+    "operation": "drilling",
+    "tool": "drill_bit",
+    "cycle": "G83",
+    "diameter_mm": 6.800000000000001,
+    "from_z": 174.62,
+    "to_z": 152.38,
+    "depth_in_material_mm": 17.12,
+    "volume_removed_mm3": 572.5,
+    "tool_max_depth_mm": 50.0,
+    "exceeds_tool": false
+   },
+   {
+    "line": 106,
+    "step": 18,
+    "operation": "drilling",
+    "tool": "drill_bit",
+    "cycle": "G81",
+    "diameter_mm": 8.4,
+    "from_z": 170.53,
+    "to_z": 164.51,
+    "depth_in_material_mm": 4.99,
+    "volume_removed_mm3": 51.6,
+    "tool_max_depth_mm": 50.0,
+    "exceeds_tool": false
+   },
+   {
+    "line": 122,
+    "step": 24,
+    "operation": "counterboring",
+    "tool": "counterbore_cutter",
+    "cycle": "G81",
+    "diameter_mm": 8.4,
+    "from_z": 170.53,
+    "to_z": 164.51,
+    "depth_in_material_mm": 4.99,
+    "volume_removed_mm3": 43.9,
+    "tool_max_depth_mm": 15.0,
+    "exceeds_tool": false
+   }
+  ],
+  "rapids_into_stock": [
+   {
+    "line": 32,
+    "step": 3,
+    "tool": "turning_insert_rough",
+    "depth_mm": 0.525,
+    "at_z": 169.501
+   },
+   {
+    "line": 33,
+    "step": 3,
+    "tool": "turning_insert_rough",
+    "depth_mm": 2.525,
+    "at_z": 140.2
+   },
+   {
+    "line": 41,
+    "step": 4,
+    "tool": "turning_insert_rough",
+    "depth_mm": 0.675,
+    "at_z": 122.25
+   },
+   {
+    "line": 48,
+    "step": 5,
+    "tool": "turning_insert_rough",
+    "depth_mm": 1.126,
+    "at_z": 140.21
+   }
+  ],
+  "feed_moves_below_part_extent": [],
+  "conformance": {
+   "outer_gouges": [
+    {
+     "z_from": 120.28,
+     "z_to": 122.25,
+     "max_mm": 0.2,
+     "steps": [
+      4
+     ],
+     "reference_features": [
+      "R04",
+      "R05"
+     ]
+    }
+   ],
+   "outer_residual": [
+    {
+     "z_from": 118.01,
+     "z_to": 118.49,
+     "max_mm": 0.49,
+     "steps": [
+      3
+     ],
+     "reference_features": [
+      "R02"
+     ]
+    },
+    {
+     "z_from": 167.51,
+     "z_to": 168.5,
+     "max_mm": 1.0,
+     "steps": [
+      5
+     ],
+     "reference_features": [
+      "R10"
+     ]
+    }
+   ],
+   "inner_gouges": [],
+   "inner_residual": [
+    {
+     "z_from": 141.47,
+     "z_to": 154.41,
+     "max_mm": 3.4,
+     "steps": [
+      17
+     ],
+     "reference_features": [
+      "R07"
+     ]
+    },
+    {
+     "z_from": 162.51,
+     "z_to": 164.5,
+     "max_mm": 0.8,
+     "steps": [
+      17
+     ],
+     "reference_features": [
+      "R08"
+     ]
+    },
+    {
+     "z_from": 165.22,
+     "z_to": 168.5,
+     "max_mm": 1.9,
+     "steps": [
+      18,
+      24
+     ],
+     "reference_features": [
+      "R09"
+     ]
+    }
+   ],
+   "material_beyond_part_end_mm": 1.0
+  }
+ },
+ "reference_stock_sweep": {
+  "26.0/169.0": {
+   "rapids_into_stock": 2,
+   "rapid_penetration_max_mm": 0.675,
+   "max_radial_engagement_mm": 1.0,
+   "passes_exceeding_planned_ap": 0,
+   "passes_exceeding_tool_limit": 0,
+   "finishing_passes_removing_nothing": 3,
+   "outer_gouges": [
+    {
+     "z_from": 120.28,
+     "z_to": 122.25,
+     "max_mm": 0.2,
+     "steps": [
+      4
+     ],
+     "reference_features": [
+      "R04",
+      "R05"
+     ]
+    }
+   ],
+   "inner_gouges": [],
+   "feed_moves_below_part_extent": 0
+  },
+  "26.0/169.5": {
+   "rapids_into_stock": 2,
+   "rapid_penetration_max_mm": 0.675,
+   "max_radial_engagement_mm": 1.0,
+   "passes_exceeding_planned_ap": 0,
+   "passes_exceeding_tool_limit": 0,
+   "finishing_passes_removing_nothing": 3,
+   "outer_gouges": [
+    {
+     "z_from": 120.28,
+     "z_to": 122.25,
+     "max_mm": 0.2,
+     "steps": [
+      4
+     ],
+     "reference_features": [
+      "R04",
+      "R05"
+     ]
+    }
+   ],
+   "inner_gouges": [],
+   "feed_moves_below_part_extent": 0
+  },
+  "26.0/170.5": {
+   "rapids_into_stock": 3,
+   "rapid_penetration_max_mm": 1.0,
+   "max_radial_engagement_mm": 1.0,
+   "passes_exceeding_planned_ap": 0,
+   "passes_exceeding_tool_limit": 0,
+   "finishing_passes_removing_nothing": 3,
+   "outer_gouges": [
+    {
+     "z_from": 120.28,
+     "z_to": 122.25,
+     "max_mm": 0.2,
+     "steps": [
+      4
+     ],
+     "reference_features": [
+      "R04",
+      "R05"
+     ]
+    }
+   ],
+   "inner_gouges": [],
+   "feed_moves_below_part_extent": 0
+  },
+  "28.0/169.0": {
+   "rapids_into_stock": 3,
+   "rapid_penetration_max_mm": 1.525,
+   "max_radial_engagement_mm": 2.0,
+   "passes_exceeding_planned_ap": 0,
+   "passes_exceeding_tool_limit": 0,
+   "finishing_passes_removing_nothing": 3,
+   "outer_gouges": [
+    {
+     "z_from": 120.28,
+     "z_to": 122.25,
+     "max_mm": 0.2,
+     "steps": [
+      4
+     ],
+     "reference_features": [
+      "R04",
+      "R05"
+     ]
+    }
+   ],
+   "inner_gouges": [],
+   "feed_moves_below_part_extent": 0
+  },
+  "28.0/169.5": {
+   "rapids_into_stock": 3,
+   "rapid_penetration_max_mm": 1.525,
+   "max_radial_engagement_mm": 2.0,
+   "passes_exceeding_planned_ap": 0,
+   "passes_exceeding_tool_limit": 0,
+   "finishing_passes_removing_nothing": 3,
+   "outer_gouges": [
+    {
+     "z_from": 120.28,
+     "z_to": 122.25,
+     "max_mm": 0.2,
+     "steps": [
+      4
+     ],
+     "reference_features": [
+      "R04",
+      "R05"
+     ]
+    }
+   ],
+   "inner_gouges": [],
+   "feed_moves_below_part_extent": 0
+  },
+  "28.0/170.5": {
+   "rapids_into_stock": 4,
+   "rapid_penetration_max_mm": 2.0,
+   "max_radial_engagement_mm": 2.0,
+   "passes_exceeding_planned_ap": 0,
+   "passes_exceeding_tool_limit": 0,
+   "finishing_passes_removing_nothing": 3,
+   "outer_gouges": [
+    {
+     "z_from": 120.28,
+     "z_to": 122.25,
+     "max_mm": 0.2,
+     "steps": [
+      4
+     ],
+     "reference_features": [
+      "R04",
+      "R05"
+     ]
+    }
+   ],
+   "inner_gouges": [],
+   "feed_moves_below_part_extent": 0
+  },
+  "30.0/169.0": {
+   "rapids_into_stock": 4,
+   "rapid_penetration_max_mm": 2.525,
+   "max_radial_engagement_mm": 3.0,
+   "passes_exceeding_planned_ap": 2,
+   "passes_exceeding_tool_limit": 0,
+   "finishing_passes_removing_nothing": 3,
+   "outer_gouges": [
+    {
+     "z_from": 120.28,
+     "z_to": 122.25,
+     "max_mm": 0.2,
+     "steps": [
+      4
+     ],
+     "reference_features": [
+      "R04",
+      "R05"
+     ]
+    }
+   ],
+   "inner_gouges": [],
+   "feed_moves_below_part_extent": 0
+  },
+  "30.0/169.5": {
+   "rapids_into_stock": 4,
+   "rapid_penetration_max_mm": 2.525,
+   "max_radial_engagement_mm": 3.0,
+   "passes_exceeding_planned_ap": 2,
+   "passes_exceeding_tool_limit": 0,
+   "finishing_passes_removing_nothing": 3,
+   "outer_gouges": [
+    {
+     "z_from": 120.28,
+     "z_to": 122.25,
+     "max_mm": 0.2,
+     "steps": [
+      4
+     ],
+     "reference_features": [
+      "R04",
+      "R05"
+     ]
+    }
+   ],
+   "inner_gouges": [],
+   "feed_moves_below_part_extent": 0
+  },
+  "30.0/170.5": {
+   "rapids_into_stock": 5,
+   "rapid_penetration_max_mm": 3.0,
+   "max_radial_engagement_mm": 3.0,
+   "passes_exceeding_planned_ap": 2,
+   "passes_exceeding_tool_limit": 0,
+   "finishing_passes_removing_nothing": 3,
+   "outer_gouges": [
+    {
+     "z_from": 120.28,
+     "z_to": 122.25,
+     "max_mm": 0.2,
+     "steps": [
+      4
+     ],
+     "reference_features": [
+      "R04",
+      "R05"
+     ]
+    }
+   ],
+   "inner_gouges": [],
+   "feed_moves_below_part_extent": 0
+  }
+ },
+ "reference_simulator_default_stock": {
+  "rapids_into_stock": 4,
+  "rapid_penetration_max_mm": 27.525,
+  "max_radial_engagement_mm": 28.0,
+  "passes_exceeding_planned_ap": 2,
+  "passes_exceeding_tool_limit": 2,
+  "finishing_passes_removing_nothing": 3,
+  "outer_gouges": [
+   {
+    "z_from": 120.28,
+    "z_to": 122.25,
+    "max_mm": 0.2,
+    "steps": [
+     4
+    ],
+    "reference_features": [
+     "R04",
+     "R05"
+    ]
+   }
+  ],
+  "inner_gouges": [],
+  "feed_moves_below_part_extent": 0
+ },
+ "free_text_configuration": {
+  "accounting": {
+   "handed": 27,
+   "serialised": 13,
+   "refused": 14,
+   "serialised_steps": [
+    3,
+    4,
+    5,
+    7,
+    8,
+    10,
+    11,
+    12,
+    14,
+    15,
+    17,
+    18,
+    24
+   ],
+   "refused_steps": [
+    1,
+    2,
+    6,
+    9,
+    13,
+    16,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "unrecorded_refusals": [],
+   "passed": true,
+   "problems": []
+  },
+  "newly_serialised_steps": [
+   {
+    "step": 7,
+    "operation": "rough_turning",
+    "feature_id": 15,
+    "feature_type": "Cylinder",
+    "dimensions": {
+     "\u00d8": 23.2,
+     "R": 11.6,
+     "L": 46.5
+    },
+    "location_z": 61.8
+   },
+   {
+    "step": 8,
+    "operation": "rough_turning",
+    "feature_id": 16,
+    "feature_type": "Cylinder",
+    "dimensions": {
+     "\u00d8": 24.0,
+     "R": 12.0,
+     "L": 37.5
+    },
+    "location_z": 18.75
+   },
+   {
+    "step": 14,
+    "operation": "finish_turning",
+    "feature_id": 15,
+    "feature_type": "Cylinder",
+    "dimensions": {
+     "\u00d8": 23.2,
+     "R": 11.6,
+     "L": 46.5
+    },
+    "location_z": 61.8
+   },
+   {
+    "step": 15,
+    "operation": "finish_turning",
+    "feature_id": 16,
+    "feature_type": "Cylinder",
+    "dimensions": {
+     "\u00d8": 24.0,
+     "R": 12.0,
+     "L": 37.5
+    },
+    "location_z": 18.75
+   }
+  ],
+  "parsed_from_text": {
+   "15": {
+    "\u00d8": 24.0,
+    "R": 12.0,
+    "L": 46.5
+   },
+   "16": {
+    "\u00d8": 24.0,
+    "R": 12.0,
+    "L": 37.5
+   },
+   "17": {
+    "\u00d8": 22.0,
+    "R": 11.0,
+    "W": 1.75
+   },
+   "18": {
+    "L": 32.0,
+    "W": 4.0
+   },
+   "19": {
+    "R": 6.1
+   },
+   "20": {
+    "R": 4.2
+   },
+   "21": {
+    "R": 3.4
+   },
+   "22": {
+    "W": 4.0
+   }
+  },
+  "check": {
+   "stock": {
+    "diameter_mm": 30.0,
+    "free_end_z": 169.5
+   },
+   "moves": [
+    {
+     "line": 34,
+     "step": 3,
+     "operation": "rough_turning",
+     "tool": "turning_insert_rough",
+     "radial_engagement_mm": 2.525,
+     "z_from": 80.5,
+     "z_to": 140.2,
+     "planned_depth_of_cut_mm": 2.0,
+     "tool_max_depth_mm": 5.0,
+     "exceeds_planned": true,
+     "exceeds_tool": false
+    },
+    {
+     "line": 42,
+     "step": 4,
+     "operation": "rough_turning",
+     "tool": "turning_insert_rough",
+     "radial_engagement_mm": 0.675,
+     "z_from": 118.5,
+     "z_to": 122.25,
+     "planned_depth_of_cut_mm": 2.0,
+     "tool_max_depth_mm": 5.0,
+     "exceeds_planned": false,
+     "exceeds_tool": false
+    },
+    {
+     "line": 50,
+     "step": 5,
+     "operation": "rough_turning",
+     "tool": "turning_insert_rough",
+     "radial_engagement_mm": 3.0,
+     "z_from": 121.0,
+     "z_to": 170.5,
+     "planned_depth_of_cut_mm": 2.0,
+     "tool_max_depth_mm": 5.0,
+     "exceeds_planned": true,
+     "exceeds_tool": false
+    },
+    {
+     "line": 58,
+     "step": 7,
+     "operation": "rough_turning",
+     "tool": "turning_insert_rough",
+     "radial_engagement_mm": 3.4,
+     "z_from": 38.55,
+     "z_to": 87.05,
+     "planned_depth_of_cut_mm": 2.0,
+     "tool_max_depth_mm": 5.0,
+     "exceeds_planned": true,
+     "exceeds_tool": false
+    },
+    {
+     "line": 66,
+     "step": 8,
+     "operation": "rough_turning",
+     "tool": "turning_insert_rough",
+     "radial_engagement_mm": 3.0,
+     "z_from": 0.0,
+     "z_to": 39.5,
+     "planned_depth_of_cut_mm": 2.0,
+     "tool_max_depth_mm": 5.0,
+     "exceeds_planned": true,
+     "exceeds_tool": false
+    },
+    {
+     "line": 83,
+     "step": 10,
+     "operation": "finish_turning",
+     "tool": "turning_insert_finish",
+     "radial_engagement_mm": 0.0,
+     "z_from": 80.5,
+     "z_to": 140.2,
+     "planned_depth_of_cut_mm": 0.2,
+     "tool_max_depth_mm": 2.0,
+     "exceeds_planned": false,
+     "exceeds_tool": false
+    },
+    {
+     "line": 91,
+     "step": 11,
+     "operation": "finish_turning",
+     "tool": "turning_insert_finish",
+     "radial_engagement_mm": 0.0,
+     "z_from": 118.5,
+     "z_to": 122.25,
+     "planned_depth_of_cut_mm": 0.2,
+     "tool_max_depth_mm": 2.0,
+     "exceeds_planned": false,
+     "exceeds_tool": false
+    },
+    {
+     "line": 99,
+     "step": 12,
+     "operation": "finish_turning",
+     "tool": "turning_insert_finish",
+     "radial_engagement_mm": 0.0,
+     "z_from": 121.0,
+     "z_to": 170.5,
+     "planned_depth_of_cut_mm": 0.2,
+     "tool_max_depth_mm": 2.0,
+     "exceeds_planned": false,
+     "exceeds_tool": false
+    },
+    {
+     "line": 107,
+     "step": 14,
+     "operation": "finish_turning",
+     "tool": "turning_insert_finish",
+     "radial_engagement_mm": 0.0,
+     "z_from": 38.55,
+     "z_to": 87.05,
+     "planned_depth_of_cut_mm": 0.2,
+     "tool_max_depth_mm": 2.0,
+     "exceeds_planned": false,
+     "exceeds_tool": false
+    },
+    {
+     "line": 115,
+     "step": 15,
+     "operation": "finish_turning",
+     "tool": "turning_insert_finish",
+     "radial_engagement_mm": 0.0,
+     "z_from": 0.0,
+     "z_to": 39.5,
+     "planned_depth_of_cut_mm": 0.2,
+     "tool_max_depth_mm": 2.0,
+     "exceeds_planned": false,
+     "exceeds_tool": false
+    },
+    {
+     "line": 131,
+     "step": 17,
+     "operation": "drilling",
+     "tool": "drill_bit",
+     "cycle": "G83",
+     "diameter_mm": 6.800000000000001,
+     "from_z": 174.62,
+     "to_z": 152.38,
+     "depth_in_material_mm": 17.12,
+     "volume_removed_mm3": 572.5,
+     "tool_max_depth_mm": 50.0,
+     "exceeds_tool": false
+    },
+    {
+     "line": 138,
+     "step": 18,
+     "operation": "drilling",
+     "tool": "drill_bit",
+     "cycle": "G81",
+     "diameter_mm": 8.4,
+     "from_z": 170.53,
+     "to_z": 164.51,
+     "depth_in_material_mm": 4.99,
+     "volume_removed_mm3": 51.6,
+     "tool_max_depth_mm": 50.0,
+     "exceeds_tool": false
+    },
+    {
+     "line": 154,
+     "step": 24,
+     "operation": "counterboring",
+     "tool": "counterbore_cutter",
+     "cycle": "G81",
+     "diameter_mm": 8.4,
+     "from_z": 170.53,
+     "to_z": 164.51,
+     "depth_in_material_mm": 4.99,
+     "volume_removed_mm3": 43.9,
+     "tool_max_depth_mm": 15.0,
+     "exceeds_tool": false
+    }
+   ],
+   "rapids_into_stock": [
+    {
+     "line": 32,
+     "step": 3,
+     "tool": "turning_insert_rough",
+     "depth_mm": 0.525,
+     "at_z": 169.501
+    },
+    {
+     "line": 33,
+     "step": 3,
+     "tool": "turning_insert_rough",
+     "depth_mm": 2.525,
+     "at_z": 140.2
+    },
+    {
+     "line": 41,
+     "step": 4,
+     "tool": "turning_insert_rough",
+     "depth_mm": 0.675,
+     "at_z": 122.25
+    },
+    {
+     "line": 48,
+     "step": 5,
+     "tool": "turning_insert_rough",
+     "depth_mm": 1.126,
+     "at_z": 140.21
+    },
+    {
+     "line": 57,
+     "step": 7,
+     "tool": "turning_insert_rough",
+     "depth_mm": 0.875,
+     "at_z": 87.05
+    }
+   ],
+   "feed_moves_below_part_extent": [
+    {
+     "line": 58,
+     "step": 7,
+     "z_from": 38.55,
+     "z_to": 87.05,
+     "radial_engagement_mm": 3.4
+    },
+    {
+     "line": 66,
+     "step": 8,
+     "z_from": 0.0,
+     "z_to": 39.5,
+     "radial_engagement_mm": 3.0
+    }
+   ],
+   "conformance": {
+    "outer_gouges": [
+     {
+      "z_from": 80.51,
+      "z_to": 87.05,
+      "max_mm": 0.875,
+      "steps": [
+       7
+      ],
+      "reference_features": [
+       "R01"
+      ]
+     },
+     {
+      "z_from": 120.28,
+      "z_to": 122.25,
+      "max_mm": 0.2,
+      "steps": [
+       4
+      ],
+      "reference_features": [
+       "R04",
+       "R05"
+      ]
+     }
+    ],
+    "outer_residual": [
+     {
+      "z_from": 118.01,
+      "z_to": 118.49,
+      "max_mm": 0.49,
+      "steps": [
+       3
+      ],
+      "reference_features": [
+       "R02"
+      ]
+     },
+     {
+      "z_from": 167.51,
+      "z_to": 168.5,
+      "max_mm": 1.0,
+      "steps": [
+       5
+      ],
+      "reference_features": [
+       "R10"
+      ]
+     }
+    ],
+    "inner_gouges": [],
+    "inner_residual": [
+     {
+      "z_from": 141.47,
+      "z_to": 154.41,
+      "max_mm": 3.4,
+      "steps": [
+       17
+      ],
+      "reference_features": [
+       "R07"
+      ]
+     },
+     {
+      "z_from": 162.51,
+      "z_to": 164.5,
+      "max_mm": 0.8,
+      "steps": [
+       17
+      ],
+      "reference_features": [
+       "R08"
+      ]
+     },
+     {
+      "z_from": 165.22,
+      "z_to": 168.5,
+      "max_mm": 1.9,
+      "steps": [
+       18,
+       24
+      ],
+      "reference_features": [
+       "R09"
+      ]
+     }
+    ],
+    "material_beyond_part_end_mm": 1.0
+   }
+  },
+  "summary": {
+   "rapids_into_stock": 5,
+   "rapid_penetration_max_mm": 2.525,
+   "max_radial_engagement_mm": 3.4,
+   "passes_exceeding_planned_ap": 4,
+   "passes_exceeding_tool_limit": 0,
+   "finishing_passes_removing_nothing": 5,
+   "outer_gouges": [
+    {
+     "z_from": 80.51,
+     "z_to": 87.05,
+     "max_mm": 0.875,
+     "steps": [
+      7
+     ],
+     "reference_features": [
+      "R01"
+     ]
+    },
+    {
+     "z_from": 120.28,
+     "z_to": 122.25,
+     "max_mm": 0.2,
+     "steps": [
+      4
+     ],
+     "reference_features": [
+      "R04",
+      "R05"
+     ]
+    }
+   ],
+   "inner_gouges": [],
+   "feed_moves_below_part_extent": 2
+  }
+ }
+}

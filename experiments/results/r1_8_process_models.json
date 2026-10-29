@@ -1,0 +1,1388 @@
+{
+ "constants_status": "NOMINAL, UNCALIBRATED. Every constant below is a handbook-order value declared for this experiment, not a measurement for this shaft, tool, or machine. Each conclusion drawn from these models is checked over the sweep ranges given with each constant. Values marked 'verify' have not been checked against the primary handbook; the manuscript reports the conclusions over the sweep ranges and states that the tool lives are not validated.",
+ "threshold": 0.8,
+ "time_base": {
+  "estimator_cutting_time_s": 198.61,
+  "sum_in_cut_s": 197.54500000000002,
+  "note": "estimator time includes G83 peck retracts; tool life is consumed only in cut"
+ },
+ "per_cut": [
+  {
+   "step": 3,
+   "operation": "rough_turning",
+   "tool": "turning_insert_rough",
+   "tool_material": "Carbide",
+   "h_mm": 0.2490486745229364,
+   "b_mm": 2.0076396750866947,
+   "kc_N_per_mm2": 2696.95178009896,
+   "Fc_kienzle_N": 1348.47589004948,
+   "Fc_constant_kc_N": 1000.0,
+   "power_kW": 0.8455778451645918,
+   "vc_m_per_min": 37.62371361939136,
+   "v_over_v_ref": 0.4180412624376818,
+   "taylor_life_min": 491.15057485972363,
+   "in_cut_s": 29.849999999999994,
+   "consumption": 0.0010129276549092703
+  },
+  {
+   "step": 4,
+   "operation": "rough_turning",
+   "tool": "turning_insert_rough",
+   "tool_material": "Carbide",
+   "h_mm": 0.2490486745229364,
+   "b_mm": 2.0076396750866947,
+   "kc_N_per_mm2": 2696.95178009896,
+   "Fc_kienzle_N": 1348.47589004948,
+   "Fc_constant_kc_N": 1000.0,
+   "power_kW": 0.79982513610759,
+   "vc_m_per_min": 35.58796157986518,
+   "v_over_v_ref": 0.39542179533183536,
+   "taylor_life_min": 613.5484236679275,
+   "in_cut_s": 1.875,
+   "consumption": 5.093322514493742e-05
+  },
+  {
+   "step": 5,
+   "operation": "rough_turning",
+   "tool": "turning_insert_rough",
+   "tool_material": "Carbide",
+   "h_mm": 0.2490486745229364,
+   "b_mm": 2.0076396750866947,
+   "kc_N_per_mm2": 2696.95178009896,
+   "Fc_kienzle_N": 1348.47589004948,
+   "Fc_constant_kc_N": 1000.0,
+   "power_kW": 0.8133814943467017,
+   "vc_m_per_min": 36.19114736935442,
+   "v_over_v_ref": 0.40212385965949354,
+   "taylor_life_min": 573.656461463366,
+   "in_cut_s": 24.75,
+   "consumption": 0.0007190714786820935
+  },
+  {
+   "step": 10,
+   "operation": "finish_turning",
+   "tool": "turning_insert_finish",
+   "tool_material": "Carbide with Coating",
+   "h_mm": 0.05977168188550473,
+   "b_mm": 0.20076396750866948,
+   "kc_N_per_mm2": 3293.393376641219,
+   "Fc_kienzle_N": 39.520720519694635,
+   "Fc_constant_kc_N": 24.0,
+   "power_kW": 0.04646613346453109,
+   "vc_m_per_min": 70.5444630363588,
+   "v_over_v_ref": 0.47029642024239204,
+   "taylor_life_min": 306.6228859358981,
+   "in_cut_s": 66.33333333333333,
+   "consumption": 0.0036055872091252847
+  },
+  {
+   "step": 11,
+   "operation": "finish_turning",
+   "tool": "turning_insert_finish",
+   "tool_material": "Carbide with Coating",
+   "h_mm": 0.05977168188550473,
+   "b_mm": 0.20076396750866948,
+   "kc_N_per_mm2": 3293.393376641219,
+   "Fc_kienzle_N": 39.520720519694635,
+   "Fc_constant_kc_N": 24.0,
+   "power_kW": 0.04395193385823381,
+   "vc_m_per_min": 66.7274279622472,
+   "v_over_v_ref": 0.4448495197483147,
+   "taylor_life_min": 383.0352603785752,
+   "in_cut_s": 4.166666666666667,
+   "consumption": 0.00018130039614579769
+  },
+  {
+   "step": 12,
+   "operation": "finish_turning",
+   "tool": "turning_insert_finish",
+   "tool_material": "Carbide with Coating",
+   "h_mm": 0.05977168188550473,
+   "b_mm": 0.20076396750866948,
+   "kc_N_per_mm2": 3293.393376641219,
+   "Fc_kienzle_N": 39.520720519694635,
+   "Fc_constant_kc_N": 24.0,
+   "power_kW": 0.0446968818897293,
+   "vc_m_per_min": 67.85840131753953,
+   "v_over_v_ref": 0.4523893421169302,
+   "taylor_life_min": 358.1309047635948,
+   "in_cut_s": 55.0,
+   "consumption": 0.0025595854880822587
+  },
+  {
+   "step": 17,
+   "operation": "drilling",
+   "tool": "drill_bit",
+   "tool_material": "High-Speed Steel",
+   "h_mm": 0.06428754755265842,
+   "b_mm": 3.9665535505321237,
+   "kc_N_per_mm2": 3259.982091085053,
+   "Fc_kienzle_N": 831.2954332266886,
+   "Fc_constant_kc_N": 510.0,
+   "power_kW": 0.2663823458507464,
+   "vc_m_per_min": 19.226547039969535,
+   "v_over_v_ref": 0.9155498590461684,
+   "taylor_life_min": 91.14996640612245,
+   "in_cut_s": 9.884444444444448,
+   "consumption": 0.0018073593138447426
+  },
+  {
+   "step": 18,
+   "operation": "drilling",
+   "tool": "drill_bit",
+   "tool_material": "High-Speed Steel",
+   "h_mm": 0.06428754755265842,
+   "b_mm": 4.899860268304388,
+   "kc_N_per_mm2": 3259.982091085053,
+   "Fc_kienzle_N": 1026.8943586917917,
+   "Fc_constant_kc_N": 630.0,
+   "power_kW": 0.40648655543314577,
+   "vc_m_per_min": 23.750440461138833,
+   "v_over_v_ref": 1.1309733552923253,
+   "taylor_life_min": 16.81099914566583,
+   "in_cut_s": 2.6755555555555603,
+   "consumption": 0.0026525843113905235
+  },
+  {
+   "step": 24,
+   "operation": "counterboring",
+   "tool": "counterbore_cutter",
+   "tool_material": "Carbide",
+   "h_mm": 0.12,
+   "b_mm": 3.0,
+   "kc_N_per_mm2": 2987.222694283365,
+   "Fc_kienzle_N": 1075.4001699420114,
+   "Fc_constant_kc_N": 720.0,
+   "power_kW": 0.4729856982982653,
+   "vc_m_per_min": 26.389378290154262,
+   "v_over_v_ref": 0.6283185307179586,
+   "taylor_life_min": 96.24358363766568,
+   "in_cut_s": 3.010000000000005,
+   "consumption": 0.0005212468693552849
+  }
+ ],
+ "per_tool_nominal": {
+  "turning_insert_rough": {
+   "tool_id": "turning_insert_rough",
+   "steps": [
+    3,
+    4,
+    5
+   ],
+   "in_cut_min": 0.9412499999999998,
+   "consumption_per_part": 0.0017829323587363012,
+   "available": true,
+   "parts_per_edge": 560.8737735338292
+  },
+  "turning_insert_finish": {
+   "tool_id": "turning_insert_finish",
+   "steps": [
+    10,
+    11,
+    12
+   ],
+   "in_cut_min": 2.0916666666666663,
+   "consumption_per_part": 0.006346473093353341,
+   "available": true,
+   "parts_per_edge": 157.5678310284337
+  },
+  "drill_bit": {
+   "tool_id": "drill_bit",
+   "steps": [
+    17,
+    18
+   ],
+   "in_cut_min": 0.20933333333333348,
+   "consumption_per_part": 0.004459943625235266,
+   "available": true,
+   "parts_per_edge": 224.21808077164854
+  },
+  "counterbore_cutter": {
+   "tool_id": "counterbore_cutter",
+   "steps": [
+    24
+   ],
+   "in_cut_min": 0.050166666666666755,
+   "consumption_per_part": 0.0005212468693552849,
+   "available": true,
+   "parts_per_edge": 1918.4767502524687
+  }
+ },
+ "force_nominal": {
+  "mean_N": 788.6199770631129,
+  "max_N": 1348.47589004948,
+  "power_max_kW": 0.8455778451645918,
+  "power_vs_torque_max_abs_diff_kW": 1.1102230246251565e-16
+ },
+ "force_sweep": {
+  "settings": 48,
+  "mean_N_range": [
+   532.6845211549073,
+   1211.2475510205395
+  ],
+  "max_N_range": [
+   910.6461632962852,
+   1914.453741154391
+  ],
+  "power_max_kW_range": [
+   0.5710315076076156,
+   1.2004809882460867
+  ],
+  "power_vs_torque_max_abs_diff_kW": 4.440892098500626e-16
+ },
+ "legacy": {
+  "constant_kc_force_by_step": {
+   "3": 1000.0,
+   "4": 1000.0,
+   "5": 1000.0,
+   "10": 24.0,
+   "11": 24.0,
+   "12": 24.0,
+   "17": 510.0,
+   "18": 630.0,
+   "24": 720.0
+  },
+  "constant_kc_power_by_step": {
+   "3": 0.6271,
+   "4": 0.5931,
+   "5": 0.6032,
+   "10": 0.0282,
+   "11": 0.0267,
+   "12": 0.0271,
+   "17": 0.1634,
+   "18": 0.2494,
+   "24": 0.3167
+  },
+  "constant_kc_mean_force_N": 548.0,
+  "legacy_wear": {
+   "turning_insert_rough": {
+    "wear_percentage": 2.16,
+    "wear_model_cutting_time_min": 1.5,
+    "status": "good"
+   },
+   "turning_insert_finish": {
+    "wear_percentage": 2.22,
+    "wear_model_cutting_time_min": 3.33,
+    "status": "good"
+   },
+   "drill_bit": {
+    "wear_percentage": 44.47,
+    "wear_model_cutting_time_min": 12.56,
+    "status": "fair"
+   },
+   "counterbore_cutter": {
+    "wear_percentage": 8.15,
+    "wear_model_cutting_time_min": 3.01,
+    "status": "good"
+   }
+  },
+  "programme_cutting_time_s": 198.61
+ },
+ "taylor_sweep_reference_speeds": {
+  "turning_insert_rough": {
+   "key": "Carbide|turning",
+   "grid": [
+    {
+     "n": 0.2,
+     "T_ref_min": 10.0,
+     "consumption_per_part": 0.0010991121919857994,
+     "parts_per_edge": 909.825227389453,
+     "trigger_part": 728
+    },
+    {
+     "n": 0.2,
+     "T_ref_min": 15.0,
+     "consumption_per_part": 0.0007327414613238662,
+     "parts_per_edge": 1364.7378410841795,
+     "trigger_part": 1092
+    },
+    {
+     "n": 0.2,
+     "T_ref_min": 30.0,
+     "consumption_per_part": 0.0003663707306619331,
+     "parts_per_edge": 2729.475682168359,
+     "trigger_part": 2184
+    },
+    {
+     "n": 0.2,
+     "T_ref_min": 60.0,
+     "consumption_per_part": 0.00018318536533096656,
+     "parts_per_edge": 5458.951364336718,
+     "trigger_part": 4368
+    },
+    {
+     "n": 0.25,
+     "T_ref_min": 10.0,
+     "consumption_per_part": 0.0026743985381044513,
+     "parts_per_edge": 373.91584902255283,
+     "trigger_part": 300
+    },
+    {
+     "n": 0.25,
+     "T_ref_min": 15.0,
+     "consumption_per_part": 0.0017829323587363012,
+     "parts_per_edge": 560.8737735338292,
+     "trigger_part": 449
+    },
+    {
+     "n": 0.25,
+     "T_ref_min": 30.0,
+     "consumption_per_part": 0.0008914661793681506,
+     "parts_per_edge": 1121.7475470676584,
+     "trigger_part": 898
+    },
+    {
+     "n": 0.25,
+     "T_ref_min": 60.0,
+     "consumption_per_part": 0.0004457330896840753,
+     "parts_per_edge": 2243.495094135317,
+     "trigger_part": 1795
+    },
+    {
+     "n": 0.3,
+     "T_ref_min": 10.0,
+     "consumption_per_part": 0.0048392530090459965,
+     "parts_per_edge": 206.6434629746996,
+     "trigger_part": 166
+    },
+    {
+     "n": 0.3,
+     "T_ref_min": 15.0,
+     "consumption_per_part": 0.0032261686726973316,
+     "parts_per_edge": 309.96519446204934,
+     "trigger_part": 248
+    },
+    {
+     "n": 0.3,
+     "T_ref_min": 30.0,
+     "consumption_per_part": 0.0016130843363486658,
+     "parts_per_edge": 619.9303889240987,
+     "trigger_part": 496
+    },
+    {
+     "n": 0.3,
+     "T_ref_min": 60.0,
+     "consumption_per_part": 0.0008065421681743329,
+     "parts_per_edge": 1239.8607778481974,
+     "trigger_part": 992
+    },
+    {
+     "n": 0.35,
+     "T_ref_min": 10.0,
+     "consumption_per_part": 0.00739250287199854,
+     "parts_per_edge": 135.27218282022164,
+     "trigger_part": 109
+    },
+    {
+     "n": 0.35,
+     "T_ref_min": 15.0,
+     "consumption_per_part": 0.0049283352479990265,
+     "parts_per_edge": 202.90827423033247,
+     "trigger_part": 163
+    },
+    {
+     "n": 0.35,
+     "T_ref_min": 30.0,
+     "consumption_per_part": 0.0024641676239995133,
+     "parts_per_edge": 405.81654846066493,
+     "trigger_part": 325
+    },
+    {
+     "n": 0.35,
+     "T_ref_min": 60.0,
+     "consumption_per_part": 0.0012320838119997566,
+     "parts_per_edge": 811.6330969213299,
+     "trigger_part": 650
+    }
+   ],
+   "parts_per_edge_range": [
+    135.27218282022164,
+    5458.951364336718
+   ],
+   "trigger_part_range": [
+    109,
+    4368
+   ],
+   "max_single_part_consumption": 0.00739250287199854
+  },
+  "turning_insert_finish": {
+   "key": "Carbide with Coating|turning",
+   "grid": [
+    {
+     "n": 0.2,
+     "T_ref_min": 10.0,
+     "consumption_per_part": 0.0044014130197868855,
+     "parts_per_edge": 227.19976414492896,
+     "trigger_part": 182
+    },
+    {
+     "n": 0.2,
+     "T_ref_min": 15.0,
+     "consumption_per_part": 0.00293427534652459,
+     "parts_per_edge": 340.7996462173935,
+     "trigger_part": 273
+    },
+    {
+     "n": 0.2,
+     "T_ref_min": 30.0,
+     "consumption_per_part": 0.001467137673262295,
+     "parts_per_edge": 681.599292434787,
+     "trigger_part": 546
+    },
+    {
+     "n": 0.2,
+     "T_ref_min": 60.0,
+     "consumption_per_part": 0.0007335688366311475,
+     "parts_per_edge": 1363.198584869574,
+     "trigger_part": 1091
+    },
+    {
+     "n": 0.25,
+     "T_ref_min": 10.0,
+     "consumption_per_part": 0.009519709640030011,
+     "parts_per_edge": 105.04522068562245,
+     "trigger_part": 85
+    },
+    {
+     "n": 0.25,
+     "T_ref_min": 15.0,
+     "consumption_per_part": 0.006346473093353341,
+     "parts_per_edge": 157.5678310284337,
+     "trigger_part": 127
+    },
+    {
+     "n": 0.25,
+     "T_ref_min": 30.0,
+     "consumption_per_part": 0.0031732365466766704,
+     "parts_per_edge": 315.1356620568674,
+     "trigger_part": 253
+    },
+    {
+     "n": 0.25,
+     "T_ref_min": 60.0,
+     "consumption_per_part": 0.0015866182733383352,
+     "parts_per_edge": 630.2713241137347,
+     "trigger_part": 505
+    },
+    {
+     "n": 0.3,
+     "T_ref_min": 10.0,
+     "consumption_per_part": 0.015924808669560902,
+     "parts_per_edge": 62.79510295853201,
+     "trigger_part": 51
+    },
+    {
+     "n": 0.3,
+     "T_ref_min": 15.0,
+     "consumption_per_part": 0.010616539113040602,
+     "parts_per_edge": 94.19265443779801,
+     "trigger_part": 76
+    },
+    {
+     "n": 0.3,
+     "T_ref_min": 30.0,
+     "consumption_per_part": 0.005308269556520301,
+     "parts_per_edge": 188.38530887559602,
+     "trigger_part": 151
+    },
+    {
+     "n": 0.3,
+     "T_ref_min": 60.0,
+     "consumption_per_part": 0.0026541347782601506,
+     "parts_per_edge": 376.77061775119205,
+     "trigger_part": 302
+    },
+    {
+     "n": 0.35,
+     "T_ref_min": 10.0,
+     "consumption_per_part": 0.023000064412807886,
+     "parts_per_edge": 43.478139106564285,
+     "trigger_part": 35
+    },
+    {
+     "n": 0.35,
+     "T_ref_min": 15.0,
+     "consumption_per_part": 0.015333376275205254,
+     "parts_per_edge": 65.21720865984643,
+     "trigger_part": 53
+    },
+    {
+     "n": 0.35,
+     "T_ref_min": 30.0,
+     "consumption_per_part": 0.007666688137602627,
+     "parts_per_edge": 130.43441731969287,
+     "trigger_part": 105
+    },
+    {
+     "n": 0.35,
+     "T_ref_min": 60.0,
+     "consumption_per_part": 0.0038333440688013134,
+     "parts_per_edge": 260.86883463938574,
+     "trigger_part": 209
+    }
+   ],
+   "parts_per_edge_range": [
+    43.478139106564285,
+    1363.198584869574
+   ],
+   "trigger_part_range": [
+    35,
+    1091
+   ],
+   "max_single_part_consumption": 0.023000064412807886
+  },
+  "drill_bit": {
+   "key": "High-Speed Steel|drilling",
+   "grid": [
+    {
+     "n": 0.1,
+     "T_ref_min": 30.0,
+     "consumption_per_part": 0.007361862178539156,
+     "parts_per_edge": 135.83519709390077,
+     "trigger_part": 109
+    },
+    {
+     "n": 0.1,
+     "T_ref_min": 45.0,
+     "consumption_per_part": 0.004907908119026104,
+     "parts_per_edge": 203.75279564085116,
+     "trigger_part": 164
+    },
+    {
+     "n": 0.1,
+     "T_ref_min": 60.0,
+     "consumption_per_part": 0.003680931089269578,
+     "parts_per_edge": 271.67039418780155,
+     "trigger_part": 218
+    },
+    {
+     "n": 0.1,
+     "T_ref_min": 90.0,
+     "consumption_per_part": 0.002453954059513052,
+     "parts_per_edge": 407.5055912817023,
+     "trigger_part": 327
+    },
+    {
+     "n": 0.125,
+     "T_ref_min": 30.0,
+     "consumption_per_part": 0.006689915437852899,
+     "parts_per_edge": 149.47872051443238,
+     "trigger_part": 120
+    },
+    {
+     "n": 0.125,
+     "T_ref_min": 45.0,
+     "consumption_per_part": 0.004459943625235266,
+     "parts_per_edge": 224.21808077164854,
+     "trigger_part": 180
+    },
+    {
+     "n": 0.125,
+     "T_ref_min": 60.0,
+     "consumption_per_part": 0.0033449577189264496,
+     "parts_per_edge": 298.95744102886476,
+     "trigger_part": 240
+    },
+    {
+     "n": 0.125,
+     "T_ref_min": 90.0,
+     "consumption_per_part": 0.002229971812617633,
+     "parts_per_edge": 448.4361615432971,
+     "trigger_part": 359
+    },
+    {
+     "n": 0.15,
+     "T_ref_min": 30.0,
+     "consumption_per_part": 0.006426170067369506,
+     "parts_per_edge": 155.61368428105433,
+     "trigger_part": 125
+    },
+    {
+     "n": 0.15,
+     "T_ref_min": 45.0,
+     "consumption_per_part": 0.004284113378246336,
+     "parts_per_edge": 233.42052642158157,
+     "trigger_part": 187
+    },
+    {
+     "n": 0.15,
+     "T_ref_min": 60.0,
+     "consumption_per_part": 0.003213085033684753,
+     "parts_per_edge": 311.22736856210867,
+     "trigger_part": 249
+    },
+    {
+     "n": 0.15,
+     "T_ref_min": 90.0,
+     "consumption_per_part": 0.002142056689123168,
+     "parts_per_edge": 466.84105284316314,
+     "trigger_part": 374
+    },
+    {
+     "n": 0.175,
+     "T_ref_min": 30.0,
+     "consumption_per_part": 0.006319999115139301,
+     "parts_per_edge": 158.22787025468733,
+     "trigger_part": 127
+    },
+    {
+     "n": 0.175,
+     "T_ref_min": 45.0,
+     "consumption_per_part": 0.0042133327434262,
+     "parts_per_edge": 237.34180538203103,
+     "trigger_part": 190
+    },
+    {
+     "n": 0.175,
+     "T_ref_min": 60.0,
+     "consumption_per_part": 0.0031599995575696503,
+     "parts_per_edge": 316.45574050937466,
+     "trigger_part": 254
+    },
+    {
+     "n": 0.175,
+     "T_ref_min": 90.0,
+     "consumption_per_part": 0.0021066663717131,
+     "parts_per_edge": 474.68361076406205,
+     "trigger_part": 380
+    }
+   ],
+   "parts_per_edge_range": [
+    135.83519709390077,
+    474.68361076406205
+   ],
+   "trigger_part_range": [
+    109,
+    380
+   ],
+   "max_single_part_consumption": 0.007361862178539156
+  },
+  "counterbore_cutter": {
+   "key": "Carbide|hole_making",
+   "grid": [
+    {
+     "n": 0.2,
+     "T_ref_min": 10.0,
+     "consumption_per_part": 0.0004912636006419725,
+     "parts_per_edge": 2035.5670533970397,
+     "trigger_part": 1629
+    },
+    {
+     "n": 0.2,
+     "T_ref_min": 15.0,
+     "consumption_per_part": 0.00032750906709464833,
+     "parts_per_edge": 3053.3505800955595,
+     "trigger_part": 2443
+    },
+    {
+     "n": 0.2,
+     "T_ref_min": 30.0,
+     "consumption_per_part": 0.00016375453354732417,
+     "parts_per_edge": 6106.701160191119,
+     "trigger_part": 4886
+    },
+    {
+     "n": 0.2,
+     "T_ref_min": 60.0,
+     "consumption_per_part": 8.187726677366208e-05,
+     "parts_per_edge": 12213.402320382238,
+     "trigger_part": 9771
+    },
+    {
+     "n": 0.25,
+     "T_ref_min": 10.0,
+     "consumption_per_part": 0.0007818703040329274,
+     "parts_per_edge": 1278.9845001683123,
+     "trigger_part": 1024
+    },
+    {
+     "n": 0.25,
+     "T_ref_min": 15.0,
+     "consumption_per_part": 0.0005212468693552849,
+     "parts_per_edge": 1918.4767502524687,
+     "trigger_part": 1535
+    },
+    {
+     "n": 0.25,
+     "T_ref_min": 30.0,
+     "consumption_per_part": 0.00026062343467764243,
+     "parts_per_edge": 3836.9535005049374,
+     "trigger_part": 3070
+    },
+    {
+     "n": 0.25,
+     "T_ref_min": 60.0,
+     "consumption_per_part": 0.00013031171733882122,
+     "parts_per_edge": 7673.907001009875,
+     "trigger_part": 6140
+    },
+    {
+     "n": 0.3,
+     "T_ref_min": 10.0,
+     "consumption_per_part": 0.0010658141287262896,
+     "parts_per_edge": 938.2499002852014,
+     "trigger_part": 751
+    },
+    {
+     "n": 0.3,
+     "T_ref_min": 15.0,
+     "consumption_per_part": 0.000710542752484193,
+     "parts_per_edge": 1407.3748504278021,
+     "trigger_part": 1126
+    },
+    {
+     "n": 0.3,
+     "T_ref_min": 30.0,
+     "consumption_per_part": 0.0003552713762420965,
+     "parts_per_edge": 2814.7497008556043,
+     "trigger_part": 2252
+    },
+    {
+     "n": 0.3,
+     "T_ref_min": 60.0,
+     "consumption_per_part": 0.00017763568812104825,
+     "parts_per_edge": 5629.4994017112085,
+     "trigger_part": 4504
+    },
+    {
+     "n": 0.35,
+     "T_ref_min": 10.0,
+     "consumption_per_part": 0.0013297999052213408,
+     "parts_per_edge": 751.9928344659893,
+     "trigger_part": 602
+    },
+    {
+     "n": 0.35,
+     "T_ref_min": 15.0,
+     "consumption_per_part": 0.0008865332701475604,
+     "parts_per_edge": 1127.9892516989842,
+     "trigger_part": 903
+    },
+    {
+     "n": 0.35,
+     "T_ref_min": 30.0,
+     "consumption_per_part": 0.0004432666350737802,
+     "parts_per_edge": 2255.9785033979683,
+     "trigger_part": 1805
+    },
+    {
+     "n": 0.35,
+     "T_ref_min": 60.0,
+     "consumption_per_part": 0.0002216333175368901,
+     "parts_per_edge": 4511.957006795937,
+     "trigger_part": 3610
+    }
+   ],
+   "parts_per_edge_range": [
+    751.9928344659893,
+    12213.402320382238
+   ],
+   "trigger_part_range": [
+    602,
+    9771
+   ],
+   "max_single_part_consumption": 0.0013297999052213408
+  }
+ },
+ "handbook_speed_scenario": {
+  "per_tool_nominal": {
+   "turning_insert_rough": {
+    "tool_id": "turning_insert_rough",
+    "steps": [
+     3,
+     4,
+     5
+    ],
+    "in_cut_min": 0.38620855127640763,
+    "consumption_per_part": 0.025747236751760508,
+    "available": true,
+    "parts_per_edge": 38.83911930594352
+   },
+   "turning_insert_finish": {
+    "tool_id": "turning_insert_finish",
+    "steps": [
+     10,
+     11,
+     12
+    ],
+    "in_cut_min": 0.9655213781910189,
+    "consumption_per_part": 0.06436809187940126,
+    "available": true,
+    "parts_per_edge": 15.535647722377409
+   },
+   "drill_bit": {
+    "tool_id": "drill_bit",
+    "steps": [
+     17,
+     18
+    ],
+    "in_cut_min": 0.20126139602997484,
+    "consumption_per_part": 0.004472475467332773,
+    "available": true,
+    "parts_per_edge": 223.58982342196384
+   },
+   "counterbore_cutter": {
+    "tool_id": "counterbore_cutter",
+    "steps": [
+     24
+    ],
+    "in_cut_min": 0.03152064629101765,
+    "consumption_per_part": 0.0021013764194011764,
+    "available": true,
+    "parts_per_edge": 475.8785673844038
+   }
+  },
+  "sweep": {
+   "turning_insert_rough": {
+    "key": "Carbide|turning",
+    "grid": [
+     {
+      "n": 0.2,
+      "T_ref_min": 10.0,
+      "consumption_per_part": 0.038620855127640755,
+      "parts_per_edge": 25.89274620396235,
+      "trigger_part": 21
+     },
+     {
+      "n": 0.2,
+      "T_ref_min": 15.0,
+      "consumption_per_part": 0.025747236751760508,
+      "parts_per_edge": 38.83911930594352,
+      "trigger_part": 32
+     },
+     {
+      "n": 0.2,
+      "T_ref_min": 30.0,
+      "consumption_per_part": 0.012873618375880254,
+      "parts_per_edge": 77.67823861188704,
+      "trigger_part": 63
+     },
+     {
+      "n": 0.2,
+      "T_ref_min": 60.0,
+      "consumption_per_part": 0.006436809187940127,
+      "parts_per_edge": 155.35647722377408,
+      "trigger_part": 125
+     },
+     {
+      "n": 0.25,
+      "T_ref_min": 10.0,
+      "consumption_per_part": 0.038620855127640755,
+      "parts_per_edge": 25.89274620396235,
+      "trigger_part": 21
+     },
+     {
+      "n": 0.25,
+      "T_ref_min": 15.0,
+      "consumption_per_part": 0.025747236751760508,
+      "parts_per_edge": 38.83911930594352,
+      "trigger_part": 32
+     },
+     {
+      "n": 0.25,
+      "T_ref_min": 30.0,
+      "consumption_per_part": 0.012873618375880254,
+      "parts_per_edge": 77.67823861188704,
+      "trigger_part": 63
+     },
+     {
+      "n": 0.25,
+      "T_ref_min": 60.0,
+      "consumption_per_part": 0.006436809187940127,
+      "parts_per_edge": 155.35647722377408,
+      "trigger_part": 125
+     },
+     {
+      "n": 0.3,
+      "T_ref_min": 10.0,
+      "consumption_per_part": 0.038620855127640755,
+      "parts_per_edge": 25.89274620396235,
+      "trigger_part": 21
+     },
+     {
+      "n": 0.3,
+      "T_ref_min": 15.0,
+      "consumption_per_part": 0.025747236751760508,
+      "parts_per_edge": 38.83911930594352,
+      "trigger_part": 32
+     },
+     {
+      "n": 0.3,
+      "T_ref_min": 30.0,
+      "consumption_per_part": 0.012873618375880254,
+      "parts_per_edge": 77.67823861188704,
+      "trigger_part": 63
+     },
+     {
+      "n": 0.3,
+      "T_ref_min": 60.0,
+      "consumption_per_part": 0.006436809187940127,
+      "parts_per_edge": 155.35647722377408,
+      "trigger_part": 125
+     },
+     {
+      "n": 0.35,
+      "T_ref_min": 10.0,
+      "consumption_per_part": 0.038620855127640755,
+      "parts_per_edge": 25.89274620396235,
+      "trigger_part": 21
+     },
+     {
+      "n": 0.35,
+      "T_ref_min": 15.0,
+      "consumption_per_part": 0.025747236751760508,
+      "parts_per_edge": 38.83911930594352,
+      "trigger_part": 32
+     },
+     {
+      "n": 0.35,
+      "T_ref_min": 30.0,
+      "consumption_per_part": 0.012873618375880254,
+      "parts_per_edge": 77.67823861188704,
+      "trigger_part": 63
+     },
+     {
+      "n": 0.35,
+      "T_ref_min": 60.0,
+      "consumption_per_part": 0.006436809187940127,
+      "parts_per_edge": 155.35647722377408,
+      "trigger_part": 125
+     }
+    ],
+    "parts_per_edge_range": [
+     25.89274620396235,
+     155.35647722377408
+    ],
+    "trigger_part_range": [
+     21,
+     125
+    ],
+    "max_single_part_consumption": 0.038620855127640755
+   },
+   "turning_insert_finish": {
+    "key": "Carbide with Coating|turning",
+    "grid": [
+     {
+      "n": 0.2,
+      "T_ref_min": 10.0,
+      "consumption_per_part": 0.0965521378191019,
+      "parts_per_edge": 10.35709848158494,
+      "trigger_part": 9
+     },
+     {
+      "n": 0.2,
+      "T_ref_min": 15.0,
+      "consumption_per_part": 0.06436809187940126,
+      "parts_per_edge": 15.535647722377409,
+      "trigger_part": 13
+     },
+     {
+      "n": 0.2,
+      "T_ref_min": 30.0,
+      "consumption_per_part": 0.03218404593970063,
+      "parts_per_edge": 31.071295444754817,
+      "trigger_part": 25
+     },
+     {
+      "n": 0.2,
+      "T_ref_min": 60.0,
+      "consumption_per_part": 0.016092022969850316,
+      "parts_per_edge": 62.142590889509634,
+      "trigger_part": 50
+     },
+     {
+      "n": 0.25,
+      "T_ref_min": 10.0,
+      "consumption_per_part": 0.0965521378191019,
+      "parts_per_edge": 10.35709848158494,
+      "trigger_part": 9
+     },
+     {
+      "n": 0.25,
+      "T_ref_min": 15.0,
+      "consumption_per_part": 0.06436809187940126,
+      "parts_per_edge": 15.535647722377409,
+      "trigger_part": 13
+     },
+     {
+      "n": 0.25,
+      "T_ref_min": 30.0,
+      "consumption_per_part": 0.03218404593970063,
+      "parts_per_edge": 31.071295444754817,
+      "trigger_part": 25
+     },
+     {
+      "n": 0.25,
+      "T_ref_min": 60.0,
+      "consumption_per_part": 0.016092022969850316,
+      "parts_per_edge": 62.142590889509634,
+      "trigger_part": 50
+     },
+     {
+      "n": 0.3,
+      "T_ref_min": 10.0,
+      "consumption_per_part": 0.0965521378191019,
+      "parts_per_edge": 10.35709848158494,
+      "trigger_part": 9
+     },
+     {
+      "n": 0.3,
+      "T_ref_min": 15.0,
+      "consumption_per_part": 0.06436809187940126,
+      "parts_per_edge": 15.535647722377409,
+      "trigger_part": 13
+     },
+     {
+      "n": 0.3,
+      "T_ref_min": 30.0,
+      "consumption_per_part": 0.03218404593970063,
+      "parts_per_edge": 31.071295444754817,
+      "trigger_part": 25
+     },
+     {
+      "n": 0.3,
+      "T_ref_min": 60.0,
+      "consumption_per_part": 0.016092022969850316,
+      "parts_per_edge": 62.142590889509634,
+      "trigger_part": 50
+     },
+     {
+      "n": 0.35,
+      "T_ref_min": 10.0,
+      "consumption_per_part": 0.0965521378191019,
+      "parts_per_edge": 10.35709848158494,
+      "trigger_part": 9
+     },
+     {
+      "n": 0.35,
+      "T_ref_min": 15.0,
+      "consumption_per_part": 0.06436809187940126,
+      "parts_per_edge": 15.535647722377409,
+      "trigger_part": 13
+     },
+     {
+      "n": 0.35,
+      "T_ref_min": 30.0,
+      "consumption_per_part": 0.03218404593970063,
+      "parts_per_edge": 31.071295444754817,
+      "trigger_part": 25
+     },
+     {
+      "n": 0.35,
+      "T_ref_min": 60.0,
+      "consumption_per_part": 0.016092022969850316,
+      "parts_per_edge": 62.142590889509634,
+      "trigger_part": 50
+     }
+    ],
+    "parts_per_edge_range": [
+     10.35709848158494,
+     62.142590889509634
+    ],
+    "trigger_part_range": [
+     9,
+     50
+    ],
+    "max_single_part_consumption": 0.0965521378191019
+   },
+   "drill_bit": {
+    "key": "High-Speed Steel|drilling",
+    "grid": [
+     {
+      "n": 0.1,
+      "T_ref_min": 30.0,
+      "consumption_per_part": 0.006708713200999161,
+      "parts_per_edge": 149.0598822813092,
+      "trigger_part": 120
+     },
+     {
+      "n": 0.1,
+      "T_ref_min": 45.0,
+      "consumption_per_part": 0.004472475467332773,
+      "parts_per_edge": 223.58982342196384,
+      "trigger_part": 179
+     },
+     {
+      "n": 0.1,
+      "T_ref_min": 60.0,
+      "consumption_per_part": 0.0033543566004995804,
+      "parts_per_edge": 298.1197645626184,
+      "trigger_part": 239
+     },
+     {
+      "n": 0.1,
+      "T_ref_min": 90.0,
+      "consumption_per_part": 0.0022362377336663866,
+      "parts_per_edge": 447.1796468439277,
+      "trigger_part": 358
+     },
+     {
+      "n": 0.125,
+      "T_ref_min": 30.0,
+      "consumption_per_part": 0.006708713200999161,
+      "parts_per_edge": 149.0598822813092,
+      "trigger_part": 120
+     },
+     {
+      "n": 0.125,
+      "T_ref_min": 45.0,
+      "consumption_per_part": 0.004472475467332773,
+      "parts_per_edge": 223.58982342196384,
+      "trigger_part": 179
+     },
+     {
+      "n": 0.125,
+      "T_ref_min": 60.0,
+      "consumption_per_part": 0.0033543566004995804,
+      "parts_per_edge": 298.1197645626184,
+      "trigger_part": 239
+     },
+     {
+      "n": 0.125,
+      "T_ref_min": 90.0,
+      "consumption_per_part": 0.0022362377336663866,
+      "parts_per_edge": 447.1796468439277,
+      "trigger_part": 358
+     },
+     {
+      "n": 0.15,
+      "T_ref_min": 30.0,
+      "consumption_per_part": 0.006708713200999161,
+      "parts_per_edge": 149.0598822813092,
+      "trigger_part": 120
+     },
+     {
+      "n": 0.15,
+      "T_ref_min": 45.0,
+      "consumption_per_part": 0.004472475467332773,
+      "parts_per_edge": 223.58982342196384,
+      "trigger_part": 179
+     },
+     {
+      "n": 0.15,
+      "T_ref_min": 60.0,
+      "consumption_per_part": 0.0033543566004995804,
+      "parts_per_edge": 298.1197645626184,
+      "trigger_part": 239
+     },
+     {
+      "n": 0.15,
+      "T_ref_min": 90.0,
+      "consumption_per_part": 0.0022362377336663866,
+      "parts_per_edge": 447.1796468439277,
+      "trigger_part": 358
+     },
+     {
+      "n": 0.175,
+      "T_ref_min": 30.0,
+      "consumption_per_part": 0.006708713200999161,
+      "parts_per_edge": 149.0598822813092,
+      "trigger_part": 120
+     },
+     {
+      "n": 0.175,
+      "T_ref_min": 45.0,
+      "consumption_per_part": 0.004472475467332773,
+      "parts_per_edge": 223.58982342196384,
+      "trigger_part": 179
+     },
+     {
+      "n": 0.175,
+      "T_ref_min": 60.0,
+      "consumption_per_part": 0.0033543566004995804,
+      "parts_per_edge": 298.1197645626184,
+      "trigger_part": 239
+     },
+     {
+      "n": 0.175,
+      "T_ref_min": 90.0,
+      "consumption_per_part": 0.0022362377336663866,
+      "parts_per_edge": 447.1796468439277,
+      "trigger_part": 358
+     }
+    ],
+    "parts_per_edge_range": [
+     149.0598822813092,
+     447.1796468439277
+    ],
+    "trigger_part_range": [
+     120,
+     358
+    ],
+    "max_single_part_consumption": 0.006708713200999161
+   },
+   "counterbore_cutter": {
+    "key": "Carbide|hole_making",
+    "grid": [
+     {
+      "n": 0.2,
+      "T_ref_min": 10.0,
+      "consumption_per_part": 0.0031520646291017646,
+      "parts_per_edge": 317.25237825626925,
+      "trigger_part": 254
+     },
+     {
+      "n": 0.2,
+      "T_ref_min": 15.0,
+      "consumption_per_part": 0.0021013764194011764,
+      "parts_per_edge": 475.8785673844038,
+      "trigger_part": 381
+     },
+     {
+      "n": 0.2,
+      "T_ref_min": 30.0,
+      "consumption_per_part": 0.0010506882097005882,
+      "parts_per_edge": 951.7571347688076,
+      "trigger_part": 762
+     },
+     {
+      "n": 0.2,
+      "T_ref_min": 60.0,
+      "consumption_per_part": 0.0005253441048502941,
+      "parts_per_edge": 1903.5142695376153,
+      "trigger_part": 1523
+     },
+     {
+      "n": 0.25,
+      "T_ref_min": 10.0,
+      "consumption_per_part": 0.0031520646291017646,
+      "parts_per_edge": 317.25237825626925,
+      "trigger_part": 254
+     },
+     {
+      "n": 0.25,
+      "T_ref_min": 15.0,
+      "consumption_per_part": 0.0021013764194011764,
+      "parts_per_edge": 475.8785673844038,
+      "trigger_part": 381
+     },
+     {
+      "n": 0.25,
+      "T_ref_min": 30.0,
+      "consumption_per_part": 0.0010506882097005882,
+      "parts_per_edge": 951.7571347688076,
+      "trigger_part": 762
+     },
+     {
+      "n": 0.25,
+      "T_ref_min": 60.0,
+      "consumption_per_part": 0.0005253441048502941,
+      "parts_per_edge": 1903.5142695376153,
+      "trigger_part": 1523
+     },
+     {
+      "n": 0.3,
+      "T_ref_min": 10.0,
+      "consumption_per_part": 0.0031520646291017646,
+      "parts_per_edge": 317.25237825626925,
+      "trigger_part": 254
+     },
+     {
+      "n": 0.3,
+      "T_ref_min": 15.0,
+      "consumption_per_part": 0.0021013764194011764,
+      "parts_per_edge": 475.8785673844038,
+      "trigger_part": 381
+     },
+     {
+      "n": 0.3,
+      "T_ref_min": 30.0,
+      "consumption_per_part": 0.0010506882097005882,
+      "parts_per_edge": 951.7571347688076,
+      "trigger_part": 762
+     },
+     {
+      "n": 0.3,
+      "T_ref_min": 60.0,
+      "consumption_per_part": 0.0005253441048502941,
+      "parts_per_edge": 1903.5142695376153,
+      "trigger_part": 1523
+     },
+     {
+      "n": 0.35,
+      "T_ref_min": 10.0,
+      "consumption_per_part": 0.0031520646291017646,
+      "parts_per_edge": 317.25237825626925,
+      "trigger_part": 254
+     },
+     {
+      "n": 0.35,
+      "T_ref_min": 15.0,
+      "consumption_per_part": 0.0021013764194011764,
+      "parts_per_edge": 475.8785673844038,
+      "trigger_part": 381
+     },
+     {
+      "n": 0.35,
+      "T_ref_min": 30.0,
+      "consumption_per_part": 0.0010506882097005882,
+      "parts_per_edge": 951.7571347688076,
+      "trigger_part": 762
+     },
+     {
+      "n": 0.35,
+      "T_ref_min": 60.0,
+      "consumption_per_part": 0.0005253441048502941,
+      "parts_per_edge": 1903.5142695376153,
+      "trigger_part": 1523
+     }
+    ],
+    "parts_per_edge_range": [
+     317.25237825626925,
+     1903.5142695376153
+    ],
+    "trigger_part_range": [
+     254,
+     1523
+    ],
+    "max_single_part_consumption": 0.0031520646291017646
+   }
+  }
+ },
+ "feedback": {
+  "single_part_no_request": {
+   "nominal_requests": 0,
+   "swept_settings_that_would_request": 0,
+   "swept_settings": 64
+  },
+  "batch_trigger": {
+   "nominal": {
+    "turning_insert_rough": {
+     "analytic_trigger_part": 449,
+     "observed_first_request_part": 449
+    },
+    "turning_insert_finish": {
+     "analytic_trigger_part": 127,
+     "observed_first_request_part": 127
+    },
+    "drill_bit": {
+     "analytic_trigger_part": 180,
+     "observed_first_request_part": 180
+    },
+    "counterbore_cutter": {
+     "analytic_trigger_part": 1535,
+     "observed_first_request_part": 1535
+    }
+   },
+   "swept_settings": 64,
+   "early_or_missed_triggers": 0
+  },
+  "resolution_reused": {
+   "tool": "turning_insert_finish",
+   "requests": 3,
+   "same_ids_on_rerun": true,
+   "statuses_on_rerun": [
+    "expert_approved"
+   ],
+   "duplicates_created": 0
+  },
+  "missing_constants": {
+   "serialised_steps": 7,
+   "tool_life_unavailable_steps": 7,
+   "requests_by_reason": {
+    "missing_knowledge": 7
+   },
+   "force_available_steps": 7
+  }
+ }
+}

@@ -1,0 +1,137 @@
+{
+ "rule_counts": {
+  "feature_operation": 18,
+  "parameter": 17,
+  "tool": 1
+ },
+ "variants": {
+  "reference": {
+   "halted": false,
+   "error": null,
+   "steps": 32,
+   "approved": 27,
+   "withheld": 5,
+   "steps_with_parameters": 32,
+   "steps_with_tool": 32,
+   "tool_selection_provenance": {
+    "preferred_tool_selection": 9,
+    "feature_tool_from_operation": 23
+   },
+   "requests": 11,
+   "requests_by_reason": {
+    "low_confidence_mapping": 6,
+    "orientation_incompatible": 2,
+    "machine_incompatible": 3
+   },
+   "knowledge_delta": {
+    "triples_added": 0,
+    "triples_removed": 0,
+    "rules_added": 0,
+    "rules_removed": 0,
+    "file_lines_changed": 0
+   },
+   "seconds": 2.36
+  },
+  "reasoner_off": {
+   "halted": false,
+   "error": null,
+   "steps": 0,
+   "approved": 0,
+   "withheld": 0,
+   "steps_with_parameters": 0,
+   "steps_with_tool": 0,
+   "tool_selection_provenance": {},
+   "requests": 25,
+   "requests_by_reason": {
+    "missing_knowledge": 22,
+    "low_confidence_mapping": 3
+   },
+   "knowledge_delta": {
+    "triples_added": 0,
+    "triples_removed": 0,
+    "rules_added": 0,
+    "rules_removed": 0,
+    "file_lines_changed": 0
+   },
+   "seconds": 0.2
+  },
+  "no_feature_operation_rules": {
+   "halted": false,
+   "error": null,
+   "steps": 0,
+   "approved": 0,
+   "withheld": 0,
+   "steps_with_parameters": 0,
+   "steps_with_tool": 0,
+   "tool_selection_provenance": {},
+   "requests": 25,
+   "requests_by_reason": {
+    "missing_knowledge": 22,
+    "low_confidence_mapping": 3
+   },
+   "knowledge_delta": {
+    "triples_added": 0,
+    "triples_removed": 0,
+    "rules_added": 0,
+    "rules_removed": 18,
+    "file_lines_changed": 18
+   },
+   "seconds": 1.88
+  },
+  "no_parameter_rules": {
+   "halted": false,
+   "error": null,
+   "steps": 32,
+   "approved": 0,
+   "withheld": 32,
+   "steps_with_parameters": 0,
+   "steps_with_tool": 32,
+   "tool_selection_provenance": {
+    "preferred_tool_selection": 9,
+    "feature_tool_from_operation": 23
+   },
+   "requests": 43,
+   "requests_by_reason": {
+    "low_confidence_mapping": 6,
+    "missing_knowledge": 32,
+    "orientation_incompatible": 2,
+    "machine_incompatible": 3
+   },
+   "knowledge_delta": {
+    "triples_added": 0,
+    "triples_removed": 0,
+    "rules_added": 0,
+    "rules_removed": 17,
+    "file_lines_changed": 17
+   },
+   "seconds": 2.16
+  },
+  "no_tool_rule": {
+   "halted": false,
+   "error": null,
+   "steps": 32,
+   "approved": 0,
+   "withheld": 32,
+   "steps_with_parameters": 32,
+   "steps_with_tool": 0,
+   "tool_selection_provenance": {
+    "none": 32
+   },
+   "requests": 43,
+   "requests_by_reason": {
+    "low_confidence_mapping": 6,
+    "missing_knowledge": 32,
+    "orientation_incompatible": 2,
+    "machine_incompatible": 3
+   },
+   "knowledge_delta": {
+    "triples_added": 0,
+    "triples_removed": 0,
+    "rules_added": 0,
+    "rules_removed": 1,
+    "file_lines_changed": 1
+   },
+   "seconds": 1.93
+  }
+ }
+}

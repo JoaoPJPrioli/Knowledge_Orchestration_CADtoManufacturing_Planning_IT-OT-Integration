@@ -1,0 +1,562 @@
+{
+ "reference": {
+  "entities": 22,
+  "correct": 15,
+  "predictors": {
+   "policy": {
+    "brier": 0.3295,
+    "routing": {
+     "reviewed": 3,
+     "wrong_entities": 7,
+     "wrong_routed_to_review": 0,
+     "correct_routed_to_review": 3
+    },
+    "range": [
+     0.4,
+     1.0
+    ]
+   },
+   "base_rate_loo": {
+    "brier": 0.2381,
+    "routing": {
+     "reviewed": 0,
+     "wrong_entities": 7,
+     "wrong_routed_to_review": 0,
+     "correct_routed_to_review": 0
+    },
+    "range": [
+     0.667,
+     0.714
+    ]
+   },
+   "reconciliation_class_loo": {
+    "brier": 0.2393,
+    "routing": {
+     "reviewed": 0,
+     "wrong_entities": 7,
+     "wrong_routed_to_review": 0,
+     "correct_routed_to_review": 0
+    },
+    "range": [
+     0.5,
+     0.778
+    ]
+   },
+   "agent_set_loo": {
+    "brier": 0.2672,
+    "routing": {
+     "reviewed": 1,
+     "wrong_entities": 7,
+     "wrong_routed_to_review": 0,
+     "correct_routed_to_review": 1
+    },
+    "range": [
+     0.333,
+     0.75
+    ]
+   }
+  },
+  "per_entity": [
+   {
+    "id": 1,
+    "class": "merged",
+    "agents": "STEP-A+STEP-B",
+    "policy": 0.621,
+    "y": 1,
+    "base_rate_loo": 0.667,
+    "reconciliation_class_loo": 0.667,
+    "agent_set_loo": 0.75
+   },
+   {
+    "id": 2,
+    "class": "primary_only",
+    "agents": "STEP-A",
+    "policy": 1.0,
+    "y": 1,
+    "base_rate_loo": 0.667,
+    "reconciliation_class_loo": 0.5,
+    "agent_set_loo": 0.5
+   },
+   {
+    "id": 3,
+    "class": "primary_only",
+    "agents": "STEP-A",
+    "policy": 1.0,
+    "y": 0,
+    "base_rate_loo": 0.714,
+    "reconciliation_class_loo": 0.583,
+    "agent_set_loo": 0.6
+   },
+   {
+    "id": 4,
+    "class": "primary_only",
+    "agents": "STEP-A",
+    "policy": 1.0,
+    "y": 1,
+    "base_rate_loo": 0.667,
+    "reconciliation_class_loo": 0.5,
+    "agent_set_loo": 0.5
+   },
+   {
+    "id": 5,
+    "class": "primary_only",
+    "agents": "STEP-A",
+    "policy": 1.0,
+    "y": 1,
+    "base_rate_loo": 0.667,
+    "reconciliation_class_loo": 0.5,
+    "agent_set_loo": 0.5
+   },
+   {
+    "id": 6,
+    "class": "primary_only",
+    "agents": "STEP-A",
+    "policy": 1.0,
+    "y": 1,
+    "base_rate_loo": 0.667,
+    "reconciliation_class_loo": 0.5,
+    "agent_set_loo": 0.5
+   },
+   {
+    "id": 7,
+    "class": "merged",
+    "agents": "STEP-A+STEP-B",
+    "policy": 0.99,
+    "y": 1,
+    "base_rate_loo": 0.667,
+    "reconciliation_class_loo": 0.667,
+    "agent_set_loo": 0.75
+   },
+   {
+    "id": 8,
+    "class": "merged",
+    "agents": "STEP-A+STEP-B",
+    "policy": 0.919,
+    "y": 1,
+    "base_rate_loo": 0.667,
+    "reconciliation_class_loo": 0.667,
+    "agent_set_loo": 0.75
+   },
+   {
+    "id": 9,
+    "class": "primary_only",
+    "agents": "STEP-A",
+    "policy": 1.0,
+    "y": 1,
+    "base_rate_loo": 0.667,
+    "reconciliation_class_loo": 0.5,
+    "agent_set_loo": 0.5
+   },
+   {
+    "id": 10,
+    "class": "primary_only",
+    "agents": "STEP-A",
+    "policy": 1.0,
+    "y": 0,
+    "base_rate_loo": 0.714,
+    "reconciliation_class_loo": 0.583,
+    "agent_set_loo": 0.6
+   },
+   {
+    "id": 11,
+    "class": "primary_only",
+    "agents": "STEP-A",
+    "policy": 1.0,
+    "y": 0,
+    "base_rate_loo": 0.714,
+    "reconciliation_class_loo": 0.583,
+    "agent_set_loo": 0.6
+   },
+   {
+    "id": 12,
+    "class": "primary_only",
+    "agents": "STEP-A",
+    "policy": 1.0,
+    "y": 0,
+    "base_rate_loo": 0.714,
+    "reconciliation_class_loo": 0.583,
+    "agent_set_loo": 0.6
+   },
+   {
+    "id": 13,
+    "class": "secondary_only",
+    "agents": "STEP-B",
+    "policy": 0.4,
+    "y": 1,
+    "base_rate_loo": 0.667,
+    "reconciliation_class_loo": 0.75,
+    "agent_set_loo": 0.667
+   },
+   {
+    "id": 14,
+    "class": "secondary_only",
+    "agents": "STEP-B",
+    "policy": 0.4,
+    "y": 1,
+    "base_rate_loo": 0.667,
+    "reconciliation_class_loo": 0.75,
+    "agent_set_loo": 0.667
+   },
+   {
+    "id": 15,
+    "class": "merged",
+    "agents": "DRW-A+DRW-B",
+    "policy": 0.786,
+    "y": 1,
+    "base_rate_loo": 0.667,
+    "reconciliation_class_loo": 0.667,
+    "agent_set_loo": 0.5
+   },
+   {
+    "id": 16,
+    "class": "merged",
+    "agents": "DRW-A+DRW-B",
+    "policy": 0.8,
+    "y": 1,
+    "base_rate_loo": 0.667,
+    "reconciliation_class_loo": 0.667,
+    "agent_set_loo": 0.5
+   },
+   {
+    "id": 17,
+    "class": "merged",
+    "agents": "DRW-A+DRW-B",
+    "policy": 0.793,
+    "y": 1,
+    "base_rate_loo": 0.667,
+    "reconciliation_class_loo": 0.667,
+    "agent_set_loo": 0.5
+   },
+   {
+    "id": 18,
+    "class": "merged",
+    "agents": "DRW-A+DRW-B",
+    "policy": 0.661,
+    "y": 0,
+    "base_rate_loo": 0.714,
+    "reconciliation_class_loo": 0.778,
+    "agent_set_loo": 0.667
+   },
+   {
+    "id": 19,
+    "class": "merged",
+    "agents": "DRW-A+DRW-B",
+    "policy": 0.673,
+    "y": 0,
+    "base_rate_loo": 0.714,
+    "reconciliation_class_loo": 0.778,
+    "agent_set_loo": 0.667
+   },
+   {
+    "id": 20,
+    "class": "primary_only",
+    "agents": "DRW-A",
+    "policy": 1.0,
+    "y": 0,
+    "base_rate_loo": 0.714,
+    "reconciliation_class_loo": 0.583,
+    "agent_set_loo": 0.667
+   },
+   {
+    "id": 21,
+    "class": "primary_only",
+    "agents": "DRW-A",
+    "policy": 1.0,
+    "y": 1,
+    "base_rate_loo": 0.667,
+    "reconciliation_class_loo": 0.5,
+    "agent_set_loo": 0.333
+   },
+   {
+    "id": 22,
+    "class": "secondary_only",
+    "agents": "DRW-B",
+    "policy": 0.4,
+    "y": 1,
+    "base_rate_loo": 0.667,
+    "reconciliation_class_loo": 0.75,
+    "agent_set_loo": 0.5
+   }
+  ]
+ },
+ "swapped_roles": {
+  "entities": 22,
+  "correct": 17,
+  "predictors": {
+   "policy": {
+    "brier": 0.1777,
+    "routing": {
+     "reviewed": 11,
+     "wrong_entities": 5,
+     "wrong_routed_to_review": 4,
+     "correct_routed_to_review": 7
+    },
+    "range": [
+     0.4,
+     1.0
+    ]
+   },
+   "base_rate_loo": {
+    "brier": 0.1927,
+    "routing": {
+     "reviewed": 0,
+     "wrong_entities": 5,
+     "wrong_routed_to_review": 0,
+     "correct_routed_to_review": 0
+    },
+    "range": [
+     0.762,
+     0.81
+    ]
+   },
+   "reconciliation_class_loo": {
+    "brier": 0.1962,
+    "routing": {
+     "reviewed": 0,
+     "wrong_entities": 5,
+     "wrong_routed_to_review": 0,
+     "correct_routed_to_review": 0
+    },
+    "range": [
+     0.583,
+     0.889
+    ]
+   },
+   "agent_set_loo": {
+    "brier": 0.2326,
+    "routing": {
+     "reviewed": 1,
+     "wrong_entities": 5,
+     "wrong_routed_to_review": 0,
+     "correct_routed_to_review": 1
+    },
+    "range": [
+     0.333,
+     0.833
+    ]
+   }
+  },
+  "per_entity": [
+   {
+    "id": 1,
+    "class": "merged",
+    "agents": "STEP-A+STEP-B",
+    "policy": 0.99,
+    "y": 1,
+    "base_rate_loo": 0.762,
+    "reconciliation_class_loo": 0.778,
+    "agent_set_loo": 0.75
+   },
+   {
+    "id": 2,
+    "class": "merged",
+    "agents": "STEP-A+STEP-B",
+    "policy": 0.919,
+    "y": 1,
+    "base_rate_loo": 0.762,
+    "reconciliation_class_loo": 0.778,
+    "agent_set_loo": 0.75
+   },
+   {
+    "id": 3,
+    "class": "primary_only",
+    "agents": "STEP-B",
+    "policy": 1.0,
+    "y": 1,
+    "base_rate_loo": 0.762,
+    "reconciliation_class_loo": 0.75,
+    "agent_set_loo": 0.667
+   },
+   {
+    "id": 4,
+    "class": "primary_only",
+    "agents": "STEP-B",
+    "policy": 1.0,
+    "y": 1,
+    "base_rate_loo": 0.762,
+    "reconciliation_class_loo": 0.75,
+    "agent_set_loo": 0.667
+   },
+   {
+    "id": 5,
+    "class": "merged",
+    "agents": "STEP-A+STEP-B",
+    "policy": 0.736,
+    "y": 1,
+    "base_rate_loo": 0.762,
+    "reconciliation_class_loo": 0.778,
+    "agent_set_loo": 0.75
+   },
+   {
+    "id": 6,
+    "class": "secondary_only",
+    "agents": "STEP-A",
+    "policy": 0.4,
+    "y": 1,
+    "base_rate_loo": 0.762,
+    "reconciliation_class_loo": 0.583,
+    "agent_set_loo": 0.6
+   },
+   {
+    "id": 7,
+    "class": "secondary_only",
+    "agents": "STEP-A",
+    "policy": 0.4,
+    "y": 1,
+    "base_rate_loo": 0.762,
+    "reconciliation_class_loo": 0.583,
+    "agent_set_loo": 0.6
+   },
+   {
+    "id": 8,
+    "class": "secondary_only",
+    "agents": "STEP-A",
+    "policy": 0.4,
+    "y": 1,
+    "base_rate_loo": 0.762,
+    "reconciliation_class_loo": 0.583,
+    "agent_set_loo": 0.6
+   },
+   {
+    "id": 9,
+    "class": "secondary_only",
+    "agents": "STEP-A",
+    "policy": 0.4,
+    "y": 1,
+    "base_rate_loo": 0.762,
+    "reconciliation_class_loo": 0.583,
+    "agent_set_loo": 0.6
+   },
+   {
+    "id": 10,
+    "class": "secondary_only",
+    "agents": "STEP-A",
+    "policy": 0.4,
+    "y": 1,
+    "base_rate_loo": 0.762,
+    "reconciliation_class_loo": 0.583,
+    "agent_set_loo": 0.6
+   },
+   {
+    "id": 11,
+    "class": "secondary_only",
+    "agents": "STEP-A",
+    "policy": 0.4,
+    "y": 1,
+    "base_rate_loo": 0.762,
+    "reconciliation_class_loo": 0.583,
+    "agent_set_loo": 0.6
+   },
+   {
+    "id": 12,
+    "class": "secondary_only",
+    "agents": "STEP-A",
+    "policy": 0.4,
+    "y": 0,
+    "base_rate_loo": 0.81,
+    "reconciliation_class_loo": 0.667,
+    "agent_set_loo": 0.7
+   },
+   {
+    "id": 13,
+    "class": "secondary_only",
+    "agents": "STEP-A",
+    "policy": 0.4,
+    "y": 0,
+    "base_rate_loo": 0.81,
+    "reconciliation_class_loo": 0.667,
+    "agent_set_loo": 0.7
+   },
+   {
+    "id": 14,
+    "class": "secondary_only",
+    "agents": "STEP-A",
+    "policy": 0.4,
+    "y": 0,
+    "base_rate_loo": 0.81,
+    "reconciliation_class_loo": 0.667,
+    "agent_set_loo": 0.7
+   },
+   {
+    "id": 15,
+    "class": "merged",
+    "agents": "DRW-A+DRW-B",
+    "policy": 0.8,
+    "y": 1,
+    "base_rate_loo": 0.762,
+    "reconciliation_class_loo": 0.778,
+    "agent_set_loo": 0.667
+   },
+   {
+    "id": 16,
+    "class": "merged",
+    "agents": "DRW-A+DRW-B",
+    "policy": 0.786,
+    "y": 1,
+    "base_rate_loo": 0.762,
+    "reconciliation_class_loo": 0.778,
+    "agent_set_loo": 0.667
+   },
+   {
+    "id": 17,
+    "class": "merged",
+    "agents": "DRW-A+DRW-B",
+    "policy": 0.793,
+    "y": 1,
+    "base_rate_loo": 0.762,
+    "reconciliation_class_loo": 0.778,
+    "agent_set_loo": 0.667
+   },
+   {
+    "id": 18,
+    "class": "merged",
+    "agents": "DRW-A+DRW-B",
+    "policy": 0.661,
+    "y": 0,
+    "base_rate_loo": 0.81,
+    "reconciliation_class_loo": 0.889,
+    "agent_set_loo": 0.833
+   },
+   {
+    "id": 19,
+    "class": "primary_only",
+    "agents": "DRW-B",
+    "policy": 1.0,
+    "y": 1,
+    "base_rate_loo": 0.762,
+    "reconciliation_class_loo": 0.75,
+    "agent_set_loo": 0.5
+   },
+   {
+    "id": 20,
+    "class": "merged",
+    "agents": "DRW-A+DRW-B",
+    "policy": 0.673,
+    "y": 1,
+    "base_rate_loo": 0.762,
+    "reconciliation_class_loo": 0.778,
+    "agent_set_loo": 0.667
+   },
+   {
+    "id": 21,
+    "class": "secondary_only",
+    "agents": "DRW-A",
+    "policy": 0.4,
+    "y": 0,
+    "base_rate_loo": 0.81,
+    "reconciliation_class_loo": 0.667,
+    "agent_set_loo": 0.667
+   },
+   {
+    "id": 22,
+    "class": "secondary_only",
+    "agents": "DRW-A",
+    "policy": 0.4,
+    "y": 1,
+    "base_rate_loo": 0.762,
+    "reconciliation_class_loo": 0.583,
+    "agent_set_loo": 0.333
+   }
+  ]
+ }
+}

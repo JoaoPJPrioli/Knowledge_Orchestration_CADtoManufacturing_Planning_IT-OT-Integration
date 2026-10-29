@@ -1,0 +1,6281 @@
+{
+ "declared_setting": {
+  "tau_min": 0.7,
+  "completeness": true,
+  "eps": 0.1
+ },
+ "declared": {
+  "tau_min": 0.7,
+  "completeness": true,
+  "eps": 0.1,
+  "drawing_entities": 8,
+  "step_entities": 14,
+  "admissible_pairs": 6,
+  "links": 4,
+  "correct_links": 2,
+  "precision": 0.5,
+  "max_true_links": 8,
+  "recall": 0.25,
+  "duplicated_approved_steps": [
+   2,
+   7,
+   8,
+   9,
+   14,
+   15,
+   16,
+   21,
+   22,
+   23,
+   29
+  ],
+  "duplicated_approved_steps_removed": [
+   7,
+   14,
+   22,
+   23,
+   29
+  ],
+  "steps_removed_by_wrong_links": [
+   22,
+   29
+  ],
+  "link_list": [
+   {
+    "drawing": 15,
+    "step": 5,
+    "tau": 0.7,
+    "common": [
+     "D",
+     "L"
+    ],
+    "relative_differences": [
+     0.0,
+     0.0211
+    ],
+    "weight": 1.6894736842105262,
+    "correct": true,
+    "phys": [
+     "P05",
+     "P05"
+    ]
+   },
+   {
+    "drawing": 17,
+    "step": 4,
+    "tau": 0.7,
+    "common": [
+     "D"
+    ],
+    "relative_differences": [
+     0.0833
+    ],
+    "weight": 1.6166666666666667,
+    "correct": false,
+    "phys": [
+     "P03",
+     "P04"
+    ]
+   },
+   {
+    "drawing": 20,
+    "step": 11,
+    "tau": 0.7,
+    "common": [
+     "D"
+    ],
+    "relative_differences": [
+     0.0476
+    ],
+    "weight": 1.6523809523809523,
+    "correct": false,
+    "phys": [
+     "P07b",
+     "P08"
+    ]
+   },
+   {
+    "drawing": 21,
+    "step": 7,
+    "tau": 0.7,
+    "common": [
+     "D"
+    ],
+    "relative_differences": [
+     0.0
+    ],
+    "weight": 1.6999999999999997,
+    "correct": true,
+    "phys": [
+     "P07a",
+     "P07a"
+    ]
+   }
+  ],
+  "unlinked_drawing_entities": [
+   {
+    "id": 16,
+    "type": "Cylinder",
+    "phys": "P01",
+    "stated": {
+     "D": 24.0,
+     "L": 37.5
+    }
+   },
+   {
+    "id": 18,
+    "type": "Boss",
+    "phys": "P08",
+    "stated": {
+     "L": 32.0,
+     "W": 4.0
+    }
+   },
+   {
+    "id": 19,
+    "type": "Hole",
+    "phys": "P07c",
+    "stated": {
+     "D": 12.2
+    }
+   },
+   {
+    "id": 22,
+    "type": "Slot",
+    "phys": "P08",
+    "stated": {
+     "W": 4.0
+    }
+   }
+  ]
+ },
+ "sweep": [
+  {
+   "tau_min": 0.7,
+   "completeness": true,
+   "eps": 0.05,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 4,
+   "links": 3,
+   "correct_links": 2,
+   "precision": 0.6666666666666666,
+   "max_true_links": 8,
+   "recall": 0.25,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    14,
+    22,
+    23
+   ],
+   "steps_removed_by_wrong_links": [
+    22
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 16,
+     "type": "Cylinder",
+     "phys": "P01",
+     "stated": {
+      "D": 24.0,
+      "L": 37.5
+     }
+    },
+    {
+     "id": 17,
+     "type": "Groove",
+     "phys": "P03",
+     "stated": {
+      "D": 22.0,
+      "W": 1.75
+     }
+    },
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 19,
+     "type": "Hole",
+     "phys": "P07c",
+     "stated": {
+      "D": 12.2
+     }
+    },
+    {
+     "id": 22,
+     "type": "Slot",
+     "phys": "P08",
+     "stated": {
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.7,
+   "completeness": true,
+   "eps": 0.1,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 6,
+   "links": 4,
+   "correct_links": 2,
+   "precision": 0.5,
+   "max_true_links": 8,
+   "recall": 0.25,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    14,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 16,
+     "type": "Cylinder",
+     "phys": "P01",
+     "stated": {
+      "D": 24.0,
+      "L": 37.5
+     }
+    },
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 19,
+     "type": "Hole",
+     "phys": "P07c",
+     "stated": {
+      "D": 12.2
+     }
+    },
+    {
+     "id": 22,
+     "type": "Slot",
+     "phys": "P08",
+     "stated": {
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.7,
+   "completeness": true,
+   "eps": 0.2,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 11,
+   "links": 4,
+   "correct_links": 2,
+   "precision": 0.5,
+   "max_true_links": 8,
+   "recall": 0.25,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    14,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 16,
+     "type": "Cylinder",
+     "phys": "P01",
+     "stated": {
+      "D": 24.0,
+      "L": 37.5
+     }
+    },
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 19,
+     "type": "Hole",
+     "phys": "P07c",
+     "stated": {
+      "D": 12.2
+     }
+    },
+    {
+     "id": 22,
+     "type": "Slot",
+     "phys": "P08",
+     "stated": {
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.7,
+   "completeness": true,
+   "eps": 0.3,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 12,
+   "links": 5,
+   "correct_links": 1,
+   "precision": 0.2,
+   "max_true_links": 8,
+   "recall": 0.125,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    8,
+    14,
+    15,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    7,
+    8,
+    14,
+    15,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 1,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0381,
+      0.1941
+     ],
+     "weight": 1.5839081976778513,
+     "correct": false,
+     "phys": [
+      "P05",
+      "P01"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.2105
+     ],
+     "weight": 1.594736842105263,
+     "correct": false,
+     "phys": [
+      "P01",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 19,
+     "type": "Hole",
+     "phys": "P07c",
+     "stated": {
+      "D": 12.2
+     }
+    },
+    {
+     "id": 22,
+     "type": "Slot",
+     "phys": "P08",
+     "stated": {
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.7,
+   "completeness": true,
+   "eps": 0.5,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 22,
+   "links": 8,
+   "correct_links": 5,
+   "precision": 0.625,
+   "max_true_links": 8,
+   "recall": 0.625,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    21,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 1,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0381,
+      0.3501
+     ],
+     "weight": 1.5059185962913695,
+     "correct": true,
+     "phys": [
+      "P01",
+      "P01"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 18,
+     "step": 10,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.3443
+     ],
+     "weight": 1.3557377049180328,
+     "correct": false,
+     "phys": [
+      "P07c",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 14,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": []
+  },
+  {
+   "tau_min": 0.7,
+   "completeness": true,
+   "eps": null,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 25,
+   "links": 8,
+   "correct_links": 5,
+   "precision": 0.625,
+   "max_true_links": 8,
+   "recall": 0.625,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    21,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 1,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0381,
+      0.3501
+     ],
+     "weight": 1.5059185962913695,
+     "correct": true,
+     "phys": [
+      "P01",
+      "P01"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 18,
+     "step": 10,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.3443
+     ],
+     "weight": 1.3557377049180328,
+     "correct": false,
+     "phys": [
+      "P07c",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 14,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": []
+  },
+  {
+   "tau_min": 0.7,
+   "completeness": false,
+   "eps": 0.05,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 6,
+   "links": 4,
+   "correct_links": 2,
+   "precision": 0.5,
+   "max_true_links": 8,
+   "recall": 0.25,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    8,
+    14,
+    15,
+    22,
+    23
+   ],
+   "steps_removed_by_wrong_links": [
+    8,
+    15,
+    22
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 10,
+     "tau": 0.7,
+     "common": [],
+     "relative_differences": [],
+     "weight": 0.7,
+     "correct": false,
+     "phys": [
+      "P01",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 17,
+     "type": "Groove",
+     "phys": "P03",
+     "stated": {
+      "D": 22.0,
+      "W": 1.75
+     }
+    },
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 19,
+     "type": "Hole",
+     "phys": "P07c",
+     "stated": {
+      "D": 12.2
+     }
+    },
+    {
+     "id": 22,
+     "type": "Slot",
+     "phys": "P08",
+     "stated": {
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.7,
+   "completeness": false,
+   "eps": 0.1,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 8,
+   "links": 5,
+   "correct_links": 2,
+   "precision": 0.4,
+   "max_true_links": 8,
+   "recall": 0.25,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    8,
+    14,
+    15,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    8,
+    15,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 10,
+     "tau": 0.7,
+     "common": [],
+     "relative_differences": [],
+     "weight": 0.7,
+     "correct": false,
+     "phys": [
+      "P01",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 19,
+     "type": "Hole",
+     "phys": "P07c",
+     "stated": {
+      "D": 12.2
+     }
+    },
+    {
+     "id": 22,
+     "type": "Slot",
+     "phys": "P08",
+     "stated": {
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.7,
+   "completeness": false,
+   "eps": 0.2,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 13,
+   "links": 5,
+   "correct_links": 2,
+   "precision": 0.4,
+   "max_true_links": 8,
+   "recall": 0.25,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    8,
+    14,
+    15,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    8,
+    15,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 10,
+     "tau": 0.7,
+     "common": [],
+     "relative_differences": [],
+     "weight": 0.7,
+     "correct": false,
+     "phys": [
+      "P01",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 19,
+     "type": "Hole",
+     "phys": "P07c",
+     "stated": {
+      "D": 12.2
+     }
+    },
+    {
+     "id": 22,
+     "type": "Slot",
+     "phys": "P08",
+     "stated": {
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.7,
+   "completeness": false,
+   "eps": 0.3,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 14,
+   "links": 5,
+   "correct_links": 1,
+   "precision": 0.2,
+   "max_true_links": 8,
+   "recall": 0.125,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    8,
+    14,
+    15,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    7,
+    8,
+    14,
+    15,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 1,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0381,
+      0.1941
+     ],
+     "weight": 1.5839081976778513,
+     "correct": false,
+     "phys": [
+      "P05",
+      "P01"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.2105
+     ],
+     "weight": 1.594736842105263,
+     "correct": false,
+     "phys": [
+      "P01",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 19,
+     "type": "Hole",
+     "phys": "P07c",
+     "stated": {
+      "D": 12.2
+     }
+    },
+    {
+     "id": 22,
+     "type": "Slot",
+     "phys": "P08",
+     "stated": {
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.7,
+   "completeness": false,
+   "eps": 0.5,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 24,
+   "links": 8,
+   "correct_links": 5,
+   "precision": 0.625,
+   "max_true_links": 8,
+   "recall": 0.625,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    21,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 1,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0381,
+      0.3501
+     ],
+     "weight": 1.5059185962913695,
+     "correct": true,
+     "phys": [
+      "P01",
+      "P01"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 18,
+     "step": 10,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.3443
+     ],
+     "weight": 1.3557377049180328,
+     "correct": false,
+     "phys": [
+      "P07c",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 14,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": []
+  },
+  {
+   "tau_min": 0.7,
+   "completeness": false,
+   "eps": null,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 27,
+   "links": 8,
+   "correct_links": 5,
+   "precision": 0.625,
+   "max_true_links": 8,
+   "recall": 0.625,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    21,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 1,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0381,
+      0.3501
+     ],
+     "weight": 1.5059185962913695,
+     "correct": true,
+     "phys": [
+      "P01",
+      "P01"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 18,
+     "step": 10,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.3443
+     ],
+     "weight": 1.3557377049180328,
+     "correct": false,
+     "phys": [
+      "P07c",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 14,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": []
+  },
+  {
+   "tau_min": 0.3,
+   "completeness": true,
+   "eps": 0.05,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 6,
+   "links": 3,
+   "correct_links": 2,
+   "precision": 0.6666666666666666,
+   "max_true_links": 8,
+   "recall": 0.25,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    14,
+    22,
+    23
+   ],
+   "steps_removed_by_wrong_links": [
+    22
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 16,
+     "type": "Cylinder",
+     "phys": "P01",
+     "stated": {
+      "D": 24.0,
+      "L": 37.5
+     }
+    },
+    {
+     "id": 17,
+     "type": "Groove",
+     "phys": "P03",
+     "stated": {
+      "D": 22.0,
+      "W": 1.75
+     }
+    },
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 19,
+     "type": "Hole",
+     "phys": "P07c",
+     "stated": {
+      "D": 12.2
+     }
+    },
+    {
+     "id": 22,
+     "type": "Slot",
+     "phys": "P08",
+     "stated": {
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.3,
+   "completeness": true,
+   "eps": 0.1,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 8,
+   "links": 4,
+   "correct_links": 2,
+   "precision": 0.5,
+   "max_true_links": 8,
+   "recall": 0.25,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    14,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 16,
+     "type": "Cylinder",
+     "phys": "P01",
+     "stated": {
+      "D": 24.0,
+      "L": 37.5
+     }
+    },
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 19,
+     "type": "Hole",
+     "phys": "P07c",
+     "stated": {
+      "D": 12.2
+     }
+    },
+    {
+     "id": 22,
+     "type": "Slot",
+     "phys": "P08",
+     "stated": {
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.3,
+   "completeness": true,
+   "eps": 0.2,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 15,
+   "links": 4,
+   "correct_links": 2,
+   "precision": 0.5,
+   "max_true_links": 8,
+   "recall": 0.25,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    14,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 16,
+     "type": "Cylinder",
+     "phys": "P01",
+     "stated": {
+      "D": 24.0,
+      "L": 37.5
+     }
+    },
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 19,
+     "type": "Hole",
+     "phys": "P07c",
+     "stated": {
+      "D": 12.2
+     }
+    },
+    {
+     "id": 22,
+     "type": "Slot",
+     "phys": "P08",
+     "stated": {
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.3,
+   "completeness": true,
+   "eps": 0.3,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 16,
+   "links": 5,
+   "correct_links": 1,
+   "precision": 0.2,
+   "max_true_links": 8,
+   "recall": 0.125,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    8,
+    14,
+    15,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    7,
+    8,
+    14,
+    15,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 1,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0381,
+      0.1941
+     ],
+     "weight": 1.5839081976778513,
+     "correct": false,
+     "phys": [
+      "P05",
+      "P01"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.2105
+     ],
+     "weight": 1.594736842105263,
+     "correct": false,
+     "phys": [
+      "P01",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 19,
+     "type": "Hole",
+     "phys": "P07c",
+     "stated": {
+      "D": 12.2
+     }
+    },
+    {
+     "id": 22,
+     "type": "Slot",
+     "phys": "P08",
+     "stated": {
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.3,
+   "completeness": true,
+   "eps": 0.5,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 28,
+   "links": 8,
+   "correct_links": 5,
+   "precision": 0.625,
+   "max_true_links": 8,
+   "recall": 0.625,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    21,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 1,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0381,
+      0.3501
+     ],
+     "weight": 1.5059185962913695,
+     "correct": true,
+     "phys": [
+      "P01",
+      "P01"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 18,
+     "step": 10,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.3443
+     ],
+     "weight": 1.3557377049180328,
+     "correct": false,
+     "phys": [
+      "P07c",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 13,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": []
+  },
+  {
+   "tau_min": 0.3,
+   "completeness": true,
+   "eps": null,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 31,
+   "links": 8,
+   "correct_links": 5,
+   "precision": 0.625,
+   "max_true_links": 8,
+   "recall": 0.625,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    21,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 1,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0381,
+      0.3501
+     ],
+     "weight": 1.5059185962913695,
+     "correct": true,
+     "phys": [
+      "P01",
+      "P01"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 18,
+     "step": 10,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.3443
+     ],
+     "weight": 1.3557377049180328,
+     "correct": false,
+     "phys": [
+      "P07c",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 13,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": []
+  },
+  {
+   "tau_min": 0.3,
+   "completeness": false,
+   "eps": 0.05,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 10,
+   "links": 5,
+   "correct_links": 3,
+   "precision": 0.6,
+   "max_true_links": 8,
+   "recall": 0.375,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    8,
+    14,
+    15,
+    22,
+    23
+   ],
+   "steps_removed_by_wrong_links": [
+    8,
+    15,
+    22
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 10,
+     "tau": 0.7,
+     "common": [],
+     "relative_differences": [],
+     "weight": 0.7,
+     "correct": false,
+     "phys": [
+      "P01",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 11,
+     "tau": 0.3,
+     "common": [],
+     "relative_differences": [],
+     "weight": 0.3,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 17,
+     "type": "Groove",
+     "phys": "P03",
+     "stated": {
+      "D": 22.0,
+      "W": 1.75
+     }
+    },
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 19,
+     "type": "Hole",
+     "phys": "P07c",
+     "stated": {
+      "D": 12.2
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.3,
+   "completeness": false,
+   "eps": 0.1,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 12,
+   "links": 6,
+   "correct_links": 3,
+   "precision": 0.5,
+   "max_true_links": 8,
+   "recall": 0.375,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    8,
+    14,
+    15,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    8,
+    15,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 10,
+     "tau": 0.7,
+     "common": [],
+     "relative_differences": [],
+     "weight": 0.7,
+     "correct": false,
+     "phys": [
+      "P01",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 11,
+     "tau": 0.3,
+     "common": [],
+     "relative_differences": [],
+     "weight": 0.3,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 19,
+     "type": "Hole",
+     "phys": "P07c",
+     "stated": {
+      "D": 12.2
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.3,
+   "completeness": false,
+   "eps": 0.2,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 19,
+   "links": 6,
+   "correct_links": 3,
+   "precision": 0.5,
+   "max_true_links": 8,
+   "recall": 0.375,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    8,
+    14,
+    15,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    8,
+    15,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 10,
+     "tau": 0.7,
+     "common": [],
+     "relative_differences": [],
+     "weight": 0.7,
+     "correct": false,
+     "phys": [
+      "P01",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 11,
+     "tau": 0.3,
+     "common": [],
+     "relative_differences": [],
+     "weight": 0.3,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 19,
+     "type": "Hole",
+     "phys": "P07c",
+     "stated": {
+      "D": 12.2
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.3,
+   "completeness": false,
+   "eps": 0.3,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 20,
+   "links": 6,
+   "correct_links": 2,
+   "precision": 0.3333333333333333,
+   "max_true_links": 8,
+   "recall": 0.25,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    8,
+    14,
+    15,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    7,
+    8,
+    14,
+    15,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 1,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0381,
+      0.1941
+     ],
+     "weight": 1.5839081976778513,
+     "correct": false,
+     "phys": [
+      "P05",
+      "P01"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.2105
+     ],
+     "weight": 1.594736842105263,
+     "correct": false,
+     "phys": [
+      "P01",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 11,
+     "tau": 0.3,
+     "common": [],
+     "relative_differences": [],
+     "weight": 0.3,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 19,
+     "type": "Hole",
+     "phys": "P07c",
+     "stated": {
+      "D": 12.2
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.3,
+   "completeness": false,
+   "eps": 0.5,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 32,
+   "links": 8,
+   "correct_links": 5,
+   "precision": 0.625,
+   "max_true_links": 8,
+   "recall": 0.625,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    21,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 1,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0381,
+      0.3501
+     ],
+     "weight": 1.5059185962913695,
+     "correct": true,
+     "phys": [
+      "P01",
+      "P01"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 18,
+     "step": 10,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.3443
+     ],
+     "weight": 1.3557377049180328,
+     "correct": false,
+     "phys": [
+      "P07c",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 13,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": []
+  },
+  {
+   "tau_min": 0.3,
+   "completeness": false,
+   "eps": null,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 35,
+   "links": 8,
+   "correct_links": 5,
+   "precision": 0.625,
+   "max_true_links": 8,
+   "recall": 0.625,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    21,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 1,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0381,
+      0.3501
+     ],
+     "weight": 1.5059185962913695,
+     "correct": true,
+     "phys": [
+      "P01",
+      "P01"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 18,
+     "step": 10,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.3443
+     ],
+     "weight": 1.3557377049180328,
+     "correct": false,
+     "phys": [
+      "P07c",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 13,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": []
+  },
+  {
+   "tau_min": 0.0,
+   "completeness": true,
+   "eps": 0.05,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 8,
+   "links": 4,
+   "correct_links": 3,
+   "precision": 0.75,
+   "max_true_links": 8,
+   "recall": 0.375,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    14,
+    21,
+    22,
+    23
+   ],
+   "steps_removed_by_wrong_links": [
+    22
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 9,
+     "tau": 0.0,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.0,
+     "correct": true,
+     "phys": [
+      "P07c",
+      "P07c"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 16,
+     "type": "Cylinder",
+     "phys": "P01",
+     "stated": {
+      "D": 24.0,
+      "L": 37.5
+     }
+    },
+    {
+     "id": 17,
+     "type": "Groove",
+     "phys": "P03",
+     "stated": {
+      "D": 22.0,
+      "W": 1.75
+     }
+    },
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 22,
+     "type": "Slot",
+     "phys": "P08",
+     "stated": {
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.0,
+   "completeness": true,
+   "eps": 0.1,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 12,
+   "links": 5,
+   "correct_links": 3,
+   "precision": 0.6,
+   "max_true_links": 8,
+   "recall": 0.375,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    14,
+    21,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 9,
+     "tau": 0.0,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.0,
+     "correct": true,
+     "phys": [
+      "P07c",
+      "P07c"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 16,
+     "type": "Cylinder",
+     "phys": "P01",
+     "stated": {
+      "D": 24.0,
+      "L": 37.5
+     }
+    },
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 22,
+     "type": "Slot",
+     "phys": "P08",
+     "stated": {
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.0,
+   "completeness": true,
+   "eps": 0.2,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 21,
+   "links": 5,
+   "correct_links": 3,
+   "precision": 0.6,
+   "max_true_links": 8,
+   "recall": 0.375,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    14,
+    21,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 9,
+     "tau": 0.0,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.0,
+     "correct": true,
+     "phys": [
+      "P07c",
+      "P07c"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 16,
+     "type": "Cylinder",
+     "phys": "P01",
+     "stated": {
+      "D": 24.0,
+      "L": 37.5
+     }
+    },
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 22,
+     "type": "Slot",
+     "phys": "P08",
+     "stated": {
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.0,
+   "completeness": true,
+   "eps": 0.3,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 22,
+   "links": 6,
+   "correct_links": 2,
+   "precision": 0.3333333333333333,
+   "max_true_links": 8,
+   "recall": 0.25,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    8,
+    14,
+    15,
+    21,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    7,
+    8,
+    14,
+    15,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 1,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0381,
+      0.1941
+     ],
+     "weight": 1.5839081976778513,
+     "correct": false,
+     "phys": [
+      "P05",
+      "P01"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.2105
+     ],
+     "weight": 1.594736842105263,
+     "correct": false,
+     "phys": [
+      "P01",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 9,
+     "tau": 0.0,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.0,
+     "correct": true,
+     "phys": [
+      "P07c",
+      "P07c"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    },
+    {
+     "id": 22,
+     "type": "Slot",
+     "phys": "P08",
+     "stated": {
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.0,
+   "completeness": true,
+   "eps": 0.5,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 46,
+   "links": 8,
+   "correct_links": 5,
+   "precision": 0.625,
+   "max_true_links": 8,
+   "recall": 0.625,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    21,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 1,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0381,
+      0.3501
+     ],
+     "weight": 1.5059185962913695,
+     "correct": true,
+     "phys": [
+      "P01",
+      "P01"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 18,
+     "step": 10,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.3443
+     ],
+     "weight": 1.3557377049180328,
+     "correct": false,
+     "phys": [
+      "P07c",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 13,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": []
+  },
+  {
+   "tau_min": 0.0,
+   "completeness": true,
+   "eps": null,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 96,
+   "links": 8,
+   "correct_links": 5,
+   "precision": 0.625,
+   "max_true_links": 8,
+   "recall": 0.625,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    21,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 1,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0381,
+      0.3501
+     ],
+     "weight": 1.5059185962913695,
+     "correct": true,
+     "phys": [
+      "P01",
+      "P01"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 18,
+     "step": 10,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.3443
+     ],
+     "weight": 1.3557377049180328,
+     "correct": false,
+     "phys": [
+      "P07c",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 13,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": []
+  },
+  {
+   "tau_min": 0.0,
+   "completeness": false,
+   "eps": 0.05,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 24,
+   "links": 6,
+   "correct_links": 4,
+   "precision": 0.6666666666666666,
+   "max_true_links": 8,
+   "recall": 0.5,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    8,
+    14,
+    15,
+    21,
+    22,
+    23
+   ],
+   "steps_removed_by_wrong_links": [
+    8,
+    15,
+    22
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 10,
+     "tau": 0.7,
+     "common": [],
+     "relative_differences": [],
+     "weight": 0.7,
+     "correct": false,
+     "phys": [
+      "P01",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 9,
+     "tau": 0.0,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.0,
+     "correct": true,
+     "phys": [
+      "P07c",
+      "P07c"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 11,
+     "tau": 0.3,
+     "common": [],
+     "relative_differences": [],
+     "weight": 0.3,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 17,
+     "type": "Groove",
+     "phys": "P03",
+     "stated": {
+      "D": 22.0,
+      "W": 1.75
+     }
+    },
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.0,
+   "completeness": false,
+   "eps": 0.1,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 28,
+   "links": 7,
+   "correct_links": 4,
+   "precision": 0.5714285714285714,
+   "max_true_links": 8,
+   "recall": 0.5,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    8,
+    14,
+    15,
+    21,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    8,
+    15,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 10,
+     "tau": 0.7,
+     "common": [],
+     "relative_differences": [],
+     "weight": 0.7,
+     "correct": false,
+     "phys": [
+      "P01",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 9,
+     "tau": 0.0,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.0,
+     "correct": true,
+     "phys": [
+      "P07c",
+      "P07c"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 11,
+     "tau": 0.3,
+     "common": [],
+     "relative_differences": [],
+     "weight": 0.3,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.0,
+   "completeness": false,
+   "eps": 0.2,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 37,
+   "links": 7,
+   "correct_links": 4,
+   "precision": 0.5714285714285714,
+   "max_true_links": 8,
+   "recall": 0.5,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    8,
+    14,
+    15,
+    21,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    8,
+    15,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 10,
+     "tau": 0.7,
+     "common": [],
+     "relative_differences": [],
+     "weight": 0.7,
+     "correct": false,
+     "phys": [
+      "P01",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 9,
+     "tau": 0.0,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.0,
+     "correct": true,
+     "phys": [
+      "P07c",
+      "P07c"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 11,
+     "tau": 0.3,
+     "common": [],
+     "relative_differences": [],
+     "weight": 0.3,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.0,
+   "completeness": false,
+   "eps": 0.3,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 38,
+   "links": 7,
+   "correct_links": 3,
+   "precision": 0.42857142857142855,
+   "max_true_links": 8,
+   "recall": 0.375,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    7,
+    8,
+    14,
+    15,
+    21,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    7,
+    8,
+    14,
+    15,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 1,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0381,
+      0.1941
+     ],
+     "weight": 1.5839081976778513,
+     "correct": false,
+     "phys": [
+      "P05",
+      "P01"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.2105
+     ],
+     "weight": 1.594736842105263,
+     "correct": false,
+     "phys": [
+      "P01",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 9,
+     "tau": 0.0,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.0,
+     "correct": true,
+     "phys": [
+      "P07c",
+      "P07c"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 11,
+     "tau": 0.3,
+     "common": [],
+     "relative_differences": [],
+     "weight": 0.3,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": [
+    {
+     "id": 18,
+     "type": "Boss",
+     "phys": "P08",
+     "stated": {
+      "L": 32.0,
+      "W": 4.0
+     }
+    }
+   ]
+  },
+  {
+   "tau_min": 0.0,
+   "completeness": false,
+   "eps": 0.5,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 62,
+   "links": 8,
+   "correct_links": 5,
+   "precision": 0.625,
+   "max_true_links": 8,
+   "recall": 0.625,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    21,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 1,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0381,
+      0.3501
+     ],
+     "weight": 1.5059185962913695,
+     "correct": true,
+     "phys": [
+      "P01",
+      "P01"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 18,
+     "step": 10,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.3443
+     ],
+     "weight": 1.3557377049180328,
+     "correct": false,
+     "phys": [
+      "P07c",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 13,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": []
+  },
+  {
+   "tau_min": 0.0,
+   "completeness": false,
+   "eps": null,
+   "drawing_entities": 8,
+   "step_entities": 14,
+   "admissible_pairs": 112,
+   "links": 8,
+   "correct_links": 5,
+   "precision": 0.625,
+   "max_true_links": 8,
+   "recall": 0.625,
+   "duplicated_approved_steps": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "duplicated_approved_steps_removed": [
+    2,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    29
+   ],
+   "steps_removed_by_wrong_links": [
+    21,
+    22,
+    29
+   ],
+   "link_list": [
+    {
+     "drawing": 15,
+     "step": 5,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0,
+      0.0211
+     ],
+     "weight": 1.6894736842105262,
+     "correct": true,
+     "phys": [
+      "P05",
+      "P05"
+     ]
+    },
+    {
+     "drawing": 16,
+     "step": 1,
+     "tau": 0.7,
+     "common": [
+      "D",
+      "L"
+     ],
+     "relative_differences": [
+      0.0381,
+      0.3501
+     ],
+     "weight": 1.5059185962913695,
+     "correct": true,
+     "phys": [
+      "P01",
+      "P01"
+     ]
+    },
+    {
+     "drawing": 17,
+     "step": 4,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0833
+     ],
+     "weight": 1.6166666666666667,
+     "correct": false,
+     "phys": [
+      "P03",
+      "P04"
+     ]
+    },
+    {
+     "drawing": 18,
+     "step": 10,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 19,
+     "step": 11,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.3443
+     ],
+     "weight": 1.3557377049180328,
+     "correct": false,
+     "phys": [
+      "P07c",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 20,
+     "step": 12,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0476
+     ],
+     "weight": 1.6523809523809523,
+     "correct": false,
+     "phys": [
+      "P07b",
+      "P08"
+     ]
+    },
+    {
+     "drawing": 21,
+     "step": 7,
+     "tau": 0.7,
+     "common": [
+      "D"
+     ],
+     "relative_differences": [
+      0.0
+     ],
+     "weight": 1.6999999999999997,
+     "correct": true,
+     "phys": [
+      "P07a",
+      "P07a"
+     ]
+    },
+    {
+     "drawing": 22,
+     "step": 13,
+     "tau": 1.0,
+     "common": [
+      "W"
+     ],
+     "relative_differences": [
+      0.5
+     ],
+     "weight": 1.5,
+     "correct": true,
+     "phys": [
+      "P08",
+      "P08"
+     ]
+    }
+   ],
+   "unlinked_drawing_entities": []
+  }
+ ],
+ "step_entities_stated": {
+  "1": [
+   "Step",
+   {
+    "D": 24.95,
+    "L": 57.7
+   },
+   "P01"
+  ],
+  "2": [
+   "Chamfer",
+   {
+    "D": 24.95,
+    "L": 0.5
+   },
+   "P02"
+  ],
+  "3": [
+   "Step",
+   {
+    "D": 23.6,
+    "L": 1.75
+   },
+   "P03"
+  ],
+  "4": [
+   "Chamfer",
+   {
+    "D": 24.0,
+    "L": 0.75
+   },
+   "P04"
+  ],
+  "5": [
+   "Step",
+   {
+    "D": 24.0,
+    "L": 47.5
+   },
+   "P05"
+  ],
+  "6": [
+   "Chamfer",
+   {
+    "D": 24.0,
+    "L": 1.0
+   },
+   "P06"
+  ],
+  "7": [
+   "Blind Hole",
+   {
+    "D": 6.800000000000001,
+    "L": 20.23,
+    "W": 6.8
+   },
+   "P07a"
+  ],
+  "8": [
+   "Counterbore",
+   {
+    "D": 8.4,
+    "L": 4.0200000000000005,
+    "W": 8.4
+   },
+   "P07b"
+  ],
+  "9": [
+   "Chamfer",
+   {
+    "D": 12.2,
+    "L": 3.3
+   },
+   "P07c"
+  ],
+  "10": [
+   "Boss",
+   {
+    "W": 8.0
+   },
+   "P08"
+  ],
+  "11": [
+   "Through Hole",
+   {
+    "D": 8.0
+   },
+   "P08"
+  ],
+  "12": [
+   "Through Hole",
+   {
+    "D": 8.0
+   },
+   "P08"
+  ],
+  "13": [
+   "Slot",
+   {
+    "D": 8.0,
+    "W": 8.0
+   },
+   "P08"
+  ],
+  "14": [
+   "Slot",
+   {
+    "D": 8.0,
+    "W": 8.0
+   },
+   "P08"
+  ]
+ },
+ "drawing_entities_stated": {
+  "15": [
+   "Cylinder",
+   {
+    "D": 24.0,
+    "L": 46.5
+   },
+   "P05"
+  ],
+  "16": [
+   "Cylinder",
+   {
+    "D": 24.0,
+    "L": 37.5
+   },
+   "P01"
+  ],
+  "17": [
+   "Groove",
+   {
+    "D": 22.0,
+    "W": 1.75
+   },
+   "P03"
+  ],
+  "18": [
+   "Boss",
+   {
+    "L": 32.0,
+    "W": 4.0
+   },
+   "P08"
+  ],
+  "19": [
+   "Hole",
+   {
+    "D": 12.2
+   },
+   "P07c"
+  ],
+  "20": [
+   "Hole",
+   {
+    "D": 8.4
+   },
+   "P07b"
+  ],
+  "21": [
+   "Hole",
+   {
+    "D": 6.8
+   },
+   "P07a"
+  ],
+  "22": [
+   "Slot",
+   {
+    "W": 4.0
+   },
+   "P08"
+  ]
+ }
+}

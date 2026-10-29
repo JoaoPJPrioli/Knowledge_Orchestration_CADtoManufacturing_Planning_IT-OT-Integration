@@ -1,0 +1,4780 @@
+{
+ "criterion": "reference: tau >= 0.7 and S > 0.5; conditions are added in front of the score",
+ "iso2768_1_table1": {
+  "upper_bounds_mm": [
+   3.0,
+   6.0,
+   30.0,
+   120.0,
+   400.0,
+   1000.0,
+   2000.0,
+   4000.0
+  ],
+  "deviations_mm": {
+   "f": [
+    0.05,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.3,
+    0.5,
+    null
+   ],
+   "m": [
+    0.1,
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    0.8,
+    1.2,
+    2.0
+   ],
+   "c": [
+    0.2,
+    0.3,
+    0.5,
+    0.8,
+    1.2,
+    2.0,
+    3.0,
+    4.0
+   ],
+   "v": [
+    0.5,
+    0.5,
+    1.0,
+    1.5,
+    2.5,
+    4.0,
+    6.0,
+    8.0
+   ]
+  }
+ },
+ "gated": {
+  "reference": {
+   "entities": 22,
+   "merges": 8,
+   "correct": 6,
+   "cross_family_merges": 0,
+   "precision": 0.75,
+   "label_consistent_precision": 0.75,
+   "recall": 0.6,
+   "duplicated_features": 2,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0030000000000048508,
+    "merged": 3.3203333333333283
+   },
+   "step_merged_len_err_mean": {
+    "primary": 0.6863333333333336,
+    "merged": 7.580333333333335
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      1,
+      "Step",
+      "R01"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     0.7,
+     false
+    ],
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "STEP",
+     [
+      8,
+      "Counterbore",
+      "R08"
+     ],
+     [
+      2,
+      "Counterbore",
+      "R08"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     0.7,
+     false
+    ]
+   ]
+  },
+  "C[structured]": {
+   "entities": 27,
+   "merges": 3,
+   "correct": 2,
+   "cross_family_merges": 0,
+   "precision": 0.6666666666666666,
+   "label_consistent_precision": 0.6666666666666666,
+   "recall": 0.2,
+   "duplicated_features": 6,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0030000000000048508,
+    "merged": 3.3203333333333283
+   },
+   "step_merged_len_err_mean": {
+    "primary": 0.6863333333333336,
+    "merged": 7.580333333333335
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      1,
+      "Step",
+      "R01"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     0.7,
+     false
+    ],
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "STEP",
+     [
+      8,
+      "Counterbore",
+      "R08"
+     ],
+     [
+      2,
+      "Counterbore",
+      "R08"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  },
+  "E0.1[structured]": {
+   "entities": 23,
+   "merges": 7,
+   "correct": 5,
+   "cross_family_merges": 0,
+   "precision": 0.7142857142857143,
+   "label_consistent_precision": 0.7142857142857143,
+   "recall": 0.5,
+   "duplicated_features": 3,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 4.4161634933503064
+   },
+   "step_merged_len_err_mean": {
+    "primary": 2.0500000000000007,
+    "merged": 1.2300000000000004
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "STEP",
+     [
+      10,
+      "Boss",
+      "R06"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     1.0,
+     false
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     0.7,
+     false
+    ]
+   ]
+  },
+  "C+E0.1[structured]": {
+   "entities": 29,
+   "merges": 1,
+   "correct": 1,
+   "cross_family_merges": 0,
+   "precision": 1.0,
+   "label_consistent_precision": 1.0,
+   "recall": 0.1,
+   "duplicated_features": 8,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 0.0
+   },
+   "step_merged_len_err_mean": {
+    "primary": 2.0500000000000007,
+    "merged": 1.2300000000000004
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  },
+  "E0.2[structured]": {
+   "entities": 23,
+   "merges": 7,
+   "correct": 5,
+   "cross_family_merges": 0,
+   "precision": 0.7142857142857143,
+   "label_consistent_precision": 0.7142857142857143,
+   "recall": 0.5,
+   "duplicated_features": 3,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 4.4161634933503064
+   },
+   "step_merged_len_err_mean": {
+    "primary": 2.0500000000000007,
+    "merged": 1.2300000000000004
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "STEP",
+     [
+      10,
+      "Boss",
+      "R06"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     1.0,
+     false
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     0.7,
+     false
+    ]
+   ]
+  },
+  "C+E0.2[structured]": {
+   "entities": 29,
+   "merges": 1,
+   "correct": 1,
+   "cross_family_merges": 0,
+   "precision": 1.0,
+   "label_consistent_precision": 1.0,
+   "recall": 0.1,
+   "duplicated_features": 8,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 0.0
+   },
+   "step_merged_len_err_mean": {
+    "primary": 2.0500000000000007,
+    "merged": 1.2300000000000004
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  },
+  "E0.3[structured]": {
+   "entities": 23,
+   "merges": 7,
+   "correct": 5,
+   "cross_family_merges": 0,
+   "precision": 0.7142857142857143,
+   "label_consistent_precision": 0.7142857142857143,
+   "recall": 0.5,
+   "duplicated_features": 3,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 4.4161634933503064
+   },
+   "step_merged_len_err_mean": {
+    "primary": 2.0500000000000007,
+    "merged": 1.2300000000000004
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "STEP",
+     [
+      10,
+      "Boss",
+      "R06"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     1.0,
+     false
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     0.7,
+     false
+    ]
+   ]
+  },
+  "C+E0.3[structured]": {
+   "entities": 29,
+   "merges": 1,
+   "correct": 1,
+   "cross_family_merges": 0,
+   "precision": 1.0,
+   "label_consistent_precision": 1.0,
+   "recall": 0.1,
+   "duplicated_features": 8,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 0.0
+   },
+   "step_merged_len_err_mean": {
+    "primary": 2.0500000000000007,
+    "merged": 1.2300000000000004
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  },
+  "E0.5[structured]": {
+   "entities": 23,
+   "merges": 7,
+   "correct": 6,
+   "cross_family_merges": 0,
+   "precision": 0.8571428571428571,
+   "label_consistent_precision": 0.8571428571428571,
+   "recall": 0.6,
+   "duplicated_features": 3,
+   "step_merged_pos_err_mean": {
+    "primary": 0.25,
+    "merged": 3.799999999999997
+   },
+   "step_merged_len_err_mean": {
+    "primary": 1.5250000000000004,
+    "merged": 9.215000000000002
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      5,
+      "Step",
+      "R05"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     0.7,
+     true
+    ],
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     0.7,
+     false
+    ]
+   ]
+  },
+  "C+E0.5[structured]": {
+   "entities": 28,
+   "merges": 2,
+   "correct": 2,
+   "cross_family_merges": 0,
+   "precision": 1.0,
+   "label_consistent_precision": 1.0,
+   "recall": 0.2,
+   "duplicated_features": 7,
+   "step_merged_pos_err_mean": {
+    "primary": 0.25,
+    "merged": 3.799999999999997
+   },
+   "step_merged_len_err_mean": {
+    "primary": 1.5250000000000004,
+    "merged": 9.215000000000002
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      5,
+      "Step",
+      "R05"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     0.7,
+     true
+    ],
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  },
+  "Tf[structured]": {
+   "entities": 24,
+   "merges": 6,
+   "correct": 4,
+   "cross_family_merges": 0,
+   "precision": 0.6666666666666666,
+   "label_consistent_precision": 0.6666666666666666,
+   "recall": 0.4,
+   "duplicated_features": 4,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 8.832326986700613
+   },
+   "step_merged_len_err_mean": null,
+   "merge_list": [
+    [
+     "STEP",
+     [
+      10,
+      "Boss",
+      "R06"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     1.0,
+     false
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     0.7,
+     false
+    ]
+   ]
+  },
+  "C+Tf[structured]": {
+   "entities": 30,
+   "merges": 0,
+   "correct": 0,
+   "cross_family_merges": 0,
+   "precision": null,
+   "label_consistent_precision": null,
+   "recall": 0.0,
+   "duplicated_features": 9,
+   "step_merged_pos_err_mean": null,
+   "step_merged_len_err_mean": null,
+   "merge_list": []
+  },
+  "Tm[structured]": {
+   "entities": 24,
+   "merges": 6,
+   "correct": 4,
+   "cross_family_merges": 0,
+   "precision": 0.6666666666666666,
+   "label_consistent_precision": 0.6666666666666666,
+   "recall": 0.4,
+   "duplicated_features": 4,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 8.832326986700613
+   },
+   "step_merged_len_err_mean": null,
+   "merge_list": [
+    [
+     "STEP",
+     [
+      10,
+      "Boss",
+      "R06"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     1.0,
+     false
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     0.7,
+     false
+    ]
+   ]
+  },
+  "C+Tm[structured]": {
+   "entities": 30,
+   "merges": 0,
+   "correct": 0,
+   "cross_family_merges": 0,
+   "precision": null,
+   "label_consistent_precision": null,
+   "recall": 0.0,
+   "duplicated_features": 9,
+   "step_merged_pos_err_mean": null,
+   "step_merged_len_err_mean": null,
+   "merge_list": []
+  },
+  "Tc[structured]": {
+   "entities": 24,
+   "merges": 6,
+   "correct": 4,
+   "cross_family_merges": 0,
+   "precision": 0.6666666666666666,
+   "label_consistent_precision": 0.6666666666666666,
+   "recall": 0.4,
+   "duplicated_features": 4,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 8.832326986700613
+   },
+   "step_merged_len_err_mean": null,
+   "merge_list": [
+    [
+     "STEP",
+     [
+      10,
+      "Boss",
+      "R06"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     1.0,
+     false
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     0.7,
+     false
+    ]
+   ]
+  },
+  "C+Tc[structured]": {
+   "entities": 30,
+   "merges": 0,
+   "correct": 0,
+   "cross_family_merges": 0,
+   "precision": null,
+   "label_consistent_precision": null,
+   "recall": 0.0,
+   "duplicated_features": 9,
+   "step_merged_pos_err_mean": null,
+   "step_merged_len_err_mean": null,
+   "merge_list": []
+  },
+  "Tv[structured]": {
+   "entities": 24,
+   "merges": 6,
+   "correct": 4,
+   "cross_family_merges": 0,
+   "precision": 0.6666666666666666,
+   "label_consistent_precision": 0.6666666666666666,
+   "recall": 0.4,
+   "duplicated_features": 4,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 8.832326986700613
+   },
+   "step_merged_len_err_mean": null,
+   "merge_list": [
+    [
+     "STEP",
+     [
+      10,
+      "Boss",
+      "R06"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     1.0,
+     false
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     0.7,
+     false
+    ]
+   ]
+  },
+  "C+Tv[structured]": {
+   "entities": 30,
+   "merges": 0,
+   "correct": 0,
+   "cross_family_merges": 0,
+   "precision": null,
+   "label_consistent_precision": null,
+   "recall": 0.0,
+   "duplicated_features": 9,
+   "step_merged_pos_err_mean": null,
+   "step_merged_len_err_mean": null,
+   "merge_list": []
+  },
+  "C[free_text]": {
+   "entities": 23,
+   "merges": 7,
+   "correct": 6,
+   "cross_family_merges": 0,
+   "precision": 0.8571428571428571,
+   "label_consistent_precision": 0.8571428571428571,
+   "recall": 0.6,
+   "duplicated_features": 3,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0030000000000048508,
+    "merged": 3.3203333333333283
+   },
+   "step_merged_len_err_mean": {
+    "primary": 0.6863333333333336,
+    "merged": 7.580333333333335
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      1,
+      "Step",
+      "R01"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     0.7,
+     false
+    ],
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "STEP",
+     [
+      8,
+      "Counterbore",
+      "R08"
+     ],
+     [
+      2,
+      "Counterbore",
+      "R08"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  },
+  "E0.1[free_text]": {
+   "entities": 23,
+   "merges": 7,
+   "correct": 5,
+   "cross_family_merges": 0,
+   "precision": 0.7142857142857143,
+   "label_consistent_precision": 0.7142857142857143,
+   "recall": 0.5,
+   "duplicated_features": 3,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 4.4161634933503064
+   },
+   "step_merged_len_err_mean": {
+    "primary": 2.0500000000000007,
+    "merged": 1.2300000000000004
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "STEP",
+     [
+      10,
+      "Boss",
+      "R06"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     1.0,
+     false
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     0.7,
+     false
+    ]
+   ]
+  },
+  "C+E0.1[free_text]": {
+   "entities": 25,
+   "merges": 5,
+   "correct": 5,
+   "cross_family_merges": 0,
+   "precision": 1.0,
+   "label_consistent_precision": 1.0,
+   "recall": 0.5,
+   "duplicated_features": 5,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 0.0
+   },
+   "step_merged_len_err_mean": {
+    "primary": 2.0500000000000007,
+    "merged": 1.2300000000000004
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  },
+  "E0.2[free_text]": {
+   "entities": 23,
+   "merges": 7,
+   "correct": 5,
+   "cross_family_merges": 0,
+   "precision": 0.7142857142857143,
+   "label_consistent_precision": 0.7142857142857143,
+   "recall": 0.5,
+   "duplicated_features": 3,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 4.4161634933503064
+   },
+   "step_merged_len_err_mean": {
+    "primary": 2.0500000000000007,
+    "merged": 1.2300000000000004
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "STEP",
+     [
+      10,
+      "Boss",
+      "R06"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     1.0,
+     false
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     0.7,
+     false
+    ]
+   ]
+  },
+  "C+E0.2[free_text]": {
+   "entities": 25,
+   "merges": 5,
+   "correct": 5,
+   "cross_family_merges": 0,
+   "precision": 1.0,
+   "label_consistent_precision": 1.0,
+   "recall": 0.5,
+   "duplicated_features": 5,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 0.0
+   },
+   "step_merged_len_err_mean": {
+    "primary": 2.0500000000000007,
+    "merged": 1.2300000000000004
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  },
+  "E0.3[free_text]": {
+   "entities": 23,
+   "merges": 7,
+   "correct": 5,
+   "cross_family_merges": 0,
+   "precision": 0.7142857142857143,
+   "label_consistent_precision": 0.7142857142857143,
+   "recall": 0.5,
+   "duplicated_features": 3,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 4.4161634933503064
+   },
+   "step_merged_len_err_mean": {
+    "primary": 2.0500000000000007,
+    "merged": 1.2300000000000004
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "STEP",
+     [
+      10,
+      "Boss",
+      "R06"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     1.0,
+     false
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     0.7,
+     false
+    ]
+   ]
+  },
+  "C+E0.3[free_text]": {
+   "entities": 25,
+   "merges": 5,
+   "correct": 5,
+   "cross_family_merges": 0,
+   "precision": 1.0,
+   "label_consistent_precision": 1.0,
+   "recall": 0.5,
+   "duplicated_features": 5,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 0.0
+   },
+   "step_merged_len_err_mean": {
+    "primary": 2.0500000000000007,
+    "merged": 1.2300000000000004
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  },
+  "E0.5[free_text]": {
+   "entities": 23,
+   "merges": 7,
+   "correct": 6,
+   "cross_family_merges": 0,
+   "precision": 0.8571428571428571,
+   "label_consistent_precision": 0.8571428571428571,
+   "recall": 0.6,
+   "duplicated_features": 3,
+   "step_merged_pos_err_mean": {
+    "primary": 0.25,
+    "merged": 3.799999999999997
+   },
+   "step_merged_len_err_mean": {
+    "primary": 1.5250000000000004,
+    "merged": 9.215000000000002
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      5,
+      "Step",
+      "R05"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     0.7,
+     true
+    ],
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     0.7,
+     false
+    ]
+   ]
+  },
+  "C+E0.5[free_text]": {
+   "entities": 24,
+   "merges": 6,
+   "correct": 6,
+   "cross_family_merges": 0,
+   "precision": 1.0,
+   "label_consistent_precision": 1.0,
+   "recall": 0.6,
+   "duplicated_features": 4,
+   "step_merged_pos_err_mean": {
+    "primary": 0.25,
+    "merged": 3.799999999999997
+   },
+   "step_merged_len_err_mean": {
+    "primary": 1.5250000000000004,
+    "merged": 9.215000000000002
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      5,
+      "Step",
+      "R05"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     0.7,
+     true
+    ],
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  },
+  "Tf[free_text]": {
+   "entities": 26,
+   "merges": 4,
+   "correct": 2,
+   "cross_family_merges": 0,
+   "precision": 0.5,
+   "label_consistent_precision": 0.5,
+   "recall": 0.2,
+   "duplicated_features": 5,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 8.832326986700613
+   },
+   "step_merged_len_err_mean": null,
+   "merge_list": [
+    [
+     "STEP",
+     [
+      10,
+      "Boss",
+      "R06"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     1.0,
+     false
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     0.7,
+     false
+    ]
+   ]
+  },
+  "C+Tf[free_text]": {
+   "entities": 28,
+   "merges": 2,
+   "correct": 2,
+   "cross_family_merges": 0,
+   "precision": 1.0,
+   "label_consistent_precision": 1.0,
+   "recall": 0.2,
+   "duplicated_features": 7,
+   "step_merged_pos_err_mean": null,
+   "step_merged_len_err_mean": null,
+   "merge_list": [
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  },
+  "Tm[free_text]": {
+   "entities": 26,
+   "merges": 4,
+   "correct": 2,
+   "cross_family_merges": 0,
+   "precision": 0.5,
+   "label_consistent_precision": 0.5,
+   "recall": 0.2,
+   "duplicated_features": 5,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 8.832326986700613
+   },
+   "step_merged_len_err_mean": null,
+   "merge_list": [
+    [
+     "STEP",
+     [
+      10,
+      "Boss",
+      "R06"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     1.0,
+     false
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     0.7,
+     false
+    ]
+   ]
+  },
+  "C+Tm[free_text]": {
+   "entities": 28,
+   "merges": 2,
+   "correct": 2,
+   "cross_family_merges": 0,
+   "precision": 1.0,
+   "label_consistent_precision": 1.0,
+   "recall": 0.2,
+   "duplicated_features": 7,
+   "step_merged_pos_err_mean": null,
+   "step_merged_len_err_mean": null,
+   "merge_list": [
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  },
+  "Tc[free_text]": {
+   "entities": 26,
+   "merges": 4,
+   "correct": 2,
+   "cross_family_merges": 0,
+   "precision": 0.5,
+   "label_consistent_precision": 0.5,
+   "recall": 0.2,
+   "duplicated_features": 5,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 8.832326986700613
+   },
+   "step_merged_len_err_mean": null,
+   "merge_list": [
+    [
+     "STEP",
+     [
+      10,
+      "Boss",
+      "R06"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     1.0,
+     false
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     0.7,
+     false
+    ]
+   ]
+  },
+  "C+Tc[free_text]": {
+   "entities": 28,
+   "merges": 2,
+   "correct": 2,
+   "cross_family_merges": 0,
+   "precision": 1.0,
+   "label_consistent_precision": 1.0,
+   "recall": 0.2,
+   "duplicated_features": 7,
+   "step_merged_pos_err_mean": null,
+   "step_merged_len_err_mean": null,
+   "merge_list": [
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  },
+  "Tv[free_text]": {
+   "entities": 25,
+   "merges": 5,
+   "correct": 3,
+   "cross_family_merges": 0,
+   "precision": 0.6,
+   "label_consistent_precision": 0.6,
+   "recall": 0.3,
+   "duplicated_features": 5,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 8.832326986700613
+   },
+   "step_merged_len_err_mean": null,
+   "merge_list": [
+    [
+     "STEP",
+     [
+      10,
+      "Boss",
+      "R06"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     1.0,
+     false
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     0.7,
+     false
+    ]
+   ]
+  },
+  "C+Tv[free_text]": {
+   "entities": 27,
+   "merges": 3,
+   "correct": 3,
+   "cross_family_merges": 0,
+   "precision": 1.0,
+   "label_consistent_precision": 1.0,
+   "recall": 0.3,
+   "duplicated_features": 7,
+   "step_merged_pos_err_mean": null,
+   "step_merged_len_err_mean": null,
+   "merge_list": [
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  }
+ },
+ "ablated_type_gate": {
+  "reference": {
+   "entities": 20,
+   "merges": 10,
+   "correct": 8,
+   "cross_family_merges": 2,
+   "precision": 0.8,
+   "label_consistent_precision": 0.6,
+   "recall": 0.8,
+   "duplicated_features": 2,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0018000000000029104,
+    "merged": 1.9921999999999969
+   },
+   "step_merged_len_err_mean": {
+    "primary": 0.6863333333333336,
+    "merged": 7.580333333333335
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      1,
+      "Step",
+      "R01"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     0.7,
+     false
+    ],
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "STEP",
+     [
+      8,
+      "Counterbore",
+      "R08"
+     ],
+     [
+      2,
+      "Counterbore",
+      "R08"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "STEP",
+     [
+      11,
+      "Through Hole",
+      "R06"
+     ],
+     [
+      3,
+      "Slot",
+      "R06"
+     ],
+     0.3,
+     true
+    ],
+    [
+     "STEP",
+     [
+      12,
+      "Through Hole",
+      "R06"
+     ],
+     [
+      4,
+      "Slot",
+      "R06"
+     ],
+     0.3,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      5,
+      "Hole",
+      "D05c"
+     ],
+     [
+      6,
+      "Bore",
+      "D05a"
+     ],
+     0.7,
+     false
+    ]
+   ]
+  },
+  "C[free_text]": {
+   "entities": 21,
+   "merges": 9,
+   "correct": 8,
+   "cross_family_merges": 2,
+   "precision": 0.8888888888888888,
+   "label_consistent_precision": 0.6666666666666666,
+   "recall": 0.8,
+   "duplicated_features": 3,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0018000000000029104,
+    "merged": 1.9921999999999969
+   },
+   "step_merged_len_err_mean": {
+    "primary": 0.6863333333333336,
+    "merged": 7.580333333333335
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      1,
+      "Step",
+      "R01"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     0.7,
+     false
+    ],
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "STEP",
+     [
+      8,
+      "Counterbore",
+      "R08"
+     ],
+     [
+      2,
+      "Counterbore",
+      "R08"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "STEP",
+     [
+      11,
+      "Through Hole",
+      "R06"
+     ],
+     [
+      3,
+      "Slot",
+      "R06"
+     ],
+     0.3,
+     true
+    ],
+    [
+     "STEP",
+     [
+      12,
+      "Through Hole",
+      "R06"
+     ],
+     [
+      4,
+      "Slot",
+      "R06"
+     ],
+     0.3,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  },
+  "C+E0.1[free_text]": {
+   "entities": 23,
+   "merges": 7,
+   "correct": 7,
+   "cross_family_merges": 2,
+   "precision": 1.0,
+   "label_consistent_precision": 0.7142857142857143,
+   "recall": 0.7,
+   "duplicated_features": 5,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 0.0
+   },
+   "step_merged_len_err_mean": {
+    "primary": 2.0500000000000007,
+    "merged": 1.2300000000000004
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "STEP",
+     [
+      11,
+      "Through Hole",
+      "R06"
+     ],
+     [
+      3,
+      "Slot",
+      "R06"
+     ],
+     0.3,
+     true
+    ],
+    [
+     "STEP",
+     [
+      12,
+      "Through Hole",
+      "R06"
+     ],
+     [
+      4,
+      "Slot",
+      "R06"
+     ],
+     0.3,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  },
+  "C+E0.2[free_text]": {
+   "entities": 23,
+   "merges": 7,
+   "correct": 7,
+   "cross_family_merges": 2,
+   "precision": 1.0,
+   "label_consistent_precision": 0.7142857142857143,
+   "recall": 0.7,
+   "duplicated_features": 5,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 0.0
+   },
+   "step_merged_len_err_mean": {
+    "primary": 2.0500000000000007,
+    "merged": 1.2300000000000004
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "STEP",
+     [
+      11,
+      "Through Hole",
+      "R06"
+     ],
+     [
+      3,
+      "Slot",
+      "R06"
+     ],
+     0.3,
+     true
+    ],
+    [
+     "STEP",
+     [
+      12,
+      "Through Hole",
+      "R06"
+     ],
+     [
+      4,
+      "Slot",
+      "R06"
+     ],
+     0.3,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  },
+  "C+E0.3[free_text]": {
+   "entities": 23,
+   "merges": 7,
+   "correct": 7,
+   "cross_family_merges": 2,
+   "precision": 1.0,
+   "label_consistent_precision": 0.7142857142857143,
+   "recall": 0.7,
+   "duplicated_features": 5,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 0.0
+   },
+   "step_merged_len_err_mean": {
+    "primary": 2.0500000000000007,
+    "merged": 1.2300000000000004
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "STEP",
+     [
+      11,
+      "Through Hole",
+      "R06"
+     ],
+     [
+      3,
+      "Slot",
+      "R06"
+     ],
+     0.3,
+     true
+    ],
+    [
+     "STEP",
+     [
+      12,
+      "Through Hole",
+      "R06"
+     ],
+     [
+      4,
+      "Slot",
+      "R06"
+     ],
+     0.3,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  },
+  "C+E0.5[free_text]": {
+   "entities": 21,
+   "merges": 9,
+   "correct": 8,
+   "cross_family_merges": 3,
+   "precision": 0.8888888888888888,
+   "label_consistent_precision": 0.6666666666666666,
+   "recall": 0.8,
+   "duplicated_features": 3,
+   "step_merged_pos_err_mean": {
+    "primary": 0.1,
+    "merged": 1.519999999999999
+   },
+   "step_merged_len_err_mean": {
+    "primary": 1.019666666666667,
+    "merged": 6.506333333333334
+   },
+   "merge_list": [
+    [
+     "STEP",
+     [
+      5,
+      "Step",
+      "R05"
+     ],
+     [
+      5,
+      "Boss",
+      "R05"
+     ],
+     0.7,
+     true
+    ],
+    [
+     "STEP",
+     [
+      7,
+      "Blind Hole",
+      "R07"
+     ],
+     [
+      1,
+      "Blind Hole",
+      "R07"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "STEP",
+     [
+      9,
+      "Chamfer",
+      "R09"
+     ],
+     [
+      2,
+      "Counterbore",
+      "R08"
+     ],
+     0.0,
+     false
+    ],
+    [
+     "STEP",
+     [
+      11,
+      "Through Hole",
+      "R06"
+     ],
+     [
+      3,
+      "Slot",
+      "R06"
+     ],
+     0.3,
+     true
+    ],
+    [
+     "STEP",
+     [
+      12,
+      "Through Hole",
+      "R06"
+     ],
+     [
+      4,
+      "Slot",
+      "R06"
+     ],
+     0.3,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      1,
+      "Cylinder",
+      "D01"
+     ],
+     [
+      2,
+      "Cylinder",
+      "D01"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  },
+  "C+Tm[free_text]": {
+   "entities": 26,
+   "merges": 4,
+   "correct": 4,
+   "cross_family_merges": 2,
+   "precision": 1.0,
+   "label_consistent_precision": 0.5,
+   "recall": 0.4,
+   "duplicated_features": 7,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 0.0
+   },
+   "step_merged_len_err_mean": null,
+   "merge_list": [
+    [
+     "STEP",
+     [
+      11,
+      "Through Hole",
+      "R06"
+     ],
+     [
+      3,
+      "Slot",
+      "R06"
+     ],
+     0.3,
+     true
+    ],
+    [
+     "STEP",
+     [
+      12,
+      "Through Hole",
+      "R06"
+     ],
+     [
+      4,
+      "Slot",
+      "R06"
+     ],
+     0.3,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  },
+  "C+Tv[free_text]": {
+   "entities": 25,
+   "merges": 5,
+   "correct": 5,
+   "cross_family_merges": 2,
+   "precision": 1.0,
+   "label_consistent_precision": 0.6,
+   "recall": 0.5,
+   "duplicated_features": 7,
+   "step_merged_pos_err_mean": {
+    "primary": 0.0,
+    "merged": 0.0
+   },
+   "step_merged_len_err_mean": null,
+   "merge_list": [
+    [
+     "STEP",
+     [
+      11,
+      "Through Hole",
+      "R06"
+     ],
+     [
+      3,
+      "Slot",
+      "R06"
+     ],
+     0.3,
+     true
+    ],
+    [
+     "STEP",
+     [
+      12,
+      "Through Hole",
+      "R06"
+     ],
+     [
+      4,
+      "Slot",
+      "R06"
+     ],
+     0.3,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      2,
+      "Cylinder",
+      "D02"
+     ],
+     [
+      1,
+      "Cylinder",
+      "D02"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     [
+      3,
+      "Groove",
+      "D03"
+     ],
+     1.0,
+     true
+    ],
+    [
+     "DRAWING",
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     [
+      4,
+      "Boss",
+      "D04"
+     ],
+     1.0,
+     true
+    ]
+   ]
+  }
+ },
+ "discrepancy_true_pairs": {
+  "summary": {
+   "common_dimensions_of_true_pairs": 20,
+   "identical": 14,
+   "different": 6,
+   "within_tolerance": {
+    "f": 14,
+    "m": 14,
+    "c": 14,
+    "v": 16
+   },
+   "different_within_tolerance": {
+    "f": 0,
+    "m": 0,
+    "c": 0,
+    "v": 2
+   },
+   "smallest_nonzero_difference": 0.31,
+   "largest_difference": 40.5
+  },
+  "rows": [
+   {
+    "family": "STEP",
+    "ref": "R05",
+    "primary": [
+     5,
+     "Step"
+    ],
+    "secondary": [
+     5,
+     "Boss"
+    ],
+    "dimension": "D",
+    "values": [
+     24.0,
+     24.95
+    ],
+    "difference": 0.95,
+    "relative_difference": 0.0381,
+    "within": {
+     "f": false,
+     "m": false,
+     "c": false,
+     "v": true
+    },
+    "source": "structured"
+   },
+   {
+    "family": "STEP",
+    "ref": "R05",
+    "primary": [
+     5,
+     "Step"
+    ],
+    "secondary": [
+     5,
+     "Boss"
+    ],
+    "dimension": "L",
+    "values": [
+     47.5,
+     88.0
+    ],
+    "difference": 40.5,
+    "relative_difference": 0.4602,
+    "within": {
+     "f": false,
+     "m": false,
+     "c": false,
+     "v": false
+    },
+    "source": "structured"
+   },
+   {
+    "family": "STEP",
+    "ref": "R07",
+    "primary": [
+     7,
+     "Blind Hole"
+    ],
+    "secondary": [
+     1,
+     "Blind Hole"
+    ],
+    "dimension": "D",
+    "values": [
+     6.8,
+     6.8
+    ],
+    "difference": 0.0,
+    "relative_difference": 0.0,
+    "within": {
+     "f": true,
+     "m": true,
+     "c": true,
+     "v": true
+    },
+    "source": "structured"
+   },
+   {
+    "family": "STEP",
+    "ref": "R07",
+    "primary": [
+     7,
+     "Blind Hole"
+    ],
+    "secondary": [
+     1,
+     "Blind Hole"
+    ],
+    "dimension": "L",
+    "values": [
+     21.05,
+     19.0
+    ],
+    "difference": 2.05,
+    "relative_difference": 0.0974,
+    "within": {
+     "f": false,
+     "m": false,
+     "c": false,
+     "v": false
+    },
+    "source": "structured"
+   },
+   {
+    "family": "STEP",
+    "ref": "R08",
+    "primary": [
+     8,
+     "Counterbore"
+    ],
+    "secondary": [
+     2,
+     "Counterbore"
+    ],
+    "dimension": "D",
+    "values": [
+     8.4,
+     8.4
+    ],
+    "difference": 0.0,
+    "relative_difference": 0.0,
+    "within": {
+     "f": true,
+     "m": true,
+     "c": true,
+     "v": true
+    },
+    "source": "structured"
+   },
+   {
+    "family": "STEP",
+    "ref": "R08",
+    "primary": [
+     8,
+     "Counterbore"
+    ],
+    "secondary": [
+     2,
+     "Counterbore"
+    ],
+    "dimension": "L",
+    "values": [
+     2.7,
+     6.0
+    ],
+    "difference": 3.3,
+    "relative_difference": 0.55,
+    "within": {
+     "f": false,
+     "m": false,
+     "c": false,
+     "v": false
+    },
+    "source": "structured"
+   },
+   {
+    "family": "STEP",
+    "ref": "R06",
+    "primary": [
+     10,
+     "Boss"
+    ],
+    "secondary": [
+     3,
+     "Slot"
+    ],
+    "dimension": "W",
+    "values": [
+     8.0,
+     8.0
+    ],
+    "difference": 0.0,
+    "relative_difference": 0.0,
+    "within": {
+     "f": true,
+     "m": true,
+     "c": true,
+     "v": true
+    },
+    "source": "structured"
+   },
+   {
+    "family": "STEP",
+    "ref": "R06",
+    "primary": [
+     10,
+     "Boss"
+    ],
+    "secondary": [
+     4,
+     "Slot"
+    ],
+    "dimension": "W",
+    "values": [
+     8.0,
+     8.0
+    ],
+    "difference": 0.0,
+    "relative_difference": 0.0,
+    "within": {
+     "f": true,
+     "m": true,
+     "c": true,
+     "v": true
+    },
+    "source": "structured"
+   },
+   {
+    "family": "STEP",
+    "ref": "R06",
+    "primary": [
+     11,
+     "Through Hole"
+    ],
+    "secondary": [
+     3,
+     "Slot"
+    ],
+    "dimension": "D",
+    "values": [
+     8.0,
+     8.0
+    ],
+    "difference": 0.0,
+    "relative_difference": 0.0,
+    "within": {
+     "f": true,
+     "m": true,
+     "c": true,
+     "v": true
+    },
+    "source": "structured"
+   },
+   {
+    "family": "STEP",
+    "ref": "R06",
+    "primary": [
+     11,
+     "Through Hole"
+    ],
+    "secondary": [
+     4,
+     "Slot"
+    ],
+    "dimension": "D",
+    "values": [
+     8.0,
+     8.0
+    ],
+    "difference": 0.0,
+    "relative_difference": 0.0,
+    "within": {
+     "f": true,
+     "m": true,
+     "c": true,
+     "v": true
+    },
+    "source": "structured"
+   },
+   {
+    "family": "STEP",
+    "ref": "R06",
+    "primary": [
+     12,
+     "Through Hole"
+    ],
+    "secondary": [
+     3,
+     "Slot"
+    ],
+    "dimension": "D",
+    "values": [
+     8.0,
+     8.0
+    ],
+    "difference": 0.0,
+    "relative_difference": 0.0,
+    "within": {
+     "f": true,
+     "m": true,
+     "c": true,
+     "v": true
+    },
+    "source": "structured"
+   },
+   {
+    "family": "STEP",
+    "ref": "R06",
+    "primary": [
+     12,
+     "Through Hole"
+    ],
+    "secondary": [
+     4,
+     "Slot"
+    ],
+    "dimension": "D",
+    "values": [
+     8.0,
+     8.0
+    ],
+    "difference": 0.0,
+    "relative_difference": 0.0,
+    "within": {
+     "f": true,
+     "m": true,
+     "c": true,
+     "v": true
+    },
+    "source": "structured"
+   },
+   {
+    "family": "DRAWING",
+    "ref": "D01",
+    "primary": [
+     1,
+     "Cylinder"
+    ],
+    "secondary": [
+     2,
+     "Cylinder"
+    ],
+    "dimension": "D",
+    "values": [
+     24.0,
+     22.0
+    ],
+    "difference": 2.0,
+    "relative_difference": 0.0833,
+    "within": {
+     "f": false,
+     "m": false,
+     "c": false,
+     "v": false
+    },
+    "source": "free_text"
+   },
+   {
+    "family": "DRAWING",
+    "ref": "D01",
+    "primary": [
+     1,
+     "Cylinder"
+    ],
+    "secondary": [
+     2,
+     "Cylinder"
+    ],
+    "dimension": "L",
+    "values": [
+     46.5,
+     46.5
+    ],
+    "difference": 0.0,
+    "relative_difference": 0.0,
+    "within": {
+     "f": true,
+     "m": true,
+     "c": true,
+     "v": true
+    },
+    "source": "free_text"
+   },
+   {
+    "family": "DRAWING",
+    "ref": "D02",
+    "primary": [
+     2,
+     "Cylinder"
+    ],
+    "secondary": [
+     1,
+     "Cylinder"
+    ],
+    "dimension": "D",
+    "values": [
+     24.0,
+     24.0
+    ],
+    "difference": 0.0,
+    "relative_difference": 0.0,
+    "within": {
+     "f": true,
+     "m": true,
+     "c": true,
+     "v": true
+    },
+    "source": "free_text"
+   },
+   {
+    "family": "DRAWING",
+    "ref": "D02",
+    "primary": [
+     2,
+     "Cylinder"
+    ],
+    "secondary": [
+     1,
+     "Cylinder"
+    ],
+    "dimension": "L",
+    "values": [
+     37.5,
+     37.5
+    ],
+    "difference": 0.0,
+    "relative_difference": 0.0,
+    "within": {
+     "f": true,
+     "m": true,
+     "c": true,
+     "v": true
+    },
+    "source": "free_text"
+   },
+   {
+    "family": "DRAWING",
+    "ref": "D03",
+    "primary": [
+     3,
+     "Groove"
+    ],
+    "secondary": [
+     3,
+     "Groove"
+    ],
+    "dimension": "W",
+    "values": [
+     1.75,
+     1.75
+    ],
+    "difference": 0.0,
+    "relative_difference": 0.0,
+    "within": {
+     "f": true,
+     "m": true,
+     "c": true,
+     "v": true
+    },
+    "source": "free_text"
+   },
+   {
+    "family": "DRAWING",
+    "ref": "D04",
+    "primary": [
+     4,
+     "Boss"
+    ],
+    "secondary": [
+     4,
+     "Boss"
+    ],
+    "dimension": "L",
+    "values": [
+     32.0,
+     32.0
+    ],
+    "difference": 0.0,
+    "relative_difference": 0.0,
+    "within": {
+     "f": true,
+     "m": true,
+     "c": true,
+     "v": true
+    },
+    "source": "free_text"
+   },
+   {
+    "family": "DRAWING",
+    "ref": "D04",
+    "primary": [
+     4,
+     "Boss"
+    ],
+    "secondary": [
+     4,
+     "Boss"
+    ],
+    "dimension": "W",
+    "values": [
+     4.0,
+     3.69
+    ],
+    "difference": 0.31,
+    "relative_difference": 0.0775,
+    "within": {
+     "f": false,
+     "m": false,
+     "c": false,
+     "v": true
+    },
+    "source": "free_text"
+   },
+   {
+    "family": "DRAWING",
+    "ref": "D04",
+    "primary": [
+     4,
+     "Boss"
+    ],
+    "secondary": [
+     5,
+     "Slot"
+    ],
+    "dimension": "W",
+    "values": [
+     4.0,
+     4.0
+    ],
+    "difference": 0.0,
+    "relative_difference": 0.0,
+    "within": {
+     "f": true,
+     "m": true,
+     "c": true,
+     "v": true
+    },
+    "source": "free_text"
+   }
+  ]
+ },
+ "fusion": [
+  {
+   "policy": "average",
+   "step_merged_pos_err_mean": {
+    "primary": 0.0030000000000048508,
+    "merged": 3.3203333333333283
+   },
+   "step_merged_len_err_mean": {
+    "primary": 0.6863333333333336,
+    "merged": 7.580333333333335
+   },
+   "step_attr": [
+    {
+     "entity": [
+      1,
+      5
+     ],
+     "ref": "R01",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 8.650000000000006,
+     "len_err_primary": 0.0,
+     "len_err_merged": 20.200000000000003
+    },
+    {
+     "entity": [
+      7,
+      1
+     ],
+     "ref": "R07",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 0.0,
+     "len_err_primary": 2.0500000000000007,
+     "len_err_merged": 1.2300000000000004
+    },
+    {
+     "entity": [
+      8,
+      2
+     ],
+     "ref": "R08",
+     "pos_err_primary": 0.009000000000014552,
+     "pos_err_merged": 1.3109999999999786,
+     "len_err_primary": 0.008999999999999897,
+     "len_err_merged": 1.3110000000000004
+    }
+   ]
+  },
+  {
+   "policy": "primary",
+   "step_merged_pos_err_mean": {
+    "primary": 0.0030000000000048508,
+    "merged": 0.0030000000000048508
+   },
+   "step_merged_len_err_mean": {
+    "primary": 0.6863333333333336,
+    "merged": 0.6863333333333336
+   },
+   "step_attr": [
+    {
+     "entity": [
+      1,
+      5
+     ],
+     "ref": "R01",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 0.0,
+     "len_err_primary": 0.0,
+     "len_err_merged": 0.0
+    },
+    {
+     "entity": [
+      7,
+      1
+     ],
+     "ref": "R07",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 0.0,
+     "len_err_primary": 2.0500000000000007,
+     "len_err_merged": 2.0500000000000007
+    },
+    {
+     "entity": [
+      8,
+      2
+     ],
+     "ref": "R08",
+     "pos_err_primary": 0.009000000000014552,
+     "pos_err_merged": 0.009000000000014552,
+     "len_err_primary": 0.008999999999999897,
+     "len_err_merged": 0.008999999999999897
+    }
+   ]
+  },
+  {
+   "policy": "tolerance:f",
+   "step_merged_pos_err_mean": {
+    "primary": 0.0030000000000048508,
+    "merged": 0.0030000000000048508
+   },
+   "step_merged_len_err_mean": {
+    "primary": 0.6863333333333336,
+    "merged": 0.6863333333333336
+   },
+   "step_attr": [
+    {
+     "entity": [
+      1,
+      5
+     ],
+     "ref": "R01",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 0.0,
+     "len_err_primary": 0.0,
+     "len_err_merged": 0.0
+    },
+    {
+     "entity": [
+      7,
+      1
+     ],
+     "ref": "R07",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 0.0,
+     "len_err_primary": 2.0500000000000007,
+     "len_err_merged": 2.0500000000000007
+    },
+    {
+     "entity": [
+      8,
+      2
+     ],
+     "ref": "R08",
+     "pos_err_primary": 0.009000000000014552,
+     "pos_err_merged": 0.009000000000014552,
+     "len_err_primary": 0.008999999999999897,
+     "len_err_merged": 0.008999999999999897
+    }
+   ]
+  },
+  {
+   "policy": "tolerance:m",
+   "step_merged_pos_err_mean": {
+    "primary": 0.0030000000000048508,
+    "merged": 0.0030000000000048508
+   },
+   "step_merged_len_err_mean": {
+    "primary": 0.6863333333333336,
+    "merged": 0.6863333333333336
+   },
+   "step_attr": [
+    {
+     "entity": [
+      1,
+      5
+     ],
+     "ref": "R01",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 0.0,
+     "len_err_primary": 0.0,
+     "len_err_merged": 0.0
+    },
+    {
+     "entity": [
+      7,
+      1
+     ],
+     "ref": "R07",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 0.0,
+     "len_err_primary": 2.0500000000000007,
+     "len_err_merged": 2.0500000000000007
+    },
+    {
+     "entity": [
+      8,
+      2
+     ],
+     "ref": "R08",
+     "pos_err_primary": 0.009000000000014552,
+     "pos_err_merged": 0.009000000000014552,
+     "len_err_primary": 0.008999999999999897,
+     "len_err_merged": 0.008999999999999897
+    }
+   ]
+  },
+  {
+   "policy": "tolerance:c",
+   "step_merged_pos_err_mean": {
+    "primary": 0.0030000000000048508,
+    "merged": 0.0030000000000048508
+   },
+   "step_merged_len_err_mean": {
+    "primary": 0.6863333333333336,
+    "merged": 0.6863333333333336
+   },
+   "step_attr": [
+    {
+     "entity": [
+      1,
+      5
+     ],
+     "ref": "R01",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 0.0,
+     "len_err_primary": 0.0,
+     "len_err_merged": 0.0
+    },
+    {
+     "entity": [
+      7,
+      1
+     ],
+     "ref": "R07",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 0.0,
+     "len_err_primary": 2.0500000000000007,
+     "len_err_merged": 2.0500000000000007
+    },
+    {
+     "entity": [
+      8,
+      2
+     ],
+     "ref": "R08",
+     "pos_err_primary": 0.009000000000014552,
+     "pos_err_merged": 0.009000000000014552,
+     "len_err_primary": 0.008999999999999897,
+     "len_err_merged": 0.008999999999999897
+    }
+   ]
+  },
+  {
+   "policy": "tolerance:v",
+   "step_merged_pos_err_mean": {
+    "primary": 0.0030000000000048508,
+    "merged": 0.0030000000000048508
+   },
+   "step_merged_len_err_mean": {
+    "primary": 0.6863333333333336,
+    "merged": 0.6863333333333336
+   },
+   "step_attr": [
+    {
+     "entity": [
+      1,
+      5
+     ],
+     "ref": "R01",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 0.0,
+     "len_err_primary": 0.0,
+     "len_err_merged": 0.0
+    },
+    {
+     "entity": [
+      7,
+      1
+     ],
+     "ref": "R07",
+     "pos_err_primary": 0.0,
+     "pos_err_merged": 0.0,
+     "len_err_primary": 2.0500000000000007,
+     "len_err_merged": 2.0500000000000007
+    },
+    {
+     "entity": [
+      8,
+      2
+     ],
+     "ref": "R08",
+     "pos_err_primary": 0.009000000000014552,
+     "pos_err_merged": 0.009000000000014552,
+     "len_err_primary": 0.008999999999999897,
+     "len_err_merged": 0.008999999999999897
+    }
+   ]
+  }
+ ]
+}

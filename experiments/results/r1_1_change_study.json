@@ -1,0 +1,995 @@
+{
+ "tables": {
+  "labels": 12,
+  "materials": 3,
+  "classes": 12,
+  "feature_rules": 18,
+  "param_rules": 17,
+  "tool_rule": 1,
+  "operations": 9,
+  "tools": 10,
+  "psets": 17,
+  "machines": 1,
+  "profiles": 1,
+  "disjoint": 0
+ },
+ "code_size_executable_lines": {
+  "epp_v1_ProceduralPlanner": 113,
+  "KEFCController": 254,
+  "SpecificityPlanner": 13,
+  "UniquenessPlanner": 11,
+  "DisjointnessPlanner": 11
+ },
+ "functional_properties_declared": 47,
+ "equivalence": {
+  "reasoner": {
+   "halted": false,
+   "error": null,
+   "steps": 32,
+   "approved": 27,
+   "requests_by_reason": {
+    "low_confidence_mapping": 6,
+    "machine_incompatible": 3,
+    "orientation_incompatible": 2
+   },
+   "attribution_audit": {
+    "records_checked": 32,
+    "misattributed": 0,
+    "cases": []
+   },
+   "seconds": 2.061
+  },
+  "epp": {
+   "halted": false,
+   "error": null,
+   "steps": 32,
+   "approved": 27,
+   "requests_by_reason": {
+    "low_confidence_mapping": 6,
+    "machine_incompatible": 3,
+    "orientation_incompatible": 2
+   },
+   "attribution_audit": null,
+   "seconds": 0.0
+  },
+  "identical_steps": true,
+  "identical_requests": true,
+  "provenance_identical_under_attribution_fix": true
+ },
+ "scenarios": [
+  {
+   "id": "S1",
+   "event": "New work material (AISI 4140) with four material-specific parameter sets",
+   "reasoner": {
+    "knowledge_delta": {
+     "triples_added": 47,
+     "triples_removed": 0,
+     "rules_added": 4,
+     "rules_removed": 0,
+     "file_lines_changed": 56
+    },
+    "code_lines": 1,
+    "code_note": "vocabulary dictionary entries in skl_repository.py",
+    "meets_intent": true,
+    "detail": "0 steps with wrong 4140 values; statuses as reference: True",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 32,
+     "approved": 27,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2
+     },
+     "attribution_audit": {
+      "records_checked": 32,
+      "misattributed": 0,
+      "cases": []
+     },
+     "seconds": 1.775
+    }
+   },
+   "epp": {
+    "knowledge_delta": {
+     "entries_added": 9,
+     "entries_removed": 0,
+     "fields_changed": 0,
+     "leaf_values": 57
+    },
+    "code_lines": 0,
+    "meets_intent": true,
+    "detail": "0 steps with wrong 4140 values; statuses as reference: True",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 32,
+     "approved": 27,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2
+     },
+     "attribution_audit": null,
+     "seconds": 0.0
+    }
+   }
+  },
+  {
+   "id": "S2",
+   "event": "New feature class (tapered hole) under an existing class, no new rule",
+   "reasoner": {
+    "knowledge_delta": {
+     "triples_added": 2,
+     "triples_removed": 0,
+     "rules_added": 0,
+     "rules_removed": 0,
+     "file_lines_changed": 3
+    },
+    "code_lines": 1,
+    "code_note": "vocabulary dictionary entries in skl_repository.py",
+    "meets_intent": true,
+    "detail": "new entity steps: [('DrillingOp', 'auto_approved')]",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 33,
+     "approved": 28,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2
+     },
+     "attribution_audit": {
+      "records_checked": 33,
+      "misattributed": 0,
+      "cases": []
+     },
+     "seconds": 1.662
+    }
+   },
+   "epp": {
+    "knowledge_delta": {
+     "entries_added": 2,
+     "entries_removed": 0,
+     "fields_changed": 0,
+     "leaf_values": 2
+    },
+    "code_lines": 0,
+    "meets_intent": true,
+    "detail": "new entity steps: [('DrillingOp', 'auto_approved')]",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 33,
+     "approved": 28,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2
+     },
+     "attribution_audit": null,
+     "seconds": 0.0
+    }
+   }
+  },
+  {
+   "id": "S3",
+   "event": "Hierarchy refactoring: blind and through holes become hole subclasses; two specific drilling rules retired",
+   "reasoner": {
+    "knowledge_delta": {
+     "triples_added": 2,
+     "triples_removed": 2,
+     "rules_added": 0,
+     "rules_removed": 2,
+     "file_lines_changed": 6
+    },
+    "code_lines": 0,
+    "code_note": "",
+    "meets_intent": true,
+    "detail": "plan identical: True; drilling provenance: ['hole_requires_drilling']",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 32,
+     "approved": 27,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2
+     },
+     "attribution_audit": {
+      "records_checked": 32,
+      "misattributed": 0,
+      "cases": []
+     },
+     "seconds": 1.582
+    }
+   },
+   "epp": {
+    "knowledge_delta": {
+     "entries_added": 2,
+     "entries_removed": 4,
+     "fields_changed": 0,
+     "leaf_values": 10
+    },
+    "code_lines": 0,
+    "meets_intent": true,
+    "detail": "plan identical: True; drilling provenance: ['hole_requires_drilling']",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 32,
+     "approved": 27,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2
+     },
+     "attribution_audit": null,
+     "seconds": 0.0
+    }
+   }
+  },
+  {
+   "id": "S4",
+   "event": "Contradictory knowledge: a second steel-drilling parameter rule",
+   "reasoner": {
+    "knowledge_delta": {
+     "triples_added": 0,
+     "triples_removed": 0,
+     "rules_added": 1,
+     "rules_removed": 0,
+     "file_lines_changed": 1
+    },
+    "code_lines": 0,
+    "code_note": "",
+    "meets_intent": true,
+    "detail": "7 of 7 drilling steps withheld; 7 rule_conflict requests",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 32,
+     "approved": 22,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2,
+      "rule_conflict": 7
+     },
+     "attribution_audit": {
+      "records_checked": 25,
+      "misattributed": 0,
+      "cases": []
+     },
+     "seconds": 1.692
+    }
+   },
+   "epp": {
+    "knowledge_delta": {
+     "entries_added": 1,
+     "entries_removed": 0,
+     "fields_changed": 0,
+     "leaf_values": 4
+    },
+    "code_lines": 0,
+    "meets_intent": true,
+    "detail": "7 of 7 drilling steps withheld; 7 rule_conflict requests",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 32,
+     "approved": 22,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2,
+      "rule_conflict": 7
+     },
+     "attribution_audit": null,
+     "seconds": 0.0
+    }
+   }
+  },
+  {
+   "id": "S5",
+   "event": "Class-specific override: blind holes in steel drilled with their own parameter set",
+   "reasoner": {
+    "knowledge_delta": {
+     "triples_added": 11,
+     "triples_removed": 0,
+     "rules_added": 1,
+     "rules_removed": 0,
+     "file_lines_changed": 13
+    },
+    "code_lines": 0,
+    "code_note": "",
+    "meets_intent": false,
+    "detail": "blind-hole drilling at 700 rpm: False; other drilling at 900 rpm: True; rule_conflict requests: 1",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 32,
+     "approved": 26,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2,
+      "rule_conflict": 1
+     },
+     "attribution_audit": {
+      "records_checked": 31,
+      "misattributed": 0,
+      "cases": []
+     },
+     "seconds": 1.755
+    },
+    "remedy": {
+     "knowledge_delta": {
+      "triples_added": 11,
+      "triples_removed": 0,
+      "rules_added": 5,
+      "rules_removed": 1,
+      "file_lines_changed": 18
+     },
+     "code_lines": 0,
+     "meets_intent": true,
+     "detail": "blind-hole drilling at 700 rpm: True; other drilling at 900 rpm: True; rule_conflict requests: 0",
+     "result": {
+      "halted": false,
+      "error": null,
+      "steps": 32,
+      "approved": 27,
+      "requests_by_reason": {
+       "low_confidence_mapping": 6,
+       "machine_incompatible": 3,
+       "orientation_incompatible": 2
+      },
+      "attribution_audit": {
+       "records_checked": 32,
+       "misattributed": 6,
+       "cases": [
+        {
+         "step": 18,
+         "feature_id": 8,
+         "used_set": "AISI1045_Drilling_Params",
+         "named_rule": "aisi1045_blindhole_drilling_params",
+         "named_rule_concludes": "AISI1045_BlindHoleDrilling_Params"
+        },
+        {
+         "step": 19,
+         "feature_id": 11,
+         "used_set": "AISI1045_Drilling_Params",
+         "named_rule": "aisi1045_blindhole_drilling_params",
+         "named_rule_concludes": "AISI1045_BlindHoleDrilling_Params"
+        },
+        {
+         "step": 20,
+         "feature_id": 12,
+         "used_set": "AISI1045_Drilling_Params",
+         "named_rule": "aisi1045_blindhole_drilling_params",
+         "named_rule_concludes": "AISI1045_BlindHoleDrilling_Params"
+        },
+        {
+         "step": 21,
+         "feature_id": 19,
+         "used_set": "AISI1045_Drilling_Params",
+         "named_rule": "aisi1045_blindhole_drilling_params",
+         "named_rule_concludes": "AISI1045_BlindHoleDrilling_Params"
+        },
+        {
+         "step": 22,
+         "feature_id": 20,
+         "used_set": "AISI1045_Drilling_Params",
+         "named_rule": "aisi1045_blindhole_drilling_params",
+         "named_rule_concludes": "AISI1045_BlindHoleDrilling_Params"
+        },
+        {
+         "step": 23,
+         "feature_id": 21,
+         "used_set": "AISI1045_Drilling_Params",
+         "named_rule": "aisi1045_blindhole_drilling_params",
+         "named_rule_concludes": "AISI1045_BlindHoleDrilling_Params"
+        }
+       ]
+      },
+      "seconds": 1.662
+     }
+    }
+   },
+   "epp": {
+    "knowledge_delta": {
+     "entries_added": 2,
+     "entries_removed": 0,
+     "fields_changed": 0,
+     "leaf_values": 15
+    },
+    "code_lines": 0,
+    "meets_intent": false,
+    "detail": "blind-hole drilling at 700 rpm: False; other drilling at 900 rpm: True; rule_conflict requests: 7",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 32,
+     "approved": 22,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2,
+      "rule_conflict": 7
+     },
+     "attribution_audit": null,
+     "seconds": 0.0
+    },
+    "remedy": {
+     "code_extension": "SpecificityPlanner",
+     "code_lines": 13,
+     "meets_intent": true,
+     "detail": "blind-hole drilling at 700 rpm: True; other drilling at 900 rpm: True; rule_conflict requests: 0",
+     "result": {
+      "halted": false,
+      "error": null,
+      "steps": 32,
+      "approved": 27,
+      "requests_by_reason": {
+       "low_confidence_mapping": 6,
+       "machine_incompatible": 3,
+       "orientation_incompatible": 2
+      },
+      "attribution_audit": null,
+      "seconds": 0.0
+     }
+    }
+   }
+  },
+  {
+   "id": "S6",
+   "event": "Machine limit change: spindle safety limit lowered to 850 rpm",
+   "reasoner": {
+    "knowledge_delta": {
+     "triples_added": 1,
+     "triples_removed": 1,
+     "rules_added": 0,
+     "rules_removed": 0,
+     "file_lines_changed": 2
+    },
+    "code_lines": 0,
+    "code_note": "",
+    "meets_intent": true,
+    "detail": "22 steps above 850 rpm, all withheld as unsafe_value: True; others unchanged: True",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 32,
+     "approved": 10,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2,
+      "unsafe_value": 22
+     },
+     "attribution_audit": {
+      "records_checked": 32,
+      "misattributed": 0,
+      "cases": []
+     },
+     "seconds": 1.807
+    }
+   },
+   "epp": {
+    "knowledge_delta": {
+     "entries_added": 0,
+     "entries_removed": 0,
+     "fields_changed": 1,
+     "leaf_values": 1
+    },
+    "code_lines": 0,
+    "meets_intent": true,
+    "detail": "22 steps above 850 rpm, all withheld as unsafe_value: True; others unchanged: True",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 32,
+     "approved": 10,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2,
+      "unsafe_value": 22
+     },
+     "attribution_audit": null,
+     "seconds": 0.0
+    }
+   }
+  },
+  {
+   "id": "S7",
+   "event": "Tool retired from an operation: chamfer mill no longer used for chamfering on the lathe",
+   "reasoner": {
+    "knowledge_delta": {
+     "triples_added": 0,
+     "triples_removed": 1,
+     "rules_added": 0,
+     "rules_removed": 0,
+     "file_lines_changed": 1
+    },
+    "code_lines": 0,
+    "code_note": "",
+    "meets_intent": true,
+    "detail": "chamfer tools: ['ChamferDrill']",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 32,
+     "approved": 27,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2
+     },
+     "attribution_audit": {
+      "records_checked": 32,
+      "misattributed": 0,
+      "cases": []
+     },
+     "seconds": 1.809
+    }
+   },
+   "epp": {
+    "knowledge_delta": {
+     "entries_added": 0,
+     "entries_removed": 1,
+     "fields_changed": 0,
+     "leaf_values": 1
+    },
+    "code_lines": 0,
+    "meets_intent": true,
+    "detail": "chamfer tools: ['ChamferDrill']",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 32,
+     "approved": 27,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2
+     },
+     "attribution_audit": null,
+     "seconds": 0.0
+    }
+   }
+  },
+  {
+   "id": "S8",
+   "event": "New tool with a recorded preference: carbide drill preferred for drilling",
+   "reasoner": {
+    "knowledge_delta": {
+     "triples_added": 5,
+     "triples_removed": 0,
+     "rules_added": 0,
+     "rules_removed": 0,
+     "file_lines_changed": 8
+    },
+    "code_lines": 1,
+    "code_note": "vocabulary dictionary entries in skl_repository.py",
+    "meets_intent": true,
+    "detail": "drilling tools: ['CarbideDrill']; missing_knowledge requests: 0",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 32,
+     "approved": 27,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2
+     },
+     "attribution_audit": {
+      "records_checked": 32,
+      "misattributed": 0,
+      "cases": []
+     },
+     "seconds": 1.902
+    }
+   },
+   "epp": {
+    "knowledge_delta": {
+     "entries_added": 1,
+     "entries_removed": 0,
+     "fields_changed": 1,
+     "leaf_values": 3
+    },
+    "code_lines": 0,
+    "meets_intent": true,
+    "detail": "drilling tools: ['CarbideDrill']; missing_knowledge requests: 0",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 32,
+     "approved": 27,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2
+     },
+     "attribution_audit": null,
+     "seconds": 0.0
+    }
+   }
+  },
+  {
+   "id": "S9",
+   "event": "New operation (reaming of through holes) with tool, parameters, and machine capability",
+   "reasoner": {
+    "knowledge_delta": {
+     "triples_added": 21,
+     "triples_removed": 0,
+     "rules_added": 2,
+     "rules_removed": 0,
+     "file_lines_changed": 27
+    },
+    "code_lines": 2,
+    "code_note": "vocabulary dictionary entries in skl_repository.py",
+    "meets_intent": true,
+    "detail": "reaming steps on features [11, 12]; withheld for orientation: [11, 12]",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 34,
+     "approved": 27,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 4
+     },
+     "attribution_audit": {
+      "records_checked": 34,
+      "misattributed": 0,
+      "cases": []
+     },
+     "seconds": 1.768
+    }
+   },
+   "epp": {
+    "knowledge_delta": {
+     "entries_added": 6,
+     "entries_removed": 0,
+     "fields_changed": 0,
+     "leaf_values": 24
+    },
+    "code_lines": 0,
+    "meets_intent": true,
+    "detail": "reaming steps on features [11, 12]; withheld for orientation: [11, 12]",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 34,
+     "approved": 27,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 4
+     },
+     "attribution_audit": null,
+     "seconds": 0.0
+    }
+   }
+  },
+  {
+   "id": "S10",
+   "event": "Copy-paste error: a second spindle-speed value recorded for the steel drilling set",
+   "reasoner": {
+    "knowledge_delta": {
+     "triples_added": 1,
+     "triples_removed": 0,
+     "rules_added": 0,
+     "rules_removed": 0,
+     "file_lines_changed": 1
+    },
+    "code_lines": 0,
+    "code_note": "",
+    "meets_intent": true,
+    "detail": "halted: SKL ontology is inconsistent after asserting case facts: ERROR: Ontology is inconsistent, run \"pellet explain\" to get th",
+    "result": {
+     "halted": true,
+     "error": "SKL ontology is inconsistent after asserting case facts: ERROR: Ontology is inconsistent, run \"pellet explain\" to get the reason",
+     "steps": 0,
+     "approved": 0,
+     "requests_by_reason": {},
+     "attribution_audit": null,
+     "seconds": 1.454
+    }
+   },
+   "epp": {
+    "knowledge_delta": {
+     "entries_added": 1,
+     "entries_removed": 0,
+     "fields_changed": 0,
+     "leaf_values": 10
+    },
+    "code_lines": 0,
+    "meets_intent": false,
+    "detail": "not halted; drilling spindle speeds emitted: [1200.0]",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 32,
+     "approved": 27,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2
+     },
+     "attribution_audit": null,
+     "seconds": 0.0
+    },
+    "remedy": {
+     "code_extension": "UniquenessPlanner",
+     "code_lines": 11,
+     "meets_intent": true,
+     "detail": "halted: parameter set 'AISI1045_Drilling_Params' recorded twice with different values",
+     "result": {
+      "halted": true,
+      "error": "parameter set 'AISI1045_Drilling_Params' recorded twice with different values",
+      "steps": 0,
+      "approved": 0,
+      "requests_by_reason": {},
+      "attribution_audit": null,
+      "seconds": 0.0
+     }
+    }
+   }
+  },
+  {
+   "id": "S11",
+   "event": "Rule refactoring with identical values: a blind-hole drilling set equal to the general one",
+   "reasoner": {
+    "knowledge_delta": {
+     "triples_added": 11,
+     "triples_removed": 0,
+     "rules_added": 1,
+     "rules_removed": 0,
+     "file_lines_changed": 13
+    },
+    "code_lines": 0,
+    "code_note": "",
+    "meets_intent": false,
+    "detail": "plan identical: True; attribution audit: {'records_checked': 32, 'misattributed': 1, 'cases': [{'step': 17, 'feature_id': 7, 'used_set': 'AISI1045_BlindHoleDrilling_Params', 'named_rule': 'aisi1045_drilling_params', 'named_rule_concludes': 'AISI1045_Drilling_Params'}]}",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 32,
+     "approved": 27,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2
+     },
+     "attribution_audit": {
+      "records_checked": 32,
+      "misattributed": 1,
+      "cases": [
+       {
+        "step": 17,
+        "feature_id": 7,
+        "used_set": "AISI1045_BlindHoleDrilling_Params",
+        "named_rule": "aisi1045_drilling_params",
+        "named_rule_concludes": "AISI1045_Drilling_Params"
+       }
+      ]
+     },
+     "seconds": 1.775
+    },
+    "with_attribution_fix": {
+     "meets_intent": true,
+     "detail": "plan identical: True; attribution audit: {'records_checked': 32, 'misattributed': 0, 'cases': []}",
+     "attribution_audit": {
+      "records_checked": 32,
+      "misattributed": 0,
+      "cases": []
+     }
+    }
+   },
+   "epp": {
+    "knowledge_delta": {
+     "entries_added": 2,
+     "entries_removed": 0,
+     "fields_changed": 0,
+     "leaf_values": 15
+    },
+    "code_lines": 0,
+    "meets_intent": true,
+    "detail": "plan identical: True; attribution audit: None",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 32,
+     "approved": 27,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2
+     },
+     "attribution_audit": null,
+     "seconds": 0.0
+    }
+   }
+  },
+  {
+   "id": "S12",
+   "event": "Disjointness axioms (external turned versus internal hole features), then a counterbore mis-filed under Step",
+   "reasoner": {
+    "knowledge_delta": {
+     "triples_added": 16,
+     "triples_removed": 0,
+     "rules_added": 0,
+     "rules_removed": 0,
+     "file_lines_changed": 46
+    },
+    "code_lines": 0,
+    "code_note": "",
+    "meets_intent": true,
+    "detail": "halted: SKL ontology is inconsistent after asserting case facts: ERROR: Ontology is inconsistent, run \"pellet explain\" to get the reason",
+    "result": {
+     "halted": true,
+     "error": "SKL ontology is inconsistent after asserting case facts: ERROR: Ontology is inconsistent, run \"pellet explain\" to get the reason",
+     "steps": 0,
+     "approved": 0,
+     "requests_by_reason": {},
+     "attribution_audit": null,
+     "seconds": 1.605
+    }
+   },
+   "epp": {
+    "knowledge_delta": {
+     "entries_added": 16,
+     "entries_removed": 0,
+     "fields_changed": 0,
+     "leaf_values": 31
+    },
+    "code_lines": 0,
+    "meets_intent": false,
+    "detail": "not halted; 34 steps; counterbore entity steps: [(8, 'RoughTurningOp', 'auto_approved'), (8, 'FinishTurningOp', 'auto_approved'), (8, 'DrillingOp', 'auto_approved'), (8, 'CounterboringOp', 'auto_approved')]",
+    "result": {
+     "halted": false,
+     "error": null,
+     "steps": 34,
+     "approved": 29,
+     "requests_by_reason": {
+      "low_confidence_mapping": 6,
+      "machine_incompatible": 3,
+      "orientation_incompatible": 2
+     },
+     "attribution_audit": null,
+     "seconds": 0.0
+    },
+    "remedy": {
+     "code_extension": "DisjointnessPlanner",
+     "code_lines": 11,
+     "meets_intent": true,
+     "detail": "halted: entity 8 (Counterbore) instantiates disjoint classes ['Counterbore', 'Step']",
+     "result": {
+      "halted": true,
+      "error": "entity 8 (Counterbore) instantiates disjoint classes ['Counterbore', 'Step']",
+      "steps": 0,
+      "approved": 0,
+      "requests_by_reason": {},
+      "attribution_audit": null,
+      "seconds": 0.0
+     }
+    }
+   },
+   "controls": {
+    "axioms_only": {
+     "reasoner": {
+      "knowledge_delta": {
+       "triples_added": 15,
+       "triples_removed": 0,
+       "rules_added": 0,
+       "rules_removed": 0,
+       "file_lines_changed": 45
+      },
+      "result": {
+       "halted": false,
+       "error": null,
+       "steps": 32,
+       "approved": 27,
+       "requests_by_reason": {
+        "low_confidence_mapping": 6,
+        "machine_incompatible": 3,
+        "orientation_incompatible": 2
+       },
+       "attribution_audit": {
+        "records_checked": 32,
+        "misattributed": 0,
+        "cases": []
+       },
+       "seconds": 1.893
+      },
+      "plan_identical_to_reference": true,
+      "detail": "not halted; 32 steps; counterbore entity steps: [(8, 'DrillingOp', 'auto_approved'), (8, 'CounterboringOp', 'auto_approved')]"
+     },
+     "epp": {
+      "knowledge_delta": {
+       "entries_added": 15,
+       "entries_removed": 0,
+       "fields_changed": 0,
+       "leaf_values": 30
+      },
+      "result": {
+       "halted": false,
+       "error": null,
+       "steps": 32,
+       "approved": 27,
+       "requests_by_reason": {
+        "low_confidence_mapping": 6,
+        "machine_incompatible": 3,
+        "orientation_incompatible": 2
+       },
+       "attribution_audit": null,
+       "seconds": 0.0
+      },
+      "plan_identical_to_reference": true,
+      "detail": "not halted; 32 steps; counterbore entity steps: [(8, 'DrillingOp', 'auto_approved'), (8, 'CounterboringOp', 'auto_approved')]"
+     },
+     "planners_agree": true
+    },
+    "misfiling_without_axioms": {
+     "reasoner": {
+      "knowledge_delta": {
+       "triples_added": 1,
+       "triples_removed": 0,
+       "rules_added": 0,
+       "rules_removed": 0,
+       "file_lines_changed": 1
+      },
+      "result": {
+       "halted": false,
+       "error": null,
+       "steps": 34,
+       "approved": 29,
+       "requests_by_reason": {
+        "low_confidence_mapping": 6,
+        "machine_incompatible": 3,
+        "orientation_incompatible": 2
+       },
+       "attribution_audit": {
+        "records_checked": 34,
+        "misattributed": 0,
+        "cases": []
+       },
+       "seconds": 1.869
+      },
+      "plan_identical_to_reference": false,
+      "detail": "not halted; 34 steps; counterbore entity steps: [(8, 'RoughTurningOp', 'auto_approved'), (8, 'FinishTurningOp', 'auto_approved'), (8, 'DrillingOp', 'auto_approved'), (8, 'CounterboringOp', 'auto_approved')]"
+     },
+     "epp": {
+      "knowledge_delta": {
+       "entries_added": 1,
+       "entries_removed": 0,
+       "fields_changed": 0,
+       "leaf_values": 1
+      },
+      "result": {
+       "halted": false,
+       "error": null,
+       "steps": 34,
+       "approved": 29,
+       "requests_by_reason": {
+        "low_confidence_mapping": 6,
+        "machine_incompatible": 3,
+        "orientation_incompatible": 2
+       },
+       "attribution_audit": null,
+       "seconds": 0.0
+      },
+      "plan_identical_to_reference": false,
+      "detail": "not halted; 34 steps; counterbore entity steps: [(8, 'RoughTurningOp', 'auto_approved'), (8, 'FinishTurningOp', 'auto_approved'), (8, 'DrillingOp', 'auto_approved'), (8, 'CounterboringOp', 'auto_approved')]"
+     },
+     "planners_agree": true
+    }
+   }
+  }
+ ]
+}
